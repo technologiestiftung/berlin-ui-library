@@ -1,0 +1,13 @@
+import { VariantProps } from 'class-variance-authority';
+import * as React from "react";
+declare const backButtonVariants: (props?: ({
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined;
+    size?: "default" | "sm" | "lg" | "icon" | null | undefined;
+} & import('class-variance-authority/dist/types').ClassProp) | undefined) => string;
+declare function BackButton({ className, variant, size, asChild, ...props }: React.ComponentProps<"button"> & VariantProps<typeof backButtonVariants> & {
+    asChild?: boolean;
+    title?: string;
+    onClick?: () => void;
+}): React.JSX.Element;
+export { BackButton, backButtonVariants };
+//# sourceMappingURL=BackButton.d.ts.map

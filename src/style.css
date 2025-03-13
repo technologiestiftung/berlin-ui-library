@@ -4,16 +4,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: "Satoshi";
+  font-family: "BerlinTypeWeb";
   font-style: normal;
   font-weight: 400;
-  font-display: var(--font-display);
-  src: url("/fonts/Satoshi-Regular.woff2") format("woff2"),
-       url("/fonts/Satoshi-Regular.woff") format("woff");
+  font-display: swap;
+  src: url("fonts/BerlinTypeWeb-Regular.woff2") format("woff2"),
+       url("fonts/BerlinTypeWeb-Regular.woff") format("woff");
 }
 
 @theme {
-  --font-display: "Satoshi", "sans-serif";
+  --font-display: "BerlinTypeWeb", sans-serif;
+  --font-custom: "BerlinTypeWeb", sans-serif;
   --breakpoint-3xl: 120rem;
   --color-avocado-100: oklch(0.99 0 0);
   --color-avocado-200: oklch(0.98 0.04 113.22);

@@ -8,4 +8,4 @@ declare function Button({ className, variant, size, asChild, ...props }: React.C
     asChild?: boolean;
 }): React.JSX.Element;
 export { Button, buttonVariants };
-//# sourceMappingURL=button.d.ts.map
+//# sourceMappingURL=Button.d.ts.map

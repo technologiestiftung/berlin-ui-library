@@ -2,13 +2,17 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
+    --ts-color-black: #000;
     --ts-color-white: #fff;
     --ts-spacing: 0.25rem;
     --ts-text-sm: 0.875rem;
     --ts-text-sm--line-height: calc(1.25 / 0.875);
     --ts-font-weight-medium: 500;
+    --ts-font-weight-bold: 700;
     --ts-default-transition-duration: 150ms;
     --ts-default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --ts-color-link-blue: #1049cc;
+    --ts-color-berlin-green: #67B18D;
   }
 }
 @layer base {
@@ -153,12 +157,36 @@
   }
 }
 @layer utilities {
+  .ts\:absolute {
+    position: absolute;
+  }
+  .ts\:relative {
+    position: relative;
+  }
+  .ts\:-top-3 {
+    top: calc(var(--ts-spacing) * -3);
+  }
+  .ts\:-right-3 {
+    right: calc(var(--ts-spacing) * -3);
+  }
+  .ts\:col-start-1 {
+    grid-column-start: 1;
+  }
+  .ts\:row-start-1 {
+    grid-row-start: 1;
+  }
+  .ts\:flex {
+    display: flex;
+  }
   .ts\:inline-flex {
     display: inline-flex;
   }
   .ts\:size-9 {
     width: calc(var(--ts-spacing) * 9);
     height: calc(var(--ts-spacing) * 9);
+  }
+  .ts\:h-6 {
+    height: calc(var(--ts-spacing) * 6);
   }
   .ts\:h-8 {
     height: calc(var(--ts-spacing) * 8);
@@ -169,20 +197,44 @@
   .ts\:h-10 {
     height: calc(var(--ts-spacing) * 10);
   }
+  .ts\:h-\[43px\] {
+    height: 43px;
+  }
+  .ts\:w-6 {
+    width: calc(var(--ts-spacing) * 6);
+  }
+  .ts\:w-fit {
+    width: fit-content;
+  }
   .ts\:shrink-0 {
     flex-shrink: 0;
   }
-  .ts\:cursor-pointer {
-    cursor: pointer;
+  .ts\:scale-75 {
+    --tw-scale-x: 75%;
+    --tw-scale-y: 75%;
+    --tw-scale-z: 75%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .ts\:flex-row {
+    flex-direction: row;
   }
   .ts\:items-center {
     align-items: center;
+  }
+  .ts\:justify-center {
+    justify-content: center;
+  }
+  .ts\:gap-1 {
+    gap: calc(var(--ts-spacing) * 1);
   }
   .ts\:gap-1\.5 {
     gap: calc(var(--ts-spacing) * 1.5);
   }
   .ts\:gap-2 {
     gap: calc(var(--ts-spacing) * 2);
+  }
+  .ts\:rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .ts\:rounded-md {
     border-radius: calc(var(--radius) - 2px);
@@ -191,14 +243,27 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .ts\:border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .ts\:border-black {
+    border-color: var(--ts-color-black);
+  }
   .ts\:border-input {
     border-color: var(--input);
   }
   .ts\:bg-background {
     background-color: var(--background);
   }
+  .ts\:bg-berlin-green {
+    background-color: var(--ts-color-berlin-green);
+  }
   .ts\:bg-destructive {
     background-color: var(--destructive);
+  }
+  .ts\:bg-primary {
+    background-color: var(--primary);
   }
   .ts\:bg-secondary {
     background-color: var(--secondary);
@@ -212,6 +277,9 @@
   .ts\:px-6 {
     padding-inline: calc(var(--ts-spacing) * 6);
   }
+  .ts\:py-1 {
+    padding-block: calc(var(--ts-spacing) * 1);
+  }
   .ts\:py-2 {
     padding-block: calc(var(--ts-spacing) * 2);
   }
@@ -219,12 +287,26 @@
     font-size: var(--ts-text-sm);
     line-height: var(--tw-leading, var(--ts-text-sm--line-height));
   }
+  .ts\:font-\(--font-custom\) {
+    --tw-font-weight: var(--font-custom);
+    font-weight: var(--font-custom);
+  }
+  .ts\:font-bold {
+    --tw-font-weight: var(--ts-font-weight-bold);
+    font-weight: var(--ts-font-weight-bold);
+  }
   .ts\:font-medium {
     --tw-font-weight: var(--ts-font-weight-medium);
     font-weight: var(--ts-font-weight-medium);
   }
   .ts\:whitespace-nowrap {
     white-space: nowrap;
+  }
+  .ts\:text-black {
+    color: var(--ts-color-black);
+  }
+  .ts\:text-link-blue {
+    color: var(--ts-color-link-blue);
   }
   .ts\:text-primary {
     color: var(--primary);
@@ -237,6 +319,9 @@
   }
   .ts\:underline-offset-4 {
     text-underline-offset: 4px;
+  }
+  .ts\:opacity-100 {
+    opacity: 100%;
   }
   .ts\:shadow-xs {
     --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
@@ -286,6 +371,13 @@
       }
     }
   }
+  .ts\:hover\:opacity-50 {
+    &:hover {
+      @media (hover: hover) {
+        opacity: 50%;
+      }
+    }
+  }
   .ts\:focus-visible\:ring-destructive\/20 {
     &:focus-visible {
       --tw-ring-color: color-mix(in oklab, var(--destructive) 20%, transparent);
@@ -322,11 +414,14 @@
     }
   }
 }
+@font-face {
+  font-family: "BerlinTypeWeb";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/BerlinTypeWeb-Regular.woff2") format("woff2"), url("fonts/BerlinTypeWeb-Regular.woff") format("woff");
+}
 @layer base {
-  html {
-    font-family: var(--font-display);
-    --primary: #ff0000;
-  }
   :root {
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -418,6 +513,21 @@
     opacity: var(--tw-exit-opacity, 1);
     transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
   }
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
 @property --tw-border-style {
   syntax: "*";
