@@ -37,7 +37,8 @@ function CopyToClipboardButton({
 
   return (
       <Comp
-        className={cn(copyToClipboardButtonVariants())}
+        className={cn(copyToClipboardButtonVariants({variant, size, className}))}
+        {...props}
         onClick={props.onClick}
       >
         <span className="ts:flex ts:flex-row ts:gap-1 ts:items-center">
