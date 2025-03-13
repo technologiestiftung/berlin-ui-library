@@ -3,5 +3,10 @@
     "globals": {
       "AudioWorkletGlobalScope": true
     }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
