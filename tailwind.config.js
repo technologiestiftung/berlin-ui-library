@@ -5,7 +5,7 @@ module.exports = {
   darkMode: ["class"],
   content: ["./src/**/*.{js,ts,jsx,tsx,css}"],
   safelist: ["dark"],
-  prefix: "tw-",
+  prefix: "ts-",  // All utility classes will be prefixed with "ts-"
   theme: {
     container: {
       center: true,
@@ -15,7 +15,30 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        desktop: "1181px",
+      },
+      boxShadow: {
+        default: "0 0 5px 1px rgba(23, 111, 193, 0.3)",
+        "default-black": "0 0 5px 1px rgba(0, 0, 0, 0.25)",
+      },
       colors: {
+        "focus-blue": "#176fc1",
+        "link-blue": "#1049cc",
+        culture: "#71A8F5",
+        sport: "#67b18d",
+        education: "#fcc832",
+        leisure: "#EC7AA0",
+        separator: "#dddddd",
+        "berlin-grey": "#777777",
+        "berlin-grey-dark": "#545454",
+        "berlin-grey-darker": "#454545", // #454545
+        "berlin-grey-light": "#f5f5f5", // neutral-100
+        "berlin-grey-medium": "#d9d9d9",
+        "berlin-grey-hover": "#efefef",
+        "berlin-pink": "#F5B4CB", // fuchsia-300
+        "berlin-green": "#67B18D", // emerald-400
+        "berlin-light-green": "#E2F1EB",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -56,7 +79,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["BerlinTypeWeb", ...fontFamily.sans], // Use the custom font
       },
       keyframes: {
         "accordion-down": {
@@ -75,4 +98,7 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  corePlugins: {
+    preflight: false,
+  },
 };

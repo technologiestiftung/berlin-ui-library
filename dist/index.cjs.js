@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const a=require("./index.cjs2.js"),t=require("./index.cjs3.js"),r=require("./index.cjs4.js");exports.Button=a.Button;exports.buttonVariants=a.buttonVariants;exports.Avatar=t.Avatar;exports.AvatarFallback=t.AvatarFallback;exports.AvatarImage=t.AvatarImage;exports.Alert=r.Alert;exports.AlertDescription=r.AlertDescription;exports.AlertTitle=r.AlertTitle;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});;/* empty css            */const t=require("./index.cjs3.js");exports.Button=t.Button;exports.buttonVariants=t.buttonVariants;
 //# sourceMappingURL=index.cjs.js.map

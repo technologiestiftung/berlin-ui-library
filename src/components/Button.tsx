@@ -5,24 +5,26 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "../lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
+  "ts:inline-flex ts:items-center ts:justify-centerts: ts:gap-2 ts:whitespace-nowrap ts:rounded-md ts:text-sm ts:font-medium ts:transition-[color,box-shadow] ts:disabled:pointer-events-none ts:disabled:opacity-50 ts:[&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 ts:shrink-0 [&_svg]:ts:shrink-0 ts:outline-none ts:focus-visible:ts:border-ring ts:focus-visible:ts:ring-ring/50 ts:focus-visible:ts:ring-[3px] aria-invalid:ts:ring-destructive/20 dark:aria-invalid:ts:ring-destructive/40 aria-invalid:ts:border-destructive",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default:
+          "ts:text-primary-blue ts:shadow-xs ts:hover:bg-primary-blue/90 ts:cursor-pointer",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "ts:bg-destructive ts:text-white ts:shadow-xs ts:hover:bg-destructive/90 ts:focus-visible:ring-destructive/20 dark:ts:focus-visible:ts:ring-destructive/40",
         outline:
-          "border border-input hover:bg-accent hover:text-accent-foreground",
+          "ts:border ts:border-input ts:bg-background ts:shadow-xs ts:hover:bg-accent ts:hover:text-accent-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "underline-offset-4 hover:underline text-primary",
+          "ts:bg-secondary ts:text-secondary-foreground ts:shadow-xs ts:hover:bg-secondary/80",
+        ghost: "ts:hover:bg-accent ts:hover:text-accent-foreground",
+        link: "ts:text-primary ts:underline-offset-4 ts:hover:underline",
       },
       size: {
-        default: "h-10 py-2 px-4",
-        sm: "h-9 px-3 rounded-md",
-        lg: "h-11 px-8 rounded-md",
+        default: "ts:h-9 ts:px-4 ts:py-2 ts:has-[>svg]:px-3",
+        sm: "ts:h-8 ts:rounded-md ts:gap-1.5 ts:px-3 ts:has-[>svg]:px-2.5",
+        lg: "ts:h-10 ts:rounded-md ts:px-6 ts:has-[>svg]:px-4",
+        icon: "ts:size-9",
       },
     },
     defaultVariants: {
@@ -32,24 +34,25 @@ const buttonVariants = cva(
   }
 )
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean
-}
+function Button({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean
+  }) {
+  const Comp = asChild ? Slot : "button"
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    )
-  }
-)
-Button.displayName = "Button"
+  return (
+    <Comp
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  )
+}
 
 export { Button, buttonVariants }

@@ -1,63 +1,49 @@
 {
   "name": "berlin-ui-library",
-  "description": "A library of reusable UI components for berlin.de, using shadcn and powered by Vite.",
-  "private": false,
-  "version": "1.0.0",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
+  "styles": "dist/style.css",
   "types": "dist/index.d.ts",
-  "sideEffects": false,
   "files": [
     "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rajeshdavidbabu/shadcn-ui-lib-starter.git"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && npm run build:styles",
-    "build:styles": "postcss ./src/index.css -o ./dist/style.css",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "prepare": "husky"
+    "build:styles": "npx @tailwindcss/cli -i ./src/style.css -o ./dist/style.css",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "postcss": "^8.5.3",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
   },
   "peerDependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.13"
   },
   "dependencies": {
-    "@radix-ui/react-avatar": "^1.0.3",
-    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@tailwindcss/cli": "^4.0.13",
     "@tailwindcss/vite": "^4.0.13",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "globals": "^16.0.0",
-    "lucide-react": "^0.479.0",
-    "tailwind-merge": "^3.0.2",
-    "tailwindcss-animate": "^1.0.5"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.13",
-    "@technologiestiftung/eslint-config": "^0.4.0",
-    "@technologiestiftung/prettier-config": "^1.0.0",
-    "@types/node": "^22.13.10",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@typescript-eslint/eslint-plugin": "^8.26.1",
-    "@typescript-eslint/parser": "^8.26.1",
-    "@vitejs/plugin-react": "^4.0.0",
-    "autoprefixer": "^10.4.14",
     "eslint": "^9.22.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "husky": "^9.1.7",
-    "postcss": "^8.4.23",
-    "postcss-cli": "^11.0.0",
-    "prop-types": "^15.8.1",
+    "lucide-react": "^0.479.0",
+    "postcss-cli": "^11.0.1",
+    "react": "^19.0.0",
+    "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.13",
-    "typescript": "^5.0.2",
-    "vite": "^6.2.1",
+    "tailwindcss-animate": "^1.0.7",
     "vite-plugin-dts": "^4.5.3"
   }
 }
