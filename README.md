@@ -1,54 +1,104 @@
 ![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:START -->
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# berlin-ui-library
+[![npm version](https://img.shields.io/npm/v/berlin-ui-library?color=blue)](https://www.npmjs.com/package/berlin-ui-library)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A collection of reusable, accessible, and customizable UI components built with React, TypeScript, and Tailwind CSS. Powered by Vite and documented with Storybook. Supports dark mode, custom theming via CSS variables, and tree-shakeable bundling for npm.
+# Berlin UI Library
+
+A reusable, themeable, accessible React UI component library built with Vite, TypeScript, and Tailwind CSS.
 
 ## Prerequisites
 
-- Node.js >= 16
-- npm >= 8
+- Node.js v14 or higher
+- npm v6 or higher
 
 ## Installation
 
 ```bash
-git clone https://github.com/your-org/berlin-ui-library.git
-cd berlin-ui-library
-npm install
+npm install berlin-ui-library
 ```
 
 ## Usage
 
-### Development
+Import and use components in your React project:
 
-- Start component dev server: `npm run dev`
-- Launch Storybook for interactive docs: `npm run storybook`
+```tsx
+import React from 'react';
+import { Button } from 'berlin-ui-library';
+import 'berlin-ui-library/dist/style.css';
 
-### Building
+export const App = () => (
+  <Button onClick={() => alert('Clicked!')}>Click me</Button>
+);
+```
 
-- Build library bundle: `npm run build`
-- Compile styles: `npm run build:styles`
-- Preview production build: `npm run preview`
-- Generate Storybook static site: `npm run build-storybook`
+## Development
 
-## Linting
+Clone and start Storybook for interactive component development:
 
 ```bash
-npm run lint
+git clone <repository-url>
+cd berlin-ui-library
+npm install
+npm run dev
+```
+
+Runs Storybook at http://localhost:6006
+
+## Build
+
+Bundle library for production:
+
+```bash
+npm run build
 ```
 
 ## Tests
 
-Currently no automated tests available.
+Execute tests:
+
+```bash
+npm run test
+```
 
 ## Contributing
 
-Please open an issue to discuss major changes before creating a pull request. Ensure code follows existing patterns and passes linting.
+Before creating a pull request, please open an issue to discuss your changes.
 
-## License
+## Contributors
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+<!-- ALL-CONTRIBUTORS-LIST:START -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## Content Licensing
+
+Texts and content available under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+
+Illustrations by MARIA_MUSTERFRAU, all rights reserved.
+
+## Credits
+
+<table>
+  <tr>
+    <td>
+      Made by  <a href="https://www.technologiestiftung-berlin.de/">
+        <br />
+        <br />
+        <img width="150" src="https://logos.citylab-berlin.org/logo-technologiestiftung-berlin-de.svg" />
+      </a>
+    </td>
+    <td>
+      Supported by <a href="https://www.berlin.de/">
+        <br />
+        <br />
+        <img width="150" src="https://logos.citylab-berlin.org/logo-berlin.svg" />
+      </a>
+    </td>
+  </tr>
+</table>
