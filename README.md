@@ -24,12 +24,17 @@ npm install berlin-ui-library
 
 ## Usage
 
-Import and use components in your React project:
+Import global styles once in your entrypoint (e.g., `index.tsx`):
+
+```tsx
+import 'berlin-ui-library/dist/style.css';
+```
+
+Then use components anywhere in your app without re-importing styles:
 
 ```tsx
 import React from 'react';
 import { Button } from 'berlin-ui-library';
-import 'berlin-ui-library/dist/style.css';
 
 export const App = () => (
   <Button onClick={() => alert('Clicked!')}>Click me</Button>
