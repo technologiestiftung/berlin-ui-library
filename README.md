@@ -1,114 +1,54 @@
 ![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# {repo-template}
+# berlin-ui-library
 
-## TODO (after you generated the repo)
-
-- [ ] Review the content of the README.md and adjust to your liking
-- [ ] Read the README.md till the end and adjust the content licensing,
-      logos, etc (I know you stopped at tbd...)
-- [ ] Adjust the file [.github/CODEOWNERS](./.github/CODEOWNERS)
-- [ ] Adjust the files under [.github/ISSUE_TEMPLATE](./.github/ISSUE_TEMPLATE)
-- [ ] If you use staging and main branches use this template for [.github/renovate.json](./.github/renovate.json)
-
-```json
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>technologiestiftung/renovate-config"],
-  "baseBranches": ["staging"]
-}
-```
-
-- [ ] Do you want to honor all kinds of contributions? Use [all-contributors](https://allcontributors.org/)
-
-```bash
-npx all-contributors-cli check
-npx all-contributors-cli add github-name doc
-```
-
-You can use it on GitHub just by commenting on PRs and issues:
-
-```plain
-@all-contributors please add @github-name for infrastructure, tests and code
-```
-
-- [ ] Add your project description
-- [ ] Get fancy shields at https://shields.io
+A collection of reusable, accessible, and customizable UI components built with React, TypeScript, and Tailwind CSS. Powered by Vite and documented with Storybook. Supports dark mode, custom theming via CSS variables, and tree-shakeable bundling for npm.
 
 ## Prerequisites
 
-tbd...
+- Node.js >= 16
+- npm >= 8
 
 ## Installation
 
-tbd...
+```bash
+git clone https://github.com/your-org/berlin-ui-library.git
+cd berlin-ui-library
+npm install
+```
 
-## Usage or Deployment
+## Usage
 
-tbd...
+### Development
 
-## Development
+- Start component dev server: `npm run dev`
+- Launch Storybook for interactive docs: `npm run storybook`
 
-tbd...
+### Building
+
+- Build library bundle: `npm run build`
+- Compile styles: `npm run build:styles`
+- Preview production build: `npm run preview`
+- Generate Storybook static site: `npm run build-storybook`
+
+## Linting
+
+```bash
+npm run lint
+```
 
 ## Tests
 
-tbd...
+Currently no automated tests available.
 
 ## Contributing
 
-Before you create a pull request, write an issue so we can discuss your changes.
+Please open an issue to discuss major changes before creating a pull request. Ensure code follows existing patterns and passes linting.
 
-## Contributors
+## License
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-## Content Licensing
-
-Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/).
-
-Illustrations by {MARIA_MUSTERFRAU}, all rights reserved.
-
-## Credits
-
-<table>
-  <tr>
-    <td>
-      Made by  <a href="https://www.technologiestiftung-berlin.de/">
-        <br />
-        <br />
-        <img width="150" src="https://logos.citylab-berlin.org/logo-technologiestiftung-berlin-de.svg" />
-      </a>
-    </td>
-    <td>
-      Supported by <a href="https://www.berlin.de/">
-        <br />
-        <br />
-        <img width="150" src="https://logos.citylab-berlin.org/logo-berlin.svg" />
-      </a>
-    </td>
-  </tr>
-</table>
-
-## Related Projects
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
