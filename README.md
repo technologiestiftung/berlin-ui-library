@@ -18,8 +18,20 @@ A reusable, themeable, accessible React UI component library built with Vite, Ty
 
 ## Installation
 
+Install from npm registry:
+
 ```bash
 npm install berlin-ui-library
+```
+
+Or consume directly from this public GitHub repo (no npm publish required):
+
+```bash
+# via npm
+npm install github:technologiestiftung/berlin-ui-library
+
+# or via git+ssh
+npm install git+ssh://git@github.com/technologiestiftung/berlin-ui-library.git
 ```
 
 ## Usage
