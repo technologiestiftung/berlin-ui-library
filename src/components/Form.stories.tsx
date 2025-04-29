@@ -24,16 +24,17 @@ type Story = StoryObj<typeof Form>;
 
 export const Simple: Story = {
 	render: () => {
-		const methods = useForm({ defaultValues: { name: "" } });
+		type FormValues = { name: string };
+		const methods = useForm<FormValues>({ defaultValues: { name: "" } });
 		return (
 			<Form {...methods}>
 				<form
-					onSubmit={methods.handleSubmit((data) => console.log(data))}
+					onSubmit={methods.handleSubmit((data) => console.warn(data))}
 					className="space-y-4"
 				>
-					<FormField
+					<FormField<{ name: string }>
 						name="name"
-						control={methods.control as any}
+						control={methods.control}
 						render={({ field }) => (
 							<FormItem>
 								<FormLabel>Name</FormLabel>
@@ -58,7 +59,7 @@ export const WithError: Story = {
 			defaultValues: { name: "" },
 			mode: "onSubmit",
 			resolver: async (values) => ({
-				values: {},
+				values: values,
 				errors: values.name
 					? {}
 					: { name: { type: "required", message: "Name is required" } },
@@ -67,9 +68,9 @@ export const WithError: Story = {
 		return (
 			<Form {...methods}>
 				<form onSubmit={methods.handleSubmit(() => {})} className="space-y-4">
-					<FormField
+					<FormField<{ name: string }>
 						name="name"
-						control={methods.control as any}
+						control={methods.control}
 						render={({ field }) => (
 							<FormItem>
 								<FormLabel>Name</FormLabel>
@@ -90,13 +91,16 @@ export const WithError: Story = {
 
 export const Disabled: Story = {
 	render: () => {
-		const methods = useForm({ defaultValues: { name: "John Doe" } });
+		type FormValues = { name: string };
+		const methods = useForm<FormValues>({
+			defaultValues: { name: "John Doe" },
+		});
 		return (
 			<Form {...methods}>
 				<form className="space-y-4">
-					<FormField
+					<FormField<FormValues>
 						name="name"
-						control={methods.control as any}
+						control={methods.control}
 						render={({ field }) => (
 							<FormItem layout="vertical">
 								<FormLabel>Name</FormLabel>
@@ -113,19 +117,19 @@ export const Disabled: Story = {
 		);
 	},
 };
-
 export const Horizontal: Story = {
 	render: () => {
-		const methods = useForm({ defaultValues: { name: "" } });
+		type FormValues = { name: string };
+		const methods = useForm<FormValues>({ defaultValues: { name: "" } });
 		return (
 			<Form {...methods}>
 				<form
-					onSubmit={methods.handleSubmit((data) => console.log(data))}
+					onSubmit={methods.handleSubmit((data) => console.warn(data))}
 					className="space-y-4"
 				>
-					<FormField
+					<FormField<FormValues>
 						name="name"
-						control={methods.control as any}
+						control={methods.control}
 						render={({ field }) => (
 							<FormItem layout="horizontal">
 								<FormLabel>Name</FormLabel>
@@ -143,16 +147,16 @@ export const Horizontal: Story = {
 		);
 	},
 };
-
 export const Required: Story = {
 	render: () => {
-		const methods = useForm({ defaultValues: { name: "" } });
+		type FormValues = { name: string };
+		const methods = useForm<FormValues>({ defaultValues: { name: "" } });
 		return (
 			<Form {...methods}>
 				<form className="space-y-4">
-					<FormField
+					<FormField<FormValues>
 						name="name"
-						control={methods.control as any}
+						control={methods.control}
 						rules={{ required: true }}
 						render={({ field }) => (
 							<FormItem>
