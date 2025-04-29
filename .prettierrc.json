@@ -1,0 +1,19 @@
+{
+	"tabWidth": 2,
+	"semi": true,
+	"singleQuote": false,
+	"useTabs": true,
+	"trailingComma": "all",
+	"printWidth": 80,
+	"overrides": [
+		{
+			"files": ["*.yml", "*.yaml"],
+			"options": {
+				"useTabs": false
+			}
+		}
+	],
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"tailwindFunctions": ["cva"],
+	"tailwindStylesheet": "./src/style.css"
+}

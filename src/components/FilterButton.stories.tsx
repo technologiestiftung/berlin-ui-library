@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import FilterButton from './FilterButton';
+import type { Meta, StoryObj } from "@storybook/react";
+import FilterButton from "./FilterButton";
 
 const meta: Meta<typeof FilterButton> = {
-  title: 'Components/FilterButton',
-  component: FilterButton,
-  argTypes: { onClick: { action: 'clicked' } },
+	title: "Components/FilterButton",
+	component: FilterButton,
+	argTypes: { onClick: { action: "clicked" } },
 };
 export default meta;
 

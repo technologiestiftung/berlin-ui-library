@@ -7,6 +7,11 @@ import { peerDependencies, dependencies } from "./package.json"
 
 // https://vite.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
+  },
   plugins: [react(
     {'jsxRuntime': 'classic'}
   ), tailwindcss(), dts({
