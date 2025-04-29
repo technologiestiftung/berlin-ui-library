@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
 import { useForm } from "react-hook-form";
 import {
 	Form,
@@ -12,6 +11,9 @@ import {
 } from "./Form";
 import { Input } from "./Input";
 import { Button } from "./Button";
+
+// @ts-expect-error TS6133 - Required for Storybook setup despite react-jsx transform
+import * as React from "react";
 
 const meta: Meta<typeof Form> = {
 	title: "Components/Form",

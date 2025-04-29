@@ -4,16 +4,16 @@ import { cn } from "../../lib/utils";
 import * as React from "react";
 
 const buttonVariants = cva(
-	"ts:font-(--font-custom) ts:px-4 ts:py-2  ts:flex ts:justify-center ts:items-center ts:text-black",
+	"flex items-center justify-center px-4 py-2 font-(--font-custom) text-black",
 	{
 		variants: {
 			variant: {
 				default:
-					"ts:border-black ts:border-2 ts:opacity-100 ts:hover:opacity-50 ts:text-black",
-				link: "ts:text-link-blue  ts:hover:underline ts:cursor-pointer",
+					"border-2 border-black text-black opacity-100 hover:opacity-50",
+				link: "cursor-pointer text-link-blue hover:underline",
 			},
 			size: {
-				default: "ts:h-[43px] ts:w-fit",
+				default: "h-[43px] w-fit",
 			},
 		},
 		defaultVariants: {
@@ -46,7 +46,7 @@ function Button({
 			{...props}
 			onClick={onClick}
 		>
-			{icon && <span className="ts:mr-2">{icon}</span>}
+			{icon && <span className="mr-2">{icon}</span>}
 			{children}
 		</Comp>
 	);

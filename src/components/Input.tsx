@@ -4,17 +4,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const inputVariants = cva(
-	"relative pl-10 pr-20 placeholder-berlin-grey row-start-1 col-start-1 w-full h-[47px] border-2 border-black px-4 focus:outline-none focus:border-focus-blue focus:shadow-default rounded-none",
+	"relative col-start-1 row-start-1 h-[47px] w-full rounded-none border-2 border-black px-4 pr-20 pl-10 placeholder-berlin-grey focus:border-focus-blue focus:shadow-default focus:outline-none",
 	{
 		variants: {
 			variant: {
-				default: "ts:bg-background text-foreground",
+				default: "bg-background text-foreground",
 				outline: "bg-transparent",
 			},
 			size: {
-				sm: "h-8 text-sm px-2",
-				default: "h-9 text-base px-3",
-				lg: "h-10 text-lg px-4",
+				sm: "h-8 px-2 text-sm",
+				default: "h-9 px-3 text-base",
+				lg: "h-10 px-4 text-lg",
 			},
 		},
 		defaultVariants: {

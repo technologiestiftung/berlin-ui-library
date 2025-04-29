@@ -11,14 +11,14 @@ interface FilterButtonProps {
 }
 
 const filterButtonVariants = cva(
-	"ts:relative ts:px-3 ts:py-1 ts:border-black ts:border-2 ts:opacity-100 ts:hover:opacity-50 ts:flex ts:justify-center ts:items-center ts:text-black ts:h-[43px]",
+	"relative flex h-[43px] items-center justify-center border-2 border-black px-3 py-1 text-black opacity-100 hover:opacity-50",
 	{
 		variants: {
 			variant: {
-				default: "ts:bg-primary ts:text-white",
+				default: "bg-primary text-white",
 			},
 			size: {
-				default: "ts:h-[43px] ts:w-fit",
+				default: "h-[43px] w-fit",
 			},
 		},
 		defaultVariants: {
@@ -41,11 +41,11 @@ const FilterButton: React.FC<FilterButtonProps> = ({
 	return (
 		<>
 			<Comp className={cn(filterButtonVariants())} onClick={onClick}>
-				<div className="ts:flex ts:flex-row ts:gap-2 ts:items-center">
+				<div className="flex flex-row items-center gap-2">
 					<div>Filter</div>
 				</div>
 				{numActiveFilters > 0 && (
-					<div className="ts:absolute ts:-top-3 ts:-right-3 ts:w-6 ts:h-6 ts:rounded-full ts:bg-berlin-green ts:flex ts:flex-row ts:items-center ts:justify-center ts:text-white ts:font-bold">
+					<div className="absolute -top-3 -right-3 flex h-6 w-6 flex-row items-center justify-center rounded-full bg-berlin-green font-bold text-white">
 						{numActiveFilters}
 					</div>
 				)}

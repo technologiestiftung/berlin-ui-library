@@ -1,5 +1,5 @@
 @plugin "tailwindcss-animate";
-@import "tailwindcss" prefix(ts);
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -159,10 +159,10 @@
 
 @layer base {
 	* {
-		@apply ts:border-border;
+		@apply border-border;
 	}
 	body {
-		@apply ts:bg-background ts:text-foreground;
+		@apply bg-background text-foreground;
 		font-feature-settings:
 			"rlig" 1,
 			"calt" 1;

@@ -1,16 +1,16 @@
-import { Slot as r } from "@radix-ui/react-slot";
-import { cva as o } from "class-variance-authority";
-import { cn as i } from "./index.es6.js";
-import * as t from "react";
-const n = o(
-  "ts:px-4 ts:py-2 ts:border-black ts:w-fit ts:border-2 ts:opacity-100 ts:hover:opacity-50 ts:flex ts:justify-center ts:items-center ts:text-black ts:h-[43px]",
+import { Slot as c } from "@radix-ui/react-slot";
+import { cva as l } from "class-variance-authority";
+import { cn as p } from "./index.es6.js";
+import * as e from "react";
+const s = l(
+  "flex h-[43px] w-fit items-center justify-center border-2 border-black px-4 py-2 text-black opacity-100 hover:opacity-50",
   {
     variants: {
       variant: {
-        default: "ts:bg-primary ts:text-white"
+        default: "bg-primary text-white"
       },
       size: {
-        default: "ts:h-[43px] ts:w-fit"
+        default: "h-[43px] w-fit"
       }
     },
     defaultVariants: {
@@ -20,24 +20,27 @@ const n = o(
   }
 );
 function u({
-  className: c,
-  variant: l,
-  size: p,
-  asChild: s = !1,
-  ...e
+  className: a,
+  variant: o,
+  size: r,
+  asChild: i = !1,
+  ...t
 }) {
-  const a = s ? r : "button";
-  return /* @__PURE__ */ t.createElement(
-    a,
+  const n = i ? c : "button";
+  return /* @__PURE__ */ e.createElement(
+    n,
     {
-      className: i(n()),
-      onClick: e.onClick
+      className: p(
+        s({ variant: o, size: r, className: a })
+      ),
+      ...t,
+      onClick: t.onClick
     },
-    /* @__PURE__ */ t.createElement("span", { className: "ts:flex ts:flex-row ts:gap-1 ts:items-center" }, "Copy Address")
+    /* @__PURE__ */ e.createElement("span", { className: "flex flex-row items-center gap-1" }, "Copy Address")
   );
 }
 export {
   u as CopyToClipboardButton,
-  n as copyToClipboardButtonVariants
+  s as copyToClipboardButtonVariants
 };
 //# sourceMappingURL=index.es5.js.map

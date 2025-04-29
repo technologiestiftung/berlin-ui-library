@@ -1,5 +1,3 @@
-import React from "react";
-
 export function BarsIcon() {
 	return (
 		<svg

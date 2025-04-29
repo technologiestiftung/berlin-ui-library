@@ -4,14 +4,14 @@ import { cn } from "@/lib/utils";
 import * as React from "react";
 
 const copyToClipboardButtonVariants = cva(
-	"ts:px-4 ts:py-2 ts:border-black ts:w-fit ts:border-2 ts:opacity-100 ts:hover:opacity-50 ts:flex ts:justify-center ts:items-center ts:text-black ts:h-[43px]",
+	"flex h-[43px] w-fit items-center justify-center border-2 border-black px-4 py-2 text-black opacity-100 hover:opacity-50",
 	{
 		variants: {
 			variant: {
-				default: "ts:bg-primary ts:text-white",
+				default: "bg-primary text-white",
 			},
 			size: {
-				default: "ts:h-[43px] ts:w-fit",
+				default: "h-[43px] w-fit",
 			},
 		},
 		defaultVariants: {
@@ -42,9 +42,7 @@ function CopyToClipboardButton({
 			{...props}
 			onClick={props.onClick}
 		>
-			<span className="ts:flex ts:flex-row ts:gap-1 ts:items-center">
-				Copy Address
-			</span>
+			<span className="flex flex-row items-center gap-1">Copy Address</span>
 		</Comp>
 	);
 }

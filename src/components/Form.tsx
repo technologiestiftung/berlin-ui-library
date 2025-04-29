@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
@@ -80,8 +79,8 @@ const FormItemContext = React.createContext<FormItemContextValue>(
 const formItemVariants = cva("space-y-2", {
 	variants: {
 		layout: {
-			vertical: "ts:space-y-2 ts:flex ts:flex-col ts:bg-white",
-			horizontal: "ts:flex ts:items-center ts:space-x-4",
+			vertical: "flex flex-col space-y-2 bg-white",
+			horizontal: "flex items-center space-x-4",
 		},
 	},
 	defaultVariants: {
@@ -116,12 +115,12 @@ const FormLabel = React.forwardRef<
 	return (
 		<Label
 			ref={ref}
-			className={cn(error && "ts:font-bold ts:text-destructive", className)}
+			className={cn(error && "font-bold text-destructive", className)}
 			htmlFor={formItemId}
 			{...props}
 		>
 			{children}
-			{required && <span className="ts:ml-1 ts:text-destructive">*</span>}
+			{required && <span className="ml-1 text-destructive">*</span>}
 		</Label>
 	);
 });
@@ -138,7 +137,7 @@ const FormControl = React.forwardRef<
 		<Slot
 			ref={ref}
 			id={formItemId}
-			className="ts:border-2 ts:border-black ts:bg-white ts:p-2"
+			className="border-2 border-black bg-white p-2"
 			aria-describedby={
 				!error
 					? `${formDescriptionId}`
@@ -161,7 +160,7 @@ const FormDescription = React.forwardRef<
 		<p
 			ref={ref}
 			id={formDescriptionId}
-			className={cn("ts:text-sm ts:text-muted-foreground", className)}
+			className={cn("text-sm text-muted-foreground", className)}
 			{...props}
 		/>
 	);
@@ -183,7 +182,7 @@ const FormMessage = React.forwardRef<
 		<p
 			ref={ref}
 			id={formMessageId}
-			className={cn("ts:text-sm ts:font-medium ts:text-destructive", className)}
+			className={cn("text-sm font-medium text-destructive", className)}
 			{...props}
 		>
 			{body}

@@ -7,7 +7,7 @@ import ArrowRightIcon from "./icons/arrow-right-icon";
 
 const submitButtonVariants = cva(
 	// Base styles for the button container
-	"ts:inline-flex ts:items-center ts:justify-between ts:w-full ts:h-[47px] ts:border-2 ts:border-black ts:bg-white ts:text-black ts:font-medium ts:whitespace-nowrap ts:text-sm ts:transition-[color,box-shadow] ts:disabled:pointer-events-none ts:disabled:opacity-50 ts:outline-none ts:focus-visible:border-focus-blue ts:focus-visible:ring-ring/50 ts:focus-visible:ring-[3px] ts:rounded-none",
+	"inline-flex h-[47px] w-full items-center justify-between rounded-none border-2 border-black bg-white text-sm font-medium whitespace-nowrap text-black transition-[color,box-shadow] outline-none focus-visible:border-focus-blue focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50",
 	{
 		variants: {
 			variant: {
@@ -40,10 +40,10 @@ function SubmitButton({
 			{...props}
 		>
 			{/* Text part */}
-			<span className="ts:pl-4">{children}</span>
+			<span className="pl-4">{children}</span>
 			{/* Icon part (red square) */}
-			<div className="ts:h-full ts:flex ts:items-center ts:justify-center ts:bg-[#D12121] ts:px-3">
-				<div className="ts:text-white ts:size-4">
+			<div className="flex h-full items-center justify-center bg-[#D12121] px-3">
+				<div className="size-4 text-white">
 					<ArrowRightIcon color="white"></ArrowRightIcon>
 				</div>
 			</div>

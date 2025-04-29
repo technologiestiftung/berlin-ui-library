@@ -1,5 +1,3 @@
-import React from "react";
-
 export function ChevronDown({ className }: { className?: string }) {
 	return (
 		<svg

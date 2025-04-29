@@ -1,0 +1,4 @@
+import { default as React } from '../../../node_modules/react';
+declare const ArrowLeftIcon: React.FC;
+export default ArrowLeftIcon;
+//# sourceMappingURL=arrow-left-icon.d.ts.map

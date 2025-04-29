@@ -1,24 +1,29 @@
-import * as o from "react";
+import * as s from "react";
 import { Slot as a } from "@radix-ui/react-slot";
 import { cva as d } from "class-variance-authority";
 import { cn as c } from "./index.es6.js";
 const u = d(
-  "ts:inline-flex ts:items-center ts:justify-centerts: ts:gap-2 ts:whitespace-nowrap ts:rounded-md ts:text-sm ts:font-medium ts:transition-[color,box-shadow] ts:disabled:pointer-events-none ts:disabled:opacity-50 ts:[&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 ts:shrink-0 [&_svg]:ts:shrink-0 ts:outline-none ts:focus-visible:ts:border-ring ts:focus-visible:ts:ring-ring/50 ts:focus-visible:ts:ring-[3px] aria-invalid:ts:ring-destructive/20 dark:aria-invalid:ts:ring-destructive/40 aria-invalid:ts:border-destructive",
+  // base: replace global .button styles with Tailwind
+  "relative inline-flex cursor-pointer items-center justify-center gap-2 overflow-visible text-base leading-[1.2] font-medium whitespace-nowrap transition-colors duration-200 ease-out outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-destructive/40",
   {
     variants: {
       variant: {
-        default: "ts:text-link-blue ts:flex ts:justify-center ts:items-center ts:w-fit ts:h-[43px] ts:hover:underline",
-        destructive: "ts:bg-destructive ts:text-white ts:shadow-xs ts:hover:bg-destructive/90 ts:focus-visible:ring-destructive/20 dark:ts:focus-visible:ts:ring-destructive/40",
-        outline: "ts:border ts:border-input ts:bg-background ts:shadow-xs ts:hover:bg-accent ts:hover:text-accent-foreground",
-        secondary: "ts:bg-secondary ts:text-secondary-foreground ts:shadow-xs ts:hover:bg-secondary/80",
-        ghost: "ts:hover:bg-accent ts:hover:text-accent-foreground",
-        link: "ts:text-primary ts:underline-offset-4 ts:hover:underline"
+        default: "border-2 ts:border-black flex h-[43px] w-fit items-center justify-center text-link-blue text-white hover:underline",
+        destructive: "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
+        outline: "border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+        "vertical-shop": (
+          // convert .button + .button--vertical-shop CSS to Tailwind
+          "flex min-h-[43px] w-auto items-center justify-center rounded-none border-2 border-black bg-white px-[10px] py-[10px] pr-[59px] text-black no-underline hover:bg-gray-200 focus:bg-gray-200"
+        )
       },
       size: {
-        default: "ts:h-9 ts:px-4 ts:py-2 ts:has-[>svg]:px-3",
-        sm: "ts:h-8 ts:rounded-md ts:gap-1.5 ts:px-3 ts:has-[>svg]:px-2.5",
-        lg: "ts:h-10 ts:rounded-md ts:px-6 ts:has-[>svg]:px-4",
-        icon: "ts:size-9"
+        default: "h-9 px-4 py-2 has-[>svg]:px-3",
+        sm: "h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5",
+        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        icon: "size-9"
       }
     },
     defaultVariants: {
@@ -28,18 +33,18 @@ const u = d(
   }
 );
 function f({
-  className: t,
-  variant: s,
-  size: e,
-  asChild: r = !1,
+  className: e,
+  variant: t,
+  size: r,
+  asChild: o = !1,
   ...i
 }) {
-  const n = r ? a : "button";
-  return /* @__PURE__ */ o.createElement(
+  const n = o ? a : "button";
+  return /* @__PURE__ */ s.createElement(
     n,
     {
       "data-slot": "button",
-      className: c(u({ variant: s, size: e, className: t })),
+      className: c(u({ variant: t, size: r, className: e })),
       ...i
     }
   );
