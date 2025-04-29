@@ -278,6 +278,9 @@
       max-width: 120rem;
     }
   }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
   }
