@@ -1,22 +1,22 @@
-import a from "./index.es31.js";
-import { useLanguage as i, t as n } from "./index.es4.js";
-function r({
-  onOpenAccessibility: t,
-  className: c = ""
-}) {
-  const { translations: l } = i(), e = n("accessibility", l);
-  return /* @__PURE__ */ React.createElement(
+import { j as e } from "./index.es4.js";
+import s from "./index.es28.js";
+import { useLanguage as a, t as l } from "./index.es5.js";
+function u({ onOpenMenu: n, className: o = "" }) {
+  const { translations: r } = a(), t = l("menu", r);
+  return /* @__PURE__ */ e.jsxs(
     "button",
     {
-      className: `flex flex-col items-center gap-1 text-[11px] leading-3 ${c}`,
-      onClick: t,
-      "aria-label": e
-    },
-    /* @__PURE__ */ React.createElement(a, null),
-    e
+      className: `flex flex-col items-center gap-1 text-[11px] leading-3 ${o}`,
+      onClick: n,
+      "aria-label": t,
+      children: [
+        /* @__PURE__ */ e.jsx(s, {}),
+        t
+      ]
+    }
   );
 }
 export {
-  r as AccessibilityButton
+  u as MenuButton
 };
 //# sourceMappingURL=index.es27.js.map

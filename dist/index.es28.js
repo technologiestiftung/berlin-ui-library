@@ -1,13 +1,6 @@
-import { SearchBar as l } from "./index.es32.js";
-import { useLanguage as m, t as o } from "./index.es4.js";
-import { Drawer as s, DrawerContent as f } from "./index.es6.js";
-function u({ isOpen: r, close: t, onSearch: a }) {
-  const { translations: c } = m(), n = (e) => {
-    a && a(e), t();
-  };
-  return /* @__PURE__ */ React.createElement(s, { open: r, onOpenChange: (e) => !e && t() }, /* @__PURE__ */ React.createElement(f, { size: "large", className: "flex flex-col gap-4" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-row justify-center" }, /* @__PURE__ */ React.createElement("div", { className: "mt-[10vh] flex w-full flex-col gap-2 px-4 md:mt-[30vh] md:w-[50%]" }, /* @__PURE__ */ React.createElement("h1", { className: "font-bold" }, o("search.title", c) || "Suche auf der Internetseite"), /* @__PURE__ */ React.createElement(l, { onSearch: n })))));
-}
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "menu-icon", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 28 32", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M1,8.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,18.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,28.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1Z" }));
 export {
-  u as SearchMenu
+  t as default
 };
 //# sourceMappingURL=index.es28.js.map

@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const n=require("./index.cjs19.js"),l=require("./index.cjs7.js");function c({showBreadcrumbs:e,breadcrumbs:r,showLanguageSelect:t,LinkComponent:a}){return!e&&!t?null:React.createElement("div",{className:"bg-berlin-grey-light px-4 shadow-inner lg:px-0"},React.createElement("div",{className:"mx-auto flex max-w-[980px] justify-between"},e&&React.createElement(l.Breadcrumbs,{items:r,LinkComponent:a}),t&&React.createElement(n.LanguageSelect,null)))}exports.SubHeaderBar=c;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e={exports:{}};exports.__module=e;
 //# sourceMappingURL=index.cjs18.js.map

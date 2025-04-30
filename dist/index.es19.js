@@ -1,59 +1,36 @@
-import e, { useState as m, useRef as u } from "react";
-import f from "./index.es20.js";
-import d from "./index.es21.js";
-import { useLanguage as p, t as b } from "./index.es4.js";
-function g(a, t) {
-  e.useEffect(() => {
-    const n = (l) => {
-      a.current && !a.current.contains(l.target) && t(!1);
+import { __exports as e } from "./index.es36.js";
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var s;
+function a() {
+  if (s) return e;
+  s = 1;
+  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
+  function o(l, r, t) {
+    var u = null;
+    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
+      t = {};
+      for (var n in r)
+        n !== "key" && (t[n] = r[n]);
+    } else t = r;
+    return r = t.ref, {
+      $$typeof: i,
+      type: l,
+      key: u,
+      ref: r !== void 0 ? r : null,
+      props: t
     };
-    return document.addEventListener("mousedown", n), () => {
-      document.removeEventListener("mousedown", n);
-    };
-  }, [a, t]);
-}
-function C({ className: a = "" }) {
-  const [t, n] = m(!1), l = u(null), { currentLanguage: r, languages: c, translations: o, setLanguage: i } = p();
-  return g(
-    l,
-    n
-  ), /* @__PURE__ */ e.createElement(
-    "div",
-    {
-      className: `relative z-[10] text-black ${a}`,
-      ref: l
-    },
-    /* @__PURE__ */ e.createElement(
-      "button",
-      {
-        className: "flex items-center",
-        onClick: () => n(!t),
-        "aria-label": b(t ? "collapse" : "expand", o),
-        "aria-expanded": t
-      },
-      /* @__PURE__ */ e.createElement("span", { className: "flex size-6 items-center justify-center bg-berlin-pink text-[11px] font-bold" }, r.toLowerCase()),
-      /* @__PURE__ */ e.createElement("span", { className: "pointer-events-none flex size-8 items-center justify-center" }, t ? /* @__PURE__ */ e.createElement(d, { className: "text-berlin-green" }) : /* @__PURE__ */ e.createElement(f, { className: "text-berlin-green" }))
-    ),
-    /* @__PURE__ */ e.createElement(
-      "div",
-      {
-        className: `${t ? "block" : "hidden"} absolute top-8 right-0 bg-white shadow-lg`
-      },
-      /* @__PURE__ */ e.createElement("ul", null, c.map((s) => /* @__PURE__ */ e.createElement("li", { key: s.code }, /* @__PURE__ */ e.createElement(
-        "button",
-        {
-          className: "block flex w-full gap-2 px-2 py-1 text-base hover:bg-gray-100",
-          onClick: () => {
-            i(s.code), n(!1);
-          }
-        },
-        /* @__PURE__ */ e.createElement("span", { className: "flex size-6 items-center justify-center bg-berlin-pink text-[11px] font-bold" }, s.code.toLowerCase()),
-        s.label
-      ))))
-    )
-  );
+  }
+  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
 }
 export {
-  C as LanguageSelect
+  a as __require
 };
 //# sourceMappingURL=index.es19.js.map

@@ -1,6 +1,18 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "menu-icon", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 28 32", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M1,8.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,18.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,28.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1Z" }));
+import { j as r } from "./index.es4.js";
+import { LanguageSelect as x } from "./index.es24.js";
+import { Breadcrumbs as m } from "./index.es8.js";
+function o({
+  showBreadcrumbs: e,
+  breadcrumbs: t,
+  showLanguageSelect: i,
+  LinkComponent: s
+}) {
+  return !e && !i ? null : /* @__PURE__ */ r.jsx("div", { className: "bg-berlin-grey-light px-4 shadow-inner lg:px-0", children: /* @__PURE__ */ r.jsxs("div", { className: "mx-auto flex max-w-[980px] justify-between", children: [
+    e && /* @__PURE__ */ r.jsx(m, { items: t, LinkComponent: s }),
+    i && /* @__PURE__ */ r.jsx(x, {})
+  ] }) });
+}
 export {
-  t as default
+  o as SubHeaderBar
 };
 //# sourceMappingURL=index.es23.js.map

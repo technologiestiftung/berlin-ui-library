@@ -14,7 +14,7 @@ export default defineConfig({
 		},
 	},
 	plugins: [
-		react({ jsxRuntime: "classic" }),
+		react({ jsxRuntime: "automatic" }),
 		tailwindcss(),
 		dts({
 			include: ["src/**/*"],
@@ -43,13 +43,15 @@ export default defineConfig({
 				preserveModulesRoot: "src",
 				assetFileNames: (assetInfo) => {
 					// Place fonts in a dedicated directory
-					if (assetInfo.name.endsWith('.woff') || 
-						assetInfo.name.endsWith('.woff2') || 
-						assetInfo.name.endsWith('.eot')) {
-						return 'fonts/[name][extname]';
+					if (
+						assetInfo?.name?.endsWith(".woff") ||
+						assetInfo?.name?.endsWith(".woff2") ||
+						assetInfo?.name?.endsWith(".eot")
+					) {
+						return "fonts/[name][extname]";
 					}
 					// Place other assets in an assets directory
-					return 'assets/[name][extname]';
+					return "assets/[name][extname]";
 				},
 			},
 		},

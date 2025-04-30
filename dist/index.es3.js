@@ -1,72 +1,74 @@
-import e from "react";
-import { LogoBar as x } from "./index.es16.js";
-import { MainHeaderContent as B } from "./index.es17.js";
-import { SubHeaderBar as H } from "./index.es18.js";
-import { LanguageProvider as L } from "./index.es4.js";
+import { j as e } from "./index.es4.js";
+import { LogoBar as w } from "./index.es21.js";
+import { MainHeaderContent as B } from "./index.es22.js";
+import { SubHeaderBar as H } from "./index.es23.js";
+import { LanguageProvider as L } from "./index.es5.js";
 function v({
-  header: t = "Design System",
-  caption: r = "Berlin.de",
-  url: a = "/",
-  logoUrl: n = "https://www.berlin.de",
-  logoComponent: i,
-  LinkComponent: o,
-  breadcrumbs: l = [],
-  showBreadcrumbs: m = !0,
-  showLanguageSelect: c = !0,
-  language: d = "de",
+  header: r = "Design System",
+  caption: t = "Berlin.de",
+  url: i = "/",
+  logoUrl: o = "https://www.berlin.de",
+  logoComponent: a,
+  LinkComponent: n,
+  breadcrumbs: s = [],
+  showBreadcrumbs: d = !0,
+  showLanguageSelect: l = !0,
+  language: m = "de",
   languages: u = [
     { code: "de", label: "Deutsch" },
     { code: "en", label: "English" }
   ],
-  translations: g,
-  onLanguageChange: p = () => {
+  translations: x,
+  onLanguageChange: g = () => {
   },
-  showSearchButton: s = !0,
-  onSearch: f = () => {
+  showSearchButton: p = !0,
+  onSearch: c = () => {
   },
-  showMenuButton: E = !0,
-  menuItems: b = [],
-  onOpenMenu: h = () => {
+  showMenuButton: h = !0,
+  menuItems: j = [],
+  onOpenMenu: f = () => {
   },
-  className: w = ""
+  className: b = ""
 }) {
-  return /* @__PURE__ */ e.createElement(
+  return /* @__PURE__ */ e.jsx(
     L,
     {
-      initialLanguage: d,
+      initialLanguage: m,
       languages: u,
-      translations: g,
-      onLanguageChange: p
-    },
-    /* @__PURE__ */ e.createElement(
-      "header",
-      {
-        className: `sticky top-0 z-[20] bg-white text-xl leading-[122.2%] tracking-[0.3px] ${w}`
-      },
-      /* @__PURE__ */ e.createElement(x, { logoUrl: n, logoComponent: i }),
-      /* @__PURE__ */ e.createElement(
-        B,
+      translations: x,
+      onLanguageChange: g,
+      children: /* @__PURE__ */ e.jsxs(
+        "header",
         {
-          header: t,
-          caption: r,
-          url: a,
-          showSearchButton: s,
-          onSearch: f,
-          showMenuButton: E,
-          menuItems: b,
-          onOpenMenu: h
-        }
-      ),
-      /* @__PURE__ */ e.createElement(
-        H,
-        {
-          showBreadcrumbs: m,
-          breadcrumbs: l,
-          showLanguageSelect: c,
-          LinkComponent: o
+          className: `sticky top-0 z-[20] bg-white text-xl leading-[122.2%] tracking-[0.3px] ${b}`,
+          children: [
+            /* @__PURE__ */ e.jsx(w, { logoUrl: o, logoComponent: a }),
+            /* @__PURE__ */ e.jsx(
+              B,
+              {
+                header: r,
+                caption: t,
+                url: i,
+                showSearchButton: p,
+                onSearch: c,
+                showMenuButton: h,
+                menuItems: j,
+                onOpenMenu: f
+              }
+            ),
+            /* @__PURE__ */ e.jsx(
+              H,
+              {
+                showBreadcrumbs: d,
+                breadcrumbs: s,
+                showLanguageSelect: l,
+                LinkComponent: n
+              }
+            )
+          ]
         }
       )
-    )
+    }
   );
 }
 export {

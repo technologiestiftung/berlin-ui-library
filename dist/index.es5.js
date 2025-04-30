@@ -1,37 +1,76 @@
-import * as t from "react";
-import { cva as s } from "class-variance-authority";
-import { cn as u } from "./index.es11.js";
-const p = s(
-  "relative col-start-1 row-start-1 h-[47px] w-full rounded-none border-2 border-black px-4 pr-20 pl-10 placeholder-berlin-grey focus:border-focus-blue focus:shadow-default focus:outline-none",
-  {
-    variants: {
-      variant: {
-        default: "bg-background text-foreground",
-        outline: "bg-transparent"
+import { j as b } from "./index.es4.js";
+import { createContext as d, useState as f, useContext as y } from "react";
+const m = [
+  { code: "de", label: "Deutsch" },
+  { code: "en", label: "English" }
+], M = {
+  de: {
+    accessibility: "Barrierefreiheit",
+    menu: "Menü",
+    search: "Suche",
+    expand: "Erweitern",
+    collapse: "Einklappen",
+    closeMenu: "Menü schließen",
+    accessibilityMenu: "Barrierefreiheit-Menü",
+    "accessibilityMenu.title": "Barrierefreiheit",
+    "button.name.close": "Schließen",
+    "accessibilityMenu.barrierefreiheit.question": "Informationen zur Barrierefreiheit:",
+    "accessibilityMenu.barrierefreiheit": "Barrierefreiheitserklärung",
+    "accessibilityMenu.contact.question": "Problem mit der Barrierefreiheit melden:",
+    "accessibilityMenu.contact": "Kontakt",
+    "accessibilityMenu.additionalInfo.question": "Weitere Informationen:",
+    "accessibilityMenu.additionalInfo": "Kompetenzstelle für Barrierefreiheit"
+  },
+  en: {
+    accessibility: "Accessibility",
+    menu: "Menu",
+    search: "Search",
+    expand: "Expand",
+    collapse: "Collapse",
+    closeMenu: "Close menu",
+    accessibilityMenu: "Accessibility menu",
+    "accessibilityMenu.title": "Accessibility",
+    "button.name.close": "Close",
+    "accessibilityMenu.barrierefreiheit.question": "Accessibility information:",
+    "accessibilityMenu.barrierefreiheit": "Accessibility statement",
+    "accessibilityMenu.contact.question": "Report an accessibility issue:",
+    "accessibilityMenu.contact": "Contact",
+    "accessibilityMenu.additionalInfo.question": "Additional information:",
+    "accessibilityMenu.additionalInfo": "Competence center for accessibility"
+  }
+}, a = d(
+  void 0
+), p = () => {
+  const e = y(a);
+  if (!e)
+    throw new Error("useLanguage must be used within a LanguageProvider");
+  return e;
+}, x = ({
+  children: e,
+  initialLanguage: i = "de",
+  languages: c = m,
+  translations: t = M,
+  onLanguageChange: n
+}) => {
+  const [s, o] = f(i), l = () => t[s] || t.de || {}, u = (r) => {
+    o(r), n && n(r);
+  };
+  return /* @__PURE__ */ b.jsx(
+    a.Provider,
+    {
+      value: {
+        currentLanguage: s,
+        languages: c,
+        translations: l(),
+        setLanguage: u
       },
-      size: {
-        sm: "h-8 px-2 text-sm",
-        default: "h-9 px-3 text-base",
-        lg: "h-10 px-4 text-lg"
-      }
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
+      children: e
     }
-  }
-), d = t.forwardRef(({ className: e, type: r, variant: a, size: o, ...n }, l) => /* @__PURE__ */ t.createElement(
-  "input",
-  {
-    type: r,
-    className: u(p({ variant: a, size: o, className: e })),
-    ref: l,
-    ...n
-  }
-));
-d.displayName = "Input";
+  );
+}, C = (e, i) => i[e] || e;
 export {
-  d as Input,
-  p as inputVariants
+  x as LanguageProvider,
+  C as t,
+  p as useLanguage
 };
 //# sourceMappingURL=index.es5.js.map
