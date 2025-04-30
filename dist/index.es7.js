@@ -1,22 +1,12 @@
 import e from "react";
-const l = () => /* @__PURE__ */ e.createElement(
-  "svg",
-  {
-    width: "21",
-    height: "19",
-    viewBox: "0 0 21 19",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
-  },
-  /* @__PURE__ */ e.createElement(
-    "path",
-    {
-      d: "M10.4087 18.9365L0.9375 9.50049L10.4087 0.0634766L12.5259 2.18848L6.69336 8H20.5127V11H6.69287L12.5259 16.8115L10.4087 18.9365Z",
-      fill: "black"
-    }
-  )
-);
+import t from "./index.es19.js";
+function m({
+  logoUrl: r = "https://www.berlin.de",
+  logoComponent: a
+}) {
+  return /* @__PURE__ */ e.createElement("div", { className: "h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] md:px-6" }, /* @__PURE__ */ e.createElement("a", { href: r, "aria-label": "Homepage Berlin.de" }, a || /* @__PURE__ */ e.createElement("img", { src: t, alt: "Berlin.de Logo", className: "h-8 w-auto" })));
+}
 export {
-  l as default
+  m as LogoBar
 };
 //# sourceMappingURL=index.es7.js.map

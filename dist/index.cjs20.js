@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const l=require("./index.cjs24.js"),t=require("./index.cjs10.js");function n({onOpenAccessibility:i,className:c=""}){const{translations:a}=t.useLanguage(),e=t.t("accessibility",a);return React.createElement("button",{className:`flex flex-col items-center gap-1 text-[11px] leading-3 ${c}`,onClick:i,"aria-label":e},React.createElement(l.default,null),e)}exports.AccessibilityButton=n;
+//# sourceMappingURL=index.cjs20.js.map

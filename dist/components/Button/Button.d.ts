@@ -1,9 +1,9 @@
+import { VariantProps } from 'class-variance-authority';
 import * as React from "react";
-import { type VariantProps } from "class-variance-authority";
 declare const buttonVariants: (props?: ({
     variant?: "default" | "search" | "link" | "filter" | "light" | "white" | "fulltone" | "negative" | "colored" | "clean" | "play" | "download" | "addtocart" | "close" | "extern" | "light-fulltone" | "negative-light" | null | undefined;
     size?: "default" | "fullwidth" | "fullwidth-palm" | null | undefined;
-} & import("class-variance-authority/types").ClassProp) | undefined) => string;
+} & import('class-variance-authority/types').ClassProp) | undefined) => string;
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
     asChild?: boolean;
     booking?: boolean;

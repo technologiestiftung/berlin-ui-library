@@ -1,54 +1,59 @@
-import * as e from "react";
-import { Slot as a } from "@radix-ui/react-slot";
-import { cva as c } from "class-variance-authority";
-import { cn as d } from "./index.es6.js";
-import l from "./index.es7.js";
-const u = c(
-  "justify-centerts: inline-flex shrink-0 items-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-  {
-    variants: {
-      variant: {
-        default: "font[var(--font-custom] flex items-center justify-center font-(--font-custom) text-link-blue hover:underline",
-        destructive: "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
-        outline: "border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline"
-      },
-      size: {
-        default: "h-[43px] w-fit",
-        sm: "h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9"
-      }
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
-    }
-  }
-);
-function b({
-  className: r,
-  variant: n,
-  size: i,
-  asChild: o = !1,
-  ...t
-}) {
-  const s = o ? a : "button";
-  return /* @__PURE__ */ e.createElement(
-    s,
+import e, { useState as m, useRef as u } from "react";
+import f from "./index.es15.js";
+import d from "./index.es16.js";
+import { useLanguage as p, t as b } from "./index.es10.js";
+function g(a, t) {
+  e.useEffect(() => {
+    const n = (l) => {
+      a.current && !a.current.contains(l.target) && t(!1);
+    };
+    return document.addEventListener("mousedown", n), () => {
+      document.removeEventListener("mousedown", n);
+    };
+  }, [a, t]);
+}
+function C({ className: a = "" }) {
+  const [t, n] = m(!1), l = u(null), { currentLanguage: r, languages: c, translations: o, setLanguage: i } = p();
+  return g(
+    l,
+    n
+  ), /* @__PURE__ */ e.createElement(
+    "div",
     {
-      "data-slot": "button",
-      className: d(u({ variant: n, size: i, className: r })),
-      onClick: t.onClick,
-      ...t
+      className: `relative z-[10] text-black ${a}`,
+      ref: l
     },
-    /* @__PURE__ */ e.createElement("div", { className: "col-start-1 row-start-1 flex flex-row items-center gap-2" }, /* @__PURE__ */ e.createElement("div", { className: "scale-75" }, /* @__PURE__ */ e.createElement(l, null)), /* @__PURE__ */ e.createElement("div", { className: "" }, t.title))
+    /* @__PURE__ */ e.createElement(
+      "button",
+      {
+        className: "flex items-center",
+        onClick: () => n(!t),
+        "aria-label": b(t ? "collapse" : "expand", o),
+        "aria-expanded": t
+      },
+      /* @__PURE__ */ e.createElement("span", { className: "flex size-6 items-center justify-center bg-berlin-pink text-[11px] font-bold" }, r.toLowerCase()),
+      /* @__PURE__ */ e.createElement("span", { className: "pointer-events-none flex size-8 items-center justify-center" }, t ? /* @__PURE__ */ e.createElement(d, { className: "text-berlin-green" }) : /* @__PURE__ */ e.createElement(f, { className: "text-berlin-green" }))
+    ),
+    /* @__PURE__ */ e.createElement(
+      "div",
+      {
+        className: `${t ? "block" : "hidden"} absolute top-8 right-0 bg-white shadow-lg`
+      },
+      /* @__PURE__ */ e.createElement("ul", null, c.map((s) => /* @__PURE__ */ e.createElement("li", { key: s.code }, /* @__PURE__ */ e.createElement(
+        "button",
+        {
+          className: "block flex w-full gap-2 px-2 py-1 text-base hover:bg-gray-100",
+          onClick: () => {
+            i(s.code), n(!1);
+          }
+        },
+        /* @__PURE__ */ e.createElement("span", { className: "flex size-6 items-center justify-center bg-berlin-pink text-[11px] font-bold" }, s.code.toLowerCase()),
+        s.label
+      ))))
+    )
   );
 }
 export {
-  b as BackButton,
-  u as backButtonVariants
+  C as LanguageSelect
 };
 //# sourceMappingURL=index.es4.js.map

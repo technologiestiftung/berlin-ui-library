@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("clsx"),t=require("tailwind-merge");function n(...e){return t.twMerge(r.clsx(e))}exports.cn=n;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const c=require("./index.cjs18.js"),t=require("./index.cjs10.js");function l({onOpenSearch:a,className:n=""}){const{translations:r}=t.useLanguage(),e=t.t("search",r);return React.createElement("button",{className:`flex flex-col items-center gap-1 text-[11px] leading-3 ${n}`,onClick:a,"aria-label":e},React.createElement(c.SearchIconLarge,null),e)}exports.SearchButton=l;
 //# sourceMappingURL=index.cjs6.js.map
