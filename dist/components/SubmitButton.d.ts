@@ -1,8 +1,8 @@
-import { VariantProps } from 'class-variance-authority';
 import * as React from "react";
+import { type VariantProps } from "class-variance-authority";
 declare const submitButtonVariants: (props?: ({
     variant?: "default" | null | undefined;
-} & import('class-variance-authority/types').ClassProp) | undefined) => string;
+} & import("class-variance-authority/types").ClassProp) | undefined) => string;
 declare function SubmitButton({ className, variant, children, asChild, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & // Use ButtonHTMLAttributes
 VariantProps<typeof submitButtonVariants> & {
     asChild?: boolean;

@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { default as FilterButton } from './FilterButton';
+import type { Meta, StoryObj } from "@storybook/react";
+import FilterButton from "./FilterButton";
 declare const meta: Meta<typeof FilterButton>;
 export default meta;
 type Story = StoryObj<typeof FilterButton>;

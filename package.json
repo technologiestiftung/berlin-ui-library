@@ -14,7 +14,7 @@
 		"dev": "vite",
 		"build": "tsc && vite build && npm run build:styles && npm run copy:assets",
 		"build:styles": "npx @tailwindcss/cli -i ./src/style.css -o ./dist/style.css",
-		"copy:assets": "copyfiles -u 1 \"src/fonts/**/*\" dist",
+		"copy:assets": "copyfiles -u 1 \"src/fonts/**/*\" \"src/assets/**/*\" dist",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
@@ -45,7 +45,8 @@
 		"storybook": "^8.6.12",
 		"typescript": "~5.7.2",
 		"typescript-eslint": "^8.26.1",
-		"vite": "^6.2.0"
+		"vite": "^6.2.0",
+		"vite-plugin-svgr": "^4.3.0"
 	},
 	"peerDependencies": {
 		"react": "^19.0.0",
@@ -54,6 +55,7 @@
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^5.0.1",
+		"@radix-ui/react-dialog": "^1.1.11",
 		"@radix-ui/react-label": "^2.1.4",
 		"@radix-ui/react-slot": "^1.2.0",
 		"@tailwindcss/cli": "^4.0.13",
@@ -69,6 +71,7 @@
 		"tailwind-merge": "^3.0.2",
 		"tailwindcss": "^4.0.13",
 		"tailwindcss-animate": "^1.0.7",
+		"vaul": "^1.1.2",
 		"vite-plugin-dts": "^4.5.3",
 		"zod": "^3.24.3"
 	}

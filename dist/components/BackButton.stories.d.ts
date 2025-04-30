@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { BackButton } from './BackButton';
 declare const meta: Meta<typeof BackButton>;
 export default meta;

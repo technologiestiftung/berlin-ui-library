@@ -1,0 +1,1 @@
+{"version":3,"file":"MenuButton.d.ts","sourceRoot":"","sources":["../../../src/components/Header/MenuButton.tsx"],"names":[],"mappings":"AAIA,MAAM,WAAW,eAAe;IAC/B;;OAEG;IACH,UAAU,EAAE,MAAM,IAAI,CAAC;IACvB;;OAEG;IACH,SAAS,CAAC,EAAE,MAAM,CAAC;CACnB;AAED,wBAAgB,UAAU,CAAC,EAAE,UAAU,EAAE,SAAc,EAAE,EAAE,eAAe,2CAczE"}

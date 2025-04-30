@@ -28,10 +28,11 @@
 		"noUncheckedSideEffectImports": true,
 		"skipLibCheck": true,
 		"jsx": "react-jsx",
+		"jsxImportSource": "react",
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"]
 		}
 	},
-	"include": ["src"]
+	"include": ["src", "src/env.d.ts", "src/vite-env.d.ts"]
 }

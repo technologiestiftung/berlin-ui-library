@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { SubmitButton } from './SubmitButton';
+import type { Meta, StoryObj } from "@storybook/react";
+import { SubmitButton } from "./SubmitButton";
 declare const meta: Meta<typeof SubmitButton>;
 export default meta;
 type Story = StoryObj<typeof SubmitButton>;

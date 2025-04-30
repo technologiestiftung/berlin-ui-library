@@ -23,7 +23,8 @@
 	--primary: #ff0000;
 	/* ... */
 	--color-primary-blue: #132458;
-	--color-primary-red: #e40422;
+	--color-primary: #e40422;
+	--color-hover: #f2f2f2;
 	--color-focus-blue: #176fc1;
 	--color-link-blue: #1049cc;
 	--color-culture: #71a8f5;

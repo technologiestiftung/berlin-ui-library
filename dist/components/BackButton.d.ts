@@ -1,9 +1,9 @@
-import { VariantProps } from 'class-variance-authority';
 import * as React from "react";
+import { type VariantProps } from "class-variance-authority";
 declare const backButtonVariants: (props?: ({
     variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined;
     size?: "default" | "sm" | "lg" | "icon" | null | undefined;
-} & import('class-variance-authority/types').ClassProp) | undefined) => string;
+} & import("class-variance-authority/types").ClassProp) | undefined) => string;
 declare function BackButton({ className, variant, size, asChild, ...props }: React.ComponentProps<"button"> & VariantProps<typeof backButtonVariants> & {
     asChild?: boolean;
     title?: string;

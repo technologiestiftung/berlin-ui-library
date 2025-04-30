@@ -10,10 +10,10 @@ import {
 	FormMessage,
 } from "./Form";
 import { Input } from "./Input";
-import { Button } from "./Button";
 
 // @ts-expect-error TS6133 - Required for Storybook setup despite react-jsx transform
 import * as React from "react";
+import { Button } from "./Button/Button";
 
 const meta: Meta<typeof Form> = {
 	title: "Components/Form",

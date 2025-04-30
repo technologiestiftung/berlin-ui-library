@@ -1,0 +1,1 @@
+{"version":3,"file":"AccessibilityButton.d.ts","sourceRoot":"","sources":["../../../src/components/Header/AccessibilityButton.tsx"],"names":[],"mappings":"AAIA,MAAM,WAAW,wBAAwB;IACxC;;OAEG;IACH,mBAAmB,EAAE,MAAM,IAAI,CAAC;IAChC;;OAEG;IACH,SAAS,CAAC,EAAE,MAAM,CAAC;CACnB;AAED,wBAAgB,mBAAmB,CAAC,EACnC,mBAAmB,EACnB,SAAc,GACd,EAAE,wBAAwB,2CAc1B"}
