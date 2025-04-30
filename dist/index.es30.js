@@ -1,37 +1,47 @@
-import * as t from "react";
-import { cva as s } from "class-variance-authority";
-import { cn as u } from "./index.es22.js";
-const p = s(
-  "relative col-start-1 row-start-1 h-[47px] w-full rounded-none border-2 border-black px-4 pr-20 pl-10 placeholder-berlin-grey focus:border-focus-blue focus:shadow-default focus:outline-none",
-  {
-    variants: {
-      variant: {
-        default: "bg-background text-foreground",
-        outline: "bg-transparent"
-      },
-      size: {
-        sm: "h-8 px-2 text-sm",
-        default: "h-9 px-3 text-base",
-        lg: "h-10 px-4 text-lg"
-      }
+import { Drawer as o, DrawerContent as u } from "./index.es6.js";
+import { useLanguage as b, t as a } from "./index.es4.js";
+function d({
+  isOpen: l,
+  close: i,
+  accessibilityItems: n = []
+}) {
+  const { translations: t } = b(), r = [
+    {
+      question: a("accessibilityMenu.barrierefreiheit.question", t),
+      label: a("accessibilityMenu.barrierefreiheit", t),
+      href: "/accessibility-statement/"
     },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
+    {
+      question: a("accessibilityMenu.contact.question", t),
+      label: a("accessibilityMenu.contact", t),
+      href: "/accessibility-statement/#accessibility-contact"
+    },
+    {
+      question: a("accessibilityMenu.additionalInfo.question", t),
+      label: a("accessibilityMenu.additionalInfo", t),
+      href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
+      external: !0
     }
-  }
-), d = t.forwardRef(({ className: e, type: r, variant: a, size: o, ...n }, l) => /* @__PURE__ */ t.createElement(
-  "input",
-  {
-    type: r,
-    className: u(p({ variant: a, size: o, className: e })),
-    ref: l,
-    ...n
-  }
-));
-d.displayName = "Input";
+  ], s = n && n.length > 0 ? n : r;
+  return /* @__PURE__ */ React.createElement(o, { open: l, onOpenChange: (e) => !e && i() }, /* @__PURE__ */ React.createElement(u, { className: "flex flex-col gap-4 px-6 py-4 text-base" }, /* @__PURE__ */ React.createElement("div", { className: "mt-4 mb-6 flex flex-row items-center justify-between" }, /* @__PURE__ */ React.createElement("p", { className: "text-2xl font-bold" }, a("accessibilityMenu.title", t))), s.map((e, c) => /* @__PURE__ */ React.createElement("div", { key: c, className: "mb-4" }, /* @__PURE__ */ React.createElement("p", { className: "mb-1 font-bold" }, e.question), e.external ? /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      className: "text-link-blue transition-colors duration-200 hover:underline",
+      href: e.href,
+      target: "_blank",
+      rel: "noreferrer"
+    },
+    e.label
+  ) : /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: e.href,
+      className: "text-link-blue transition-colors duration-200 hover:underline"
+    },
+    e.label
+  )))));
+}
 export {
-  d as Input,
-  p as inputVariants
+  d as AccessibilityMenu
 };
 //# sourceMappingURL=index.es30.js.map

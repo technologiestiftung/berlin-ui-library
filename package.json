@@ -12,9 +12,7 @@
 	],
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc && vite build && npm run build:styles && npm run copy:assets",
-		"build:styles": "npx @tailwindcss/cli -i ./src/style.css -o ./dist/style.css",
-		"copy:assets": "copyfiles -u 1 \"src/fonts/**/*\" \"src/assets/**/*\" dist",
+		"build": "tsc && vite build",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"

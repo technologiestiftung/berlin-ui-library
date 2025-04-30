@@ -1,31 +1,22 @@
-import t, { useState as o } from "react";
-import { Input as u } from "./index.es30.js";
-import { useLanguage as i, t as l } from "./index.es10.js";
-function f({ onSearch: s, className: c = "" }) {
-  const [e, m] = o(""), { translations: a } = i(), n = (r) => {
-    r.preventDefault(), s && e.trim() && s(e);
-  };
-  return /* @__PURE__ */ t.createElement("form", { onSubmit: n, className: `w-full ${c}` }, /* @__PURE__ */ t.createElement("div", { className: "relative" }, /* @__PURE__ */ t.createElement(
-    u,
+import e from "react";
+const C = () => /* @__PURE__ */ e.createElement(
+  "svg",
+  {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "32",
+    height: "32",
+    viewBox: "0 0 32 32",
+    fill: "none"
+  },
+  /* @__PURE__ */ e.createElement(
+    "path",
     {
-      type: "search",
-      placeholder: l("search.placeholder", a) || "Suche...",
-      value: e,
-      onChange: (r) => m(r.target.value),
-      className: "w-full",
-      "aria-label": l("search.ariaLabel", a) || "Search"
+      d: "M31.5648 27.666L25.3331 21.4354C25.0518 21.1542 24.6706 20.9979 24.2705 20.9979H23.2517C24.9768 18.7919 26.0019 16.0172 26.0019 12.9987C26.0019 5.81818 20.1827 0 13.001 0C5.81918 0 0 5.81818 0 12.9987C0 20.1793 5.81918 25.9975 13.001 25.9975C16.0199 25.9975 18.7951 24.9726 21.0015 23.2477V24.2664C21.0015 24.6663 21.1578 25.0476 21.4391 25.3288L27.6708 31.5594C28.2583 32.1469 29.2084 32.1469 29.7897 31.5594L31.5586 29.7908C32.1461 29.2034 32.1461 28.2535 31.5648 27.666ZM13.001 20.9979C8.58188 20.9979 5.00037 17.4233 5.00037 12.9987C5.00037 8.58041 8.57563 4.99951 13.001 4.99951C17.42 4.99951 21.0015 8.57416 21.0015 12.9987C21.0015 17.417 17.4263 20.9979 13.001 20.9979Z",
+      fill: "black"
     }
-  ), /* @__PURE__ */ t.createElement(
-    "button",
-    {
-      type: "submit",
-      className: "absolute top-1/2 right-4 -translate-y-1/2 bg-black px-4 py-1 text-sm text-white",
-      disabled: !e.trim()
-    },
-    l("search.button", a) || "Suchen"
-  )));
-}
+  )
+);
 export {
-  f as SearchBar
+  C as SearchIconLarge
 };
 //# sourceMappingURL=index.es25.js.map

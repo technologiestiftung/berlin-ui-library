@@ -41,11 +41,20 @@ export default defineConfig({
 				exports: "named",
 				dir: "dist",
 				preserveModulesRoot: "src",
+				assetFileNames: (assetInfo) => {
+					// Place fonts in a dedicated directory
+					if (assetInfo.name.endsWith('.woff') || 
+						assetInfo.name.endsWith('.woff2') || 
+						assetInfo.name.endsWith('.eot')) {
+						return 'fonts/[name][extname]';
+					}
+					// Place other assets in an assets directory
+					return 'assets/[name][extname]';
+				},
 			},
 		},
-
 		target: "esnext",
 		sourcemap: true,
-		cssCodeSplit: false,
+		cssCodeSplit: true, // Enable CSS code splitting for tree shaking
 	},
 });

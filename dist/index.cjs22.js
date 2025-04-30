@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("clsx"),t=require("tailwind-merge");function n(...e){return t.twMerge(r.clsx(e))}exports.cn=n;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("./index.cjs23.js"),t=require("./index.cjs4.js");function u({onOpenMenu:n,className:a=""}){const{translations:l}=t.useLanguage(),e=t.t("menu",l);return React.createElement("button",{className:`flex flex-col items-center gap-1 text-[11px] leading-3 ${a}`,onClick:n,"aria-label":e},React.createElement(r.default,null),e)}exports.MenuButton=u;
 //# sourceMappingURL=index.cjs22.js.map

@@ -1,75 +1,19 @@
-import b, { createContext as d, useState as f, useContext as y } from "react";
-const M = [
-  { code: "de", label: "Deutsch" },
-  { code: "en", label: "English" }
-], h = {
-  de: {
-    accessibility: "Barrierefreiheit",
-    menu: "Menü",
-    search: "Suche",
-    expand: "Erweitern",
-    collapse: "Einklappen",
-    closeMenu: "Menü schließen",
-    accessibilityMenu: "Barrierefreiheit-Menü",
-    "accessibilityMenu.title": "Barrierefreiheit",
-    "button.name.close": "Schließen",
-    "accessibilityMenu.barrierefreiheit.question": "Informationen zur Barrierefreiheit:",
-    "accessibilityMenu.barrierefreiheit": "Barrierefreiheitserklärung",
-    "accessibilityMenu.contact.question": "Problem mit der Barrierefreiheit melden:",
-    "accessibilityMenu.contact": "Kontakt",
-    "accessibilityMenu.additionalInfo.question": "Weitere Informationen:",
-    "accessibilityMenu.additionalInfo": "Kompetenzstelle für Barrierefreiheit"
-  },
-  en: {
-    accessibility: "Accessibility",
-    menu: "Menu",
-    search: "Search",
-    expand: "Expand",
-    collapse: "Collapse",
-    closeMenu: "Close menu",
-    accessibilityMenu: "Accessibility menu",
-    "accessibilityMenu.title": "Accessibility",
-    "button.name.close": "Close",
-    "accessibilityMenu.barrierefreiheit.question": "Accessibility information:",
-    "accessibilityMenu.barrierefreiheit": "Accessibility statement",
-    "accessibilityMenu.contact.question": "Report an accessibility issue:",
-    "accessibilityMenu.contact": "Contact",
-    "accessibilityMenu.additionalInfo.question": "Additional information:",
-    "accessibilityMenu.additionalInfo": "Competence center for accessibility"
+import * as e from "react";
+import * as a from "@radix-ui/react-label";
+import { cva as m } from "class-variance-authority";
+import { cn as i } from "./index.es11.js";
+const l = m(
+  "text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+), s = e.forwardRef(({ className: o, ...t }, r) => /* @__PURE__ */ e.createElement(
+  a.Root,
+  {
+    ref: r,
+    className: i(l(), o),
+    ...t
   }
-}, a = d(
-  void 0
-), g = () => {
-  const e = y(a);
-  if (!e)
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  return e;
-}, p = ({
-  children: e,
-  initialLanguage: i = "de",
-  languages: c = M,
-  translations: t = h,
-  onLanguageChange: n
-}) => {
-  const [s, o] = f(i), l = () => t[s] || t.de || {}, u = (r) => {
-    o(r), n && n(r);
-  };
-  return /* @__PURE__ */ b.createElement(
-    a.Provider,
-    {
-      value: {
-        currentLanguage: s,
-        languages: c,
-        translations: l(),
-        setLanguage: u
-      }
-    },
-    e
-  );
-}, C = (e, i) => i[e] || e;
+));
+s.displayName = a.Root.displayName;
 export {
-  p as LanguageProvider,
-  C as t,
-  g as useLanguage
+  s as Label
 };
 //# sourceMappingURL=index.es10.js.map

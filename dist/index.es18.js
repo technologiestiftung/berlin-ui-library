@@ -1,22 +1,14 @@
-import a from "./index.es24.js";
-import { useLanguage as i, t as n } from "./index.es10.js";
-function r({
-  onOpenAccessibility: t,
-  className: c = ""
+import { LanguageSelect as l } from "./index.es19.js";
+import { Breadcrumbs as n } from "./index.es7.js";
+function i({
+  showBreadcrumbs: e,
+  breadcrumbs: r,
+  showLanguageSelect: t,
+  LinkComponent: a
 }) {
-  const { translations: l } = i(), e = n("accessibility", l);
-  return /* @__PURE__ */ React.createElement(
-    "button",
-    {
-      className: `flex flex-col items-center gap-1 text-[11px] leading-3 ${c}`,
-      onClick: t,
-      "aria-label": e
-    },
-    /* @__PURE__ */ React.createElement(a, null),
-    e
-  );
+  return !e && !t ? null : /* @__PURE__ */ React.createElement("div", { className: "bg-berlin-grey-light px-4 shadow-inner lg:px-0" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto flex max-w-[980px] justify-between" }, e && /* @__PURE__ */ React.createElement(n, { items: r, LinkComponent: a }), t && /* @__PURE__ */ React.createElement(l, null)));
 }
 export {
-  r as AccessibilityButton
+  i as SubHeaderBar
 };
 //# sourceMappingURL=index.es18.js.map

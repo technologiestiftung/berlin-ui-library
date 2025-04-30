@@ -1,59 +1,75 @@
-import e, { useState as m, useRef as u } from "react";
-import f from "./index.es13.js";
-import d from "./index.es14.js";
-import { useLanguage as p, t as b } from "./index.es10.js";
-function g(a, t) {
-  e.useEffect(() => {
-    const n = (l) => {
-      a.current && !a.current.contains(l.target) && t(!1);
-    };
-    return document.addEventListener("mousedown", n), () => {
-      document.removeEventListener("mousedown", n);
-    };
-  }, [a, t]);
-}
-function C({ className: a = "" }) {
-  const [t, n] = m(!1), l = u(null), { currentLanguage: r, languages: c, translations: o, setLanguage: i } = p();
-  return g(
-    l,
-    n
-  ), /* @__PURE__ */ e.createElement(
-    "div",
+import b, { createContext as d, useState as f, useContext as y } from "react";
+const M = [
+  { code: "de", label: "Deutsch" },
+  { code: "en", label: "English" }
+], h = {
+  de: {
+    accessibility: "Barrierefreiheit",
+    menu: "Menü",
+    search: "Suche",
+    expand: "Erweitern",
+    collapse: "Einklappen",
+    closeMenu: "Menü schließen",
+    accessibilityMenu: "Barrierefreiheit-Menü",
+    "accessibilityMenu.title": "Barrierefreiheit",
+    "button.name.close": "Schließen",
+    "accessibilityMenu.barrierefreiheit.question": "Informationen zur Barrierefreiheit:",
+    "accessibilityMenu.barrierefreiheit": "Barrierefreiheitserklärung",
+    "accessibilityMenu.contact.question": "Problem mit der Barrierefreiheit melden:",
+    "accessibilityMenu.contact": "Kontakt",
+    "accessibilityMenu.additionalInfo.question": "Weitere Informationen:",
+    "accessibilityMenu.additionalInfo": "Kompetenzstelle für Barrierefreiheit"
+  },
+  en: {
+    accessibility: "Accessibility",
+    menu: "Menu",
+    search: "Search",
+    expand: "Expand",
+    collapse: "Collapse",
+    closeMenu: "Close menu",
+    accessibilityMenu: "Accessibility menu",
+    "accessibilityMenu.title": "Accessibility",
+    "button.name.close": "Close",
+    "accessibilityMenu.barrierefreiheit.question": "Accessibility information:",
+    "accessibilityMenu.barrierefreiheit": "Accessibility statement",
+    "accessibilityMenu.contact.question": "Report an accessibility issue:",
+    "accessibilityMenu.contact": "Contact",
+    "accessibilityMenu.additionalInfo.question": "Additional information:",
+    "accessibilityMenu.additionalInfo": "Competence center for accessibility"
+  }
+}, a = d(
+  void 0
+), g = () => {
+  const e = y(a);
+  if (!e)
+    throw new Error("useLanguage must be used within a LanguageProvider");
+  return e;
+}, p = ({
+  children: e,
+  initialLanguage: i = "de",
+  languages: c = M,
+  translations: t = h,
+  onLanguageChange: n
+}) => {
+  const [s, o] = f(i), l = () => t[s] || t.de || {}, u = (r) => {
+    o(r), n && n(r);
+  };
+  return /* @__PURE__ */ b.createElement(
+    a.Provider,
     {
-      className: `relative z-[10] text-black ${a}`,
-      ref: l
+      value: {
+        currentLanguage: s,
+        languages: c,
+        translations: l(),
+        setLanguage: u
+      }
     },
-    /* @__PURE__ */ e.createElement(
-      "button",
-      {
-        className: "flex items-center",
-        onClick: () => n(!t),
-        "aria-label": b(t ? "collapse" : "expand", o),
-        "aria-expanded": t
-      },
-      /* @__PURE__ */ e.createElement("span", { className: "flex size-6 items-center justify-center bg-berlin-pink text-[11px] font-bold" }, r.toLowerCase()),
-      /* @__PURE__ */ e.createElement("span", { className: "pointer-events-none flex size-8 items-center justify-center" }, t ? /* @__PURE__ */ e.createElement(d, { className: "text-berlin-green" }) : /* @__PURE__ */ e.createElement(f, { className: "text-berlin-green" }))
-    ),
-    /* @__PURE__ */ e.createElement(
-      "div",
-      {
-        className: `${t ? "block" : "hidden"} absolute top-8 right-0 bg-white shadow-lg`
-      },
-      /* @__PURE__ */ e.createElement("ul", null, c.map((s) => /* @__PURE__ */ e.createElement("li", { key: s.code }, /* @__PURE__ */ e.createElement(
-        "button",
-        {
-          className: "block flex w-full gap-2 px-2 py-1 text-base hover:bg-gray-100",
-          onClick: () => {
-            i(s.code), n(!1);
-          }
-        },
-        /* @__PURE__ */ e.createElement("span", { className: "flex size-6 items-center justify-center bg-berlin-pink text-[11px] font-bold" }, s.code.toLowerCase()),
-        s.label
-      ))))
-    )
+    e
   );
-}
+}, C = (e, i) => i[e] || e;
 export {
-  C as LanguageSelect
+  p as LanguageProvider,
+  C as t,
+  g as useLanguage
 };
 //# sourceMappingURL=index.es4.js.map

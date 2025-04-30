@@ -9,8 +9,8 @@
 	font-weight: 400;
 	font-display: swap;
 	src:
-		url("fonts/BerlinTypeWeb-Regular.woff2") format("woff2"),
-		url("fonts/BerlinTypeWeb-Regular.woff") format("woff");
+		url("@/fonts/BerlinTypeWeb-Regular.woff2") format("woff2"),
+		url("@/fonts/BerlinTypeWeb-Regular.woff") format("woff");
 }
 
 @theme {
