@@ -1,7 +1,7 @@
 import * as e from "react";
 import { Slot as b } from "@radix-ui/react-slot";
 import { ChevronRight as n, MoreHorizontal as E } from "lucide-react";
-import { cn as s } from "./index.es13.js";
+import { cn as s } from "./index.es22.js";
 const o = e.forwardRef(({ ...r }, a) => /* @__PURE__ */ e.createElement("nav", { ref: a, "aria-label": "breadcrumb", ...r }));
 o.displayName = "Breadcrumb";
 const d = e.forwardRef(({ className: r, ...a }, t) => /* @__PURE__ */ e.createElement(

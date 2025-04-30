@@ -1,6 +1,6 @@
-import * as e from "react";
-const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 19, height: 11, viewBox: "0 0 19 11", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { id: "Rectangle 128", d: "M1.5 1.12916L9.5 8.87109L17.5 1.12916", stroke: "currentColor", strokeWidth: 3 }));
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "menu-icon", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 28 32", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M1,8.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,18.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,28.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1Z" }));
 export {
-  o as default
+  t as default
 };
 //# sourceMappingURL=index.es15.js.map

@@ -1,4 +1,4 @@
-import { SearchIconLarge as r } from "./index.es18.js";
+import { SearchIconLarge as r } from "./index.es16.js";
 import { useLanguage as c, t as l } from "./index.es10.js";
 function i({
   onOpenSearch: t,

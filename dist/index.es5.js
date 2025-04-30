@@ -1,4 +1,4 @@
-import l from "./index.es17.js";
+import l from "./index.es15.js";
 import { useLanguage as o, t as r } from "./index.es10.js";
 function s({ onOpenMenu: t, className: n = "" }) {
   const { translations: a } = o(), e = r("menu", a);

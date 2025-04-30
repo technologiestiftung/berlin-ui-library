@@ -1,5 +1,5 @@
 import e from "react";
-import t from "./index.es19.js";
+import t from "./index.es17.js";
 function m({
   logoUrl: r = "https://www.berlin.de",
   logoComponent: a
