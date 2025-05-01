@@ -3,6 +3,9 @@ import "./style.css";
 // Header components
 export { Header } from "./components/Header";
 
+// Footer components
+export { Footer } from "./components/Footer";
+
 // Drawer components
 export {
 	Drawer,

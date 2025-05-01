@@ -1,7 +1,9 @@
 ![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![npm version](https://img.shields.io/npm/v/berlin-ui-library?color=blue)](https://www.npmjs.com/package/berlin-ui-library)
@@ -39,17 +41,17 @@ npm install git+ssh://git@github.com/technologiestiftung/berlin-ui-library.git
 Import global styles once in your entrypoint (e.g., `index.tsx`):
 
 ```tsx
-import 'berlin-ui-library/dist/style.css';
+import "berlin-ui-library/dist/assets/style.css";
 ```
 
 Then use components anywhere in your app without re-importing styles:
 
 ```tsx
-import React from 'react';
-import { Button } from 'berlin-ui-library';
+import React from "react";
+import { Button } from "berlin-ui-library";
 
 export const App = () => (
-  <Button onClick={() => alert('Clicked!')}>Click me</Button>
+	<Button onClick={() => alert("Clicked!")}>Click me</Button>
 );
 ```
 
