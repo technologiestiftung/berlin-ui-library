@@ -13,6 +13,23 @@ const preview: Preview = {
 				date: /Date$/i,
 			},
 		},
+		docs: {
+			toc: true, // Enables the table of contents
+			source: {
+				state: "open",
+			},
+			canvas: {
+				sourceState: "shown",
+			},
+			story: {
+				inline: true,
+			},
+		},
+		options: {
+			storySort: {
+				order: ["Introduction", "Components"],
+			},
+		},
 	},
 };
 

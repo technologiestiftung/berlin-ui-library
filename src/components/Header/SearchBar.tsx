@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input } from "../Input";
+import { Input } from "../Input/Input";
 import { useLanguage, t } from "./LanguageProvider";
 
 export interface SearchBarProps {

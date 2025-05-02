@@ -1,0 +1,41 @@
+import{j as b}from"./jsx-runtime-D_zvdyIk.js";import{r as n}from"./index-CFahbR6w.js";const f=[{code:"de",label:"Deutsch"},{code:"en",label:"English"}],m={de:{accessibility:"Barrierefreiheit",menu:"Menü",search:"Suche",expand:"Erweitern",collapse:"Einklappen",closeMenu:"Menü schließen",accessibilityMenu:"Barrierefreiheit-Menü","accessibilityMenu.title":"Barrierefreiheit","button.name.close":"Schließen","accessibilityMenu.barrierefreiheit.question":"Informationen zur Barrierefreiheit:","accessibilityMenu.barrierefreiheit":"Barrierefreiheitserklärung","accessibilityMenu.contact.question":"Problem mit der Barrierefreiheit melden:","accessibilityMenu.contact":"Kontakt","accessibilityMenu.additionalInfo.question":"Weitere Informationen:","accessibilityMenu.additionalInfo":"Kompetenzstelle für Barrierefreiheit"},en:{accessibility:"Accessibility",menu:"Menu",search:"Search",expand:"Expand",collapse:"Collapse",closeMenu:"Close menu",accessibilityMenu:"Accessibility menu","accessibilityMenu.title":"Accessibility","button.name.close":"Close","accessibilityMenu.barrierefreiheit.question":"Accessibility information:","accessibilityMenu.barrierefreiheit":"Accessibility statement","accessibilityMenu.contact.question":"Report an accessibility issue:","accessibilityMenu.contact":"Contact","accessibilityMenu.additionalInfo.question":"Additional information:","accessibilityMenu.additionalInfo":"Competence center for accessibility"}},c=n.createContext(void 0),M=()=>{const e=n.useContext(c);if(!e)throw new Error("useLanguage must be used within a LanguageProvider");return e},y=({children:e,initialLanguage:i="de",languages:o=f,translations:t=m,onLanguageChange:s})=>{const[a,l]=n.useState(i),u=()=>t[a]||t.de||{},d=r=>{l(r),s&&s(r)};return b.jsx(c.Provider,{value:{currentLanguage:a,languages:o,translations:u(),setLanguage:d},children:e})},h=(e,i)=>i[e]||e;y.__docgenInfo={description:"",methods:[],displayName:"LanguageProvider",props:{children:{required:!0,tsType:{name:"ReactNode"},description:""},initialLanguage:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"de"',computed:!1}},languages:{required:!1,tsType:{name:"Array",elements:[{name:"Language"}],raw:"Language[]"},description:"",defaultValue:{value:`[
+	{ code: "de", label: "Deutsch" },
+	{ code: "en", label: "English" },
+]`,computed:!1}},translations:{required:!1,tsType:{name:"Record",elements:[{name:"string"},{name:"Record",elements:[{name:"string"},{name:"string"}],raw:"Record<string, string>"}],raw:"Record<string, Translations>"},description:"",defaultValue:{value:`{
+	de: {
+		accessibility: "Barrierefreiheit",
+		menu: "Menü",
+		search: "Suche",
+		expand: "Erweitern",
+		collapse: "Einklappen",
+		closeMenu: "Menü schließen",
+		accessibilityMenu: "Barrierefreiheit-Menü",
+		"accessibilityMenu.title": "Barrierefreiheit",
+		"button.name.close": "Schließen",
+		"accessibilityMenu.barrierefreiheit.question":
+			"Informationen zur Barrierefreiheit:",
+		"accessibilityMenu.barrierefreiheit": "Barrierefreiheitserklärung",
+		"accessibilityMenu.contact.question":
+			"Problem mit der Barrierefreiheit melden:",
+		"accessibilityMenu.contact": "Kontakt",
+		"accessibilityMenu.additionalInfo.question": "Weitere Informationen:",
+		"accessibilityMenu.additionalInfo": "Kompetenzstelle für Barrierefreiheit",
+	},
+	en: {
+		accessibility: "Accessibility",
+		menu: "Menu",
+		search: "Search",
+		expand: "Expand",
+		collapse: "Collapse",
+		closeMenu: "Close menu",
+		accessibilityMenu: "Accessibility menu",
+		"accessibilityMenu.title": "Accessibility",
+		"button.name.close": "Close",
+		"accessibilityMenu.barrierefreiheit.question": "Accessibility information:",
+		"accessibilityMenu.barrierefreiheit": "Accessibility statement",
+		"accessibilityMenu.contact.question": "Report an accessibility issue:",
+		"accessibilityMenu.contact": "Contact",
+		"accessibilityMenu.additionalInfo.question": "Additional information:",
+		"accessibilityMenu.additionalInfo": "Competence center for accessibility",
+	},
+}`,computed:!1}},onLanguageChange:{required:!1,tsType:{name:"signature",type:"function",raw:"(code: string) => void",signature:{arguments:[{type:{name:"string"},name:"code"}],return:{name:"void"}}},description:""}}};export{y as L,h as t,M as u};

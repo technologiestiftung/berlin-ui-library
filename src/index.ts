@@ -42,8 +42,11 @@ export {
 	FormMessage,
 } from "./components/Form";
 
+// Form field wrapper components
+export { FormFieldWrapper, FormWrapper } from "./components/FormWrapper";
+
 // Input component
-export { Input } from "./components/Input";
+export { Input } from "./components/Input/Input";
 
 // Label component
-export { Label } from "./components/Label";
+export { Label } from "./components/Label/Label";

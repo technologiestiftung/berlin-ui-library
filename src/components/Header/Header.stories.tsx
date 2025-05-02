@@ -23,13 +23,15 @@ const deTranslations = {
 	"accessibilityMenu.title": "Barrierefreiheit",
 	"button.name.close": "Schließen",
 	"accessibilityMenu.barrierefreiheit.question":
-		"Informationen zur Barrierefreiheit:",
-	"accessibilityMenu.barrierefreiheit": "Barrierefreiheitserklärung",
+		"Wie barrierefrei ist diese Webseite?",
+	"accessibilityMenu.barrierefreiheit": "Erklärung zur Barrierefreiheit",
 	"accessibilityMenu.contact.question":
-		"Problem mit der Barrierefreiheit melden:",
-	"accessibilityMenu.contact": "Kontakt",
-	"accessibilityMenu.additionalInfo.question": "Weitere Informationen:",
-	"accessibilityMenu.additionalInfo": "Kompetenzstelle für Barrierefreiheit",
+		"Haben Sie Anmerkungen oder Fragen zur Barrierefreiheit dieser Webseite?",
+	"accessibilityMenu.contact": "Kontakt zur Ansprechperson",
+	"accessibilityMenu.additionalInfo.question":
+		"Wo gibt es zusätzliche Informationen zur Barrierefreiheit im Land Berlin?",
+	"accessibilityMenu.additionalInfo":
+		"Barrierefreie Informations- und Kommunikationstechnik (IKT)",
 };
 
 const enTranslations = {

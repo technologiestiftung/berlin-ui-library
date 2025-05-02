@@ -63,7 +63,7 @@ export function AccessibilityMenu({
 						<p className="mb-1 font-bold">{item.question}</p>
 						{item.external ? (
 							<a
-								className="text-link-blue transition-colors duration-200 hover:underline"
+								className="text-text-link transition-colors duration-200 hover:underline"
 								href={item.href}
 								target="_blank"
 								rel="noreferrer"
@@ -73,7 +73,7 @@ export function AccessibilityMenu({
 						) : (
 							<a
 								href={item.href}
-								className="text-link-blue transition-colors duration-200 hover:underline"
+								className="text-text-link transition-colors duration-200 hover:underline"
 							>
 								{item.label}
 							</a>

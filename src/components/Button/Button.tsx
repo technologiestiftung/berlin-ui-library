@@ -32,7 +32,7 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 		);
 	}
 
-	const iconBackgroundColor = isDisabled ? "bg-gray-400" : "bg-primary";
+	const iconBackgroundColor = isDisabled ? "bg-gray-400" : "bg-red";
 
 	return (
 		<>
@@ -68,11 +68,11 @@ const buttonVariants = cva(
 				white:
 					"disabled:bg-gray-200focus:bg-hover border-0 border-white bg-white px-4 text-black hover:bg-hover disabled:text-gray-500",
 				fulltone:
-					"border-0 bg-primary px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
+					"border-0 bg-red px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
 				negative:
 					"border-2 border-white bg-transparent text-white hover:bg-transparent focus:bg-transparent disabled:border-gray-500 disabled:bg-transparent disabled:text-gray-500",
 				colored:
-					"border-primary pr-[59px] hover:bg-hover focus:bg-hover disabled:border-gray-400 disabled:text-gray-500",
+					"border-red pr-[59px] hover:bg-hover focus:bg-hover disabled:border-gray-400 disabled:text-gray-500",
 				clean: "border border-transparent px-4 disabled:text-gray-500",
 				play: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				download: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
@@ -85,7 +85,7 @@ const buttonVariants = cva(
 				extern: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
 				"light-fulltone":
-					"border-0 bg-primary px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
+					"border-0 bg-red px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
 				"negative-light":
 					"border-2 border-white bg-transparent text-white hover:bg-transparent focus:bg-transparent disabled:border-gray-500 disabled:bg-transparent disabled:text-gray-500",
 			},

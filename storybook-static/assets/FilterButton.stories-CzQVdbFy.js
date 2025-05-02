@@ -1,9 +1,0 @@
-import{R as e}from"./index-BCtMShv3.js";import{c as i,a as o}from"./utils-DaaxtNl5.js";const c=o("relative flex h-[43px] items-center justify-center border-2 border-black px-3 py-1 text-black opacity-100 hover:opacity-50",{variants:{variant:{default:"bg-primary text-white"},size:{default:"h-[43px] w-fit"}},defaultVariants:{variant:"default",size:"default"}}),a=({onClick:s,numActiveFilters:n})=>e.createElement(e.Fragment,null,e.createElement("button",{className:i(c()),onClick:s},e.createElement("div",{className:"flex flex-row items-center gap-2"},e.createElement("div",null,"Filter")),n>0&&e.createElement("div",{className:"absolute -top-3 -right-3 flex h-6 w-6 flex-row items-center justify-center rounded-full bg-berlin-green font-bold text-white"},n)));a.__docgenInfo={description:"",methods:[],displayName:"FilterButton",props:{onClick:{required:!0,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""},numActiveFilters:{required:!0,tsType:{name:"number"},description:""},isOpen:{required:!0,tsType:{name:"boolean"},description:""},closeMenu:{required:!0,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""}}};const p={title:"Components/FilterButton",component:a,argTypes:{onClick:{action:"clicked"}}},t={args:{numActiveFilters:0}},r={args:{numActiveFilters:3}};t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:`{
-  args: {
-    numActiveFilters: 0
-  }
-}`,...t.parameters?.docs?.source}}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
-  args: {
-    numActiveFilters: 3
-  }
-}`,...r.parameters?.docs?.source}}};const d=["Default","WithCount"];export{t as Default,r as WithCount,d as __namedExportsOrder,p as default};

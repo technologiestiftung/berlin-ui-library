@@ -101,7 +101,7 @@ function FooterContent({
 	);
 
 	return (
-		<footer className={`w-full bg-berlin-grey-light ${className}`}>
+		<footer className={`bg-block-colored w-full ${className}`}>
 			<div className="flex w-full items-start justify-between md:p-6">
 				<div className="flex w-full flex-wrap justify-between md:items-start md:pl-[5%]">
 					{/* Mobile scroll to top button */}

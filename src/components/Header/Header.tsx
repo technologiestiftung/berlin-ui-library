@@ -1,3 +1,4 @@
+"use server";
 /* eslint-disable complexity */
 import React from "react";
 import { LogoBar } from "./LogoBar";

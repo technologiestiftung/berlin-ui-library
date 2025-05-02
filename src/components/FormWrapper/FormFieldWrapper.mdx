@@ -1,0 +1,331 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/addon-docs/blocks";
+import * as FormFieldWrapperStories from "./FormFieldWrapper.stories";
+
+<Meta of={FormFieldWrapperStories} />
+
+# FormFieldWrapper
+
+The `FormFieldWrapper` component is a versatile form field renderer that works with react-hook-form to simplify form creation in the Berlin UI Library.
+
+## Features
+
+- Renders different input types based on configuration
+- Works seamlessly with react-hook-form
+- Supports text inputs, textareas, number inputs, checkboxes, and select dropdowns
+- Handles field validation and error messages
+- Consistent styling with Berlin UI Library components
+
+## Important: Form Context Requirements
+
+The `FormFieldWrapper` component **must** be used within a React Hook Form context. Always wrap your FormFieldWrapper components with both:
+
+1. The `Form` component (which is a wrapper around FormProvider)
+2. A `form` HTML element
+
+```tsx
+// Correct usage:
+<Form {...methods}>
+  <form onSubmit={methods.handleSubmit(onSubmit)}>
+    <FormFieldWrapper formProperty={field} form={methods} />
+  </form>
+</Form>
+
+// Incorrect usage (will cause errors):
+<FormFieldWrapper formProperty={field} form={methods} />;
+```
+
+## Component API
+
+The `FormFieldWrapper` component accepts the following props:
+
+### FormProperty Object
+
+<Controls of={FormFieldWrapperStories.TextInput} />
+
+### Property Table
+
+<div className="sb-unstyled">
+	<table
+		style={{ width: "100%", borderCollapse: "collapse", marginBottom: "20px" }}
+	>
+		<thead>
+			<tr>
+				<th
+					style={{
+						textAlign: "left",
+						padding: "8px",
+						borderBottom: "2px solid #ddd",
+					}}
+				>
+					Property
+				</th>
+				<th
+					style={{
+						textAlign: "left",
+						padding: "8px",
+						borderBottom: "2px solid #ddd",
+					}}
+				>
+					Type
+				</th>
+				<th
+					style={{
+						textAlign: "left",
+						padding: "8px",
+						borderBottom: "2px solid #ddd",
+					}}
+				>
+					Description
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>id</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					string
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Unique identifier for the form field
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>name</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					string
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Display name for the form field label
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>type</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					string
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Type of the input field
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					description
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					string (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Description text shown below the input
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					placeholder
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					string (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Placeholder text for the input
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					helperText
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					string (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Helper text to provide additional information
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					options
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Array (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Options for select fields
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					isRequired
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					boolean (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Whether the field is required
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					isDisabled
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					boolean (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Whether the field is disabled
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>min</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					number (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Minimum value (for number inputs)
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>max</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					number (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Maximum value (for number inputs)
+				</td>
+			</tr>
+			<tr>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>step</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					number (optional)
+				</td>
+				<td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+					Step increment (for number inputs)
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+### Form
+
+The `form` prop should be the methods object returned from react-hook-form's `useForm()` hook.
+
+```typescript
+form: UseFormReturn<any>;
+```
+
+This type comes from the `react-hook-form` library and represents the complete form control object with methods like `control`, `handleSubmit`, `register`, etc.
+
+## Usage Examples
+
+### Text Input
+
+<Canvas of={FormFieldWrapperStories.TextInput} />
+
+### Number Input
+
+<Canvas of={FormFieldWrapperStories.NumberInput} />
+
+### Textarea Input
+
+<Canvas of={FormFieldWrapperStories.TextareaInput} />
+
+### Select Input
+
+<Canvas of={FormFieldWrapperStories.SelectInput} />
+
+### Checkbox Input
+
+<Canvas of={FormFieldWrapperStories.CheckboxInput} />
+
+### Disabled Input
+
+<Canvas of={FormFieldWrapperStories.DisabledInput} />
+
+## Creating Forms with Multiple Fields
+
+You can easily create forms with multiple fields by defining an array of field properties and mapping through them:
+
+```tsx
+import { useForm } from "react-hook-form";
+import { Form } from "../Form";
+import { FormFieldWrapper, FormProperty } from "./FormFieldWrapper";
+import { Button } from "../Button/Button";
+
+function MyForm() {
+	const methods = useForm({
+		defaultValues: {
+			fullName: "",
+			email: "",
+			age: "",
+			country: "",
+			terms: false,
+		},
+	});
+
+	const formFields: FormProperty[] = [
+		{
+			id: "fullName",
+			name: "Full Name",
+			type: "text",
+			description: "Your first and last name",
+			placeholder: "John Doe",
+			isRequired: true,
+		},
+		{
+			id: "email",
+			name: "Email Address",
+			type: "email",
+			description: "We'll never share your email",
+			placeholder: "john@example.com",
+			isRequired: true,
+		},
+		{
+			id: "age",
+			name: "Age",
+			type: "number",
+			min: 18,
+			max: 100,
+		},
+		{
+			id: "country",
+			name: "Country",
+			type: "select",
+			options: [
+				{ value: "de", label: "Germany" },
+				{ value: "fr", label: "France" },
+				{ value: "uk", label: "United Kingdom" },
+			],
+			isRequired: true,
+		},
+		{
+			id: "terms",
+			name: "Terms",
+			type: "checkbox",
+			description: "I agree to the terms and conditions",
+			isRequired: true,
+		},
+	];
+
+	const onSubmit = (data) => {
+		console.log(data);
+	};
+
+	return (
+		<Form {...methods}>
+			<form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-4">
+				{formFields.map((property) => (
+					<FormFieldWrapper
+						key={property.id}
+						formProperty={property}
+						form={methods}
+					/>
+				))}
+				<Button type="submit">Submit Form</Button>
+			</form>
+		</Form>
+	);
+}
+```
+
+## Complete Form Example
+
+<Canvas of={FormFieldWrapperStories.MultipleInputsForm} />
