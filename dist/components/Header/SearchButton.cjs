@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("react/jsx-runtime"),o=require("../../assets/icons/search-icon-large.cjs"),r=require("./LanguageProvider.cjs");function s({onOpenSearch:n,className:a=""}){const{translations:c}=r.useLanguage(),e=r.t("search",c);return t.jsxs("button",{className:`flex flex-col items-center gap-1 text-[11px] leading-3 ${a}`,onClick:n,"aria-label":e,children:[t.jsx(o.SearchIconLarge,{}),e]})}exports.SearchButton=s;
+//# sourceMappingURL=SearchButton.cjs.map

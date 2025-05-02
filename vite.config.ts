@@ -19,6 +19,7 @@ export default defineConfig({
 		tailwindcss(),
 		dts({
 			include: ["src/**/*"],
+			outDir: "dist/types", // Consolidated types output
 		}),
 		svgr({
 			svgrOptions: {
@@ -36,14 +37,21 @@ export default defineConfig({
 	},
 	build: {
 		lib: {
-			entry: resolve(__dirname, "src", "index.ts"),
+			// Define multiple entry points
+			entry: {
+				index: resolve(__dirname, "src", "index.ts"),
+				server: resolve(__dirname, "src", "index.server.ts"),
+				client: resolve(__dirname, "src", "index.client.ts"),
+			},
 			formats: ["es", "cjs"],
-			fileName: (ext) => `index.${ext}.js`,
+			fileName: (format, entryName) =>
+				`${entryName}.${format === "es" ? "mjs" : "cjs"}`,
 		},
 		rollupOptions: {
 			external: [
 				...Object.keys(peerDependencies),
 				...Object.keys(dependencies),
+				/^react\//, // Handle React Server Components specific imports
 			],
 			output: {
 				preserveModules: true,

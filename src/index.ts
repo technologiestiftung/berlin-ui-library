@@ -1,7 +1,8 @@
 import "./style.css";
 
 // Header components
-export { Header } from "./components/Header";
+export { Header, HeaderClient } from "./components/Header";
+export type { HeaderProps, HeaderClientProps } from "./components/Header";
 
 // Footer components
 export { Footer } from "./components/Footer";
@@ -31,7 +32,7 @@ export {
 // Button components
 export { Button, buttonVariants } from "./components/Button";
 
-// Form components
+// Form components - will be imported in client components
 export {
 	Form,
 	FormControl,
@@ -40,6 +41,7 @@ export {
 	FormItem,
 	FormLabel,
 	FormMessage,
+	useFormField,
 } from "./components/Form";
 
 // Form field wrapper components
@@ -50,3 +52,12 @@ export { Input } from "./components/Input/Input";
 
 // Label component
 export { Label } from "./components/Label/Label";
+
+// For convenience, re-export utility used by other components
+export { cn } from "./lib/utils";
+
+// Main entry point - re-exports server components
+// For client components, users should import from 'berlin-ui-library/client'
+
+// Re-export everything from the server entry point
+export * from "./index.server";

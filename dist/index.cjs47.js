@@ -1,2 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("./index.cjs4.js"),l=require("./index.cjs51.js"),i=require("./index.cjs5.js");function o({onOpenAccessibility:s,className:n=""}){const{translations:c}=i.useLanguage(),e=i.t("accessibility",c);return t.jsxRuntimeExports.jsxs("button",{className:`flex flex-col items-center gap-1 text-[11px] leading-3 ${n}`,onClick:s,"aria-label":e,children:[t.jsxRuntimeExports.jsx(l.default,{}),e]})}exports.AccessibilityButton=o;
-//# sourceMappingURL=index.cjs47.js.map

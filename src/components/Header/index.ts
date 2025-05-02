@@ -19,9 +19,6 @@ export type { HeaderProps } from "./Header";
 export { HeaderClient } from "./Header.client";
 export type { HeaderClientProps } from "./Header.client";
 
-// Types
-export * from "./types";
-
 export { LanguageSelect } from "./LanguageSelect";
 export type { LanguageSelectProps } from "./LanguageSelect";
 

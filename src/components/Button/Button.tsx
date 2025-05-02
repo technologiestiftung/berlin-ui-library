@@ -1,8 +1,7 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable complexity */
-import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 import ArrowRightIcon from "@/assets/icons/arrow_right_icon.svg?react";
@@ -11,6 +10,7 @@ import SearchIcon from "@/assets/icons/search_icon.svg?react";
 import CloseIcon from "@/assets/icons/close_icon.svg?react";
 import FilterIcon from "@/assets/icons/filter_icon.svg?react";
 import LinkIcon from "@/assets/icons/link_icon.svg?react";
+import { ButtonProps } from "./types";
 
 // Additional icon imports can be added as needed
 const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
@@ -132,14 +132,6 @@ const buttonVariants = cva(
 		},
 	},
 );
-
-export interface ButtonProps
-	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-		VariantProps<typeof buttonVariants> {
-	asChild?: boolean;
-	booking?: boolean;
-	price?: string;
-}
 
 function Button({
 	className,

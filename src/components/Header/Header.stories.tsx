@@ -74,7 +74,7 @@ export const Default: Story = {
 		onSearch: () => {
 			console.warn("Search opened");
 		},
-		onLanguageChange: (code) => {
+		onLanguageChange: (code: string) => {
 			console.warn(`Language changed to: ${code}`);
 		},
 	},

@@ -50,7 +50,7 @@ export function LanguageSelect({ className = "" }: LanguageSelectProps) {
 				aria-label={t(isOpen ? "collapse" : "expand", translations)}
 				aria-expanded={isOpen}
 			>
-				<span className="flex size-6 items-center justify-center bg-berlin-pink text-[11px] font-bold">
+				<span className="bg-berlin-pink flex size-6 items-center justify-center text-[11px] font-bold">
 					{currentLanguage.toLowerCase()}
 				</span>
 				<span className="pointer-events-none flex size-8 items-center justify-center">
@@ -75,7 +75,7 @@ export function LanguageSelect({ className = "" }: LanguageSelectProps) {
 									setIsOpen(false);
 								}}
 							>
-								<span className="flex size-6 items-center justify-center bg-berlin-pink text-[11px] font-bold">
+								<span className="bg-berlin-pink flex size-6 items-center justify-center text-[11px] font-bold">
 									{language.code.toLowerCase()}
 								</span>
 								{language.label}
