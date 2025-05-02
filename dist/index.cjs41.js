@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("./index.cjs4.js"),o=require("./index.cjs42.js"),r=require("./index.cjs5.js");function c({onOpenSearch:n,className:a=""}){const{translations:s}=r.useLanguage(),e=r.t("search",s);return t.jsxRuntimeExports.jsxs("button",{className:`flex flex-col items-center gap-1 text-[11px] leading-3 ${a}`,onClick:n,"aria-label":e,children:[t.jsxRuntimeExports.jsx(o.SearchIconLarge,{}),e]})}exports.SearchButton=c;
+//# sourceMappingURL=index.cjs41.js.map

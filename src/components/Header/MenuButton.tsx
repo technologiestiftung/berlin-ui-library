@@ -1,3 +1,5 @@
+"use client";
+
 import BarsIcon from "@/assets/icons/bars_icon.svg?react";
 import { useLanguage, t } from "./LanguageProvider";
 

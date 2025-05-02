@@ -1,6 +1,25 @@
-import * as t from "react";
-const o = (e) => /* @__PURE__ */ t.createElement("svg", { width: 20, height: 19, viewBox: "0 0 20 19", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...e }, /* @__PURE__ */ t.createElement("path", { d: "M0 9.49989H17.1666M9.04529 17.874L17.45 9.49955L9.04529 1.12598", stroke: "currentColor", strokeWidth: 3 }));
+import { j as m } from "./index.es4.js";
+import { cn as p } from "./index.es15.js";
+function i({
+  children: r,
+  withBackground: o = !0,
+  padding: t = "p-6",
+  className: e
+}) {
+  return /* @__PURE__ */ m.jsx(
+    "div",
+    {
+      className: p(
+        o && "bg-block-colored",
+        t,
+        "w-full",
+        e
+      ),
+      children: r
+    }
+  );
+}
 export {
-  o as default
+  i as FormWrapper
 };
 //# sourceMappingURL=index.es13.js.map

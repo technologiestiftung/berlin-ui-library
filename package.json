@@ -5,7 +5,7 @@
 	"type": "module",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.es.js",
-	"styles": "dist/style.css",
+	"styles": "dist/assets/style.css",
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist"

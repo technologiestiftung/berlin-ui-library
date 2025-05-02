@@ -41,4 +41,8 @@ export declare const FullWidth: Story;
 export declare const FullWidthDisabled: Story;
 export declare const Booking: Story;
 export declare const BookingDisabled: Story;
+export declare const Back: Story;
+export declare const BackDisabled: Story;
+export declare const BackLink: Story;
+export declare const BackLinkDisabled: Story;
 //# sourceMappingURL=Button.stories.d.ts.map

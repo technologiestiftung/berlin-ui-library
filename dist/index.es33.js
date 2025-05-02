@@ -1,17 +1,12 @@
-import { j as e } from "./index.es4.js";
-import { SearchBar as o } from "./index.es39.js";
-import { useLanguage as c, t as i } from "./index.es5.js";
-import { Drawer as m, DrawerContent as f } from "./index.es7.js";
-function u({ isOpen: s, close: a, onSearch: n }) {
-  const { translations: t } = c(), l = (r) => {
-    n && n(r), a();
-  };
-  return /* @__PURE__ */ e.jsx(m, { open: s, onOpenChange: (r) => !r && a(), children: /* @__PURE__ */ e.jsx(f, { size: "large", className: "flex flex-col gap-4", children: /* @__PURE__ */ e.jsx("div", { className: "flex flex-row justify-center", children: /* @__PURE__ */ e.jsxs("div", { className: "mt-[10vh] flex w-full flex-col gap-2 px-4 md:mt-[30vh] md:w-[50%]", children: [
-    /* @__PURE__ */ e.jsx("h1", { className: "font-bold", children: i("search.title", t) || "Suche auf der Internetseite" }),
-    /* @__PURE__ */ e.jsx(o, { onSearch: l })
-  ] }) }) }) });
+import { j as r } from "./index.es4.js";
+import a from "./index.es43.js";
+function t({
+  logoUrl: e = "https://www.berlin.de",
+  logoComponent: o
+}) {
+  return /* @__PURE__ */ r.jsx("div", { className: "h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] md:px-6", children: /* @__PURE__ */ r.jsx("a", { href: e, "aria-label": "Homepage Berlin.de", children: o || /* @__PURE__ */ r.jsx("img", { src: a, alt: "Berlin.de Logo", className: "h-8 w-auto" }) }) });
 }
 export {
-  u as SearchMenu
+  t as LogoBar
 };
 //# sourceMappingURL=index.es33.js.map

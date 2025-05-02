@@ -9,6 +9,10 @@ interface MainHeaderContentProps {
     menuItems: MenuItem[];
     onOpenMenu: () => void;
 }
-export declare function MainHeaderContent({ header, caption, url, showSearchButton, onSearch, showMenuButton, menuItems, onOpenMenu, }: MainHeaderContentProps): import("react/jsx-runtime").JSX.Element;
+/**
+ * Server component wrapper for MainHeaderContent
+ * This delegates interactive elements to the client component
+ */
+export declare function MainHeaderContent(props: MainHeaderContentProps): import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=MainHeaderContent.d.ts.map

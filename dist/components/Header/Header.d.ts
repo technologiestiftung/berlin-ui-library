@@ -76,7 +76,13 @@ export interface HeaderProps extends LinkComponentProps {
     className?: string;
 }
 /**
- * Header component with integrated accessibility menu
+ * Header component with integrated accessibility menu - Server Component
+ *
+ * This component is a server component that delegates interactive elements to client components.
+ * Use this version when you're working with React Server Components and want the header
+ * to be a server component with client interactivity where needed.
+ *
+ * If you need the entire header as a client component, use HeaderClient instead.
  *
  * The Header component includes:
  * - Logo section

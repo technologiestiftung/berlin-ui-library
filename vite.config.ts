@@ -1,6 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { defineConfig, searchForWorkspaceRoot } from "vite";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import svgr from "vite-plugin-svgr";
@@ -9,6 +9,7 @@ import { peerDependencies, dependencies } from "./package.json";
 // https://vite.dev/config/
 export default defineConfig({
 	resolve: {
+		preserveSymlinks: true,
 		alias: {
 			"@": resolve(__dirname, "src"),
 		},
@@ -25,6 +26,14 @@ export default defineConfig({
 			},
 		}),
 	],
+	server: {
+		fs: {
+			allow: [
+				searchForWorkspaceRoot(process.cwd()), // keep default workspace logic
+				"../berlin-ui-library", // explicitly allow that folder
+			],
+		},
+	},
 	build: {
 		lib: {
 			entry: resolve(__dirname, "src", "index.ts"),

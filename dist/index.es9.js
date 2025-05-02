@@ -1,101 +1,91 @@
-import { j as r } from "./index.es4.js";
-import { Slot as p } from "@radix-ui/react-slot";
-import { cva as x } from "class-variance-authority";
-import { cn as c } from "./index.es12.js";
-import f from "./index.es13.js";
-import u from "./index.es14.js";
-import h from "./index.es15.js";
-import m from "./index.es16.js";
-const y = (e, t) => {
-  if (e === "light" || e === "white" || e === "clean" || e === "link")
-    return null;
-  if (e === "close")
-    return /* @__PURE__ */ r.jsx("span", { className: "flex h-full w-full items-center justify-center", children: /* @__PURE__ */ r.jsx(
-      h,
-      {
-        className: `${t ? "text-gray-500" : "text-black"}`
-      }
-    ) });
-  const a = t ? "bg-gray-400" : "bg-primary";
-  return /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
-    /* @__PURE__ */ r.jsx(
-      "span",
-      {
-        className: `absolute top-0 right-0 flex h-full w-[39px] items-center justify-center ${e.includes("fulltone") ? "" : "border-l-2"} ${t ? "border-gray-400" : "border-black"} ${a}`
-      }
-    ),
-    /* @__PURE__ */ r.jsx("span", { className: "pointer-events-none absolute top-0 right-0 flex h-full w-[39px] items-center justify-center", children: e === "default" || e === "colored" || e === "fulltone" || e === "light-fulltone" ? /* @__PURE__ */ r.jsx(f, { className: "text-white" }) : e === "search" ? /* @__PURE__ */ r.jsx(u, { className: "fill-white" }) : e === "filter" ? /* @__PURE__ */ r.jsx(m, { className: "fill-white" }) : null })
-  ] });
-}, w = x(
-  // base styles for all buttons
-  "relative inline-block min-h-[43px] w-auto cursor-pointer justify-center overflow-visible rounded-none border-2 border-black bg-white px-4 py-[10px] text-center font-sans text-base leading-[1.2] text-black no-underline transition-colors duration-200 ease-out disabled:cursor-not-allowed",
-  {
-    variants: {
-      variant: {
-        default: "pr-[59px] hover:bg-hover focus:bg-hover disabled:border-gray-400 disabled:text-gray-500",
-        light: "px-4 hover:bg-hover focus:bg-hover disabled:border-gray-400 disabled:text-gray-500",
-        white: "disabled:bg-gray-200focus:bg-hover border-0 border-white bg-white px-4 text-black hover:bg-hover disabled:text-gray-500",
-        fulltone: "border-0 bg-primary px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
-        negative: "border-2 border-white bg-transparent text-white hover:bg-transparent focus:bg-transparent disabled:border-gray-500 disabled:bg-transparent disabled:text-gray-500",
-        colored: "border-primary pr-[59px] hover:bg-hover focus:bg-hover disabled:border-gray-400 disabled:text-gray-500",
-        clean: "border border-transparent px-4 disabled:text-gray-500",
-        play: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
-        download: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
-        search: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
-        filter: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
-        addtocart: "flex pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
-        close: "h-[39px] min-h-0 w-[39px] border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
-        extern: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
-        link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
-        "light-fulltone": "border-0 bg-primary px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
-        "negative-light": "border-2 border-white bg-transparent text-white hover:bg-transparent focus:bg-transparent disabled:border-gray-500 disabled:bg-transparent disabled:text-gray-500"
-      },
-      size: {
-        default: "",
-        fullwidth: "w-full",
-        "fullwidth-palm": "md:w-full"
-      }
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
-    }
-  }
-);
-function B({
-  className: e,
-  variant: t = "default",
-  size: a,
-  asChild: b = !1,
-  booking: o = !1,
-  price: l,
-  children: d,
-  disabled: s = !1,
-  ...n
+import { j as e } from "./index.es4.js";
+import f from "./index.es16.js";
+import { Accordion as m, AccordionItem as h, AccordionTrigger as j, AccordionContent as u } from "./index.es17.js";
+import { LanguageProvider as p, useLanguage as w, t as g } from "./index.es5.js";
+function v({
+  footerColumns: a = [],
+  berlinFooter: d,
+  LinkComponent: n = ({ href: x, children: r, ...c }) => /* @__PURE__ */ e.jsx("a", { href: x, ...c, children: r }),
+  className: o = "",
+  showScrollToTop: t = !0
 }) {
-  const i = b ? p : "button", g = o && l ? /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
-    /* @__PURE__ */ r.jsx("span", { className: "price mr-[0.7em] border-r border-black/60 pr-[0.7em]", children: l }),
-    /* @__PURE__ */ r.jsx("span", { children: d })
-  ] }) : d;
-  return /* @__PURE__ */ r.jsxs(
-    i,
+  const { translations: x } = w(), r = (l) => g(l, x), c = () => /* @__PURE__ */ e.jsxs(
+    "button",
     {
-      "data-slot": "button",
-      className: c(
-        w({ variant: t, size: a, className: e }),
-        o ? "button--booking flex" : ""
-      ),
-      disabled: s,
-      ...n,
+      className: "flex w-48 gap-x-2 p-2",
+      onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }),
       children: [
-        g,
-        y(t, s)
+        r("toTheTop"),
+        " ",
+        /* @__PURE__ */ e.jsx(f, { className: "bg-berlin-green" })
       ]
+    }
+  );
+  return /* @__PURE__ */ e.jsxs("footer", { className: `bg-block-colored w-full ${o}`, children: [
+    /* @__PURE__ */ e.jsx("div", { className: "flex w-full items-start justify-between md:p-6", children: /* @__PURE__ */ e.jsxs("div", { className: "flex w-full flex-wrap justify-between md:items-start md:pl-[5%]", children: [
+      t && /* @__PURE__ */ e.jsx("div", { className: "mb-4 flex w-full justify-end md:hidden", children: /* @__PURE__ */ e.jsx(c, {}) }),
+      /* @__PURE__ */ e.jsx("div", { className: "flex w-full flex-col md:hidden md:w-auto md:flex-row md:flex-wrap", children: /* @__PURE__ */ e.jsx(m, { collapsible: !0, type: "single", children: a.map((l, s) => /* @__PURE__ */ e.jsxs(h, { value: l.title, children: [
+        /* @__PURE__ */ e.jsx(j, { children: l.title }),
+        /* @__PURE__ */ e.jsx(u, { children: /* @__PURE__ */ e.jsx("div", { className: "flex flex-col", children: /* @__PURE__ */ e.jsx("ul", { className: "flex flex-col", children: l.links.map((i) => /* @__PURE__ */ e.jsx("li", { children: /* @__PURE__ */ e.jsxs(
+          n,
+          {
+            href: i.href,
+            className: `flex gap-x-1.5 py-4 pl-7 hover:underline ${l.title.includes("socialMedia") ? "flex-row" : "flex-row-reverse justify-end"}`,
+            children: [
+              r(i.label),
+              i.icon && i.icon
+            ]
+          }
+        ) }, i.href)) }) }) })
+      ] }, s)) }) }),
+      /* @__PURE__ */ e.jsx("div", { className: "flex w-full flex-col md:w-auto md:flex-row md:flex-wrap", children: a.map((l) => /* @__PURE__ */ e.jsxs("div", { className: "mb-6 ml-[3svw] hidden min-w-[12svw] flex-col gap-3.5 md:flex", children: [
+        /* @__PURE__ */ e.jsx("div", { className: "flex items-center justify-between font-bold", children: /* @__PURE__ */ e.jsx("span", { children: r(l.title) }) }),
+        /* @__PURE__ */ e.jsx("ul", { className: "flex flex-col gap-2.5 bg-inherit", children: l.links.map((s) => /* @__PURE__ */ e.jsx("li", { children: /* @__PURE__ */ e.jsxs(
+          n,
+          {
+            href: s.href,
+            className: `flex gap-1.5 hover:underline ${l.title.includes("socialMedia") ? "flex-row" : "flex-row-reverse justify-end"}`,
+            children: [
+              r(s.label),
+              s.icon && s.icon
+            ]
+          }
+        ) }, s.href)) })
+      ] })) }),
+      t && /* @__PURE__ */ e.jsx("div", { className: "hidden self-start md:block", children: /* @__PURE__ */ e.jsx(c, {}) })
+    ] }) }),
+    d && /* @__PURE__ */ e.jsx(
+      "div",
+      {
+        suppressHydrationWarning: !0,
+        dangerouslySetInnerHTML: { __html: d }
+      }
+    )
+  ] });
+}
+function T({
+  language: a = "de",
+  languages: d = [
+    { code: "de", label: "Deutsch" },
+    { code: "en", label: "English" }
+  ],
+  translations: n,
+  onLanguageChange: o = () => {
+  },
+  ...t
+}) {
+  return /* @__PURE__ */ e.jsx(
+    p,
+    {
+      initialLanguage: a,
+      languages: d,
+      translations: n,
+      onLanguageChange: o,
+      children: /* @__PURE__ */ e.jsx(v, { ...t })
     }
   );
 }
 export {
-  B as Button,
-  w as buttonVariants
+  T as Footer
 };
 //# sourceMappingURL=index.es9.js.map

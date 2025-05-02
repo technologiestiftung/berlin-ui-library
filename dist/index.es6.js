@@ -1,13 +1,13 @@
-import { j as s } from "./index.es4.js";
-import * as u from "react";
-import { cva as l } from "class-variance-authority";
-import { cn as p } from "./index.es12.js";
-const i = l(
-  "relative col-start-1 row-start-1 h-[47px] w-full rounded-none border-2 border-black px-4 pr-20 pl-10 placeholder-berlin-grey focus:border-focus-blue focus:shadow-default focus:outline-none",
+import { j as n } from "./index.es4.js";
+import * as l from "react";
+import { cva as u } from "class-variance-authority";
+import { cn as i } from "./index.es15.js";
+const p = u(
+  "placeholder-berlin-grey focus:border-focus-blue relative col-start-1 row-start-1 h-[47px] w-full rounded-none border border-black px-4 pr-20 pl-10 focus:shadow-default focus:outline-none",
   {
     variants: {
       variant: {
-        default: "bg-background text-foreground",
+        default: "text-foreground bg-white",
         outline: "bg-transparent"
       },
       size: {
@@ -21,18 +21,18 @@ const i = l(
       size: "default"
     }
   }
-), f = u.forwardRef(({ className: t, type: r, variant: e, size: a, ...o }, n) => /* @__PURE__ */ s.jsx(
+), f = l.forwardRef(({ className: t, type: e, variant: r, size: a, ...o }, s) => /* @__PURE__ */ n.jsx(
   "input",
   {
-    type: r,
-    className: p(i({ variant: e, size: a, className: t })),
-    ref: n,
+    type: e,
+    className: i(p({ variant: r, size: a, className: t })),
+    ref: s,
     ...o
   }
 ));
 f.displayName = "Input";
 export {
   f as Input,
-  i as inputVariants
+  p as inputVariants
 };
 //# sourceMappingURL=index.es6.js.map

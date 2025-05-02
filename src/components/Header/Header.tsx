@@ -1,4 +1,3 @@
-"use server";
 /* eslint-disable complexity */
 import React from "react";
 import { LogoBar } from "./LogoBar";
@@ -84,7 +83,13 @@ export interface HeaderProps extends LinkComponentProps {
 }
 
 /**
- * Header component with integrated accessibility menu
+ * Header component with integrated accessibility menu - Server Component
+ *
+ * This component is a server component that delegates interactive elements to client components.
+ * Use this version when you're working with React Server Components and want the header
+ * to be a server component with client interactivity where needed.
+ *
+ * If you need the entire header as a client component, use HeaderClient instead.
  *
  * The Header component includes:
  * - Logo section
@@ -129,7 +134,7 @@ export function Header({
 				{/* Logo Bar */}
 				<LogoBar logoUrl={logoUrl} logoComponent={logoComponent} />
 
-				{/* Main Header Content */}
+				{/* Main Header Content - Client Component */}
 				<MainHeaderContent
 					header={header}
 					caption={caption}
