@@ -1,1 +1,0 @@
-{"version":3,"file":"SearchBar.d.ts","sourceRoot":"","sources":["../../../../src/components/Header/SearchBar.tsx"],"names":[],"mappings":"AAIA,MAAM,WAAW,cAAc;IAC9B;;OAEG;IACH,QAAQ,CAAC,EAAE,CAAC,UAAU,EAAE,MAAM,KAAK,IAAI,CAAC;IACxC;;OAEG;IACH,SAAS,CAAC,EAAE,MAAM,CAAC;CACnB;AAED,wBAAgB,SAAS,CAAC,EAAE,QAAQ,EAAE,SAAc,EAAE,EAAE,cAAc,2CAgCrE"}

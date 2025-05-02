@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index.cjs4.js"),o=require("./index.cjs43.js");function s({logoUrl:r="https://www.berlin.de",logoComponent:t}){return e.jsxRuntimeExports.jsx("div",{className:"h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] md:px-6",children:e.jsxRuntimeExports.jsx("a",{href:r,"aria-label":"Homepage Berlin.de",children:t||e.jsxRuntimeExports.jsx("img",{src:o.default,alt:"Berlin.de Logo",className:"h-8 w-auto"})})})}exports.LogoBar=s;
+//# sourceMappingURL=index.cjs33.js.map

@@ -1,2 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("react/jsx-runtime"),o=require("../../assets/icons/bars_icon.svg.cjs"),n=require("./LanguageProvider.cjs");function s({onOpenMenu:r,className:u=""}){const{translations:a}=n.useLanguage(),e=n.t("menu",a);return t.jsxs("button",{className:`flex flex-col items-center gap-1 text-[11px] leading-3 ${u}`,onClick:r,"aria-label":e,children:[t.jsx(o.default,{}),e]})}exports.MenuButton=s;
-//# sourceMappingURL=MenuButton.cjs.map

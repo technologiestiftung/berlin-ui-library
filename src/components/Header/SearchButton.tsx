@@ -1,5 +1,3 @@
-"use client";
-
 import { SearchIconLarge } from "@/assets/icons/search-icon-large";
 import { useLanguage, t } from "./LanguageProvider";
 

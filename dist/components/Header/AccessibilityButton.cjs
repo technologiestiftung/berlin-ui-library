@@ -1,2 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("react/jsx-runtime"),l=require("../../assets/icons/accessibility_icon.svg.cjs"),i=require("./LanguageProvider.cjs");function a({onOpenAccessibility:s,className:n=""}){const{translations:c}=i.useLanguage(),e=i.t("accessibility",c);return t.jsxs("button",{className:`flex flex-col items-center gap-1 text-[11px] leading-3 ${n}`,onClick:s,"aria-label":e,children:[t.jsx(l.default,{}),e]})}exports.AccessibilityButton=a;
-//# sourceMappingURL=AccessibilityButton.cjs.map
