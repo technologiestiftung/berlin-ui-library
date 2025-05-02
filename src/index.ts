@@ -50,3 +50,5 @@ export { Input } from "./components/Input/Input";
 
 // Label component
 export { Label } from "./components/Label/Label";
+
+export { SearchForm } from "./components/SearchForm";

@@ -1,25 +1,6 @@
-import { j as e } from "./index.es4.js";
-import { SearchIconLarge as n } from "./index.es42.js";
-import { useLanguage as s, t as c } from "./index.es5.js";
-function x({
-  onOpenSearch: r,
-  className: a = ""
-}) {
-  const { translations: o } = s(), t = c("search", o);
-  return /* @__PURE__ */ e.jsxs(
-    "button",
-    {
-      className: `flex flex-col items-center gap-1 text-[11px] leading-3 ${a}`,
-      onClick: r,
-      "aria-label": t,
-      children: [
-        /* @__PURE__ */ e.jsx(n, {}),
-        t
-      ]
-    }
-  );
-}
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "menu-icon", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 28 32", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M1,8.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,18.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,28.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1Z" }));
 export {
-  x as SearchButton
+  t as default
 };
 //# sourceMappingURL=index.es41.js.map

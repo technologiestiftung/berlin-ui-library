@@ -7,4 +7,5 @@ export { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 export { FormFieldWrapper, FormWrapper } from './components/FormWrapper';
 export { Input } from './components/Input/Input';
 export { Label } from './components/Label/Label';
+export { SearchForm } from './components/SearchForm';
 //# sourceMappingURL=index.d.ts.map

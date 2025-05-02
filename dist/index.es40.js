@@ -1,6 +1,22 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "menu-icon", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 28 32", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M1,8.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,18.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1ZM1,28.25h26c.55,0,1-.45,1-1v-2.5c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v2.5c0,.55.45,1,1,1Z" }));
+import { j as e } from "./index.es4.js";
+import s from "./index.es41.js";
+import { useLanguage as a, t as l } from "./index.es5.js";
+function u({ onOpenMenu: n, className: o = "" }) {
+  const { translations: r } = a(), t = l("menu", r);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `flex flex-col items-center gap-1 text-[11px] leading-3 ${o}`,
+      onClick: n,
+      "aria-label": t,
+      children: [
+        /* @__PURE__ */ e.jsx(s, {}),
+        t
+      ]
+    }
+  );
+}
 export {
-  t as default
+  u as MenuButton
 };
 //# sourceMappingURL=index.es40.js.map

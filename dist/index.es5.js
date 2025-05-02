@@ -1,9 +1,9 @@
-import { j as b } from "./index.es4.js";
-import { createContext as d, useState as f, useContext as y } from "react";
+import { j as h } from "./index.es4.js";
+import { createContext as b, useState as d, useContext as f } from "react";
 const m = [
   { code: "de", label: "Deutsch" },
   { code: "en", label: "English" }
-], M = {
+], y = {
   de: {
     accessibility: "Barrierefreiheit",
     menu: "Menü",
@@ -12,6 +12,13 @@ const m = [
     collapse: "Einklappen",
     closeMenu: "Menü schließen",
     accessibilityMenu: "Barrierefreiheit-Menü",
+    "search.title": "Suche",
+    "search.placeholder": "Suchbegriff",
+    "search.ariaLabel": "Suche",
+    "search.button": "Suchen",
+    "search.submit": "Suchen",
+    "search.results": "Suchergebnisse",
+    "search.noResults": "Keine Ergebnisse gefunden",
     "accessibilityMenu.title": "Barrierefreiheit",
     "button.name.close": "Schließen",
     "accessibilityMenu.barrierefreiheit.question": "Informationen zur Barrierefreiheit:",
@@ -29,6 +36,13 @@ const m = [
     collapse: "Collapse",
     closeMenu: "Close menu",
     accessibilityMenu: "Accessibility menu",
+    "search.title": "Search",
+    "search.placeholder": "Search term",
+    "search.ariaLabel": "Search",
+    "search.button": "Search",
+    "search.submit": "Search",
+    "search.results": "Search results",
+    "search.noResults": "No results found",
     "accessibilityMenu.title": "Accessibility",
     "button.name.close": "Close",
     "accessibilityMenu.barrierefreiheit.question": "Accessibility information:",
@@ -38,39 +52,39 @@ const m = [
     "accessibilityMenu.additionalInfo.question": "Additional information:",
     "accessibilityMenu.additionalInfo": "Competence center for accessibility"
   }
-}, a = d(
+}, a = b(
   void 0
 ), p = () => {
-  const e = y(a);
+  const e = f(a);
   if (!e)
     throw new Error("useLanguage must be used within a LanguageProvider");
   return e;
-}, x = ({
+}, S = ({
   children: e,
   initialLanguage: i = "de",
   languages: c = m,
-  translations: t = M,
-  onLanguageChange: n
+  translations: t = y,
+  onLanguageChange: s
 }) => {
-  const [s, o] = f(i), l = () => t[s] || t.de || {}, u = (r) => {
-    o(r), n && n(r);
+  const [r, o] = d(i), u = () => t[r] || t.de || {}, l = (n) => {
+    o(n), s && s(n);
   };
-  return /* @__PURE__ */ b.jsx(
+  return /* @__PURE__ */ h.jsx(
     a.Provider,
     {
       value: {
-        currentLanguage: s,
+        currentLanguage: r,
         languages: c,
-        translations: l(),
-        setLanguage: u
+        translations: u(),
+        setLanguage: l
       },
       children: e
     }
   );
-}, C = (e, i) => i[e] || e;
+}, x = (e, i) => i[e] || e;
 export {
-  x as LanguageProvider,
-  C as t,
+  S as LanguageProvider,
+  x as t,
   p as useLanguage
 };
 //# sourceMappingURL=index.es5.js.map

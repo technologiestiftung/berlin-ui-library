@@ -1,6 +1,6 @@
 import { j as e } from "./index.es4.js";
-import f from "./index.es16.js";
-import { Accordion as m, AccordionItem as h, AccordionTrigger as j, AccordionContent as u } from "./index.es17.js";
+import f from "./index.es17.js";
+import { Accordion as m, AccordionItem as h, AccordionTrigger as j, AccordionContent as u } from "./index.es18.js";
 import { LanguageProvider as p, useLanguage as w, t as g } from "./index.es5.js";
 function v({
   footerColumns: a = [],

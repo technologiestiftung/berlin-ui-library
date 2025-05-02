@@ -2,7 +2,7 @@ import { j as r } from "./index.es4.js";
 import * as t from "react";
 import { Slot as b } from "@radix-ui/react-slot";
 import { ChevronRight as d } from "lucide-react";
-import { cn as c } from "./index.es15.js";
+import { cn as c } from "./index.es16.js";
 const o = t.forwardRef(({ ...e }, a) => /* @__PURE__ */ r.jsx("nav", { ref: a, "aria-label": "breadcrumb", ...e }));
 o.displayName = "Breadcrumb";
 const i = t.forwardRef(({ className: e, ...a }, s) => /* @__PURE__ */ r.jsx(

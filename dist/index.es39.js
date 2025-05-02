@@ -1,22 +1,6 @@
-import { j as e } from "./index.es4.js";
-import s from "./index.es40.js";
-import { useLanguage as a, t as l } from "./index.es5.js";
-function u({ onOpenMenu: n, className: o = "" }) {
-  const { translations: r } = a(), t = l("menu", r);
-  return /* @__PURE__ */ e.jsxs(
-    "button",
-    {
-      className: `flex flex-col items-center gap-1 text-[11px] leading-3 ${o}`,
-      onClick: n,
-      "aria-label": t,
-      children: [
-        /* @__PURE__ */ e.jsx(s, {}),
-        t
-      ]
-    }
-  );
-}
+import * as e from "react";
+const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 19, height: 11, viewBox: "0 0 19 11", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M17.5 9.87084L9.5 2.12891L1.5 9.87084", stroke: "currentColor", strokeWidth: 3 }));
 export {
-  u as MenuButton
+  o as default
 };
 //# sourceMappingURL=index.es39.js.map

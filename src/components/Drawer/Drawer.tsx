@@ -5,7 +5,7 @@ import * as DrawerPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import { Button } from "../Button/Button";
+import CloseIcon from "@/assets/icons/close_icon.svg?react";
 
 const Drawer = DrawerPrimitive.Root;
 
@@ -80,7 +80,7 @@ const DrawerContent = React.forwardRef<
 				>
 					{children}
 					<DrawerPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-1 right-4 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
-						<Button variant="close" />
+						<CloseIcon className="m-2 text-black" />
 						<span className="sr-only">Close</span>
 					</DrawerPrimitive.Close>
 				</DrawerPrimitive.Content>

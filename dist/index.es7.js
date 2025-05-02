@@ -1,122 +1,59 @@
-import { j as o } from "./index.es4.js";
-import * as i from "react";
-import * as e from "@radix-ui/react-dialog";
-import { cva as c } from "class-variance-authority";
-import { cn as r } from "./index.es15.js";
-import { Button as f } from "./index.es10.js";
-const v = e.Root, C = e.Trigger, R = e.Close, p = e.Portal, n = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
-  e.Overlay,
-  {
-    className: r(
-      "fixed inset-0 z-50 bg-black/40 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0",
-      t
-    ),
-    ...a,
-    ref: s
-  }
-));
-n.displayName = e.Overlay.displayName;
-const u = c(
-  "fixed z-50 gap-4 bg-white pt-[0.7em] shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=closed]:animate-out data-[state=open]:duration-500 data-[state=open]:animate-in",
-  {
-    variants: {
-      side: {
-        top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
-        bottom: "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
-        left: "inset-y-0 left-0 h-full w-[35rem] border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
-        right: "inset-y-0 right-0 h-full w-[35rem] border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right"
-      },
-      size: {
-        default: "",
-        large: "w-[90vw]"
-      }
-    },
-    defaultVariants: {
-      side: "right",
-      size: "default"
-    }
-  }
-), x = i.forwardRef(
-  ({ side: t = "right", size: a = "default", className: s, children: d, ...l }, m) => /* @__PURE__ */ o.jsxs(p, { children: [
-    /* @__PURE__ */ o.jsx(n, {}),
-    /* @__PURE__ */ o.jsxs(
-      e.Content,
-      {
-        ref: m,
-        className: r(
-          u({ side: t, size: a }),
-          "overflow-y-auto",
-          s
+import { j as e } from "./index.es4.js";
+import { useState as b } from "react";
+import { cn as x } from "./index.es16.js";
+import g from "./index.es26.js";
+import v from "./index.es24.js";
+function I({
+  placeholder: a = "Suchbegriff",
+  onSubmit: i,
+  defaultValue: o = "",
+  label: n = "Suchbegriff",
+  submitLabel: c = "Suchen",
+  className: u = "",
+  value: t,
+  onChange: h
+}) {
+  const [m, f] = b(o), s = t !== void 0, l = s ? t : m, d = (r) => {
+    s ? h?.(r.target.value) : f(r.target.value);
+  }, p = (r) => {
+    r.preventDefault(), i?.(l || "");
+  };
+  return /* @__PURE__ */ e.jsx("form", { onSubmit: p, className: x("text-left", u), children: /* @__PURE__ */ e.jsx("div", { className: "searchform-slot", children: /* @__PURE__ */ e.jsxs("div", { className: "form-group", children: [
+    /* @__PURE__ */ e.jsx("label", { className: "sr-only", htmlFor: "searchInput", children: n }),
+    /* @__PURE__ */ e.jsxs("div", { className: "relative inline-flex w-full bg-white", children: [
+      /* @__PURE__ */ e.jsxs("div", { className: "relative flex w-full items-center border border-black", children: [
+        /* @__PURE__ */ e.jsx(
+          g,
+          {
+            className: "absolute left-3 h-5 w-5 fill-text-lightest",
+            "aria-hidden": "true"
+          }
         ),
-        ...l,
-        children: [
-          d,
-          /* @__PURE__ */ o.jsxs(e.Close, { className: "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-1 right-4 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none", children: [
-            /* @__PURE__ */ o.jsx(f, { variant: "close" }),
-            /* @__PURE__ */ o.jsx("span", { className: "sr-only", children: "Close" })
-          ] })
-        ]
-      }
-    )
-  ] })
-);
-x.displayName = e.Content.displayName;
-const w = ({
-  className: t,
-  ...a
-}) => /* @__PURE__ */ o.jsx(
-  "div",
-  {
-    className: r(
-      "flex flex-col space-y-2 text-center sm:text-left",
-      t
-    ),
-    ...a
-  }
-);
-w.displayName = "DrawerHeader";
-const g = ({
-  className: t,
-  ...a
-}) => /* @__PURE__ */ o.jsx(
-  "div",
-  {
-    className: r(
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
-      t
-    ),
-    ...a
-  }
-);
-g.displayName = "DrawerFooter";
-const y = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
-  e.Title,
-  {
-    ref: s,
-    className: r("text-foreground px-[0.8rem] text-xl font-bold", t),
-    ...a
-  }
-));
-y.displayName = e.Title.displayName;
-const N = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
-  e.Description,
-  {
-    ref: s,
-    className: r("text-muted-foreground text-sm", t),
-    ...a
-  }
-));
-N.displayName = e.Description.displayName;
+        /* @__PURE__ */ e.jsx(
+          "input",
+          {
+            type: "search",
+            id: "searchInput",
+            className: "h-[47px] w-full border-0 bg-transparent py-2 pr-14 pl-10 outline-none focus-visible:border-tabfocus focus-visible:ring-0 focus-visible:ring-offset-0",
+            placeholder: a,
+            value: l,
+            onChange: d
+          }
+        )
+      ] }),
+      /* @__PURE__ */ e.jsx(
+        "button",
+        {
+          className: "absolute top-0 right-0 flex h-full w-[47px] cursor-pointer items-center justify-center text-red",
+          type: "submit",
+          "aria-label": c,
+          children: /* @__PURE__ */ e.jsx(v, { className: "h-7 w-7", "aria-hidden": "true" })
+        }
+      )
+    ] })
+  ] }) }) });
+}
 export {
-  v as Drawer,
-  R as DrawerClose,
-  x as DrawerContent,
-  N as DrawerDescription,
-  g as DrawerFooter,
-  w as DrawerHeader,
-  n as DrawerOverlay,
-  p as DrawerPortal,
-  y as DrawerTitle,
-  C as DrawerTrigger
+  I as SearchForm
 };
 //# sourceMappingURL=index.es7.js.map
