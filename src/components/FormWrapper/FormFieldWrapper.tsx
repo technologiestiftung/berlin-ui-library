@@ -24,6 +24,7 @@ import {
 	SelectValue,
 } from "../Select";
 import { Checkbox } from "../Checkbox";
+import { RadioGroup, RadioGroupItem } from "../RadioGroup/RadioGroup";
 import { Info } from "lucide-react";
 import {
 	Tooltip,
@@ -31,6 +32,7 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from "../Tooltip";
+import { Label } from "../Label";
 
 /**
  * FormProperty interface defines the structure of a form field property
@@ -129,6 +131,12 @@ export interface FormProperty {
 	 * Step increment (for number inputs)
 	 */
 	step?: number;
+
+	/**
+	 * Direction for displaying option groups (radio, checkbox)
+	 * 'horizontal' or 'vertical', defaults to 'vertical'
+	 */
+	direction?: "horizontal" | "vertical";
 }
 
 // Render a number field
@@ -226,18 +234,113 @@ const renderCheckboxField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
 ) => {
-	const { name, description, isDisabled } = property;
+	const { name, isDisabled, options, direction } = property;
+
+	// If options are provided, render multiple checkboxes (checkbox group)
+	if (options && Array.isArray(options) && options.length > 0) {
+		// Initialize the field value as an array if it doesn't exist
+		let selectedValues: string[] = [];
+		if (Array.isArray(field.value)) {
+			selectedValues = field.value;
+		} else if (field.value) {
+			selectedValues = [field.value];
+		}
+
+		return (
+			<div
+				className={`flex ${direction === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-2"}`}
+			>
+				{options.map((option) => {
+					// Check if this option is selected
+					const isSelected = selectedValues.includes(option.value);
+
+					return (
+						<div key={option.value} className="flex items-center space-x-2">
+							<Checkbox
+								id={`${field.name}-${option.value}`}
+								disabled={isDisabled}
+								checked={isSelected}
+								onCheckedChange={(checked) => {
+									const newValue = [...selectedValues];
+
+									if (checked) {
+										// Add the value if it's not already included
+										if (!newValue.includes(option.value)) {
+											newValue.push(option.value);
+										}
+									} else {
+										// Remove the value
+										const index = newValue.indexOf(option.value);
+										if (index > -1) {
+											newValue.splice(index, 1);
+										}
+									}
+
+									field.onChange(newValue);
+								}}
+							/>
+							<Label
+								htmlFor={`${field.name}-${option.value}`}
+								className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+							>
+								{option.label || option.value}
+							</Label>
+						</div>
+					);
+				})}
+			</div>
+		);
+	}
+
+	// If no options are provided, render a single checkbox
 	return (
-		<Checkbox
+		<div className="flex items-center space-x-2">
+			<Checkbox
+				{...field}
+				id={field.name}
+				disabled={isDisabled}
+				checked={field.value}
+				onCheckedChange={(checked) => {
+					field.onChange(checked);
+				}}
+			/>
+			<Label
+				htmlFor={field.name}
+				className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+			>
+				{name}
+			</Label>
+		</div>
+	);
+};
+
+const renderRadioGroup = (
+	property: FormProperty,
+	field: ControllerRenderProps<FieldValues, string>,
+) => {
+	const { options, isDisabled, direction } = property;
+
+	return (
+		<RadioGroup
 			{...field}
 			disabled={isDisabled}
-			checked={field.value}
-			onCheckedChange={(checked) => {
-				field.onChange(checked);
-			}}
+			className={`flex ${direction === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-1"}`}
 		>
-			{description || name}
-		</Checkbox>
+			{options?.map((option) => (
+				<div key={option.value} className="flex items-center space-x-2">
+					<RadioGroupItem
+						id={`${field.name}-${option.value}`}
+						value={option.value}
+					/>
+					<Label
+						htmlFor={`${field.name}-${option.value}`}
+						className="leading-none peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+					>
+						{option.label || option.value}
+					</Label>
+				</div>
+			))}
+		</RadioGroup>
 	);
 };
 
@@ -263,6 +366,8 @@ const renderField = (
 			return renderNumberField(property, field);
 		case "checkbox":
 			return renderCheckboxField(property, field);
+		case "radio":
+			return renderRadioGroup(property, field);
 		case "select":
 			return renderSelectField(property, field);
 		default:
@@ -275,7 +380,7 @@ const renderTooltip = (content: string) => (
 	<TooltipProvider>
 		<Tooltip>
 			<TooltipTrigger asChild>
-				<Info className="h-4 w-4 text-muted-foreground" />
+				<Info className="text-muted-foreground h-4 w-4" />
 			</TooltipTrigger>
 			<TooltipContent>
 				<p>{content}</p>
@@ -401,14 +506,16 @@ function FormFieldWrapper({
 			render={({ field }) => (
 				<FormItem>
 					<div className="flex items-center justify-between">
-						<FormLabel className="text-sm">
+						<FormLabel className="font-bold">
 							{name}
-							{isRequired && <span className="ml-1 text-destructive">*</span>}
+							{isRequired && (
+								<span className="ml-1 text-decorative-destructive">*</span>
+							)}
 						</FormLabel>
 						{helperText && renderTooltip(helperText)}
 					</div>
 					<FormControl>{renderField(formProperty, field)}</FormControl>
-					<FormDescription className="text-sm text-muted-foreground">
+					<FormDescription className="text-sm text-text-lightest">
 						{description}
 					</FormDescription>
 					<FormMessage />

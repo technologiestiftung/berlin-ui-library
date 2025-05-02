@@ -6,9 +6,11 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 import ArrowRightIcon from "@/assets/icons/arrow_right_icon.svg?react";
+import ArrowLeftIcon from "@/assets/icons/arrow_left_icon.svg?react";
 import SearchIcon from "@/assets/icons/search_icon.svg?react";
 import CloseIcon from "@/assets/icons/close_icon.svg?react";
 import FilterIcon from "@/assets/icons/filter_icon.svg?react";
+import LinkIcon from "@/assets/icons/link_icon.svg?react";
 
 // Additional icon imports can be added as needed
 const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
@@ -32,6 +34,30 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 		);
 	}
 
+	// Special handling for back variant
+	if (variant === "back") {
+		return (
+			<span className="flex h-full w-full items-center justify-center">
+				<ArrowLeftIcon
+					className={`${isDisabled ? "text-gray-500" : "text-black"}`}
+					width="24"
+					height="24"
+				/>
+			</span>
+		);
+	}
+
+	// Special handling for back-link variant (arrow + text)
+	if (variant === "back-link") {
+		return (
+			<ArrowLeftIcon
+				className={`mr-1 ${isDisabled ? "text-gray-500" : "text-[#0047d3]"}`}
+				width="16"
+				height="16"
+			/>
+		);
+	}
+
 	const iconBackgroundColor = isDisabled ? "bg-gray-400" : "bg-red";
 
 	return (
@@ -49,6 +75,8 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 					<SearchIcon className="fill-white" />
 				) : variant === "filter" ? (
 					<FilterIcon className="fill-white" />
+				) : variant === "extern" ? (
+					<LinkIcon className="text-white" />
 				) : null}
 			</span>
 		</>
@@ -62,17 +90,17 @@ const buttonVariants = cva(
 		variants: {
 			variant: {
 				default:
-					"pr-[59px] hover:bg-hover focus:bg-hover disabled:border-gray-400 disabled:text-gray-500",
+					"hover:bg-hover focus:bg-hover pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				light:
-					"px-4 hover:bg-hover focus:bg-hover disabled:border-gray-400 disabled:text-gray-500",
+					"hover:bg-hover focus:bg-hover px-4 disabled:border-gray-400 disabled:text-gray-500",
 				white:
-					"disabled:bg-gray-200focus:bg-hover border-0 border-white bg-white px-4 text-black hover:bg-hover disabled:text-gray-500",
+					"disabled:bg-gray-200focus:bg-hover hover:bg-hover border-0 border-white bg-white px-4 text-black disabled:text-gray-500",
 				fulltone:
 					"border-0 bg-red px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
 				negative:
 					"border-2 border-white bg-transparent text-white hover:bg-transparent focus:bg-transparent disabled:border-gray-500 disabled:bg-transparent disabled:text-gray-500",
 				colored:
-					"border-red pr-[59px] hover:bg-hover focus:bg-hover disabled:border-gray-400 disabled:text-gray-500",
+					"hover:bg-hover focus:bg-hover border-red pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				clean: "border border-transparent px-4 disabled:text-gray-500",
 				play: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				download: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
@@ -82,6 +110,9 @@ const buttonVariants = cva(
 					"flex pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				close:
 					"h-[39px] min-h-0 w-[39px] border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
+				back: "flex h-[39px] min-h-0 w-[39px] items-center justify-center border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
+				"back-link":
+					"flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
 				extern: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
 				"light-fulltone":

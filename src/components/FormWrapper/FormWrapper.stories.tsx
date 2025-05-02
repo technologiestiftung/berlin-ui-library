@@ -1,16 +1,12 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { FormWrapper } from "./FormWrapper";
-import {
-	Form,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormControl,
-	FormMessage,
-} from "../Form/Form";
-import { Input } from "../Input/Input";
+import { Form } from "../Form/Form";
 import { Button } from "../Button/Button";
 import { useForm } from "react-hook-form";
+import {
+	FormFieldWrapper,
+	FormProperty,
+} from "../FormWrapper/FormFieldWrapper";
 
 const meta: Meta<typeof FormWrapper> = {
 	title: "Components/FormWrapper",
@@ -25,90 +21,117 @@ export default meta;
 
 type Story = StoryObj<typeof FormWrapper>;
 
-// Basic form setup for stories
-const SimpleForm = ({ withBackground = true }) => {
+// Basic form setup for stories that matches the example image
+const ExampleForm = ({ withBackground = true }) => {
 	const form = useForm({
 		defaultValues: {
-			name: "",
-			email: "",
+			input: "",
+			select: "",
+			checkboxGroup: [],
+			radioGroup: "yes",
 		},
 	});
 
+	const formFields: FormProperty[] = [
+		{
+			id: "input",
+			name: "Input",
+			type: "text",
+			helperText: "Helptext",
+			isRequired: true,
+		},
+		{
+			id: "select",
+			name: "Select",
+			type: "select",
+			helperText: "Helptext",
+			isRequired: true,
+			options: [
+				{ value: "option1", label: "Option 1" },
+				{ value: "option2", label: "Option 2" },
+				{ value: "option3", label: "Option 3" },
+			],
+			placeholder: "Bitte wählen",
+		},
+		{
+			id: "checkboxGroup",
+			name: "Frage",
+			type: "checkbox",
+			options: [
+				{ value: "answer1", label: "Antwort 1" },
+				{ value: "answer2", label: "Antwort 2" },
+			],
+		},
+		{
+			id: "radioGroup",
+			name: "Frage",
+			type: "radio",
+			options: [
+				{ value: "yes", label: "Ja" },
+				{ value: "no", label: "Nein" },
+			],
+		},
+	];
+
 	return (
-		<FormWrapper withBackground={withBackground} className="max-w-md">
+		<FormWrapper
+			withBackground={withBackground}
+			className="w-full max-w-md"
+			padding="p-8"
+		>
+			<h2 className="mb-6 text-xl font-bold">Example</h2>
 			<Form {...form}>
-				<form className="space-y-4">
-					<FormField
-						control={form.control}
-						name="name"
-						rules={{ required: "Name is required" }}
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Name</FormLabel>
-								<FormControl>
-									<Input placeholder="Enter your name" {...field} />
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
+				<form className="space-y-6">
+					{formFields.map((field) => (
+						<FormFieldWrapper key={field.id} formProperty={field} form={form} />
+					))}
 
-					<FormField
-						control={form.control}
-						name="email"
-						rules={{
-							required: "Email is required",
-							pattern: {
-								value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-								message: "Invalid email address",
-							},
-						}}
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Email</FormLabel>
-								<FormControl>
-									<Input placeholder="Enter your email" {...field} />
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
-
-					<Button type="submit">Submit</Button>
+					<div className="mt-8 flex justify-between border-t border-gray-200 pt-4">
+						<Button variant="back-link">
+							<span className="flex items-center">Back</span>
+						</Button>
+						<Button type="submit">
+							<span className="flex items-center">Action</span>
+						</Button>
+					</div>
 				</form>
 			</Form>
 		</FormWrapper>
 	);
 };
 
-export const WithBackground: Story = {
-	render: () => <SimpleForm />,
+export const Example: Story = {
+	render: () => <ExampleForm />,
 };
 
 export const WithoutBackground: Story = {
-	render: () => <SimpleForm withBackground={false} />,
+	render: () => <ExampleForm withBackground={false} />,
 };
 
 export const CustomPadding: Story = {
-	render: () => (
-		<FormWrapper padding="p-10" className="max-w-md">
-			<Form {...useForm()}>
-				<form className="space-y-4">
-					<FormField
-						control={useForm().control}
-						name="message"
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Message</FormLabel>
-								<FormControl>
-									<Input placeholder="Enter a message" {...field} />
-								</FormControl>
-							</FormItem>
-						)}
-					/>
-					<Button type="submit">Send</Button>
-				</form>
-			</Form>
-		</FormWrapper>
-	),
+	render: () => {
+		const methods = useForm({
+			defaultValues: {
+				message: "",
+			},
+		});
+
+		const messageField: FormProperty = {
+			id: "message",
+			name: "Message",
+			type: "text",
+			placeholder: "Enter a message",
+		};
+
+		return (
+			<FormWrapper padding="p-10" className="max-w-md">
+				<Form {...methods}>
+					<form className="space-y-4">
+						<FormFieldWrapper formProperty={messageField} form={methods} />
+						<Button type="submit">Send</Button>
+					</form>
+				</Form>
+			</FormWrapper>
+		);
+	},
 };

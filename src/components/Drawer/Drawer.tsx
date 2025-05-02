@@ -31,7 +31,7 @@ const DrawerOverlay = React.forwardRef<
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
 const drawerVariants = cva(
-	"fixed z-50 gap-4 bg-background pt-[0.7em] shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=closed]:animate-out data-[state=open]:duration-500 data-[state=open]:animate-in",
+	"fixed z-50 gap-4 bg-white pt-[0.7em] shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=closed]:animate-out data-[state=open]:duration-500 data-[state=open]:animate-in",
 	{
 		variants: {
 			side: {
@@ -79,7 +79,7 @@ const DrawerContent = React.forwardRef<
 					{...props}
 				>
 					{children}
-					<DrawerPrimitive.Close className="absolute top-1 right-4 cursor-pointer rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-secondary">
+					<DrawerPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-1 right-4 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
 						<Button variant="close" />
 						<span className="sr-only">Close</span>
 					</DrawerPrimitive.Close>
@@ -124,7 +124,7 @@ const DrawerTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<DrawerPrimitive.Title
 		ref={ref}
-		className={cn("px-[0.8rem] text-xl font-bold text-foreground", className)}
+		className={cn("text-foreground px-[0.8rem] text-xl font-bold", className)}
 		{...props}
 	/>
 ));
@@ -136,7 +136,7 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<DrawerPrimitive.Description
 		ref={ref}
-		className={cn("text-sm text-muted-foreground", className)}
+		className={cn("text-muted-foreground text-sm", className)}
 		{...props}
 	/>
 ));

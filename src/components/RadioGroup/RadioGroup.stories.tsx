@@ -43,11 +43,11 @@ export const WithDescriptions: Story = {
 				<div className="grid gap-1.5 leading-none">
 					<label
 						htmlFor="r1"
-						className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+						className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 					>
 						Default
 					</label>
-					<p className="text-sm text-muted-foreground">
+					<p className="text-muted-foreground text-sm">
 						Use the system default theme.
 					</p>
 				</div>
@@ -57,11 +57,11 @@ export const WithDescriptions: Story = {
 				<div className="grid gap-1.5 leading-none">
 					<label
 						htmlFor="r2"
-						className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+						className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 					>
 						Light
 					</label>
-					<p className="text-sm text-muted-foreground">Use the light theme.</p>
+					<p className="text-muted-foreground text-sm">Use the light theme.</p>
 				</div>
 			</div>
 			<div className="flex items-start space-x-2">
@@ -69,11 +69,11 @@ export const WithDescriptions: Story = {
 				<div className="grid gap-1.5 leading-none">
 					<label
 						htmlFor="r3"
-						className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+						className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 					>
 						Dark
 					</label>
-					<p className="text-sm text-muted-foreground">Use the dark theme.</p>
+					<p className="text-muted-foreground text-sm">Use the dark theme.</p>
 				</div>
 			</div>
 		</RadioGroup>
@@ -87,7 +87,7 @@ export const Disabled: Story = {
 				<RadioGroupItem value="option-one" id="disabled-option-one" />
 				<label
 					htmlFor="disabled-option-one"
-					className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+					className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 				>
 					Option One (Selected & Disabled)
 				</label>
@@ -96,7 +96,7 @@ export const Disabled: Story = {
 				<RadioGroupItem value="option-two" id="disabled-option-two" />
 				<label
 					htmlFor="disabled-option-two"
-					className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+					className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 				>
 					Option Two (Disabled)
 				</label>

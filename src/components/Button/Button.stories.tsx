@@ -308,3 +308,33 @@ export const BookingDisabled: Story = {
 		disabled: true,
 	},
 };
+
+export const Back: Story = {
+	args: {
+		variant: "back",
+		"aria-label": "Back",
+	},
+};
+
+export const BackDisabled: Story = {
+	args: {
+		variant: "back",
+		"aria-label": "Back",
+		disabled: true,
+	},
+};
+
+export const BackLink: Story = {
+	args: {
+		variant: "back-link",
+		children: "Back button als Link",
+	},
+};
+
+export const BackLinkDisabled: Story = {
+	args: {
+		variant: "back-link",
+		children: "Back button als Link",
+		disabled: true,
+	},
+};

@@ -302,3 +302,141 @@ export const MultipleInputsForm: Story = {
 		);
 	},
 };
+
+export const CheckboxGroupInput: Story = {
+	render: () => {
+		const methods = useForm({
+			defaultValues: {
+				interests: [],
+			},
+		});
+		const property: FormProperty = {
+			id: "interests",
+			name: "Interests",
+			type: "checkbox",
+			description: "Select your areas of interest",
+			helperText: "Choose all that apply",
+			isRequired: false,
+			options: [
+				{ value: "technology", label: "Technology" },
+				{ value: "arts", label: "Arts & Culture" },
+				{ value: "sports", label: "Sports & Recreation" },
+				{ value: "science", label: "Science & Education" },
+			],
+		};
+
+		return (
+			<Form {...methods}>
+				<form>
+					<FormFieldWrapper formProperty={property} form={methods} />
+					<div className="mt-4">
+						<p className="text-muted-foreground text-xs">
+							Selected value: {JSON.stringify(methods.watch("interests"))}
+						</p>
+					</div>
+				</form>
+			</Form>
+		);
+	},
+};
+
+export const RadioGroupInput: Story = {
+	render: () => {
+		const methods = useForm({
+			defaultValues: {
+				theme: "light",
+			},
+		});
+		const property: FormProperty = {
+			id: "theme",
+			name: "Theme Preference",
+			type: "radio",
+			description: "Choose your preferred theme",
+			helperText: "This can be changed later in settings",
+			isRequired: true,
+			options: [
+				{ value: "light", label: "Light Theme" },
+				{ value: "dark", label: "Dark Theme" },
+				{ value: "system", label: "System Default" },
+			],
+		};
+
+		return (
+			<Form {...methods}>
+				<form>
+					<FormFieldWrapper formProperty={property} form={methods} />
+				</form>
+			</Form>
+		);
+	},
+};
+
+export const RadioGroupInputHorizontal: Story = {
+	render: () => {
+		const methods = useForm({
+			defaultValues: {
+				subscription: "",
+			},
+		});
+		const property: FormProperty = {
+			id: "subscription",
+			name: "Subscription Plan",
+			type: "radio",
+			description: "Select your subscription tier",
+			helperText: "You can upgrade or downgrade anytime",
+			isRequired: true,
+			direction: "horizontal",
+			options: [
+				{ value: "free", label: "Free" },
+				{ value: "pro", label: "Pro" },
+				{ value: "enterprise", label: "Enterprise" },
+			],
+		};
+
+		return (
+			<Form {...methods}>
+				<form>
+					<FormFieldWrapper formProperty={property} form={methods} />
+				</form>
+			</Form>
+		);
+	},
+};
+
+export const CheckboxGroupInputHorizontal: Story = {
+	render: () => {
+		const methods = useForm({
+			defaultValues: {
+				notifications: [],
+			},
+		});
+		const property: FormProperty = {
+			id: "notifications",
+			name: "Notification Preferences",
+			type: "checkbox",
+			description: "Choose notification methods",
+			helperText: "Select all that apply",
+			isRequired: false,
+			direction: "horizontal",
+			options: [
+				{ value: "email", label: "Email" },
+				{ value: "sms", label: "SMS" },
+				{ value: "push", label: "Push" },
+				{ value: "inapp", label: "In-app" },
+			],
+		};
+
+		return (
+			<Form {...methods}>
+				<form>
+					<FormFieldWrapper formProperty={property} form={methods} />
+					<div className="mt-4">
+						<p className="text-muted-foreground text-xs">
+							Selected options: {JSON.stringify(methods.watch("notifications"))}
+						</p>
+					</div>
+				</form>
+			</Form>
+		);
+	},
+};

@@ -11,9 +11,10 @@ The `FormFieldWrapper` component is a versatile form field renderer that works w
 
 - Renders different input types based on configuration
 - Works seamlessly with react-hook-form
-- Supports text inputs, textareas, number inputs, checkboxes, and select dropdowns
+- Supports text inputs, textareas, number inputs, checkboxes, radio groups, and select dropdowns
 - Handles field validation and error messages
 - Consistent styling with Berlin UI Library components
+- Flexible layout options for checkbox groups and radio groups
 
 ## Important: Form Context Requirements
 
@@ -235,6 +236,84 @@ This type comes from the `react-hook-form` library and represents the complete f
 ### Checkbox Input
 
 <Canvas of={FormFieldWrapperStories.CheckboxInput} />
+
+### Checkbox Group Input
+
+<Canvas of={FormFieldWrapperStories.CheckboxGroupInput} />
+
+When you provide `options` to a checkbox field, the FormFieldWrapper will render a group of checkboxes that allows multiple selections. The form value will be stored as an array of the selected option values.
+
+```tsx
+// Example of checkbox group configuration
+const multiCheckboxField = {
+	id: "interests",
+	name: "Interests",
+	type: "checkbox",
+	description: "Select all that apply",
+	options: [
+		{ value: "technology", label: "Technology" },
+		{ value: "arts", label: "Arts & Culture" },
+		{ value: "sports", label: "Sports & Recreation" },
+		{ value: "science", label: "Science & Education" },
+	],
+};
+```
+
+### Radio Group Input
+
+<Canvas of={FormFieldWrapperStories.RadioGroupInput} />
+
+Radio groups allow users to select one option from a set of mutually exclusive choices. The form value will be the selected option's value.
+
+```tsx
+// Example of radio group configuration
+const radioGroupField = {
+	id: "theme",
+	name: "Theme Preference",
+	type: "radio",
+	description: "Choose your preferred theme",
+	options: [
+		{ value: "light", label: "Light Theme" },
+		{ value: "dark", label: "Dark Theme" },
+		{ value: "system", label: "System Default" },
+	],
+};
+```
+
+### Horizontal Layout Options
+
+<Canvas of={FormFieldWrapperStories.RadioGroupInputHorizontal} />
+<Canvas of={FormFieldWrapperStories.CheckboxGroupInputHorizontal} />
+
+Both checkbox groups and radio groups support horizontal or vertical layouts using the `direction` property:
+
+```tsx
+// Example of horizontal radio group
+const horizontalRadioGroup = {
+	id: "subscription",
+	name: "Subscription Plan",
+	type: "radio",
+	direction: "horizontal", // Can be "horizontal" or "vertical" (default)
+	options: [
+		{ value: "free", label: "Free" },
+		{ value: "pro", label: "Pro" },
+		{ value: "enterprise", label: "Enterprise" },
+	],
+};
+
+// Example of horizontal checkbox group
+const horizontalCheckboxGroup = {
+	id: "notifications",
+	name: "Notification Preferences",
+	type: "checkbox",
+	direction: "horizontal",
+	options: [
+		{ value: "email", label: "Email" },
+		{ value: "sms", label: "SMS" },
+		{ value: "push", label: "Push" },
+	],
+};
+```
 
 ### Disabled Input
 

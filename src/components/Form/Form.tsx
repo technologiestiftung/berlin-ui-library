@@ -76,10 +76,10 @@ const FormItemContext = React.createContext<FormItemContextValue>(
 	{} as FormItemContextValue,
 );
 
-const formItemVariants = cva("space-y-2", {
+const formItemVariants = cva("space-y-1", {
 	variants: {
 		layout: {
-			vertical: "flex flex-col space-y-2",
+			vertical: "flex flex-col space-y-1",
 			horizontal: "flex items-center space-x-4",
 		},
 		background: {
@@ -122,12 +122,12 @@ const FormLabel = React.forwardRef<
 	return (
 		<Label
 			ref={ref}
-			className={cn(error && "font-bold text-destructive", className)}
+			className={cn(error && "text-destructive font-bold", className)}
 			htmlFor={formItemId}
 			{...props}
 		>
 			{children}
-			{required && <span className="ml-1 text-destructive">*</span>}
+			{required && <span className="text-destructive ml-1">*</span>}
 		</Label>
 	);
 });
@@ -144,7 +144,7 @@ const FormControl = React.forwardRef<
 		<Slot
 			ref={ref}
 			id={formItemId}
-			className="border-2 border-black bg-white p-2"
+			className="p-2"
 			aria-describedby={
 				!error
 					? `${formDescriptionId}`
@@ -167,7 +167,7 @@ const FormDescription = React.forwardRef<
 		<p
 			ref={ref}
 			id={formDescriptionId}
-			className={cn("text-sm text-muted-foreground", className)}
+			className={cn("text-sm text-text-lightest", className)}
 			{...props}
 		/>
 	);
@@ -189,7 +189,7 @@ const FormMessage = React.forwardRef<
 		<p
 			ref={ref}
 			id={formMessageId}
-			className={cn("text-sm font-medium text-destructive", className)}
+			className={cn("text-destructive text-sm font-medium", className)}
 			{...props}
 		>
 			{body}
