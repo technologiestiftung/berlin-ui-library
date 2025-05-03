@@ -1,4 +1,4 @@
-import { SearchFormProps } from "./types";
+import { SearchFormProps } from './types';
 /**
  * SearchForm component for Berlin UI Library
  *

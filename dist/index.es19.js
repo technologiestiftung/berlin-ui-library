@@ -1,6 +1,86 @@
-import * as e from "react";
-const a = (t) => /* @__PURE__ */ e.createElement("svg", { width: 24, height: 22, viewBox: "0 0 20 20", fill: "none", xmlns: "http://www.w3.org/2000/svg", className: "{className} ", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M14.0975 10L19.5026 4.3142C20.1659 3.61648 20.1659 2.48523 19.5026 1.78693L18.3013 0.523295C17.6381 -0.174432 16.5626 -0.174432 15.8988 0.523295L10.4937 6.20909L5.08855 0.523295C4.42527 -0.174432 3.34986 -0.174432 2.68603 0.523295L1.48477 1.78693C0.821483 2.48466 0.821483 3.61591 1.48477 4.3142L6.8899 10L1.48477 15.6858C0.821483 16.3835 0.821483 17.5148 1.48477 18.2131L2.68603 19.4767C3.34932 20.1744 4.42527 20.1744 5.08855 19.4767L10.4937 13.7909L15.8988 19.4767C16.5621 20.1744 17.6381 20.1744 18.3013 19.4767L19.5026 18.2131C20.1659 17.5153 20.1659 16.3841 19.5026 15.6858L14.0975 10Z", fill: "black" }));
+import { j as e } from "./index.es4.js";
+import { useState as s } from "react";
+import { MenuButton as g } from "./index.es24.js";
+import { SearchButton as C } from "./index.es26.js";
+import { AccessibilityButton as I } from "./index.es29.js";
+import { SearchMenu as N } from "./index.es30.js";
+import { MenuDrawer as w } from "./index.es31.js";
+import { AccessibilityMenu as B } from "./index.es32.js";
+function z({
+  header: i,
+  caption: r,
+  url: o,
+  showSearchButton: a,
+  onSearch: l,
+  showMenuButton: p,
+  menuItems: m,
+  onOpenMenu: x
+}) {
+  const [h, n] = s(!1), [f, t] = s(!1), [u, c] = s(!1), d = () => {
+    n(!0), l();
+  }, j = () => {
+    n(!1);
+  }, O = (A) => {
+    console.warn("Search term:", A);
+  }, b = () => {
+    t(!0), x();
+  }, y = () => {
+    t(!1);
+  }, S = () => {
+    c(!0);
+  }, M = () => {
+    c(!1);
+  };
+  return /* @__PURE__ */ e.jsxs("div", { className: "flex items-center justify-between px-4 py-2 md:px-6", children: [
+    /* @__PURE__ */ e.jsxs(
+      "a",
+      {
+        href: o,
+        className: "flex h-[86px] flex-col justify-center px-4 text-base sm:text-[20px]",
+        children: [
+          /* @__PURE__ */ e.jsx("span", { children: i }),
+          /* @__PURE__ */ e.jsx("span", { className: "font-bold", children: r })
+        ]
+      }
+    ),
+    /* @__PURE__ */ e.jsxs("div", { className: "flex items-center gap-x-[30px]", children: [
+      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(I, { onOpenAccessibility: S }),
+        /* @__PURE__ */ e.jsx(
+          B,
+          {
+            isOpen: u,
+            close: M,
+            accessibilityItems: []
+          }
+        )
+      ] }),
+      a && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(C, { onOpenSearch: d }),
+        /* @__PURE__ */ e.jsx(
+          N,
+          {
+            isOpen: h,
+            close: j,
+            onSearch: O
+          }
+        )
+      ] }),
+      p && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(g, { onOpenMenu: b }),
+        /* @__PURE__ */ e.jsx(
+          w,
+          {
+            isOpen: f,
+            close: y,
+            menuItems: m
+          }
+        )
+      ] })
+    ] })
+  ] });
+}
 export {
-  a as default
+  z as MainHeaderContent
 };
 //# sourceMappingURL=index.es19.js.map

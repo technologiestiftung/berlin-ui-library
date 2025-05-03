@@ -1,19 +1,25 @@
-import { j as t } from "./index.es4.js";
-import * as i from "react";
-import { cn as s } from "./index.es16.js";
-const a = i.forwardRef(({ className: e, ...r }, o) => /* @__PURE__ */ t.jsx(
-  "textarea",
-  {
-    className: s(
-      "border-input ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full border bg-white px-3 py-2 text-base focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-      e
-    ),
-    ref: o,
-    ...r
-  }
-));
-a.displayName = "Textarea";
+import { j as i } from "./index.es4.js";
+import n from "./index.es51.js";
+import { useLanguage as c, t as l } from "./index.es5.js";
+function x({
+  onOpenAccessibility: s,
+  className: e = ""
+}) {
+  const { translations: o } = c(), t = l("accessibility", o);
+  return /* @__PURE__ */ i.jsxs(
+    "button",
+    {
+      className: `flex flex-col items-center gap-1 text-[11px] leading-3 ${e}`,
+      onClick: s,
+      "aria-label": t,
+      children: [
+        /* @__PURE__ */ i.jsx(n, {}),
+        t
+      ]
+    }
+  );
+}
 export {
-  a as Textarea
+  x as AccessibilityButton
 };
 //# sourceMappingURL=index.es29.js.map
