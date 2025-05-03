@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { RadioGroup } from './RadioGroup';
+import type { Meta, StoryObj } from "@storybook/react";
+import { RadioGroup } from "./RadioGroup";
 declare const meta: Meta<typeof RadioGroup>;
 export default meta;
 type Story = StoryObj<typeof RadioGroup>;

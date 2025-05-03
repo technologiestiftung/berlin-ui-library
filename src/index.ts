@@ -52,3 +52,10 @@ export { Input } from "./components/Input/Input";
 export { Label } from "./components/Label/Label";
 
 export { SearchForm } from "./components/SearchForm";
+
+export {
+	Accordion,
+	AccordionItem,
+	AccordionTrigger,
+	AccordionContent,
+} from "./components/Accordion";
