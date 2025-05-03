@@ -3,7 +3,7 @@ import * as i from "react";
 import * as e from "@radix-ui/react-dialog";
 import { cva as c } from "class-variance-authority";
 import { cn as r } from "./index.es16.js";
-import f from "./index.es27.js";
+import f from "./index.es19.js";
 const v = e.Root, C = e.Trigger, R = e.Close, p = e.Portal, n = i.forwardRef(({ className: t, ...a }, o) => /* @__PURE__ */ s.jsx(
   e.Overlay,
   {

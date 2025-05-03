@@ -1,8 +1,35 @@
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-declare const Accordion: React.ForwardRefExoticComponent<(AccordionPrimitive.AccordionSingleProps | AccordionPrimitive.AccordionMultipleProps) & React.RefAttributes<HTMLDivElement>>;
-declare const AccordionItem: React.ForwardRefExoticComponent<Omit<AccordionPrimitive.AccordionItemProps & React.RefAttributes<HTMLDivElement>, "ref"> & React.RefAttributes<HTMLDivElement>>;
-declare const AccordionTrigger: React.ForwardRefExoticComponent<Omit<AccordionPrimitive.AccordionTriggerProps & React.RefAttributes<HTMLButtonElement>, "ref"> & React.RefAttributes<HTMLButtonElement>>;
-declare const AccordionContent: React.ForwardRefExoticComponent<Omit<AccordionPrimitive.AccordionContentProps & React.RefAttributes<HTMLDivElement>, "ref"> & React.RefAttributes<HTMLDivElement>>;
+declare const accordionVariants: {
+    default: {
+        item: string;
+        header: string;
+        trigger: string;
+        content: string;
+    };
+    footer: {
+        item: string;
+        header: string;
+        trigger: string;
+        content: string;
+    };
+};
+type AccordionVariant = keyof typeof accordionVariants;
+type AccordionProps = React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Root> & {
+    variant?: AccordionVariant;
+};
+declare const Accordion: React.ForwardRefExoticComponent<AccordionProps & React.RefAttributes<HTMLDivElement>>;
+interface AccordionItemProps extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> {
+    variant?: AccordionVariant;
+}
+declare const AccordionItem: React.ForwardRefExoticComponent<AccordionItemProps & React.RefAttributes<HTMLDivElement>>;
+interface AccordionTriggerProps extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> {
+    variant?: AccordionVariant;
+}
+declare const AccordionTrigger: React.ForwardRefExoticComponent<AccordionTriggerProps & React.RefAttributes<HTMLButtonElement>>;
+interface AccordionContentProps extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> {
+    variant?: AccordionVariant;
+}
+declare const AccordionContent: React.ForwardRefExoticComponent<AccordionContentProps & React.RefAttributes<HTMLDivElement>>;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 //# sourceMappingURL=Accordion.d.ts.map

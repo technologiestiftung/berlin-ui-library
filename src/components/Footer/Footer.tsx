@@ -101,7 +101,7 @@ function FooterContent({
 	);
 
 	return (
-		<footer className={`bg-block-colored w-full ${className}`}>
+		<footer className={`w-full bg-block-colored ${className}`}>
 			<div className="flex w-full items-start justify-between md:p-6">
 				<div className="flex w-full flex-wrap justify-between md:items-start md:pl-[5%]">
 					{/* Mobile scroll to top button */}
@@ -113,18 +113,18 @@ function FooterContent({
 
 					{/* Footer columns */}
 					<div className="flex w-full flex-col md:hidden md:w-auto md:flex-row md:flex-wrap">
-						<Accordion collapsible type="single">
+						<Accordion collapsible type="single" variant="footer">
 							{footerColumns.map((column, index) => (
 								<AccordionItem value={column.title} key={index}>
 									<AccordionTrigger>{column.title}</AccordionTrigger>
 									<AccordionContent>
 										<div className="flex flex-col">
-											<ul className="flex flex-col">
+											<ul className="flex flex-col gap-6">
 												{column.links.map((link) => (
 													<li key={link.href}>
 														<LinkComponent
 															href={link.href}
-															className={`flex gap-x-1.5 py-4 pl-7 hover:underline ${
+															className={`flex gap-x-1.5 hover:underline ${
 																column.title.includes("socialMedia")
 																	? "flex-row"
 																	: "flex-row-reverse justify-end"

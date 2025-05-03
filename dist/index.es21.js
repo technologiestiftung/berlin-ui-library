@@ -1,28 +1,6 @@
-import { j as e } from "./index.es4.js";
-import * as a from "react";
-import * as t from "@radix-ui/react-checkbox";
-import { Check as c } from "lucide-react";
-import { cn as o } from "./index.es16.js";
-const d = a.forwardRef(({ className: s, ...i }, r) => /* @__PURE__ */ e.jsx(
-  t.Root,
-  {
-    ref: r,
-    className: o(
-      "peer ring-offset-background focus-visible:ring-ring h-4 w-4 shrink-0 rounded-xs border border-black bg-white focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-tabfocus data-[state=checked]:bg-tabfocus data-[state=checked]:!text-white",
-      s
-    ),
-    ...i,
-    children: /* @__PURE__ */ e.jsx(
-      t.Indicator,
-      {
-        className: o("flex items-center justify-center text-white"),
-        children: /* @__PURE__ */ e.jsx(c, { className: "h-4 w-4" })
-      }
-    )
-  }
-));
-d.displayName = t.Root.displayName;
+import * as t from "react";
+const o = (e) => /* @__PURE__ */ t.createElement("svg", { width: 20, height: 19, viewBox: "0 0 20 19", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...e }, /* @__PURE__ */ t.createElement("path", { d: "M0 9.49989H17.1666M9.04529 17.874L17.45 9.49955L9.04529 1.12598", stroke: "currentColor", strokeWidth: 3 }));
 export {
-  d as Checkbox
+  o as default
 };
 //# sourceMappingURL=index.es21.js.map
