@@ -1,19 +1,11 @@
-import { j as t } from "./index.es4.js";
-import * as i from "react";
-import { cn as s } from "./index.es17.js";
-const a = i.forwardRef(({ className: e, ...r }, o) => /* @__PURE__ */ t.jsx(
-  "textarea",
-  {
-    className: s(
-      "border-input ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full border bg-white px-3 py-2 text-base focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-      e
-    ),
-    ref: o,
-    ...r
-  }
-));
-a.displayName = "Textarea";
+import { __module as e } from "./index.es34.js";
+import { __require as t } from "./index.es35.js";
+import { __require as i } from "./index.es36.js";
+var r;
+function m() {
+  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
+}
 export {
-  a as Textarea
+  m as __require
 };
 //# sourceMappingURL=index.es33.js.map

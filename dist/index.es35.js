@@ -1,28 +1,36 @@
-import { j as e } from "./index.es4.js";
-import * as a from "react";
-import * as t from "@radix-ui/react-checkbox";
-import { Check as c } from "lucide-react";
-import { cn as o } from "./index.es17.js";
-const d = a.forwardRef(({ className: s, ...i }, r) => /* @__PURE__ */ e.jsx(
-  t.Root,
-  {
-    ref: r,
-    className: o(
-      "peer ring-offset-background focus-visible:ring-ring h-4 w-4 shrink-0 rounded-xs border border-black bg-white focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-tabfocus data-[state=checked]:bg-tabfocus data-[state=checked]:!text-white",
-      s
-    ),
-    ...i,
-    children: /* @__PURE__ */ e.jsx(
-      t.Indicator,
-      {
-        className: o("flex items-center justify-center text-white"),
-        children: /* @__PURE__ */ e.jsx(c, { className: "h-4 w-4" })
-      }
-    )
+import { __exports as e } from "./index.es52.js";
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var s;
+function a() {
+  if (s) return e;
+  s = 1;
+  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
+  function o(l, r, t) {
+    var u = null;
+    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
+      t = {};
+      for (var n in r)
+        n !== "key" && (t[n] = r[n]);
+    } else t = r;
+    return r = t.ref, {
+      $$typeof: i,
+      type: l,
+      key: u,
+      ref: r !== void 0 ? r : null,
+      props: t
+    };
   }
-));
-d.displayName = t.Root.displayName;
+  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
+}
 export {
-  d as Checkbox
+  a as __require
 };
 //# sourceMappingURL=index.es35.js.map

@@ -8,4 +8,6 @@ export declare const Checked: Story;
 export declare const Disabled: Story;
 export declare const DisabledChecked: Story;
 export declare const WithDescription: Story;
+export declare const StyledVariant: Story;
+export declare const StyledBoxes: Story;
 //# sourceMappingURL=Checkbox.stories.d.ts.map

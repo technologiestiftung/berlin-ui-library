@@ -96,7 +96,7 @@ function FooterContent({
 			className="flex w-48 gap-x-2 p-2"
 			onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>
-			{translate("toTheTop")} <ArrowUpIcon className="bg-berlin-green" />
+			{translate("toTheTop")} <ArrowUpIcon className="bg-red" />
 		</button>
 	);
 
@@ -147,7 +147,10 @@ function FooterContent({
 
 					<div className="flex w-full flex-col md:w-auto md:flex-row md:flex-wrap">
 						{footerColumns.map((column) => (
-							<div className="mb-6 ml-[3svw] hidden min-w-[12svw] flex-col gap-3.5 md:flex">
+							<div
+								key={column.title}
+								className="mb-6 ml-[3svw] hidden min-w-[12svw] flex-col gap-3.5 md:flex"
+							>
 								<div className="flex items-center justify-between font-bold">
 									<span>{translate(column.title)}</span>
 								</div>

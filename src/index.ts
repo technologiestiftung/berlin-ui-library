@@ -43,7 +43,11 @@ export {
 } from "./components/Form";
 
 // Form field wrapper components
-export { FormFieldWrapper, FormWrapper } from "./components/FormWrapper";
+export {
+	FormFieldWrapper,
+	FormWrapper,
+	type FormProperty,
+} from "./components/FormWrapper";
 
 // Input component
 export { Input } from "./components/Input/Input";
@@ -59,3 +63,9 @@ export {
 	AccordionTrigger,
 	AccordionContent,
 } from "./components/Accordion";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/Tabs";
+
+export { ImageComponent } from "./components/Image";
+
+export { Toggle, toggleVariants } from "./components/Toggle";

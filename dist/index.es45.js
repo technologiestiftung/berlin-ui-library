@@ -1,11 +1,25 @@
-import { __module as e } from "./index.es46.js";
-import { __require as t } from "./index.es47.js";
-import { __require as i } from "./index.es48.js";
-var r;
-function m() {
-  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
+import { j as e } from "./index.es4.js";
+import { SearchIconLarge as n } from "./index.es46.js";
+import { useLanguage as s, t as c } from "./index.es5.js";
+function x({
+  onOpenSearch: r,
+  className: a = ""
+}) {
+  const { translations: o } = s(), t = c("search", o);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `flex flex-col items-center gap-1 text-[11px] leading-3 ${a}`,
+      onClick: r,
+      "aria-label": t,
+      children: [
+        /* @__PURE__ */ e.jsx(n, {}),
+        t
+      ]
+    }
+  );
 }
 export {
-  m as __require
+  x as SearchButton
 };
 //# sourceMappingURL=index.es45.js.map

@@ -87,3 +87,61 @@ export const WithDescription: Story = {
 		</div>
 	),
 };
+
+// Styled variant examples
+export const StyledVariant: Story = {
+	render: () => (
+		<div className="flex flex-col gap-4">
+			<div className="flex items-center space-x-2">
+				<Checkbox id="styled-unchecked" variant="styled" />
+				<label
+					htmlFor="styled-unchecked"
+					className="text-sm leading-none font-medium"
+				>
+					Styled variant (unchecked)
+				</label>
+			</div>
+			<div className="flex items-center space-x-2">
+				<Checkbox id="styled-checked" variant="styled" defaultChecked />
+				<label
+					htmlFor="styled-checked"
+					className="text-sm leading-none font-medium"
+				>
+					Styled variant (checked)
+				</label>
+			</div>
+		</div>
+	),
+};
+
+// Styled  box example similar to the image
+export const StyledBoxes: Story = {
+	render: () => (
+		<div className="flex flex-col gap-4">
+			{/* Starkregen styled box */}
+			<div className="flex w-[240px] border-2 border-black">
+				<div className="flex h-12 w-12 items-center justify-center border-r-2 border-black bg-white">
+					<Checkbox
+						id="starkregen"
+						variant="styled"
+						className="h-5 w-5"
+						defaultChecked
+					/>
+				</div>
+				<div className="flex h-12 flex-1 items-center bg-red px-4 font-bold text-white">
+					Starkregen
+				</div>
+			</div>
+
+			{/* Flusshochwasser styled box */}
+			<div className="flex w-[240px] border-2 border-black">
+				<div className="flex h-12 w-12 items-center justify-center border-r-2 border-black bg-white">
+					<Checkbox id="flusshochwasser" variant="styled" className="h-5 w-5" />
+				</div>
+				<div className="flex h-12 flex-1 items-center bg-red px-4 font-bold text-white">
+					Flusshochwasser
+				</div>
+			</div>
+		</div>
+	),
+};

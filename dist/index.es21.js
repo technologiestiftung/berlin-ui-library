@@ -1,66 +1,6 @@
-import { j as e } from "./index.es4.js";
-import d, { useState as u, useRef as x } from "react";
-import m from "./index.es22.js";
-import f from "./index.es23.js";
-import { useLanguage as p, t as b } from "./index.es5.js";
-function g(n, t) {
-  d.useEffect(() => {
-    const s = (a) => {
-      n.current && !n.current.contains(a.target) && t(!1);
-    };
-    return document.addEventListener("mousedown", s), () => {
-      document.removeEventListener("mousedown", s);
-    };
-  }, [n, t]);
-}
-function C({ className: n = "" }) {
-  const [t, s] = u(!1), a = x(null), { currentLanguage: r, languages: o, translations: c, setLanguage: i } = p();
-  return g(
-    a,
-    s
-  ), /* @__PURE__ */ e.jsxs(
-    "div",
-    {
-      className: `relative z-[10] text-black ${n}`,
-      ref: a,
-      children: [
-        /* @__PURE__ */ e.jsxs(
-          "button",
-          {
-            className: "flex items-center",
-            onClick: () => s(!t),
-            "aria-label": b(t ? "collapse" : "expand", c),
-            "aria-expanded": t,
-            children: [
-              /* @__PURE__ */ e.jsx("span", { className: "flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white", children: r.toLowerCase() }),
-              /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none flex size-8 items-center justify-center", children: t ? /* @__PURE__ */ e.jsx(f, { className: "text-berlin-green" }) : /* @__PURE__ */ e.jsx(m, { className: "text-berlin-green" }) })
-            ]
-          }
-        ),
-        /* @__PURE__ */ e.jsx(
-          "div",
-          {
-            className: `${t ? "block" : "hidden"} absolute top-8 right-0 bg-white shadow-lg`,
-            children: /* @__PURE__ */ e.jsx("ul", { children: o.map((l) => /* @__PURE__ */ e.jsx("li", { children: /* @__PURE__ */ e.jsxs(
-              "button",
-              {
-                className: "block flex w-full gap-2 px-2 py-1 text-base hover:bg-gray-100",
-                onClick: () => {
-                  i(l.code), s(!1);
-                },
-                children: [
-                  /* @__PURE__ */ e.jsx("span", { className: "flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white", children: l.code.toLowerCase() }),
-                  l.label
-                ]
-              }
-            ) }, l.code)) })
-          }
-        )
-      ]
-    }
-  );
-}
+import * as e from "react";
+const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 24, height: 24, viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M5.93771 13.0475L5.22601 12.3539C4.92466 12.0602 4.92466 11.5852 5.22601 11.2946L11.455 5.22029C11.7564 4.92657 12.2436 4.92657 12.5418 5.22029L18.774 11.2946C19.0753 11.5883 19.0753 12.0633 18.774 12.3539L18.0623 13.0475C17.7577 13.3444 17.2608 13.3381 16.9627 13.035L13.2823 9.26984L13.2823 18.2501C13.2823 18.6657 12.9393 19 12.5129 19L11.4871 19C11.0607 19 10.7177 18.6657 10.7177 18.2501L10.7177 9.26984L7.03733 13.035C6.73918 13.3413 6.24227 13.3475 5.93771 13.0475Z", fill: "white" }));
 export {
-  C as LanguageSelect
+  o as default
 };
 //# sourceMappingURL=index.es21.js.map

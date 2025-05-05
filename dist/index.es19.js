@@ -1,86 +1,38 @@
-import { j as e } from "./index.es4.js";
-import { useState as s } from "react";
-import { MenuButton as g } from "./index.es24.js";
-import { SearchButton as C } from "./index.es26.js";
-import { AccessibilityButton as I } from "./index.es29.js";
-import { SearchMenu as N } from "./index.es30.js";
-import { MenuDrawer as w } from "./index.es31.js";
-import { AccessibilityMenu as B } from "./index.es32.js";
-function z({
-  header: i,
-  caption: r,
-  url: o,
-  showSearchButton: a,
-  onSearch: l,
-  showMenuButton: p,
-  menuItems: m,
-  onOpenMenu: x
-}) {
-  const [h, n] = s(!1), [f, t] = s(!1), [u, c] = s(!1), d = () => {
-    n(!0), l();
-  }, j = () => {
-    n(!1);
-  }, O = (A) => {
-    console.warn("Search term:", A);
-  }, b = () => {
-    t(!0), x();
-  }, y = () => {
-    t(!1);
-  }, S = () => {
-    c(!0);
-  }, M = () => {
-    c(!1);
-  };
-  return /* @__PURE__ */ e.jsxs("div", { className: "flex items-center justify-between px-4 py-2 md:px-6", children: [
-    /* @__PURE__ */ e.jsxs(
-      "a",
-      {
-        href: o,
-        className: "flex h-[86px] flex-col justify-center px-4 text-base sm:text-[20px]",
-        children: [
-          /* @__PURE__ */ e.jsx("span", { children: i }),
-          /* @__PURE__ */ e.jsx("span", { className: "font-bold", children: r })
-        ]
+import { j as a } from "./index.es4.js";
+import * as s from "react";
+import * as e from "@radix-ui/react-toggle";
+import { cva as l } from "class-variance-authority";
+import { cn as f } from "./index.es20.js";
+const c = l(
+  "ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center gap-2 text-sm font-medium transition-colors hover:bg-block-heavy hover:font-bold focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-block-heavy data-[state=on]:font-bold [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-transparent",
+        outline: "border-input hover:bg-accent hover:text-accent-foreground cursor-pointer border border-black bg-transparent"
+      },
+      size: {
+        default: "h-10 min-w-10 px-3",
+        sm: "h-9 min-w-9 px-2.5",
+        lg: "h-11 min-w-11 px-5"
       }
-    ),
-    /* @__PURE__ */ e.jsxs("div", { className: "flex items-center gap-x-[30px]", children: [
-      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(I, { onOpenAccessibility: S }),
-        /* @__PURE__ */ e.jsx(
-          B,
-          {
-            isOpen: u,
-            close: M,
-            accessibilityItems: []
-          }
-        )
-      ] }),
-      a && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(C, { onOpenSearch: d }),
-        /* @__PURE__ */ e.jsx(
-          N,
-          {
-            isOpen: h,
-            close: j,
-            onSearch: O
-          }
-        )
-      ] }),
-      p && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(g, { onOpenMenu: b }),
-        /* @__PURE__ */ e.jsx(
-          w,
-          {
-            isOpen: f,
-            close: y,
-            menuItems: m
-          }
-        )
-      ] })
-    ] })
-  ] });
-}
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default"
+    }
+  }
+), g = s.forwardRef(({ className: t, variant: o, size: i, ...r }, n) => /* @__PURE__ */ a.jsx(
+  e.Root,
+  {
+    ref: n,
+    className: f(c({ variant: o, size: i, className: t })),
+    ...r
+  }
+));
+g.displayName = e.Root.displayName;
 export {
-  z as MainHeaderContent
+  g as Toggle,
+  c as toggleVariants
 };
 //# sourceMappingURL=index.es19.js.map
