@@ -21,7 +21,7 @@ export function SearchButton({
 
 	return (
 		<button
-			className={`flex flex-col items-center justify-between gap-1 text-[11px] leading-normal ${className}`}
+			className={`flex cursor-pointer flex-col items-center justify-between gap-1 text-[11px] leading-normal ${className}`}
 			onClick={onOpenSearch}
 			aria-label={label}
 		>
