@@ -1,12 +1,12 @@
 import { j as e } from "./index.es4.js";
 import o from "./index.es44.js";
-import { useLanguage as r, t as l } from "./index.es5.js";
+import { useLanguage as r, t as i } from "./index.es5.js";
 function p({ onOpenMenu: t, className: n = "" }) {
-  const { translations: a } = r(), s = l("menu", a);
+  const { translations: a } = r(), s = i("menu", a);
   return /* @__PURE__ */ e.jsxs(
     "button",
     {
-      className: `flex flex-col items-center justify-between gap-1 text-[11px] leading-normal ${n}`,
+      className: `flex cursor-pointer flex-col items-center justify-between gap-1 text-[11px] leading-normal ${n}`,
       onClick: t,
       "aria-label": s,
       children: [

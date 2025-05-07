@@ -1,36 +1,6 @@
-import { __exports as e } from "./index.es51.js";
-/**
- * @license React
- * react-jsx-runtime.production.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var s;
-function a() {
-  if (s) return e;
-  s = 1;
-  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
-  function o(l, r, t) {
-    var u = null;
-    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
-      t = {};
-      for (var n in r)
-        n !== "key" && (t[n] = r[n]);
-    } else t = r;
-    return r = t.ref, {
-      $$typeof: i,
-      type: l,
-      key: u,
-      ref: r !== void 0 ? r : null,
-      props: t
-    };
-  }
-  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
-}
+import * as e from "react";
+const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 24, height: 24, viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M5.93771 13.0475L5.22601 12.3539C4.92466 12.0602 4.92466 11.5852 5.22601 11.2946L11.455 5.22029C11.7564 4.92657 12.2436 4.92657 12.5418 5.22029L18.774 11.2946C19.0753 11.5883 19.0753 12.0633 18.774 12.3539L18.0623 13.0475C17.7577 13.3444 17.2608 13.3381 16.9627 13.035L13.2823 9.26984L13.2823 18.2501C13.2823 18.6657 12.9393 19 12.5129 19L11.4871 19C11.0607 19 10.7177 18.6657 10.7177 18.2501L10.7177 9.26984L7.03733 13.035C6.73918 13.3413 6.24227 13.3475 5.93771 13.0475Z", fill: "white" }));
 export {
-  a as __require
+  o as default
 };
 //# sourceMappingURL=index.es32.js.map
