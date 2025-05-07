@@ -1,24 +1,36 @@
-import { j as a } from "./index.es4.js";
-import * as d from "react";
-import * as o from "@radix-ui/react-tooltip";
-import { cn as s } from "./index.es20.js";
-const l = o.Provider, f = o.Root, c = o.Trigger, n = d.forwardRef(({ className: t, sideOffset: i = 4, ...e }, r) => /* @__PURE__ */ a.jsx(
-  o.Content,
-  {
-    ref: r,
-    sideOffset: i,
-    className: s(
-      "bg-popover text-popover-foreground z-50 origin-[--radix-tooltip-content-transform-origin] overflow-hidden border px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
-      t
-    ),
-    ...e
+import { __exports as e } from "./index.es51.js";
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var s;
+function a() {
+  if (s) return e;
+  s = 1;
+  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
+  function o(l, r, t) {
+    var u = null;
+    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
+      t = {};
+      for (var n in r)
+        n !== "key" && (t[n] = r[n]);
+    } else t = r;
+    return r = t.ref, {
+      $$typeof: i,
+      type: l,
+      key: u,
+      ref: r !== void 0 ? r : null,
+      props: t
+    };
   }
-));
-n.displayName = o.Content.displayName;
+  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
+}
 export {
-  f as Tooltip,
-  n as TooltipContent,
-  l as TooltipProvider,
-  c as TooltipTrigger
+  a as __require
 };
 //# sourceMappingURL=index.es32.js.map
