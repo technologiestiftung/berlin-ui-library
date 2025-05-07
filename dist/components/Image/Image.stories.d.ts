@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ImageComponent } from './Image';
-declare const meta: Meta<typeof ImageComponent>;
+import { Image } from './Image';
+declare const meta: Meta<typeof Image>;
 export default meta;
-type Story = StoryObj<typeof ImageComponent>;
+type Story = StoryObj<typeof Image>;
 export declare const Default: Story;
 export declare const WithCaption: Story;
 export declare const WithCopyright: Story;

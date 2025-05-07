@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Header>;
 
 // Example translations as JSON objects
 const deTranslations = {
-	accessibility: "Barrierefreiheit",
+	accessibility: "Barrierefrei",
 	menu: "Menü",
 	search: "Suche",
 	expand: "Erweitern",

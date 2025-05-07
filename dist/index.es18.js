@@ -1,10 +1,10 @@
 import { j as t } from "./index.es4.js";
 import h from "react";
 import { cn as r } from "./index.es20.js";
-const p = ({ title: e, copyrightText: s, link: a, position: l }) => {
+const g = ({ title: e, copyrightText: s, link: a, position: l }) => {
   if (!e && !s)
     return null;
-  const o = a ? "a" : "span", n = a ? { href: a, "data-mainlink": "true" } : {};
+  const i = a ? "a" : "span", o = a ? { href: a, "data-mainlink": "true" } : {};
   return /* @__PURE__ */ t.jsxs(
     "div",
     {
@@ -15,10 +15,10 @@ const p = ({ title: e, copyrightText: s, link: a, position: l }) => {
       ),
       children: [
         e && /* @__PURE__ */ t.jsx(
-          o,
+          i,
           {
             className: "text-lg leading-tight font-bold hover:underline md:text-2xl",
-            ...n,
+            ...o,
             children: e
           }
         ),
@@ -37,16 +37,16 @@ const p = ({ title: e, copyrightText: s, link: a, position: l }) => {
       ]
     }
   );
-}, g = h.forwardRef(
+}, p = h.forwardRef(
   ({
     className: e,
     src: s,
     alt: a,
     caption: l,
-    copyright: o,
-    overlayTitle: n,
-    overlayCopyright: i,
-    overlayLink: m,
+    copyright: i,
+    overlayTitle: o,
+    overlayCopyright: m,
+    overlayLink: n,
     overlayPosition: x = "center",
     darkenImage: c = !1,
     imgClassName: d,
@@ -73,11 +73,11 @@ const p = ({ title: e, copyrightText: s, link: a, position: l }) => {
           }
         ),
         /* @__PURE__ */ t.jsx(
-          p,
+          g,
           {
-            title: n,
-            copyrightText: i,
-            link: m,
+            title: o,
+            copyrightText: m,
+            link: n,
             position: x
           }
         ),
@@ -85,16 +85,16 @@ const p = ({ title: e, copyrightText: s, link: a, position: l }) => {
           " ",
           l
         ] }),
-        o && /* @__PURE__ */ t.jsxs("p", { className: "mb-1 block text-[11px] leading-tight break-words text-gray-600", children: [
+        i && /* @__PURE__ */ t.jsxs("p", { className: "mb-1 block text-[11px] leading-tight break-words text-gray-600", children: [
           " ",
-          o
+          i
         ] })
       ]
     }
   )
 );
-g.displayName = "ImageComponent";
+p.displayName = "Image";
 export {
-  g as ImageComponent
+  p as Image
 };
 //# sourceMappingURL=index.es18.js.map

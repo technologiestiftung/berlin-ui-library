@@ -1,5 +1,5 @@
-var r = {};
+var e = {};
 export {
-  r as __exports
+  e as __exports
 };
 //# sourceMappingURL=index.es52.js.map

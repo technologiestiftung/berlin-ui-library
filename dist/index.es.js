@@ -3,7 +3,7 @@ import { Header as p } from "./index.es3.js";
 import "./index.es4.js";
 import "react";
 import "./index.es5.js";
-import { Drawer as n, DrawerClose as c, DrawerContent as f, DrawerDescription as x, DrawerFooter as d, DrawerHeader as s, DrawerTitle as F, DrawerTrigger as b } from "./index.es6.js";
+import { Drawer as n, DrawerClose as c, DrawerContent as f, DrawerDescription as s, DrawerFooter as x, DrawerHeader as d, DrawerTitle as g, DrawerTrigger as F } from "./index.es6.js";
 import { SearchForm as D } from "./index.es7.js";
 import { BreadcrumbItem as u, BreadcrumbLink as T, BreadcrumbList as w, BreadcrumbPage as B, BreadcrumbSeparator as C, Breadcrumbs as I } from "./index.es8.js";
 import { Footer as A } from "./index.es9.js";
@@ -15,7 +15,7 @@ import { Input as K } from "./index.es14.js";
 import { Label as O } from "./index.es15.js";
 import { Accordion as R, AccordionContent as U, AccordionItem as X, AccordionTrigger as Y } from "./index.es16.js";
 import { Tabs as _, TabsContent as $, TabsList as rr, TabsTrigger as or } from "./index.es17.js";
-import { ImageComponent as tr } from "./index.es18.js";
+import { Image as tr } from "./index.es18.js";
 import { Toggle as ar, toggleVariants as pr } from "./index.es19.js";
 export {
   R as Accordion,
@@ -32,11 +32,11 @@ export {
   n as Drawer,
   c as DrawerClose,
   f as DrawerContent,
-  x as DrawerDescription,
-  d as DrawerFooter,
-  s as DrawerHeader,
-  F as DrawerTitle,
-  b as DrawerTrigger,
+  s as DrawerDescription,
+  x as DrawerFooter,
+  d as DrawerHeader,
+  g as DrawerTitle,
+  F as DrawerTrigger,
   A as Footer,
   h as Form,
   k as FormControl,

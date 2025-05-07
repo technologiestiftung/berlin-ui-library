@@ -65,18 +65,18 @@ export function MainHeaderContent({
 	};
 
 	return (
-		<div className="flex items-center justify-between px-4 py-2 md:px-6">
+		<div className="flex items-center justify-between px-4 py-1 md:px-6">
 			{/* Site Title */}
 			<a
 				href={url}
-				className="flex h-[86px] flex-col justify-center px-4 text-base sm:text-[20px]"
+				className="flex h-[86px] flex-col justify-center text-base sm:text-[20px]"
 			>
 				<span>{header}</span>
 				<span className="font-bold">{caption}</span>
 			</a>
 
 			{/* Action Buttons */}
-			<div className="flex items-center gap-x-[30px]">
+			<div className="mx-4 flex items-center space-x-3">
 				<>
 					<AccessibilityButton onOpenAccessibility={handleOpenAccessibility} />
 					<AccessibilityMenu

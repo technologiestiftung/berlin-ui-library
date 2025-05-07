@@ -1,6 +1,36 @@
-import * as e from "react";
-const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 21, height: 21, viewBox: "0 0 11 12", fill: "currentColor", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { id: "Vector", d: "M8.83784 5.50883V9.60163C8.83784 9.9725 8.6919 10.3282 8.43214 10.5904C8.17238 10.8527 7.82006 11 7.4527 11H2.38514C2.01777 11 1.66546 10.8527 1.4057 10.5904C1.14593 10.3282 1 9.9725 1 9.60163V4.19913C1 3.82826 1.14593 3.47258 1.4057 3.21033C1.66546 2.94808 2.01777 2.80076 2.38514 2.80076H5.78378M10 3.94682V1M10 1H7.08108M10 1L3.5 8.5", stroke: "currentColor", fill: "none", strokeLinecap: "round", strokeLinejoin: "round" }));
+import { __exports as e } from "./index.es51.js";
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var s;
+function a() {
+  if (s) return e;
+  s = 1;
+  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
+  function o(l, r, t) {
+    var u = null;
+    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
+      t = {};
+      for (var n in r)
+        n !== "key" && (t[n] = r[n]);
+    } else t = r;
+    return r = t.ref, {
+      $$typeof: i,
+      type: l,
+      key: u,
+      ref: r !== void 0 ? r : null,
+      props: t
+    };
+  }
+  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
+}
 export {
-  o as default
+  a as __require
 };
 //# sourceMappingURL=index.es32.js.map

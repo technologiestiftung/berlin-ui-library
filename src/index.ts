@@ -66,6 +66,6 @@ export {
 
 export { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/Tabs";
 
-export { ImageComponent } from "./components/Image";
+export { Image as ImageComponent } from "./components/Image";
 
 export { Toggle, toggleVariants } from "./components/Toggle";

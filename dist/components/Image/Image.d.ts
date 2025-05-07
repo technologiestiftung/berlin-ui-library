@@ -1,5 +1,5 @@
 import { default as React } from 'react';
-interface ImageComponentProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
     /**
      * The source URL of the image.
      */
@@ -47,6 +47,6 @@ interface ImageComponentProps extends React.HTMLAttributes<HTMLDivElement> {
  * A component for displaying images with optional overlays, captions, and copyright information,
  * styled using Tailwind CSS, following a structure similar to the provided example.
  */
-declare const ImageComponent: React.ForwardRefExoticComponent<ImageComponentProps & React.RefAttributes<HTMLDivElement>>;
-export { ImageComponent };
+declare const Image: React.ForwardRefExoticComponent<ImageProps & React.RefAttributes<HTMLDivElement>>;
+export { Image as Image };
 //# sourceMappingURL=Image.d.ts.map

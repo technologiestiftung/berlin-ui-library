@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils"; // Assuming cn utility is available (e.g., from shadcn/ui)
 
-interface ImageComponentProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * The source URL of the image.
 	 */
@@ -97,7 +97,7 @@ const ImageOverlay: React.FC<{
  * A component for displaying images with optional overlays, captions, and copyright information,
  * styled using Tailwind CSS, following a structure similar to the provided example.
  */
-const ImageComponent = React.forwardRef<HTMLDivElement, ImageComponentProps>(
+const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 	(
 		{
 			className,
@@ -162,6 +162,6 @@ const ImageComponent = React.forwardRef<HTMLDivElement, ImageComponentProps>(
 	},
 );
 
-ImageComponent.displayName = "ImageComponent";
+Image.displayName = "Image";
 
-export { ImageComponent };
+export { Image as Image };

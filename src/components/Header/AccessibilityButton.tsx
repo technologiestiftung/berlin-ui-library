@@ -21,12 +21,12 @@ export function AccessibilityButton({
 
 	return (
 		<button
-			className={`flex flex-col items-center gap-1 text-[11px] leading-3 ${className}`}
+			className={`flex flex-col items-center justify-between gap-1 text-[11px] leading-normal ${className}`}
 			onClick={onOpenAccessibility}
 			aria-label={label}
 		>
-			<AccessibilityIcon />
-			{label}
+			<AccessibilityIcon className="size-8" />
+			<span className="whitespace-nowrap">{label}</span>
 		</button>
 	);
 }

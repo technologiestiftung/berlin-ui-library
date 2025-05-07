@@ -78,6 +78,9 @@ const DrawerContent = React.forwardRef<
 					)}
 					{...props}
 				>
+					<DrawerTitle className="px-[0.8rem] text-xl font-bold">
+						{props.title}
+					</DrawerTitle>
 					{children}
 					<DrawerPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-1 right-4 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
 						<CloseIcon className="m-2 text-black" />

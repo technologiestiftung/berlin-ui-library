@@ -1,5 +1,5 @@
 import { j as r } from "./index.es4.js";
-import a from "./index.es47.js";
+import a from "./index.es46.js";
 function t({
   logoUrl: e = "https://www.berlin.de",
   logoComponent: o

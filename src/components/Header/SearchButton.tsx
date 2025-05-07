@@ -1,4 +1,4 @@
-import { SearchIconLarge } from "@/assets/icons/search-icon-large";
+import SearchIcon from "@/assets/icons/search_icon.svg?react";
 import { useLanguage, t } from "./LanguageProvider";
 
 export interface SearchButtonProps {
@@ -21,12 +21,12 @@ export function SearchButton({
 
 	return (
 		<button
-			className={`flex flex-col items-center gap-1 text-[11px] leading-3 ${className}`}
+			className={`flex flex-col items-center justify-between gap-1 text-[11px] leading-normal ${className}`}
 			onClick={onOpenSearch}
 			aria-label={label}
 		>
-			<SearchIconLarge />
-			{label}
+			<SearchIcon className="size-8" />
+			<span className="whitespace-nowrap">{label}</span>
 		</button>
 	);
 }

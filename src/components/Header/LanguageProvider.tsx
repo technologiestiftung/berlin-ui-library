@@ -26,7 +26,7 @@ const defaultLanguages: Language[] = [
 // Default German translations
 const defaultTranslations: Record<string, Translations> = {
 	de: {
-		accessibility: "Barrierefreiheit",
+		accessibility: "Barrierefrei",
 		menu: "Menü",
 		search: "Suche",
 		expand: "Erweitern",

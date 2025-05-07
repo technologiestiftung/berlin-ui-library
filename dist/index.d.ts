@@ -10,6 +10,6 @@ export { Label } from './components/Label/Label';
 export { SearchForm } from './components/SearchForm';
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent, } from './components/Accordion';
 export { Tabs, TabsList, TabsTrigger, TabsContent } from './components/Tabs';
-export { ImageComponent } from './components/Image';
+export { Image as ImageComponent } from './components/Image';
 export { Toggle, toggleVariants } from './components/Toggle';
 //# sourceMappingURL=index.d.ts.map

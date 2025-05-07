@@ -5,7 +5,7 @@ const m = [
   { code: "en", label: "English" }
 ], y = {
   de: {
-    accessibility: "Barrierefreiheit",
+    accessibility: "Barrierefrei",
     menu: "Menü",
     search: "Suche",
     expand: "Erweitern",
