@@ -1,11 +1,12 @@
-import { __module as e } from "./index.es34.js";
-import { __require as t } from "./index.es35.js";
-import { __require as i } from "./index.es36.js";
-var r;
-function m() {
-  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
+import { j as r } from "./index.es4.js";
+import a from "./index.es42.js";
+function t({
+  logoUrl: e = "https://www.berlin.de",
+  logoComponent: o
+}) {
+  return /* @__PURE__ */ r.jsx("div", { className: "h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] md:px-6", children: /* @__PURE__ */ r.jsx("a", { href: e, "aria-label": "Homepage Berlin.de", children: o || /* @__PURE__ */ r.jsx("img", { src: a, alt: "Berlin.de Logo", className: "h-8 w-auto" }) }) });
 }
 export {
-  m as __require
+  t as LogoBar
 };
 //# sourceMappingURL=index.es33.js.map

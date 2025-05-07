@@ -1,18 +1,22 @@
-import { j as r } from "./index.es4.js";
-import { LanguageSelect as x } from "./index.es40.js";
-import { Breadcrumbs as m } from "./index.es8.js";
-function l({
-  showBreadcrumbs: e,
-  breadcrumbs: s,
-  showLanguageSelect: i,
-  LinkComponent: t
-}) {
-  return !e && !i ? null : /* @__PURE__ */ r.jsx("div", { className: "bg-block-colored px-4 shadow-inner lg:px-0", children: /* @__PURE__ */ r.jsxs("div", { className: "mx-auto flex max-w-[980px] justify-between", children: [
-    e && /* @__PURE__ */ r.jsx(m, { items: s, LinkComponent: t }),
-    i && /* @__PURE__ */ r.jsx(x, {})
-  ] }) });
+import { j as e } from "./index.es4.js";
+import o from "./index.es40.js";
+import { useLanguage as r, t as i } from "./index.es5.js";
+function p({ onOpenMenu: t, className: n = "" }) {
+  const { translations: a } = r(), s = i("menu", a);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `flex cursor-pointer flex-col items-center justify-between gap-1 text-[11px] leading-normal ${n}`,
+      onClick: t,
+      "aria-label": s,
+      children: [
+        /* @__PURE__ */ e.jsx(o, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "whitespace-nowrap", children: s })
+      ]
+    }
+  );
 }
 export {
-  l as SubHeaderBar
+  p as MenuButton
 };
 //# sourceMappingURL=index.es39.js.map

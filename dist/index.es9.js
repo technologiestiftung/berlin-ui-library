@@ -1,5 +1,5 @@
 import { j as e } from "./index.es4.js";
-import f from "./index.es32.js";
+import f from "./index.es23.js";
 import { Accordion as m, AccordionItem as h, AccordionTrigger as j, AccordionContent as u } from "./index.es16.js";
 import { LanguageProvider as p, useLanguage as w, t as g } from "./index.es5.js";
 function v({
@@ -12,7 +12,7 @@ function v({
   const { translations: x } = w(), r = (l) => g(l, x), n = () => /* @__PURE__ */ e.jsxs(
     "button",
     {
-      className: "flex w-48 gap-x-2 p-2",
+      className: "flex w-48 cursor-pointer gap-x-2 p-2",
       onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }),
       children: [
         r("toTheTop"),
