@@ -93,7 +93,7 @@ function FooterContent({
 
 	const ScrollToTopButton = () => (
 		<button
-			className="flex w-48 gap-x-2 p-2"
+			className="flex w-48 cursor-pointer gap-x-2 p-2"
 			onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 		>
 			{translate("toTheTop")} <ArrowUpIcon className="bg-red" />
