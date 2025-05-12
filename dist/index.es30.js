@@ -1,34 +1,6 @@
-import { j as o } from "./index.es4.js";
-import * as a from "react";
-import * as s from "@radix-ui/react-checkbox";
-import { Check as d } from "lucide-react";
-import l from "./index.es54.js";
-import { cn as t } from "./index.es20.js";
-const f = a.forwardRef(({ className: r, variant: e = "default", ...i }, c) => /* @__PURE__ */ o.jsx(
-  s.Root,
-  {
-    ref: c,
-    className: t(
-      "peer ring-offset-background focus-visible:ring-ring h-4 w-4 shrink-0 cursor-pointer rounded-xs border border-black bg-white focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
-      e === "default" && "data-[state=checked]:border-tabfocus data-[state=checked]:bg-tabfocus data-[state=checked]:!text-white",
-      e === "styled" && "h-6 w-6 cursor-pointer border-2 border-none",
-      r
-    ),
-    ...i,
-    children: /* @__PURE__ */ o.jsxs(
-      s.Indicator,
-      {
-        className: t("flex items-center justify-center"),
-        children: [
-          e === "styled" && /* @__PURE__ */ o.jsx(l, { className: "h-6 w-6 text-black" }),
-          e !== "styled" && /* @__PURE__ */ o.jsx(d, { className: "h-4 w-4 text-white" })
-        ]
-      }
-    )
-  }
-));
-f.displayName = s.Root.displayName;
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" }));
 export {
-  f as Checkbox
+  t as default
 };
 //# sourceMappingURL=index.es30.js.map

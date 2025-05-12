@@ -1,25 +1,11 @@
-import { j as s } from "./index.es4.js";
-import n from "./index.es53.js";
-import { useLanguage as o, t as c } from "./index.es5.js";
-function p({
-  onOpenAccessibility: t,
-  className: i = ""
-}) {
-  const { translations: a } = o(), e = c("accessibility", a);
-  return /* @__PURE__ */ s.jsxs(
-    "button",
-    {
-      className: `flex cursor-pointer flex-col items-center justify-between gap-1 text-[11px] leading-normal ${i}`,
-      onClick: t,
-      "aria-label": e,
-      children: [
-        /* @__PURE__ */ s.jsx(n, { className: "size-8" }),
-        /* @__PURE__ */ s.jsx("span", { className: "whitespace-nowrap", children: e })
-      ]
-    }
-  );
+import { __module as e } from "./index.es48.js";
+import { __require as t } from "./index.es49.js";
+import { __require as i } from "./index.es50.js";
+var r;
+function m() {
+  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
 }
 export {
-  p as AccessibilityButton
+  m as __require
 };
 //# sourceMappingURL=index.es47.js.map

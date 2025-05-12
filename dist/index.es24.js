@@ -1,6 +1,66 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" }));
+import { j as e } from "./index.es4.js";
+import d, { useState as u, useRef as x } from "react";
+import m from "./index.es25.js";
+import f from "./index.es26.js";
+import { useLanguage as p, t as b } from "./index.es5.js";
+function g(n, t) {
+  d.useEffect(() => {
+    const s = (a) => {
+      n.current && !n.current.contains(a.target) && t(!1);
+    };
+    return document.addEventListener("mousedown", s), () => {
+      document.removeEventListener("mousedown", s);
+    };
+  }, [n, t]);
+}
+function C({ className: n = "" }) {
+  const [t, s] = u(!1), a = x(null), { currentLanguage: r, languages: o, translations: c, setLanguage: i } = p();
+  return g(
+    a,
+    s
+  ), /* @__PURE__ */ e.jsxs(
+    "div",
+    {
+      className: `relative z-[10] text-black ${n}`,
+      ref: a,
+      children: [
+        /* @__PURE__ */ e.jsxs(
+          "button",
+          {
+            className: "flex items-center",
+            onClick: () => s(!t),
+            "aria-label": b(t ? "collapse" : "expand", c),
+            "aria-expanded": t,
+            children: [
+              /* @__PURE__ */ e.jsx("span", { className: "flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white", children: r.toLowerCase() }),
+              /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none flex size-8 items-center justify-center", children: t ? /* @__PURE__ */ e.jsx(f, { className: "text-berlin-green" }) : /* @__PURE__ */ e.jsx(m, { className: "text-berlin-green" }) })
+            ]
+          }
+        ),
+        /* @__PURE__ */ e.jsx(
+          "div",
+          {
+            className: `${t ? "block" : "hidden"} absolute top-8 right-0 bg-white shadow-lg`,
+            children: /* @__PURE__ */ e.jsx("ul", { children: o.map((l) => /* @__PURE__ */ e.jsx("li", { children: /* @__PURE__ */ e.jsxs(
+              "button",
+              {
+                className: "block flex w-full gap-2 px-2 py-1 text-base hover:bg-gray-100",
+                onClick: () => {
+                  i(l.code), s(!1);
+                },
+                children: [
+                  /* @__PURE__ */ e.jsx("span", { className: "flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white", children: l.code.toLowerCase() }),
+                  l.label
+                ]
+              }
+            ) }, l.code)) })
+          }
+        )
+      ]
+    }
+  );
+}
 export {
-  t as default
+  C as LanguageSelect
 };
 //# sourceMappingURL=index.es24.js.map

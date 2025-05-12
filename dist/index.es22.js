@@ -1,6 +1,86 @@
-import * as t from "react";
-const o = (e) => /* @__PURE__ */ t.createElement("svg", { width: 20, height: 19, viewBox: "0 0 20 19", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...e }, /* @__PURE__ */ t.createElement("path", { d: "M0 9.49989H17.1666M9.04529 17.874L17.45 9.49955L9.04529 1.12598", stroke: "currentColor", strokeWidth: 3 }));
+import { j as e } from "./index.es4.js";
+import { useState as s } from "react";
+import { MenuButton as g } from "./index.es27.js";
+import { SearchButton as C } from "./index.es29.js";
+import { AccessibilityButton as I } from "./index.es32.js";
+import { SearchMenu as N } from "./index.es33.js";
+import { MenuDrawer as w } from "./index.es34.js";
+import { AccessibilityMenu as B } from "./index.es35.js";
+function z({
+  header: i,
+  caption: r,
+  url: o,
+  showSearchButton: a,
+  onSearch: l,
+  showMenuButton: p,
+  menuItems: m,
+  onOpenMenu: x
+}) {
+  const [h, n] = s(!1), [f, t] = s(!1), [d, c] = s(!1), u = () => {
+    n(!0), l();
+  }, j = () => {
+    n(!1);
+  }, O = (A) => {
+    console.warn("Search term:", A);
+  }, b = () => {
+    t(!0), x();
+  }, y = () => {
+    t(!1);
+  }, S = () => {
+    c(!0);
+  }, M = () => {
+    c(!1);
+  };
+  return /* @__PURE__ */ e.jsxs("div", { className: "flex items-center justify-between px-4 py-1 md:px-6", children: [
+    /* @__PURE__ */ e.jsxs(
+      "a",
+      {
+        href: o,
+        className: "flex h-[86px] flex-col justify-center text-base leading-[1.2em] md:text-[20px]",
+        children: [
+          /* @__PURE__ */ e.jsx("span", { children: i }),
+          /* @__PURE__ */ e.jsx("span", { className: "font-bold", children: r })
+        ]
+      }
+    ),
+    /* @__PURE__ */ e.jsxs("div", { className: "mx-4 flex items-center space-x-3", children: [
+      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(I, { onOpenAccessibility: S }),
+        /* @__PURE__ */ e.jsx(
+          B,
+          {
+            isOpen: d,
+            close: M,
+            accessibilityItems: []
+          }
+        )
+      ] }),
+      a && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(C, { onOpenSearch: u }),
+        /* @__PURE__ */ e.jsx(
+          N,
+          {
+            isOpen: h,
+            close: j,
+            onSearch: O
+          }
+        )
+      ] }),
+      p && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(g, { onOpenMenu: b }),
+        /* @__PURE__ */ e.jsx(
+          w,
+          {
+            isOpen: f,
+            close: y,
+            menuItems: m
+          }
+        )
+      ] })
+    ] })
+  ] });
+}
 export {
-  o as default
+  z as MainHeaderContent
 };
 //# sourceMappingURL=index.es22.js.map
