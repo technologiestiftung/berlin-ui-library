@@ -1,2 +1,2 @@
-export { useFormField, Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage, FormField, } from './Form.client';
+export { useFormField, Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage, FormField, } from "./Form.client";
 //# sourceMappingURL=index.d.ts.map

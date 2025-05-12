@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Breadcrumbs } from './Breadcrumb';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Breadcrumbs } from "./Breadcrumb";
 declare const meta: Meta<typeof Breadcrumbs>;
 export default meta;
 type Story = StoryObj<typeof Breadcrumbs>;
