@@ -1,4 +1,4 @@
-import { j as n } from "./index.es4.js";
+import { j as s } from "./index.es4.js";
 import * as l from "react";
 import { cva as u } from "class-variance-authority";
 import { cn as i } from "./index.es20.js";
@@ -11,7 +11,7 @@ const p = u(
         outline: "bg-transparent"
       },
       size: {
-        sm: "h-8 px-2 text-sm",
+        md: "h-8 px-2 text-sm",
         default: "h-9 px-3 text-base",
         lg: "h-10 px-4 text-lg"
       }
@@ -21,12 +21,12 @@ const p = u(
       size: "default"
     }
   }
-), f = l.forwardRef(({ className: t, type: e, variant: r, size: a, ...o }, s) => /* @__PURE__ */ n.jsx(
+), f = l.forwardRef(({ className: t, type: e, variant: r, size: a, ...o }, n) => /* @__PURE__ */ s.jsx(
   "input",
   {
     type: e,
     className: i(p({ variant: r, size: a, className: t })),
-    ref: s,
+    ref: n,
     ...o
   }
 ));

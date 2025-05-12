@@ -3,19 +3,19 @@ import * as i from "react";
 import * as e from "@radix-ui/react-dialog";
 import { cva as f } from "class-variance-authority";
 import { cn as r } from "./index.es20.js";
-import p from "./index.es24.js";
-const v = e.Root, C = e.Trigger, R = e.Close, x = e.Portal, n = i.forwardRef(({ className: a, ...s }, o) => /* @__PURE__ */ t.jsx(
+import p from "./index.es25.js";
+const v = e.Root, C = e.Trigger, R = e.Close, x = e.Portal, l = i.forwardRef(({ className: a, ...o }, s) => /* @__PURE__ */ t.jsx(
   e.Overlay,
   {
     className: r(
       "fixed inset-0 z-50 bg-black/40 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0",
       a
     ),
-    ...s,
-    ref: o
+    ...o,
+    ref: s
   }
 ));
-n.displayName = e.Overlay.displayName;
+l.displayName = e.Overlay.displayName;
 const u = f(
   "fixed z-50 gap-4 bg-white pt-[0.7em] shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=closed]:animate-out data-[state=open]:duration-500 data-[state=open]:animate-in",
   {
@@ -37,20 +37,20 @@ const u = f(
     }
   }
 ), g = i.forwardRef(
-  ({ side: a = "right", size: s = "default", className: o, children: m, ...l }, c) => /* @__PURE__ */ t.jsxs(x, { children: [
-    /* @__PURE__ */ t.jsx(n, {}),
+  ({ side: a = "right", size: o = "default", className: s, children: m, ...d }, c) => /* @__PURE__ */ t.jsxs(x, { children: [
+    /* @__PURE__ */ t.jsx(l, {}),
     /* @__PURE__ */ t.jsxs(
       e.Content,
       {
         ref: c,
         className: r(
-          u({ side: a, size: s }),
+          u({ side: a, size: o }),
           "overflow-y-auto",
-          o
+          s
         ),
-        ...l,
+        ...d,
         children: [
-          /* @__PURE__ */ t.jsx(d, { className: "px-[0.8rem] text-xl font-bold", children: l.title }),
+          /* @__PURE__ */ t.jsx(n, { className: "px-[0.8rem] text-xl font-bold", children: d.title }),
           m,
           /* @__PURE__ */ t.jsxs(e.Close, { className: "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-1 right-4 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none", children: [
             /* @__PURE__ */ t.jsx(p, { className: "m-2 text-black" }),
@@ -64,47 +64,47 @@ const u = f(
 g.displayName = e.Content.displayName;
 const w = ({
   className: a,
-  ...s
+  ...o
 }) => /* @__PURE__ */ t.jsx(
   "div",
   {
     className: r(
-      "flex flex-col space-y-2 text-center sm:text-left",
+      "flex flex-col space-y-2 text-center md:text-left",
       a
     ),
-    ...s
+    ...o
   }
 );
 w.displayName = "DrawerHeader";
 const y = ({
   className: a,
-  ...s
+  ...o
 }) => /* @__PURE__ */ t.jsx(
   "div",
   {
     className: r(
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+      "flex flex-col-reverse md:flex-row md:justify-end md:space-x-2",
       a
     ),
-    ...s
+    ...o
   }
 );
 y.displayName = "DrawerFooter";
-const d = i.forwardRef(({ className: a, ...s }, o) => /* @__PURE__ */ t.jsx(
+const n = i.forwardRef(({ className: a, ...o }, s) => /* @__PURE__ */ t.jsx(
   e.Title,
   {
-    ref: o,
+    ref: s,
     className: r("text-foreground px-[0.8rem] text-xl font-bold", a),
-    ...s
+    ...o
   }
 ));
-d.displayName = e.Title.displayName;
-const N = i.forwardRef(({ className: a, ...s }, o) => /* @__PURE__ */ t.jsx(
+n.displayName = e.Title.displayName;
+const N = i.forwardRef(({ className: a, ...o }, s) => /* @__PURE__ */ t.jsx(
   e.Description,
   {
-    ref: o,
+    ref: s,
     className: r("text-muted-foreground text-sm", a),
-    ...s
+    ...o
   }
 ));
 N.displayName = e.Description.displayName;
@@ -115,9 +115,9 @@ export {
   N as DrawerDescription,
   y as DrawerFooter,
   w as DrawerHeader,
-  n as DrawerOverlay,
+  l as DrawerOverlay,
   x as DrawerPortal,
-  d as DrawerTitle,
+  n as DrawerTitle,
   C as DrawerTrigger
 };
 //# sourceMappingURL=index.es6.js.map

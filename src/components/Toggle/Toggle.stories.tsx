@@ -43,7 +43,7 @@ export const Outline: Story = {
 
 export const Small: Story = {
 	args: {
-		size: "sm",
+		size: "md",
 		"aria-label": "Toggle underline",
 		children: <Underline />,
 	},
@@ -122,7 +122,7 @@ export const ToggleGroup: Story = {
 
 			<p className="text-muted-foreground text-sm">With different sizes:</p>
 			<div className="flex items-center gap-2">
-				<Toggle size="sm" aria-label="Small toggle">
+				<Toggle size="md" aria-label="Small toggle">
 					<span>S</span>
 				</Toggle>
 				<Toggle aria-label="Default toggle">

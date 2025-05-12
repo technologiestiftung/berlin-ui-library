@@ -1,7 +1,7 @@
 import { j as r } from "./index.es4.js";
 import * as t from "react";
 import { Slot as b } from "@radix-ui/react-slot";
-import { ChevronRight as d } from "lucide-react";
+import { ChevronRight as n } from "lucide-react";
 import { cn as c } from "./index.es20.js";
 const o = t.forwardRef(({ ...e }, a) => /* @__PURE__ */ r.jsx("nav", { ref: a, "aria-label": "breadcrumb", ...e }));
 o.displayName = "Breadcrumb";
@@ -10,7 +10,7 @@ const i = t.forwardRef(({ className: e, ...a }, s) => /* @__PURE__ */ r.jsx(
   {
     ref: s,
     className: c(
-      "flex flex-wrap items-center gap-[0.3em] text-sm break-words text-muted-foreground sm:gap-[0.3em]",
+      "text-muted-foreground flex flex-wrap items-center gap-[0.3em] text-sm break-words md:gap-[0.3em]",
       e
     ),
     ...a
@@ -32,7 +32,7 @@ const f = t.forwardRef(({ asChild: e, className: a, ...s }, l) => {
     m,
     {
       ref: l,
-      className: c("transition-colors hover:text-foreground", a),
+      className: c("hover:text-foreground transition-colors", a),
       ...s
     }
   );
@@ -45,7 +45,7 @@ const u = t.forwardRef(({ className: e, ...a }, s) => /* @__PURE__ */ r.jsx(
     role: "link",
     "aria-disabled": "true",
     "aria-current": "page",
-    className: c("font-normal text-foreground", e),
+    className: c("text-foreground font-normal", e),
     ...a
   }
 ));
@@ -61,7 +61,7 @@ const p = ({
     "aria-hidden": "true",
     className: c("[&>svg]:h-3.5 [&>svg]:w-3.5", a),
     ...s,
-    children: e ?? /* @__PURE__ */ r.jsx(d, {})
+    children: e ?? /* @__PURE__ */ r.jsx(n, {})
   }
 );
 p.displayName = "BreadcrumbSeparator";
@@ -70,9 +70,9 @@ const B = ({
   LinkComponent: a,
   className: s = ""
 }) => e.length ? /* @__PURE__ */ r.jsx(o, { className: c("py-2 text-sm", s), children: /* @__PURE__ */ r.jsx(i, { className: "flex flex-wrap items-center", children: e.map((l, m) => {
-  const n = m === e.length - 1;
+  const d = m === e.length - 1;
   return /* @__PURE__ */ r.jsxs(t.Fragment, { children: [
-    /* @__PURE__ */ r.jsx(x, { children: n ? /* @__PURE__ */ r.jsx(u, { children: l.label }) : /* @__PURE__ */ r.jsx(
+    /* @__PURE__ */ r.jsx(x, { children: d ? /* @__PURE__ */ r.jsx(u, { children: l.label }) : /* @__PURE__ */ r.jsx(
       f,
       {
         href: l.href,
@@ -81,10 +81,10 @@ const B = ({
         children: a ? /* @__PURE__ */ r.jsx(a, { href: l.href, children: l.label }) : l.label
       }
     ) }),
-    !n && /* @__PURE__ */ r.jsx(p, { className: "text-gray-400", children: /* @__PURE__ */ r.jsx(
-      d,
+    !d && /* @__PURE__ */ r.jsx(p, { className: "text-gray-400", children: /* @__PURE__ */ r.jsx(
+      n,
       {
-        className: n ? "text-black" : "text-berlin-grey-darker"
+        className: d ? "text-black" : "text-berlin-grey-darker"
       }
     ) })
   ] }, `${l.href}-${m}`);

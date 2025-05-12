@@ -1,32 +1,19 @@
-import { j as r } from "./index.es4.js";
+import { j as t } from "./index.es4.js";
 import * as i from "react";
-import * as e from "@radix-ui/react-radio-group";
-import { Circle as l } from "lucide-react";
-import { cn as a } from "./index.es20.js";
-const c = i.forwardRef(({ className: o, ...s }, t) => /* @__PURE__ */ r.jsx(
-  e.Root,
+import { cn as s } from "./index.es20.js";
+const a = i.forwardRef(({ className: e, ...r }, o) => /* @__PURE__ */ t.jsx(
+  "textarea",
   {
-    className: a("grid gap-2", o),
-    ...s,
-    ref: t
-  }
-));
-c.displayName = e.Root.displayName;
-const d = i.forwardRef(({ className: o, ...s }, t) => /* @__PURE__ */ r.jsx(
-  e.Item,
-  {
-    ref: t,
-    className: a(
-      "ring-offset-background focus-visible:ring-ring aspect-square h-4 w-4 rounded-full border border-black bg-white text-tabfocus focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:text-text-disabled",
-      o
+    className: s(
+      "border-input ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full border bg-white px-3 py-2 text-base focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+      e
     ),
-    ...s,
-    children: /* @__PURE__ */ r.jsx(e.Indicator, { className: "flex items-center justify-center", children: /* @__PURE__ */ r.jsx(l, { className: "h-2.5 w-2.5 fill-current text-current" }) })
+    ref: o,
+    ...r
   }
 ));
-d.displayName = e.Item.displayName;
+a.displayName = "Textarea";
 export {
-  c as RadioGroup,
-  d as RadioGroupItem
+  a as Textarea
 };
 //# sourceMappingURL=index.es28.js.map

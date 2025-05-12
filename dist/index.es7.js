@@ -1,7 +1,7 @@
 import { j as e } from "./index.es4.js";
 import { useState as b } from "react";
 import { cn as x } from "./index.es20.js";
-import g from "./index.es21.js";
+import g from "./index.es24.js";
 import v from "./index.es22.js";
 function I({
   placeholder: a = "Suchbegriff",

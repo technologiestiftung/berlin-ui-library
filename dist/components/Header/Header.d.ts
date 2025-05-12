@@ -1,6 +1,6 @@
-import React from "react";
-import { BreadcrumbItem, LinkComponentProps, MenuItem } from "./types";
-import { Language } from "./LanguageProvider";
+import { default as React } from 'react';
+import { BreadcrumbItem, LinkComponentProps, MenuItem } from './types';
+import { Language } from './LanguageProvider';
 export interface HeaderProps extends LinkComponentProps {
     /**
      * Header title text

@@ -1,5 +1,5 @@
-import { JSX } from "react";
-import { UseFormReturn } from "react-hook-form";
+import { JSX } from 'react';
+import { UseFormReturn } from 'react-hook-form';
 /**
  * FormProperty interface defines the structure of a form field property
  * that will be used to render a form field with the FormFieldWrapper component.

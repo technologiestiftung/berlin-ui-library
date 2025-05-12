@@ -13,7 +13,7 @@ const c = l(
       },
       size: {
         default: "h-10 min-w-10 px-3",
-        sm: "h-9 min-w-9 px-2.5",
+        md: "h-9 min-w-9 px-2.5",
         lg: "h-11 min-w-11 px-5"
       }
     },
@@ -22,7 +22,7 @@ const c = l(
       size: "default"
     }
   }
-), g = s.forwardRef(({ className: t, variant: o, size: i, ...r }, n) => /* @__PURE__ */ a.jsx(
+), d = s.forwardRef(({ className: t, variant: o, size: i, ...r }, n) => /* @__PURE__ */ a.jsx(
   e.Root,
   {
     ref: n,
@@ -30,9 +30,9 @@ const c = l(
     ...r
   }
 ));
-g.displayName = e.Root.displayName;
+d.displayName = e.Root.displayName;
 export {
-  g as Toggle,
+  d as Toggle,
   c as toggleVariants
 };
 //# sourceMappingURL=index.es19.js.map
