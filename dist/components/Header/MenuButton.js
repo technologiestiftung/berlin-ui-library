@@ -1,0 +1,8 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import BarsIcon from "@/assets/icons/bars_icon.svg?react";
+import { useLanguage, t } from "./LanguageProvider";
+export function MenuButton({ onOpenMenu, className = "" }) {
+    const { translations } = useLanguage();
+    const label = t("menu", translations);
+    return (_jsxs("button", { className: `flex cursor-pointer flex-col items-center justify-between gap-1 text-[11px] leading-normal ${className}`, onClick: onOpenMenu, "aria-label": label, children: [_jsx(BarsIcon, { className: "size-8" }), _jsx("span", { className: "whitespace-nowrap", children: label })] }));
+}

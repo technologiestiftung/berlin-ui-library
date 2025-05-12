@@ -12,7 +12,7 @@ const inputVariants = cva(
 				outline: "bg-transparent",
 			},
 			size: {
-				sm: "h-8 px-2 text-sm",
+				md: "h-8 px-2 text-sm",
 				default: "h-9 px-3 text-base",
 				lg: "h-10 px-4 text-lg",
 			},

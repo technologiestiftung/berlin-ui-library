@@ -22,7 +22,7 @@ export function SubHeaderBar({
 
 	return (
 		<div className="bg-block-colored px-4 shadow-inner lg:px-0">
-			<div className="mx-auto flex max-w-[980px] justify-between">
+			<div className="mx-auto flex max-w-[61.25rem] justify-between">
 				{showBreadcrumbs && (
 					<Breadcrumbs items={breadcrumbs} LinkComponent={LinkComponent} />
 				)}

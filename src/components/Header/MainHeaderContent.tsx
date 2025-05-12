@@ -69,7 +69,7 @@ export function MainHeaderContent({
 			{/* Site Title */}
 			<a
 				href={url}
-				className="flex h-[86px] flex-col justify-center text-base sm:text-[20px]"
+				className="flex h-[86px] flex-col justify-center text-base md:text-[20px]"
 			>
 				<span>{header}</span>
 				<span className="font-bold">{caption}</span>

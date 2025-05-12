@@ -1,4 +1,4 @@
-import { MenuItem } from './types';
+import { MenuItem } from "./types";
 interface MainHeaderContentProps {
     header: string;
     caption: string;
