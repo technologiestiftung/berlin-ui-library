@@ -1,25 +1,19 @@
-import { j as e } from "./index.es4.js";
-import n from "./index.es30.js";
-import { useLanguage as o, t as c } from "./index.es5.js";
-function p({
-  onOpenSearch: t,
-  className: a = ""
-}) {
-  const { translations: r } = o(), s = c("search", r);
-  return /* @__PURE__ */ e.jsxs(
-    "button",
-    {
-      className: `flex cursor-pointer flex-col items-center justify-between gap-1 text-[11px] leading-normal ${a}`,
-      onClick: t,
-      "aria-label": s,
-      children: [
-        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
-        /* @__PURE__ */ e.jsx("span", { className: "whitespace-nowrap", children: s })
-      ]
-    }
-  );
-}
+import { j as t } from "./index.es4.js";
+import * as i from "react";
+import { cn as s } from "./index.es21.js";
+const a = i.forwardRef(({ className: e, ...r }, o) => /* @__PURE__ */ t.jsx(
+  "textarea",
+  {
+    className: s(
+      "border-input ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full border bg-white px-3 py-2 text-base focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+      e
+    ),
+    ref: o,
+    ...r
+  }
+));
+a.displayName = "Textarea";
 export {
-  p as SearchButton
+  a as Textarea
 };
 //# sourceMappingURL=index.es29.js.map

@@ -9,6 +9,7 @@ export { Input } from './components/Input/Input';
 export { Label } from './components/Label/Label';
 export { SearchForm } from './components/SearchForm';
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent, } from './components/Accordion';
+export { Checkbox } from './components/Checkbox';
 export { Tabs, TabsList, TabsTrigger, TabsContent } from './components/Tabs';
 export { Image } from './components/Image';
 export { Toggle, toggleVariants } from './components/Toggle';

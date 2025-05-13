@@ -1,6 +1,66 @@
-import * as e from "react";
-const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 21, height: 21, viewBox: "0 0 11 12", fill: "currentColor", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { id: "Vector", d: "M8.83784 5.50883V9.60163C8.83784 9.9725 8.6919 10.3282 8.43214 10.5904C8.17238 10.8527 7.82006 11 7.4527 11H2.38514C2.01777 11 1.66546 10.8527 1.4057 10.5904C1.14593 10.3282 1 9.9725 1 9.60163V4.19913C1 3.82826 1.14593 3.47258 1.4057 3.21033C1.66546 2.94808 2.01777 2.80076 2.38514 2.80076H5.78378M10 3.94682V1M10 1H7.08108M10 1L3.5 8.5", stroke: "currentColor", fill: "none", strokeLinecap: "round", strokeLinejoin: "round" }));
+import { j as e } from "./index.es4.js";
+import d, { useState as u, useRef as x } from "react";
+import m from "./index.es42.js";
+import f from "./index.es43.js";
+import { useLanguage as p, t as b } from "./index.es5.js";
+function g(n, t) {
+  d.useEffect(() => {
+    const s = (a) => {
+      n.current && !n.current.contains(a.target) && t(!1);
+    };
+    return document.addEventListener("mousedown", s), () => {
+      document.removeEventListener("mousedown", s);
+    };
+  }, [n, t]);
+}
+function C({ className: n = "" }) {
+  const [t, s] = u(!1), a = x(null), { currentLanguage: r, languages: o, translations: c, setLanguage: i } = p();
+  return g(
+    a,
+    s
+  ), /* @__PURE__ */ e.jsxs(
+    "div",
+    {
+      className: `relative z-[10] text-black ${n}`,
+      ref: a,
+      children: [
+        /* @__PURE__ */ e.jsxs(
+          "button",
+          {
+            className: "flex items-center",
+            onClick: () => s(!t),
+            "aria-label": b(t ? "collapse" : "expand", c),
+            "aria-expanded": t,
+            children: [
+              /* @__PURE__ */ e.jsx("span", { className: "flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white", children: r.toLowerCase() }),
+              /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none flex size-8 items-center justify-center", children: t ? /* @__PURE__ */ e.jsx(f, { className: "text-berlin-green" }) : /* @__PURE__ */ e.jsx(m, { className: "text-berlin-green" }) })
+            ]
+          }
+        ),
+        /* @__PURE__ */ e.jsx(
+          "div",
+          {
+            className: `${t ? "block" : "hidden"} absolute top-8 right-0 bg-white shadow-lg`,
+            children: /* @__PURE__ */ e.jsx("ul", { children: o.map((l) => /* @__PURE__ */ e.jsx("li", { children: /* @__PURE__ */ e.jsxs(
+              "button",
+              {
+                className: "block flex w-full gap-2 px-2 py-1 text-base hover:bg-gray-100",
+                onClick: () => {
+                  i(l.code), s(!1);
+                },
+                children: [
+                  /* @__PURE__ */ e.jsx("span", { className: "flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white", children: l.code.toLowerCase() }),
+                  l.label
+                ]
+              }
+            ) }, l.code)) })
+          }
+        )
+      ]
+    }
+  );
+}
 export {
-  o as default
+  C as LanguageSelect
 };
 //# sourceMappingURL=index.es41.js.map

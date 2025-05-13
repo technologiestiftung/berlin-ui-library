@@ -62,8 +62,8 @@ const enTranslations = {
 
 export const Default: Story = {
 	args: {
-		header: "Design System",
-		caption: "Berlin.de",
+		header: "Senatsverwaltung für",
+		caption: "Mobilität, Verkehr, Klimaschutz und Umwelt",
 		breadcrumbs: [
 			{ label: "Home", href: "/" },
 			{ label: "Components", href: "/components" },

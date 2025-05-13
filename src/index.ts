@@ -64,6 +64,8 @@ export {
 	AccordionContent,
 } from "./components/Accordion";
 
+export { Checkbox } from "./components/Checkbox";
+
 export { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/Tabs";
 
 export { Image } from "./components/Image";

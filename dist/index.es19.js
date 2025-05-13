@@ -1,38 +1,100 @@
-import { j as a } from "./index.es4.js";
-import * as s from "react";
-import * as e from "@radix-ui/react-toggle";
-import { cva as l } from "class-variance-authority";
-import { cn as f } from "./index.es20.js";
-const c = l(
-  "ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center gap-2 text-sm font-medium transition-colors hover:bg-block-heavy hover:font-bold focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-block-heavy data-[state=on]:font-bold [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
-  {
-    variants: {
-      variant: {
-        default: "bg-transparent",
-        outline: "border-input hover:bg-accent hover:text-accent-foreground cursor-pointer border border-black bg-transparent"
-      },
-      size: {
-        default: "h-10 min-w-10 px-3",
-        md: "h-9 min-w-9 px-2.5",
-        lg: "h-11 min-w-11 px-5"
-      }
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
+import { j as t } from "./index.es4.js";
+import h from "react";
+import { cn as r } from "./index.es21.js";
+const g = ({ title: e, copyrightText: s, link: a, position: l }) => {
+  if (!e && !s)
+    return null;
+  const i = a ? "a" : "span", o = a ? { href: a, "data-mainlink": "true" } : {};
+  return /* @__PURE__ */ t.jsxs(
+    "div",
+    {
+      className: r(
+        "absolute inset-0 flex flex-col p-6 text-white [text-shadow:1px_1px_4px_rgba(0,0,0,0.4)]",
+        l === "bottom" ? "justify-end" : "justify-start"
+        // Content alignment
+      ),
+      children: [
+        e && /* @__PURE__ */ t.jsx(
+          i,
+          {
+            className: "text-lg leading-tight font-bold hover:underline md:text-2xl",
+            ...o,
+            children: e
+          }
+        ),
+        s && /* @__PURE__ */ t.jsx(
+          "p",
+          {
+            className: r(
+              "absolute text-xs text-white/40",
+              // Corresponds to 'image__copyright' within overlay
+              l === "bottom" ? "top-1 right-2" : "right-2 bottom-1"
+              // Position depends on main content alignment
+            ),
+            children: s
+          }
+        )
+      ]
     }
-  }
-), d = s.forwardRef(({ className: t, variant: o, size: i, ...r }, n) => /* @__PURE__ */ a.jsx(
-  e.Root,
-  {
-    ref: n,
-    className: f(c({ variant: o, size: i, className: t })),
-    ...r
-  }
-));
-d.displayName = e.Root.displayName;
+  );
+}, p = h.forwardRef(
+  ({
+    className: e,
+    src: s,
+    alt: a,
+    caption: l,
+    copyright: i,
+    overlayTitle: o,
+    overlayCopyright: m,
+    overlayLink: n,
+    overlayPosition: x = "center",
+    darkenImage: c = !1,
+    imgClassName: d,
+    ...b
+  }, f) => /* @__PURE__ */ t.jsxs(
+    "div",
+    {
+      className: r("relative mb-3 block", e),
+      ref: f,
+      ...b,
+      children: [
+        /* @__PURE__ */ t.jsx(
+          "div",
+          {
+            className: r("mb-1", c && "brightness-60 filter"),
+            children: /* @__PURE__ */ t.jsx(
+              "img",
+              {
+                src: s,
+                alt: a,
+                className: r("block h-auto w-full", d)
+              }
+            )
+          }
+        ),
+        /* @__PURE__ */ t.jsx(
+          g,
+          {
+            title: o,
+            copyrightText: m,
+            link: n,
+            position: x
+          }
+        ),
+        l && /* @__PURE__ */ t.jsxs("p", { className: "mb-1 block text-sm leading-tight font-normal break-words text-black", children: [
+          " ",
+          l
+        ] }),
+        i && /* @__PURE__ */ t.jsxs("p", { className: "mb-1 block text-[11px] leading-tight break-words text-gray-600", children: [
+          " ",
+          i
+        ] })
+      ]
+    }
+  )
+);
+p.displayName = "Image";
 export {
-  d as Toggle,
-  c as toggleVariants
+  p as Image
 };
 //# sourceMappingURL=index.es19.js.map

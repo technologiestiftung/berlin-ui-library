@@ -21,7 +21,7 @@ export function LogoBar({
 		<div className="h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] md:px-6">
 			<a href={logoUrl} aria-label="Homepage Berlin.de">
 				{logoComponent || (
-					<img src={BerlinLogo} alt="Berlin.de Logo" className="h-8 w-auto" />
+					<img src={BerlinLogo} alt="Berlin.de Logo" className="object-fill" />
 				)}
 			</a>
 		</div>
