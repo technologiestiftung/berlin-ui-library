@@ -45,15 +45,15 @@ export function LanguageSelect({ className = "" }: LanguageSelectProps) {
 			ref={languageSelectRef}
 		>
 			<button
-				className="flex items-center"
+				className="flex h-full items-center gap-2"
 				onClick={() => setIsOpen(!isOpen)}
 				aria-label={t(isOpen ? "collapse" : "expand", translations)}
 				aria-expanded={isOpen}
 			>
-				<span className="flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white">
+				<span className="font-bolder flex size-5 items-center justify-center bg-black text-[11px] text-white">
 					{currentLanguage.toLowerCase()}
 				</span>
-				<span className="pointer-events-none flex size-8 items-center justify-center">
+				<span className="pointer-events-none flex size-3 items-center justify-center text-red">
 					{isOpen ? (
 						<ChevronUp className="text-berlin-green" />
 					) : (

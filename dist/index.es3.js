@@ -1,19 +1,19 @@
 import { j as e } from "./index.es4.js";
-import { LogoBar as w } from "./index.es38.js";
-import { MainHeaderContent as B } from "./index.es39.js";
-import { SubHeaderBar as H } from "./index.es40.js";
+import { LogoBar as w } from "./index.es34.js";
+import { MainHeaderContent as B } from "./index.es35.js";
+import { SubHeaderBar as H } from "./index.es36.js";
 import { LanguageProvider as L } from "./index.es5.js";
 function v({
   header: r = "Design System",
   caption: t = "Berlin.de",
-  url: i = "/",
-  logoUrl: o = "https://www.berlin.de",
+  url: o = "/",
+  logoUrl: i = "https://www.berlin.de",
   logoComponent: a,
   LinkComponent: n,
   breadcrumbs: s = [],
   showBreadcrumbs: d = !0,
-  showLanguageSelect: l = !0,
-  language: m = "de",
+  showLanguageSelect: m = !0,
+  language: l = "de",
   languages: u = [
     { code: "de", label: "Deutsch" },
     { code: "en", label: "English" }
@@ -24,36 +24,36 @@ function v({
   showSearchButton: p = !0,
   onSearch: c = () => {
   },
-  showMenuButton: h = !0,
-  menuItems: j = [],
-  onOpenMenu: f = () => {
+  showMenuButton: b = !0,
+  menuItems: h = [],
+  onOpenMenu: j = () => {
   },
-  className: b = ""
+  className: f = ""
 }) {
   return /* @__PURE__ */ e.jsx(
     L,
     {
-      initialLanguage: m,
+      initialLanguage: l,
       languages: u,
       translations: x,
       onLanguageChange: g,
       children: /* @__PURE__ */ e.jsxs(
         "header",
         {
-          className: `sticky top-0 z-[20] bg-white text-xl leading-[122.2%] tracking-[0.3px] ${b}`,
+          className: `sticky top-0 z-[20] box-border bg-white text-xl leading-[1.22rem] ${f}`,
           children: [
-            /* @__PURE__ */ e.jsx(w, { logoUrl: o, logoComponent: a }),
+            /* @__PURE__ */ e.jsx(w, { logoUrl: i, logoComponent: a }),
             /* @__PURE__ */ e.jsx(
               B,
               {
                 header: r,
                 caption: t,
-                url: i,
+                url: o,
                 showSearchButton: p,
                 onSearch: c,
-                showMenuButton: h,
-                menuItems: j,
-                onOpenMenu: f
+                showMenuButton: b,
+                menuItems: h,
+                onOpenMenu: j
               }
             ),
             /* @__PURE__ */ e.jsx(
@@ -61,7 +61,7 @@ function v({
               {
                 showBreadcrumbs: d,
                 breadcrumbs: s,
-                showLanguageSelect: l,
+                showLanguageSelect: m,
                 LinkComponent: n
               }
             )

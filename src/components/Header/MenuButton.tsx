@@ -18,11 +18,11 @@ export function MenuButton({ onOpenMenu, className = "" }: MenuButtonProps) {
 
 	return (
 		<button
-			className={`flex cursor-pointer flex-col items-center justify-between gap-1 text-[11px] leading-normal ${className}`}
+			className={`mb-[0.1rem] flex cursor-pointer flex-col items-center justify-between text-[11px] leading-normal ${className}`}
 			onClick={onOpenMenu}
 			aria-label={label}
 		>
-			<BarsIcon className="size-8" />
+			<BarsIcon className="h-8" />
 			<span className="whitespace-nowrap">{label}</span>
 		</button>
 	);

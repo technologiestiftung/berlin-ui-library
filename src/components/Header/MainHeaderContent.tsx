@@ -65,7 +65,7 @@ export function MainHeaderContent({
 	};
 
 	return (
-		<div className="flex items-center justify-between px-[24px] py-[1rem] md:py-[1rem]">
+		<div className="flex items-center justify-between px-[24px] py-[1rem] md:py-[0.7rem]">
 			{/* Site Title */}
 			<a
 				href={url}
@@ -76,7 +76,7 @@ export function MainHeaderContent({
 			</a>
 
 			{/* Action Buttons */}
-			<div className="mx-[0.7rem] flex items-center space-x-[0.6rem] p-[0.21rem]">
+			<div className="mx-[0.65rem] flex h-full flex-0 items-end space-x-[1.05rem] pt-[0.65rem] pb-[0.2rem]">
 				<>
 					<AccessibilityButton onOpenAccessibility={handleOpenAccessibility} />
 					<AccessibilityMenu

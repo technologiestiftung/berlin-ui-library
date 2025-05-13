@@ -73,6 +73,29 @@ export const Default: Story = {
 			{ code: "de", label: "Deutsch" },
 			{ code: "en", label: "English" },
 		],
+		menuItems: [
+			{ label: "Item 1", href: "/item1" },
+			{ label: "Item 2", href: "/item2" },
+			{
+				label: "Item 3",
+				href: "/item3",
+				children: [
+					{ label: "Subitem 1", href: "/item3/subitem1" },
+					{ label: "Subitem 2", href: "/item3/subitem2" },
+					{
+						label: "Subitem 3",
+						href: "/item3/subitem3",
+						children: [
+							{ label: "Subitem 1", href: "/item3/subitem1" },
+							{ label: "Subitem 2", href: "/item3/subitem2" },
+							{ label: "Subitem 1", href: "/item3/subitem1" },
+							{ label: "Subitem 2", href: "/item3/subitem2" },
+						],
+					},
+					{ label: "Item 4", href: "/item4" },
+				],
+			},
+		],
 		language: "de",
 		translations: {
 			de: deTranslations,

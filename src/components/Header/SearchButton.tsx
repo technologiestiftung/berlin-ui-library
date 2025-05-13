@@ -21,12 +21,12 @@ export function SearchButton({
 
 	return (
 		<button
-			className={`flex cursor-pointer flex-col items-center justify-between gap-1 text-[11px] leading-normal ${className}`}
+			className={`mb-[0.1rem] flex cursor-pointer flex-col items-center justify-between text-[11px] leading-normal ${className}`}
 			onClick={onOpenSearch}
 			aria-label={label}
 		>
 			<SearchIcon className="size-8" />
-			<span className="whitespace-nowrap">{label}</span>
+			<span className="text-[11px] whitespace-nowrap">{label}</span>
 		</button>
 	);
 }

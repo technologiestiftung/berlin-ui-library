@@ -124,7 +124,7 @@ export function Header({
 			onLanguageChange={onLanguageChange}
 		>
 			<header
-				className={`sticky top-0 z-[20] bg-white text-xl leading-[122.2%] tracking-[0.3px] ${className}`}
+				className={`sticky top-0 z-[20] box-border bg-white text-xl leading-[1.22rem] ${className}`}
 			>
 				{/* Logo Bar */}
 				<LogoBar logoUrl={logoUrl} logoComponent={logoComponent} />

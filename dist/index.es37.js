@@ -1,6 +1,66 @@
-import * as e from "react";
-const L = (t) => /* @__PURE__ */ e.createElement("svg", { width: 14, height: 14, viewBox: "0 0 14 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M9.3458 7.00002L12.8649 3.48088C13.2974 3.04846 13.2974 2.34885 12.8649 1.91643L12.0845 1.13596C11.6521 0.70354 10.9524 0.70354 10.52 1.13596L7.00088 4.6551L3.48174 1.13596C3.04932 0.70354 2.34971 0.70354 1.91729 1.13596L1.13682 1.91995C0.704395 2.35237 0.704395 3.05198 1.13682 3.4844L4.65596 7.00002L1.13682 10.5192C0.704395 10.9516 0.704395 11.6512 1.13682 12.0836L1.91729 12.8641C2.34971 13.2965 3.04932 13.2965 3.48174 12.8641L7.00088 9.34495L10.52 12.8641C10.9524 13.2965 11.6521 13.2965 12.0845 12.8641L12.8649 12.0836C13.2974 11.6512 13.2974 10.9516 12.8649 10.5192L9.3458 7.00002Z", fill: "black" }));
+import { j as e } from "./index.es4.js";
+import d, { useState as u, useRef as x } from "react";
+import m from "./index.es38.js";
+import f from "./index.es39.js";
+import { useLanguage as p, t as g } from "./index.es5.js";
+function h(n, t) {
+  d.useEffect(() => {
+    const s = (a) => {
+      n.current && !n.current.contains(a.target) && t(!1);
+    };
+    return document.addEventListener("mousedown", s), () => {
+      document.removeEventListener("mousedown", s);
+    };
+  }, [n, t]);
+}
+function C({ className: n = "" }) {
+  const [t, s] = u(!1), a = x(null), { currentLanguage: r, languages: o, translations: c, setLanguage: i } = p();
+  return h(
+    a,
+    s
+  ), /* @__PURE__ */ e.jsxs(
+    "div",
+    {
+      className: `relative z-[10] text-black ${n}`,
+      ref: a,
+      children: [
+        /* @__PURE__ */ e.jsxs(
+          "button",
+          {
+            className: "flex h-full items-center gap-2",
+            onClick: () => s(!t),
+            "aria-label": g(t ? "collapse" : "expand", c),
+            "aria-expanded": t,
+            children: [
+              /* @__PURE__ */ e.jsx("span", { className: "font-bolder flex size-5 items-center justify-center bg-black text-[11px] text-white", children: r.toLowerCase() }),
+              /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none flex size-3 items-center justify-center text-red", children: t ? /* @__PURE__ */ e.jsx(f, { className: "text-berlin-green" }) : /* @__PURE__ */ e.jsx(m, { className: "text-berlin-green" }) })
+            ]
+          }
+        ),
+        /* @__PURE__ */ e.jsx(
+          "div",
+          {
+            className: `${t ? "block" : "hidden"} absolute top-8 right-0 bg-white shadow-lg`,
+            children: /* @__PURE__ */ e.jsx("ul", { children: o.map((l) => /* @__PURE__ */ e.jsx("li", { children: /* @__PURE__ */ e.jsxs(
+              "button",
+              {
+                className: "block flex w-full gap-2 px-2 py-1 text-base hover:bg-gray-100",
+                onClick: () => {
+                  i(l.code), s(!1);
+                },
+                children: [
+                  /* @__PURE__ */ e.jsx("span", { className: "flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white", children: l.code.toLowerCase() }),
+                  l.label
+                ]
+              }
+            ) }, l.code)) })
+          }
+        )
+      ]
+    }
+  );
+}
 export {
-  L as default
+  C as LanguageSelect
 };
 //# sourceMappingURL=index.es37.js.map

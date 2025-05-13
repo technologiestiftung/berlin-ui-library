@@ -153,7 +153,7 @@ const Breadcrumbs = ({
 									<BreadcrumbLink
 										href={item.href}
 										asChild={!!LinkComponent}
-										className="hover:underline"
+										className="font-base text-text-lightest hover:underline"
 									>
 										{LinkComponent ? (
 											<LinkComponent href={item.href}>
@@ -166,13 +166,9 @@ const Breadcrumbs = ({
 								)}
 							</BreadcrumbItem>
 							{!isLast && (
-								<BreadcrumbSeparator className="text-gray-400">
-									<ChevronRight
-										className={
-											isLast ? "text-black" : "text-berlin-grey-darker"
-										}
-									/>
-								</BreadcrumbSeparator>
+								<BreadcrumbSeparator
+									className={isLast ? "text-black" : "text-text-lightest"}
+								/>
 							)}
 						</React.Fragment>
 					);
