@@ -98,7 +98,7 @@ const DrawerHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
 	<div
 		className={cn(
-			"flex flex-col space-y-2 text-center md:text-left",
+			"flex flex-col space-y-2 text-center lg:text-left",
 			className,
 		)}
 		{...props}
@@ -112,7 +112,7 @@ const DrawerFooter = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
 	<div
 		className={cn(
-			"flex flex-col-reverse md:flex-row md:justify-end md:space-x-2",
+			"flex flex-col-reverse lg:flex-row lg:justify-end lg:space-x-2",
 			className,
 		)}
 		{...props}

@@ -65,11 +65,11 @@ export function MainHeaderContent({
 	};
 
 	return (
-		<div className="flex items-center justify-between px-[24px] py-[1rem] md:py-[0.7rem]">
+		<div className="flex items-center justify-between px-4 py-[1rem] lg:px-6 lg:py-[0.7rem]">
 			{/* Site Title */}
 			<a
 				href={url}
-				className="flex flex-col justify-center p-[3px] text-base leading-[1.2] break-words md:text-xl"
+				className="flex flex-col justify-center p-0 text-base leading-[1.2] break-words lg:p-[3px] lg:text-xl"
 			>
 				<span>{header}</span>
 				<span className="block font-bold">{caption}</span>

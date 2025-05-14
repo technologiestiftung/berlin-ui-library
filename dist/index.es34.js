@@ -1,12 +1,6 @@
-import { j as e } from "./index.es4.js";
-import i from "./index.es43.js";
-function s({
-  logoUrl: r = "https://www.berlin.de",
-  logoComponent: o
-}) {
-  return /* @__PURE__ */ e.jsx("div", { className: "h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] md:px-6", children: /* @__PURE__ */ e.jsx("a", { href: r, "aria-label": "Homepage Berlin.de", children: o || /* @__PURE__ */ e.jsx("img", { src: i, alt: "Berlin.de Logo", className: "object-fill" }) }) });
-}
+import * as t from "react";
+const o = (e) => /* @__PURE__ */ t.createElement("svg", { width: 20, height: 19, viewBox: "0 0 20 19", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...e }, /* @__PURE__ */ t.createElement("path", { d: "M0 9.49989H17.1666M9.04529 17.874L17.45 9.49955L9.04529 1.12598", stroke: "currentColor", strokeWidth: 3 }));
 export {
-  s as LogoBar
+  o as default
 };
 //# sourceMappingURL=index.es34.js.map

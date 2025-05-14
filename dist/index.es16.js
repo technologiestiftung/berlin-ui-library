@@ -7,8 +7,8 @@ const s = {
   default: {
     item: "border-t border-b border-gray-200",
     header: "flex",
-    trigger: "flex flex-1 [&>svg]:text-red items-center px-4 justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
-    content: "data-[state=closed]:animate-accordion-up px-4 data-[state=open]:animate-accordion-down overflow-hidden duration-500 text-sm transition-all"
+    trigger: "flex flex-1 text-start [&>svg]:text-red items-center pr-4 justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+    content: "data-[state=closed]:animate-accordion-up pr-4 data-[state=open]:animate-accordion-down overflow-hidden duration-500 text-sm transition-all"
   },
   footer: {
     item: "border-b",

@@ -1,19 +1,36 @@
-import { j as t } from "./index.es4.js";
-import * as i from "react";
-import { cn as s } from "./index.es21.js";
-const a = i.forwardRef(({ className: e, ...r }, o) => /* @__PURE__ */ t.jsx(
-  "textarea",
-  {
-    className: s(
-      "border-input ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full border bg-white px-3 py-2 text-base focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-      e
-    ),
-    ref: o,
-    ...r
+import { __exports as e } from "./index.es52.js";
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var s;
+function a() {
+  if (s) return e;
+  s = 1;
+  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
+  function o(l, r, t) {
+    var u = null;
+    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
+      t = {};
+      for (var n in r)
+        n !== "key" && (t[n] = r[n]);
+    } else t = r;
+    return r = t.ref, {
+      $$typeof: i,
+      type: l,
+      key: u,
+      ref: r !== void 0 ? r : null,
+      props: t
+    };
   }
-));
-a.displayName = "Textarea";
+  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
+}
 export {
-  a as Textarea
+  a as __require
 };
 //# sourceMappingURL=index.es30.js.map

@@ -123,7 +123,7 @@ const buttonVariants = cva(
 			size: {
 				default: "",
 				fullwidth: "w-full",
-				"fullwidth-palm": "md:w-full",
+				"fullwidth-palm": "lg:w-full",
 			},
 		},
 		defaultVariants: {

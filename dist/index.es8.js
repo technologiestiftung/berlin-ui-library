@@ -10,7 +10,7 @@ const d = l.forwardRef(({ className: e, ...r }, s) => /* @__PURE__ */ a.jsx(
   {
     ref: s,
     className: c(
-      "text-muted-foreground flex flex-wrap items-center gap-[0.3em] text-sm break-words md:gap-[0.3em]",
+      "text-muted-foreground flex flex-wrap items-center gap-[0.3em] text-sm break-words lg:gap-[0.3em]",
       e
     ),
     ...r

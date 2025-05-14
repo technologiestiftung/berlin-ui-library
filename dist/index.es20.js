@@ -9,7 +9,7 @@ const c = l(
     variants: {
       variant: {
         default: "bg-transparent",
-        outline: "border-input hover:bg-accent hover:text-accent-foreground cursor-pointer border border-black bg-transparent"
+        outline: "border-input hover:bg-accent hover:text-accent-foreground cursor-pointer border-2 border-black bg-transparent"
       },
       size: {
         default: "h-10 min-w-10 px-3",

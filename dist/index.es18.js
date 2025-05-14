@@ -19,7 +19,7 @@ const f = o.forwardRef(({ className: s, ...i }, t) => /* @__PURE__ */ a.jsx(
   {
     ref: t,
     className: r(
-      "ring-offset-background focus-visible:ring-ring data-[state=active]:text-foreground inline-flex h-full flex-grow items-center justify-center bg-grey-dark px-3 py-1.5 text-base whitespace-nowrap transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-block-heavy data-[state=active]:shadow-[inset_0_4px_0_0_var(--color-red)]",
+      "ring-offset-background focus-visible:ring-ring data-[state=active]:text-foreground inline-flex h-full flex-grow cursor-pointer items-center justify-center bg-grey-dark px-3 py-1.5 text-base whitespace-nowrap transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-block-heavy data-[state=active]:shadow-[inset_0_4px_0_0_var(--color-red)]",
       s
     ),
     ...i

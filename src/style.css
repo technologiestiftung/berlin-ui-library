@@ -16,7 +16,7 @@
 @theme {
 	--font-display: "BerlinTypeWeb", sans-serif;
 	--font-arial: "Arial", sans-serif;
-	--breakpoint-3xl: 120rem;
+	--breakpoint-lg: 61.25rem;
 	--color-white: #ffffff;
 	--color-black: #000000;
 	--color-red: #e40422;

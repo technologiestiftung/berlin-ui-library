@@ -71,7 +71,7 @@ const ImageOverlay: React.FC<{
 			{/* Overlay Title */}
 			{title && (
 				<TitleElement
-					className="text-lg leading-tight font-bold hover:underline md:text-2xl" // Corresponds to 'title' within overlay
+					className="text-lg leading-tight font-bold hover:underline lg:text-2xl" // Corresponds to 'title' within overlay
 					{...titleLinkProps}
 				>
 					{title}
@@ -142,7 +142,7 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 
 				{/* Optional Caption */}
 				{caption && (
-					<p className="mb-1 block text-sm leading-tight font-normal break-words text-black">
+					<p className="mb-1 block px-4 text-sm leading-tight font-normal break-words text-black lg:px-0">
 						{" "}
 						{/* Corresponds to 'image__caption' */}
 						{caption}
@@ -151,7 +151,7 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 
 				{/* Optional Copyright (below image) */}
 				{copyright && (
-					<p className="mb-1 block text-[11px] leading-tight break-words text-gray-600">
+					<p className="mb-1 block px-4 text-[11px] leading-tight break-words text-gray-600 lg:px-0">
 						{" "}
 						{/* Corresponds to 'image__copyright' below image */}
 						{copyright}

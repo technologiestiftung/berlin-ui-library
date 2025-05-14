@@ -31,7 +31,7 @@ export function SearchMenu({ isOpen, close, onSearch }: SearchMenuProps) {
 		<Drawer open={isOpen} onOpenChange={(open) => !open && close()}>
 			<DrawerContent size="large" className="flex flex-col gap-4">
 				<div className="flex flex-row justify-center">
-					<div className="mt-[10vh] flex w-full flex-col gap-2 px-4 md:mt-[30vh] md:w-[50%]">
+					<div className="mt-[10vh] flex w-full flex-col gap-2 px-4 lg:mt-[30vh] lg:w-[50%]">
 						<h1 className="font-bold">{t("search.title", translations)}</h1>
 						<SearchForm
 							placeholder={t("search.placeholder", translations)}

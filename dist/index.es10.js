@@ -2,12 +2,12 @@ import { j as e } from "./index.es4.js";
 import { Slot as c } from "@radix-ui/react-slot";
 import { cva as p } from "class-variance-authority";
 import { cn as f } from "./index.es21.js";
-import h from "./index.es22.js";
-import n from "./index.es23.js";
-import u from "./index.es24.js";
-import m from "./index.es25.js";
-import y from "./index.es26.js";
-import w from "./index.es27.js";
+import h from "./index.es34.js";
+import n from "./index.es35.js";
+import u from "./index.es33.js";
+import m from "./index.es23.js";
+import y from "./index.es36.js";
+import w from "./index.es37.js";
 const j = (r, t) => {
   if (r === "light" || r === "white" || r === "clean" || r === "link")
     return null;
@@ -75,7 +75,7 @@ const j = (r, t) => {
       size: {
         default: "",
         fullwidth: "w-full",
-        "fullwidth-palm": "md:w-full"
+        "fullwidth-palm": "lg:w-full"
       }
     },
     defaultVariants: {

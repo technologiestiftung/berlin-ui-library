@@ -102,17 +102,17 @@ function FooterContent({
 
 	return (
 		<footer className={`w-full bg-block-colored ${className}`}>
-			<div className="flex w-full items-start justify-between md:p-6">
-				<div className="flex w-full flex-wrap justify-between md:items-start md:pl-[5%]">
+			<div className="flex w-full items-start justify-between lg:p-6">
+				<div className="flex w-full flex-wrap justify-between lg:items-start lg:pl-[5%]">
 					{/* Mobile scroll to top button */}
 					{showScrollToTop && (
-						<div className="mb-4 flex w-full justify-end md:hidden">
+						<div className="mb-4 flex w-full justify-end lg:hidden">
 							<ScrollToTopButton />
 						</div>
 					)}
 
 					{/* Footer columns */}
-					<div className="flex w-full flex-col md:hidden md:w-auto md:flex-row md:flex-wrap">
+					<div className="flex w-full flex-col lg:hidden lg:w-auto lg:flex-row lg:flex-wrap">
 						<Accordion collapsible type="single" variant="footer">
 							{footerColumns.map((column, index) => (
 								<AccordionItem value={column.title} key={index}>
@@ -145,11 +145,11 @@ function FooterContent({
 						</Accordion>
 					</div>
 
-					<div className="flex w-full flex-col md:w-auto md:flex-row md:flex-wrap">
+					<div className="flex w-full flex-col lg:w-auto lg:flex-row lg:flex-wrap">
 						{footerColumns.map((column) => (
 							<div
 								key={column.title}
-								className="mb-6 ml-[3svw] hidden min-w-[12svw] flex-col gap-3.5 md:flex"
+								className="mb-6 ml-[3svw] hidden min-w-[12svw] flex-col gap-3.5 lg:flex"
 							>
 								<div className="flex items-center justify-between font-bold">
 									<span>{translate(column.title)}</span>
@@ -177,7 +177,7 @@ function FooterContent({
 
 					{/* md scroll to top button */}
 					{showScrollToTop && (
-						<div className="hidden self-start md:block">
+						<div className="hidden self-start lg:block">
 							<ScrollToTopButton />
 						</div>
 					)}
