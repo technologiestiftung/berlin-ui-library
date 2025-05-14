@@ -1,12 +1,36 @@
-import { j as e } from "./index.es4.js";
-import i from "./index.es47.js";
-function s({
-  logoUrl: r = "https://www.berlin.de",
-  logoComponent: o
-}) {
-  return /* @__PURE__ */ e.jsx("div", { className: "h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] lg:px-6", children: /* @__PURE__ */ e.jsx("a", { href: r, "aria-label": "Homepage Berlin.de", children: o || /* @__PURE__ */ e.jsx("img", { src: i, alt: "Berlin.de Logo", className: "object-fill" }) }) });
+import { __exports as e } from "./index.es55.js";
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var s;
+function a() {
+  if (s) return e;
+  s = 1;
+  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
+  function o(l, r, t) {
+    var u = null;
+    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
+      t = {};
+      for (var n in r)
+        n !== "key" && (t[n] = r[n]);
+    } else t = r;
+    return r = t.ref, {
+      $$typeof: i,
+      type: l,
+      key: u,
+      ref: r !== void 0 ? r : null,
+      props: t
+    };
+  }
+  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
 }
 export {
-  s as LogoBar
+  a as __require
 };
 //# sourceMappingURL=index.es38.js.map

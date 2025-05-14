@@ -1,25 +1,22 @@
 import { j as e } from "./index.es4.js";
-import n from "./index.es33.js";
-import { useLanguage as o, t as c } from "./index.es5.js";
-function x({
-  onOpenSearch: s,
-  className: r = ""
-}) {
-  const { translations: a } = o(), t = c("search", a);
+import a from "./index.es47.js";
+import { useLanguage as o, t as l } from "./index.es5.js";
+function u({ onOpenMenu: n, className: s = "" }) {
+  const { translations: r } = o(), t = l("menu", r);
   return /* @__PURE__ */ e.jsxs(
     "button",
     {
-      className: `mb-[0.1rem] flex cursor-pointer flex-col items-center justify-between text-[11px] leading-normal ${r}`,
-      onClick: s,
+      className: `mb-[0.1rem] flex cursor-pointer flex-col items-center justify-between text-[11px] leading-normal ${s}`,
+      onClick: n,
       "aria-label": t,
       children: [
-        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
-        /* @__PURE__ */ e.jsx("span", { className: "text-[11px] whitespace-nowrap", children: t })
+        /* @__PURE__ */ e.jsx(a, { className: "h-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "whitespace-nowrap", children: t })
       ]
     }
   );
 }
 export {
-  x as SearchButton
+  u as MenuButton
 };
 //# sourceMappingURL=index.es46.js.map

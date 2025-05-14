@@ -35,6 +35,8 @@ export declare const Close: Story;
 export declare const CloseDisabled: Story;
 export declare const Extern: Story;
 export declare const ExternDisabled: Story;
+export declare const LinkWithIcon: Story;
+export declare const LinkWithIconDisabled: Story;
 export declare const Link: Story;
 export declare const LinkDisabled: Story;
 export declare const FullWidth: Story;

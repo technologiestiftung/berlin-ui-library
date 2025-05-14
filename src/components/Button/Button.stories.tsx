@@ -262,6 +262,21 @@ export const ExternDisabled: Story = {
 	},
 };
 
+export const LinkWithIcon: Story = {
+	args: {
+		children: "Link with Icon",
+		variant: "linkWithIcon",
+	},
+};
+
+export const LinkWithIconDisabled: Story = {
+	args: {
+		children: "Link with Icon",
+		variant: "linkWithIcon",
+		disabled: true,
+	},
+};
+
 export const Link: Story = {
 	args: {
 		children: "Link Button",

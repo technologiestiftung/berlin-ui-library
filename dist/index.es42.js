@@ -1,6 +1,18 @@
-import * as e from "react";
-const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 19, height: 11, viewBox: "0 0 19 11", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { id: "Rectangle 128", d: "M1.5 1.12916L9.5 8.87109L17.5 1.12916", stroke: "currentColor", strokeWidth: 3 }));
+import { j as r } from "./index.es4.js";
+import { LanguageSelect as t } from "./index.es43.js";
+import { Breadcrumbs as o } from "./index.es8.js";
+function l({
+  showBreadcrumbs: e,
+  breadcrumbs: m,
+  showLanguageSelect: i,
+  LinkComponent: s
+}) {
+  return !e && !i ? null : /* @__PURE__ */ r.jsx("div", { className: "bg-block-colored px-4 shadow-inner lg:px-0", children: /* @__PURE__ */ r.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
+    e && /* @__PURE__ */ r.jsx(o, { items: m, LinkComponent: s }),
+    i && /* @__PURE__ */ r.jsx(t, {})
+  ] }) });
+}
 export {
-  o as default
+  l as SubHeaderBar
 };
 //# sourceMappingURL=index.es42.js.map

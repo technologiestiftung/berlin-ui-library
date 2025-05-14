@@ -1,2 +1,10 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index.cjs4.js"),o=require("./index.cjs47.js");function i({logoUrl:r="https://www.berlin.de",logoComponent:t}){return e.jsxRuntimeExports.jsx("div",{className:"h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] lg:px-6",children:e.jsxRuntimeExports.jsx("a",{href:r,"aria-label":"Homepage Berlin.de",children:t||e.jsxRuntimeExports.jsx("img",{src:o.default,alt:"Berlin.de Logo",className:"object-fill"})})})}exports.LogoBar=i;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index.cjs55.js");/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var _;function x(){if(_)return e.__exports;_=1;var n=Symbol.for("react.transitional.element"),i=Symbol.for("react.fragment");function s(l,r,t){var o=null;if(t!==void 0&&(o=""+t),r.key!==void 0&&(o=""+r.key),"key"in r){t={};for(var u in r)u!=="key"&&(t[u]=r[u])}else t=r;return r=t.ref,{$$typeof:n,type:l,key:o,ref:r!==void 0?r:null,props:t}}return e.__exports.Fragment=i,e.__exports.jsx=s,e.__exports.jsxs=s,e.__exports}exports.__require=x;
 //# sourceMappingURL=index.cjs38.js.map

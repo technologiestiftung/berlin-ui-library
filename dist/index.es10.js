@@ -1,19 +1,22 @@
 import { j as e } from "./index.es4.js";
-import { Slot as c } from "@radix-ui/react-slot";
-import { cva as p } from "class-variance-authority";
-import { cn as f } from "./index.es21.js";
-import h from "./index.es34.js";
-import n from "./index.es35.js";
-import u from "./index.es33.js";
-import m from "./index.es23.js";
-import y from "./index.es36.js";
-import w from "./index.es37.js";
-const j = (r, t) => {
-  if (r === "light" || r === "white" || r === "clean" || r === "link")
+import { Slot as p } from "@radix-ui/react-slot";
+import { cva as f } from "class-variance-authority";
+import { cn as h } from "./index.es21.js";
+import u from "./index.es27.js";
+import n from "./index.es28.js";
+import m from "./index.es29.js";
+import y from "./index.es22.js";
+import w from "./index.es30.js";
+import i from "./index.es31.js";
+import j from "./index.es32.js";
+import k from "./index.es33.js";
+import v from "./index.es34.js";
+const N = (r, t) => {
+  if (r === "light" || r === "white" || r === "clean" || r === "link" || r === "linkWithIcon")
     return null;
   if (r === "close")
     return /* @__PURE__ */ e.jsx("span", { className: "flex h-full w-full items-center justify-center", children: /* @__PURE__ */ e.jsx(
-      m,
+      y,
       {
         className: `${t ? "text-gray-500" : "text-black"}`
       }
@@ -36,17 +39,17 @@ const j = (r, t) => {
         height: "16"
       }
     );
-  const a = t ? "bg-gray-400" : "bg-red";
+  const l = t ? "bg-gray-400" : "bg-red";
   return /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     /* @__PURE__ */ e.jsx(
       "span",
       {
-        className: `absolute top-0 right-0 flex h-full w-[39px] items-center justify-center ${r.includes("fulltone") ? "" : "border-l-2"} ${t ? "border-gray-400" : "border-black"} ${a}`
+        className: `absolute top-0 right-0 flex h-full w-[39px] items-center justify-center ${r.includes("fulltone") ? "" : "border-l-2"} ${t ? "border-gray-400" : "border-black"} ${l}`
       }
     ),
-    /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none absolute top-0 right-0 flex h-full w-[39px] items-center justify-center", children: r === "default" || r === "colored" || r === "fulltone" || r === "light-fulltone" ? /* @__PURE__ */ e.jsx(h, { className: "text-white" }) : r === "search" ? /* @__PURE__ */ e.jsx(u, { className: "fill-white" }) : r === "filter" ? /* @__PURE__ */ e.jsx(y, { className: "fill-white" }) : r === "extern" ? /* @__PURE__ */ e.jsx(w, { className: "text-white" }) : null })
+    /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none absolute top-0 right-0 flex h-full w-[39px] items-center justify-center", children: r === "default" || r === "colored" || r === "fulltone" || r === "light-fulltone" ? /* @__PURE__ */ e.jsx(u, { className: "text-white" }) : r === "search" ? /* @__PURE__ */ e.jsx(m, { className: "size-[18px] fill-white" }) : r === "filter" ? /* @__PURE__ */ e.jsx(w, { className: "fill-white" }) : r === "extern" ? /* @__PURE__ */ e.jsx(i, { className: "text-white" }) : r === "download" ? /* @__PURE__ */ e.jsx(j, { className: "size-[18px] fill-white" }) : r === "addtocart" ? /* @__PURE__ */ e.jsx(v, { className: "size-[18px] fill-white" }) : r === "play" ? /* @__PURE__ */ e.jsx(k, { className: "size-[18px] fill-white" }) : null })
   ] });
-}, k = p(
+}, I = f(
   // base styles for all buttons
   "relative inline-block min-h-[43px] w-auto cursor-pointer justify-center overflow-visible rounded-none border-2 border-black bg-white px-4 py-[10px] text-center font-sans text-base leading-[1.2] text-black no-underline transition-colors duration-200 ease-out disabled:cursor-not-allowed",
   {
@@ -69,6 +72,8 @@ const j = (r, t) => {
         "back-link": "flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
         extern: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
         link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
+        // New variant definition
+        linkWithIcon: "m-0 inline-flex h-auto cursor-pointer items-center border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
         "light-fulltone": "border-0 bg-red px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
         "negative-light": "border-2 border-white bg-transparent text-white hover:bg-transparent focus:bg-transparent disabled:border-gray-500 disabled:bg-transparent disabled:text-gray-500"
       },
@@ -84,40 +89,47 @@ const j = (r, t) => {
     }
   }
 );
-function L({
+function q({
   className: r,
   variant: t = "default",
-  size: a,
+  size: l,
   asChild: b = !1,
-  booking: o = !1,
-  price: l,
+  booking: a = !1,
+  price: s,
   children: d,
-  disabled: s = !1,
-  ...i
+  disabled: o = !1,
+  ...x
 }) {
-  const g = b ? c : "button", x = o && l ? /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-    /* @__PURE__ */ e.jsx("span", { className: "price mr-[0.7em] border-r border-black/60 pr-[0.7em]", children: l }),
+  const c = b ? p : "button", g = a && s ? /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+    /* @__PURE__ */ e.jsx("span", { className: "price mr-[0.7em] border-r border-black/60 pr-[0.7em]", children: s }),
     /* @__PURE__ */ e.jsx("span", { children: d })
   ] }) : d;
   return /* @__PURE__ */ e.jsxs(
-    g,
+    c,
     {
       "data-slot": "button",
-      className: f(
-        k({ variant: t, size: a, className: r }),
-        o ? "button--booking flex" : ""
+      className: h(
+        I({ variant: t, size: l, className: r }),
+        a ? "button--booking flex" : ""
       ),
-      disabled: s,
-      ...i,
+      disabled: o,
+      ...x,
       children: [
-        x,
-        j(t, s)
+        g,
+        t === "linkWithIcon" && /* @__PURE__ */ e.jsx(
+          i,
+          {
+            className: `mb-2 ml-1 inline-block size-[16px] align-text-top leading-none ${o ? "text-gray-500" : "text-[#0047d3]"}`,
+            "aria-hidden": "true"
+          }
+        ),
+        N(t, o)
       ]
     }
   );
 }
 export {
-  L as Button,
-  k as buttonVariants
+  q as Button,
+  I as buttonVariants
 };
 //# sourceMappingURL=index.es10.js.map

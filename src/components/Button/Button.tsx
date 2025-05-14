@@ -10,6 +10,10 @@ import SearchIcon from "@/assets/icons/search_icon.svg?react";
 import CloseIcon from "@/assets/icons/close_icon.svg?react";
 import FilterIcon from "@/assets/icons/filter_icon.svg?react";
 import LinkIcon from "@/assets/icons/link_icon.svg?react";
+import DownloadIcon from "@/assets/icons/download_icon.svg?react";
+import PlayIcon from "@/assets/icons/play_icon.svg?react";
+import CartIcon from "@/assets/icons/cart_icon.svg?react";
+
 import { ButtonProps } from "./types";
 
 // Additional icon imports can be added as needed
@@ -18,7 +22,8 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 		variant === "light" ||
 		variant === "white" ||
 		variant === "clean" ||
-		variant === "link"
+		variant === "link" ||
+		variant === "linkWithIcon" // Add new variant to skip default icon rendering
 	) {
 		return null;
 	}
@@ -72,11 +77,17 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 				variant === "light-fulltone" ? (
 					<ArrowRightIcon className="text-white" />
 				) : variant === "search" ? (
-					<SearchIcon className="fill-white" />
+					<SearchIcon className="size-[18px] fill-white" />
 				) : variant === "filter" ? (
 					<FilterIcon className="fill-white" />
 				) : variant === "extern" ? (
 					<LinkIcon className="text-white" />
+				) : variant === "download" ? (
+					<DownloadIcon className="size-[18px] fill-white" />
+				) : variant === "addtocart" ? (
+					<CartIcon className="size-[18px] fill-white" />
+				) : variant === "play" ? (
+					<PlayIcon className="size-[18px] fill-white" />
 				) : null}
 			</span>
 		</>
@@ -115,6 +126,9 @@ const buttonVariants = cva(
 					"flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
 				extern: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
+				// New variant definition
+				linkWithIcon:
+					"m-0 inline-flex h-auto cursor-pointer items-center border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
 				"light-fulltone":
 					"border-0 bg-red px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
 				"negative-light":
@@ -169,6 +183,13 @@ function Button({
 			{...props}
 		>
 			{bookingContent}
+			{/* Render icon for the new linkWithIcon variant */}
+			{variant === "linkWithIcon" && (
+				<LinkIcon
+					className={`mb-2 ml-1 inline-block size-[16px] align-text-top leading-none ${disabled ? "text-gray-500" : "text-[#0047d3]"}`}
+					aria-hidden="true"
+				/>
+			)}
 			{renderIconAndBackground(variant as string, disabled)}
 		</Comp>
 	);

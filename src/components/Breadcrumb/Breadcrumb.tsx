@@ -76,15 +76,15 @@ const BreadcrumbSeparator = ({
 	children,
 	className,
 	...props
-}: React.ComponentProps<"li">) => (
-	<li
+}: React.ComponentProps<"span">) => (
+	<span
 		role="presentation"
 		aria-hidden="true"
 		className={cn("[&>svg]:h-3.5 [&>svg]:w-3.5", className)}
 		{...props}
 	>
 		{children ?? <ChevronRight />}
-	</li>
+	</span>
 );
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
 
@@ -143,34 +143,29 @@ const Breadcrumbs = ({
 			<BreadcrumbList className="flex flex-wrap items-center">
 				{items.map((item, index) => {
 					const isLast = index === items.length - 1;
+					const isFirst = index === 0;
 
 					return (
-						<React.Fragment key={`${item.href}-${index}`}>
-							<BreadcrumbItem>
-								{isLast ? (
-									<BreadcrumbPage>{item.label}</BreadcrumbPage>
-								) : (
-									<BreadcrumbLink
-										href={item.href}
-										asChild={!!LinkComponent}
-										className="font-base text-text-lightest hover:underline"
-									>
-										{LinkComponent ? (
-											<LinkComponent href={item.href}>
-												{item.label}
-											</LinkComponent>
-										) : (
-											item.label
-										)}
-									</BreadcrumbLink>
-								)}
-							</BreadcrumbItem>
-							{!isLast && (
-								<BreadcrumbSeparator
-									className={isLast ? "text-black" : "text-text-lightest"}
-								/>
+						<BreadcrumbItem key={`${item.href}-${index}`}>
+							{!isFirst && (
+								<BreadcrumbSeparator className="text-text-lightest" />
 							)}
-						</React.Fragment>
+							{isLast ? (
+								<BreadcrumbPage>{item.label}</BreadcrumbPage>
+							) : (
+								<BreadcrumbLink
+									href={item.href}
+									asChild={!!LinkComponent}
+									className="font-base text-text-lightest hover:underline"
+								>
+									{LinkComponent ? (
+										<LinkComponent href={item.href}>{item.label}</LinkComponent>
+									) : (
+										item.label
+									)}
+								</BreadcrumbLink>
+							)}
+						</BreadcrumbItem>
 					);
 				})}
 			</BreadcrumbList>

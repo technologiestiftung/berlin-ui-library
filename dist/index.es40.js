@@ -1,18 +1,12 @@
-import { j as r } from "./index.es4.js";
-import { LanguageSelect as t } from "./index.es41.js";
-import { Breadcrumbs as o } from "./index.es8.js";
-function l({
-  showBreadcrumbs: e,
-  breadcrumbs: m,
-  showLanguageSelect: i,
-  LinkComponent: s
+import { j as e } from "./index.es4.js";
+import i from "./index.es49.js";
+function s({
+  logoUrl: r = "https://www.berlin.de",
+  logoComponent: o
 }) {
-  return !e && !i ? null : /* @__PURE__ */ r.jsx("div", { className: "bg-block-colored px-4 shadow-inner lg:px-0", children: /* @__PURE__ */ r.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
-    e && /* @__PURE__ */ r.jsx(o, { items: m, LinkComponent: s }),
-    i && /* @__PURE__ */ r.jsx(t, {})
-  ] }) });
+  return /* @__PURE__ */ e.jsx("div", { className: "h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] lg:px-6", children: /* @__PURE__ */ e.jsx("a", { href: r, "aria-label": "Homepage Berlin.de", children: o || /* @__PURE__ */ e.jsx("img", { src: i, alt: "Berlin.de Logo", className: "object-fill" }) }) });
 }
 export {
-  l as SubHeaderBar
+  s as LogoBar
 };
 //# sourceMappingURL=index.es40.js.map
