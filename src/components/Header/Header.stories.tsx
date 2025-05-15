@@ -196,3 +196,51 @@ export const WithCustomAccessibilityItems: Story = {
 		},
 	},
 };
+
+export const ScrollableContent: Story = {
+	args: {
+		...Default.args,
+	},
+	render: (args) => (
+		<div className="h-full">
+			<Header {...args} />
+			<div className="p-4">
+				<h2 className="text-2xl font-bold mb-4">
+					Scroll Test for Sticky LogoBar
+				</h2>
+				<p className="mb-4">
+					Scroll down to see the LogoBar collapse to a thin line (3px height)
+					with a dark gray background. The logo will fade out as you scroll.
+				</p>
+				<div className="bg-gray-100 p-4 mb-4">
+					<p>
+						<strong>Expected Behavior:</strong>
+					</p>
+					<ul className="list-disc pl-8">
+						<li>Initial state: LogoBar is 44px tall with white background</li>
+						<li>When scrolling: LogoBar collapses to 3px height</li>
+						<li>Background color changes to dark gray</li>
+						<li>Logo fades out with a smooth transition</li>
+					</ul>
+				</div>
+				{Array.from({ length: 30 }, (_, i) => (
+					<p
+						key={i}
+						className={`mb-4 p-2 ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
+					>
+						This is scrollable content (row {i + 1}). Continue scrolling to test
+						the sticky behavior of the LogoBar.
+					</p>
+				))}
+			</div>
+		</div>
+	),
+	parameters: {
+		docs: {
+			description: {
+				story:
+					"This story provides scrollable content to test the sticky behavior of the LogoBar component. As you scroll down, the LogoBar will collapse to a thin line and change its background color. The logo will fade out during this transition.",
+			},
+		},
+	},
+};

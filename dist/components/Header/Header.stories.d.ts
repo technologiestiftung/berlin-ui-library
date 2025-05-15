@@ -13,4 +13,5 @@ export declare const WithoutSearch: Story;
 export declare const WithoutMenu: Story;
 export declare const MinimalHeader: Story;
 export declare const WithCustomAccessibilityItems: Story;
+export declare const ScrollableContent: Story;
 //# sourceMappingURL=Header.stories.d.ts.map

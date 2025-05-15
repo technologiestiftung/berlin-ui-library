@@ -1,6 +1,6 @@
 "use server";
 /* eslint-disable complexity */
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { LogoBar } from "./LogoBar";
 import { MainHeaderContent } from "./MainHeaderContent";
 import { SubHeaderBar } from "./SubHeaderBar";
@@ -116,6 +116,50 @@ export function Header({
 	onOpenMenu = () => {},
 	className = "",
 }: HeaderProps) {
+	const [isSticky, setIsSticky] = useState(false);
+	const headerRef = useRef<HTMLElement>(null);
+
+	useEffect(() => {
+		const headerElement = headerRef.current;
+
+		if (headerElement) {
+			// Create a sentinel element that will be positioned at the top of the viewport
+			const sentinel = document.createElement("div");
+			sentinel.style.height = "1px";
+			sentinel.style.width = "100%";
+			sentinel.style.position = "absolute";
+			sentinel.style.top = "0";
+			sentinel.style.left = "0";
+			sentinel.style.zIndex = "-1";
+
+			// Insert the sentinel before the header
+			headerElement.parentElement?.insertBefore(sentinel, headerElement);
+
+			// Create and configure the observer
+			const observer = new IntersectionObserver(
+				([entry]) => {
+					// When sentinel is not visible (scrolled out of view), header should be sticky
+					setIsSticky(!entry.isIntersecting);
+				},
+				{ threshold: [0] },
+			);
+
+			// Start observing the sentinel
+			observer.observe(sentinel);
+
+			// Cleanup function
+			return () => {
+				observer.disconnect();
+				if (sentinel.parentElement) {
+					sentinel.parentElement.removeChild(sentinel);
+				}
+			};
+		}
+
+		// Return undefined for when headerElement doesn't exist
+		return undefined;
+	}, []);
+
 	return (
 		<LanguageProvider
 			initialLanguage={language}
@@ -124,10 +168,15 @@ export function Header({
 			onLanguageChange={onLanguageChange}
 		>
 			<header
+				ref={headerRef}
 				className={`sticky top-0 z-[20] box-border bg-white leading-[1.22rem] ${className}`}
 			>
 				{/* Logo Bar */}
-				<LogoBar logoUrl={logoUrl} logoComponent={logoComponent} />
+				<LogoBar
+					logoUrl={logoUrl}
+					logoComponent={logoComponent}
+					isSticky={isSticky}
+				/>
 
 				{/* Main Header Content */}
 				<MainHeaderContent

@@ -1,24 +1,6 @@
-import { j as a } from "./index.es4.js";
-import * as d from "react";
-import * as o from "@radix-ui/react-tooltip";
-import { cn as s } from "./index.es21.js";
-const l = o.Provider, f = o.Root, c = o.Trigger, n = d.forwardRef(({ className: t, sideOffset: i = 4, ...e }, r) => /* @__PURE__ */ a.jsx(
-  o.Content,
-  {
-    ref: r,
-    sideOffset: i,
-    className: s(
-      "bg-popover text-popover-foreground z-50 origin-[--radix-tooltip-content-transform-origin] overflow-hidden border px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
-      t
-    ),
-    ...e
-  }
-));
-n.displayName = o.Content.displayName;
+import * as e from "react";
+const L = (t) => /* @__PURE__ */ e.createElement("svg", { width: 14, height: 14, viewBox: "0 0 14 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M9.3458 7.00002L12.8649 3.48088C13.2974 3.04846 13.2974 2.34885 12.8649 1.91643L12.0845 1.13596C11.6521 0.70354 10.9524 0.70354 10.52 1.13596L7.00088 4.6551L3.48174 1.13596C3.04932 0.70354 2.34971 0.70354 1.91729 1.13596L1.13682 1.91995C0.704395 2.35237 0.704395 3.05198 1.13682 3.4844L4.65596 7.00002L1.13682 10.5192C0.704395 10.9516 0.704395 11.6512 1.13682 12.0836L1.91729 12.8641C2.34971 13.2965 3.04932 13.2965 3.48174 12.8641L7.00088 9.34495L10.52 12.8641C10.9524 13.2965 11.6521 13.2965 12.0845 12.8641L12.8649 12.0836C13.2974 11.6512 13.2974 10.9516 12.8649 10.5192L9.3458 7.00002Z", fill: "black" }));
 export {
-  f as Tooltip,
-  n as TooltipContent,
-  l as TooltipProvider,
-  c as TooltipTrigger
+  L as default
 };
 //# sourceMappingURL=index.es36.js.map

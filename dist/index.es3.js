@@ -1,68 +1,93 @@
-import { j as e } from "./index.es4.js";
-import { LogoBar as w } from "./index.es41.js";
-import { MainHeaderContent as B } from "./index.es42.js";
-import { SubHeaderBar as H } from "./index.es43.js";
-import { LanguageProvider as L } from "./index.es5.js";
-function v({
-  header: r = "Design System",
-  caption: t = "Berlin.de",
-  url: o = "/",
-  logoUrl: i = "https://www.berlin.de",
-  logoComponent: a,
-  LinkComponent: n,
-  breadcrumbs: s = [],
-  showBreadcrumbs: d = !0,
-  showLanguageSelect: m = !0,
-  language: l = "de",
-  languages: u = [
+import { j as t } from "./index.es4.js";
+import { useState as k, useRef as H, useEffect as L } from "react";
+import { LogoBar as R } from "./index.es41.js";
+import { MainHeaderContent as z } from "./index.es42.js";
+import { SubHeaderBar as C } from "./index.es43.js";
+import { LanguageProvider as D } from "./index.es5.js";
+function A({
+  header: o = "Design System",
+  caption: i = "Berlin.de",
+  url: l = "/",
+  logoUrl: a = "https://www.berlin.de",
+  logoComponent: d,
+  LinkComponent: c,
+  breadcrumbs: m = [],
+  showBreadcrumbs: u = !0,
+  showLanguageSelect: f = !0,
+  language: p = "de",
+  languages: h = [
     { code: "de", label: "Deutsch" },
     { code: "en", label: "English" }
   ],
-  translations: x,
+  translations: b,
   onLanguageChange: g = () => {
   },
-  showSearchButton: p = !0,
-  onSearch: c = () => {
+  showSearchButton: x = !0,
+  onSearch: y = () => {
   },
-  showMenuButton: b = !0,
-  menuItems: h = [],
-  onOpenMenu: j = () => {
+  showMenuButton: E = !0,
+  menuItems: j = [],
+  onOpenMenu: v = () => {
   },
-  className: f = ""
+  className: w = ""
 }) {
-  return /* @__PURE__ */ e.jsx(
-    L,
+  const [S, B] = k(!1), n = H(null);
+  return L(() => {
+    const r = n.current;
+    if (r) {
+      const e = document.createElement("div");
+      e.style.height = "1px", e.style.width = "100%", e.style.position = "absolute", e.style.top = "0", e.style.left = "0", e.style.zIndex = "-1", r.parentElement?.insertBefore(e, r);
+      const s = new IntersectionObserver(
+        ([I]) => {
+          B(!I.isIntersecting);
+        },
+        { threshold: [0] }
+      );
+      return s.observe(e), () => {
+        s.disconnect(), e.parentElement && e.parentElement.removeChild(e);
+      };
+    }
+  }, []), /* @__PURE__ */ t.jsx(
+    D,
     {
-      initialLanguage: l,
-      languages: u,
-      translations: x,
+      initialLanguage: p,
+      languages: h,
+      translations: b,
       onLanguageChange: g,
-      children: /* @__PURE__ */ e.jsxs(
+      children: /* @__PURE__ */ t.jsxs(
         "header",
         {
-          className: `sticky top-0 z-[20] box-border bg-white text-xl leading-[1.22rem] ${f}`,
+          ref: n,
+          className: `sticky top-0 z-[20] box-border bg-white leading-[1.22rem] ${w}`,
           children: [
-            /* @__PURE__ */ e.jsx(w, { logoUrl: i, logoComponent: a }),
-            /* @__PURE__ */ e.jsx(
-              B,
+            /* @__PURE__ */ t.jsx(
+              R,
               {
-                header: r,
-                caption: t,
-                url: o,
-                showSearchButton: p,
-                onSearch: c,
-                showMenuButton: b,
-                menuItems: h,
-                onOpenMenu: j
+                logoUrl: a,
+                logoComponent: d,
+                isSticky: S
               }
             ),
-            /* @__PURE__ */ e.jsx(
-              H,
+            /* @__PURE__ */ t.jsx(
+              z,
               {
-                showBreadcrumbs: d,
-                breadcrumbs: s,
-                showLanguageSelect: m,
-                LinkComponent: n
+                header: o,
+                caption: i,
+                url: l,
+                showSearchButton: x,
+                onSearch: y,
+                showMenuButton: E,
+                menuItems: j,
+                onOpenMenu: v
+              }
+            ),
+            /* @__PURE__ */ t.jsx(
+              C,
+              {
+                showBreadcrumbs: u,
+                breadcrumbs: m,
+                showLanguageSelect: f,
+                LinkComponent: c
               }
             )
           ]
@@ -72,6 +97,6 @@ function v({
   );
 }
 export {
-  v as Header
+  A as Header
 };
 //# sourceMappingURL=index.es3.js.map
