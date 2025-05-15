@@ -15,6 +15,10 @@ interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
 	 */
 	caption?: string;
 	/**
+	 * Optional URL for the image, making it a link.
+	 */
+	href?: string;
+	/**
 	 * Optional copyright text displayed below the image (and caption, if present).
 	 */
 	copyright?: string;
@@ -123,9 +127,19 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 			>
 				{/* Image container */}
 				<div
-					className={cn("mb-1", darkenImage && "brightness-60 filter")} // Conditionally darken
+					className={cn(
+						(caption || copyright) && "mb-1", // Only add mb-1 if caption or copyright exists
+						darkenImage && "brightness-60 filter",
+						props.href && "cursor-pointer",
+					)}
 				>
 					<img
+						onClick={(e) => {
+							if (props.href) {
+								e.preventDefault();
+								window.open(props.href, "_blank");
+							}
+						}}
 						src={src}
 						alt={alt}
 						className={cn("block h-auto w-full", imgClassName)} // Basic image styling

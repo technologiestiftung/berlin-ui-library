@@ -13,6 +13,10 @@ interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
      */
     caption?: string;
     /**
+     * Optional URL for the image, making it a link.
+     */
+    href?: string;
+    /**
      * Optional copyright text displayed below the image (and caption, if present).
      */
     copyright?: string;

@@ -80,6 +80,15 @@ export const WithOverlayLink: Story = {
 	},
 };
 
+// Image as a link
+export const WithLink: Story = {
+	args: {
+		src: "https://placehold.co/600x400",
+		alt: "Sample image that is a link",
+		href: "https://berlin.de",
+	},
+};
+
 // Image with overlay position bottom
 export const OverlayPositionBottom: Story = {
 	args: {

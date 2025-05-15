@@ -1,12 +1,24 @@
-import { j as e } from "./index.es4.js";
-import i from "./index.es49.js";
-function s({
-  logoUrl: r = "https://www.berlin.de",
-  logoComponent: o
-}) {
-  return /* @__PURE__ */ e.jsx("div", { className: "h-11 border-b border-gray-300 bg-white px-4 py-[0.25em] lg:px-6", children: /* @__PURE__ */ e.jsx("a", { href: r, "aria-label": "Homepage Berlin.de", children: o || /* @__PURE__ */ e.jsx("img", { src: i, alt: "Berlin.de Logo", className: "object-fill" }) }) });
-}
+import { j as a } from "./index.es4.js";
+import * as d from "react";
+import * as o from "@radix-ui/react-tooltip";
+import { cn as s } from "./index.es21.js";
+const l = o.Provider, f = o.Root, c = o.Trigger, n = d.forwardRef(({ className: t, sideOffset: i = 4, ...e }, r) => /* @__PURE__ */ a.jsx(
+  o.Content,
+  {
+    ref: r,
+    sideOffset: i,
+    className: s(
+      "bg-popover text-popover-foreground z-50 origin-[--radix-tooltip-content-transform-origin] overflow-hidden border px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+      t
+    ),
+    ...e
+  }
+));
+n.displayName = o.Content.displayName;
 export {
-  s as LogoBar
+  f as Tooltip,
+  n as TooltipContent,
+  l as TooltipProvider,
+  c as TooltipTrigger
 };
 //# sourceMappingURL=index.es40.js.map

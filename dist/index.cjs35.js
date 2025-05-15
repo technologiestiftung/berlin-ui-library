@@ -1,2 +1,10 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const c=require("react");function l(e){const r=Object.create(null,{[Symbol.toStringTag]:{value:"Module"}});if(e){for(const t in e)if(t!=="default"){const n=Object.getOwnPropertyDescriptor(e,t);Object.defineProperty(r,t,n.get?n:{enumerable:!0,get:()=>e[t]})}}return r.default=e,Object.freeze(r)}const o=l(c),a=e=>o.createElement("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",...e},o.createElement("path",{d:"M5.93771 13.0475L5.22601 12.3539C4.92466 12.0602 4.92466 11.5852 5.22601 11.2946L11.455 5.22029C11.7564 4.92657 12.2436 4.92657 12.5418 5.22029L18.774 11.2946C19.0753 11.5883 19.0753 12.0633 18.774 12.3539L18.0623 13.0475C17.7577 13.3444 17.2608 13.3381 16.9627 13.035L13.2823 9.26984L13.2823 18.2501C13.2823 18.6657 12.9393 19 12.5129 19L11.4871 19C11.0607 19 10.7177 18.6657 10.7177 18.2501L10.7177 9.26984L7.03733 13.035C6.73918 13.3413 6.24227 13.3475 5.93771 13.0475Z",fill:"white"}));exports.default=a;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index.cjs55.js");/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var _;function x(){if(_)return e.__exports;_=1;var n=Symbol.for("react.transitional.element"),i=Symbol.for("react.fragment");function s(l,r,t){var o=null;if(t!==void 0&&(o=""+t),r.key!==void 0&&(o=""+r.key),"key"in r){t={};for(var u in r)u!=="key"&&(t[u]=r[u])}else t=r;return r=t.ref,{$$typeof:n,type:l,key:o,ref:r!==void 0?r:null,props:t}}return e.__exports.Fragment=i,e.__exports.jsx=s,e.__exports.jsxs=s,e.__exports}exports.__require=x;
 //# sourceMappingURL=index.cjs35.js.map

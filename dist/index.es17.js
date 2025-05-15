@@ -2,7 +2,7 @@ import { j as o } from "./index.es4.js";
 import * as a from "react";
 import * as s from "@radix-ui/react-checkbox";
 import { Check as d } from "lucide-react";
-import l from "./index.es54.js";
+import l from "./index.es31.js";
 import { cn as t } from "./index.es21.js";
 const f = a.forwardRef(({ className: r, variant: e = "default", ...i }, c) => /* @__PURE__ */ o.jsx(
   s.Root,

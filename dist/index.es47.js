@@ -1,6 +1,22 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 76v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16z" }));
+import { j as e } from "./index.es4.js";
+import a from "./index.es48.js";
+import { useLanguage as o, t as l } from "./index.es5.js";
+function u({ onOpenMenu: n, className: s = "" }) {
+  const { translations: r } = o(), t = l("menu", r);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `mb-[0.1rem] flex cursor-pointer flex-col items-center justify-between text-[11px] leading-normal ${s}`,
+      onClick: n,
+      "aria-label": t,
+      children: [
+        /* @__PURE__ */ e.jsx(a, { className: "h-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "whitespace-nowrap", children: t })
+      ]
+    }
+  );
+}
 export {
-  t as default
+  u as MenuButton
 };
 //# sourceMappingURL=index.es47.js.map

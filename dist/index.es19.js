@@ -1,34 +1,34 @@
-import { j as t } from "./index.es4.js";
-import f from "react";
-import { cn as r } from "./index.es21.js";
-const g = ({ title: e, copyrightText: s, link: l, position: a }) => {
-  if (!e && !s)
+import { j as e } from "./index.es4.js";
+import g from "react";
+import { cn as n } from "./index.es21.js";
+const u = ({ title: l, copyrightText: s, link: a, position: t }) => {
+  if (!l && !s)
     return null;
-  const i = l ? "a" : "span", o = l ? { href: l, "data-mainlink": "true" } : {};
-  return /* @__PURE__ */ t.jsxs(
+  const r = a ? "a" : "span", o = a ? { href: a, "data-mainlink": "true" } : {};
+  return /* @__PURE__ */ e.jsxs(
     "div",
     {
-      className: r(
+      className: n(
         "absolute inset-0 flex flex-col p-6 text-white [text-shadow:1px_1px_4px_rgba(0,0,0,0.4)]",
-        a === "bottom" ? "justify-end" : "justify-start"
+        t === "bottom" ? "justify-end" : "justify-start"
         // Content alignment
       ),
       children: [
-        e && /* @__PURE__ */ t.jsx(
-          i,
+        l && /* @__PURE__ */ e.jsx(
+          r,
           {
             className: "text-lg leading-tight font-bold hover:underline lg:text-2xl",
             ...o,
-            children: e
+            children: l
           }
         ),
-        s && /* @__PURE__ */ t.jsx(
+        s && /* @__PURE__ */ e.jsx(
           "p",
           {
-            className: r(
+            className: n(
               "absolute text-xs text-white/40",
               // Corresponds to 'image__copyright' within overlay
-              a === "bottom" ? "top-1 right-2" : "right-2 bottom-1"
+              t === "bottom" ? "top-1 right-2" : "right-2 bottom-1"
               // Position depends on main content alignment
             ),
             children: s
@@ -37,64 +37,72 @@ const g = ({ title: e, copyrightText: s, link: l, position: a }) => {
       ]
     }
   );
-}, h = f.forwardRef(
+}, j = g.forwardRef(
   ({
-    className: e,
+    className: l,
     src: s,
-    alt: l,
-    caption: a,
-    copyright: i,
+    alt: a,
+    caption: t,
+    copyright: r,
     overlayTitle: o,
     overlayCopyright: x,
-    overlayLink: n,
-    overlayPosition: m = "center",
-    darkenImage: c = !1,
-    imgClassName: d,
-    ...b
-  }, p) => /* @__PURE__ */ t.jsxs(
+    overlayLink: m,
+    overlayPosition: c = "center",
+    darkenImage: d = !1,
+    imgClassName: f,
+    ...i
+  }, b) => /* @__PURE__ */ e.jsxs(
     "div",
     {
-      className: r("relative mb-3 block", e),
-      ref: p,
-      ...b,
+      className: n("relative mb-3 block", l),
+      ref: b,
+      ...i,
       children: [
-        /* @__PURE__ */ t.jsx(
+        /* @__PURE__ */ e.jsx(
           "div",
           {
-            className: r("mb-1", c && "brightness-60 filter"),
-            children: /* @__PURE__ */ t.jsx(
+            className: n(
+              (t || r) && "mb-1",
+              // Only add mb-1 if caption or copyright exists
+              d && "brightness-60 filter",
+              i.href && "cursor-pointer"
+            ),
+            children: /* @__PURE__ */ e.jsx(
               "img",
               {
+                onClick: (h) => {
+                  i.href && (h.preventDefault(), window.open(i.href, "_blank"));
+                },
                 src: s,
-                alt: l,
-                className: r("block h-auto w-full", d)
+                alt: a,
+                className: n("block h-auto w-full", f)
               }
             )
           }
         ),
-        /* @__PURE__ */ t.jsx(
-          g,
+        /* @__PURE__ */ e.jsx(
+          u,
           {
             title: o,
             copyrightText: x,
-            link: n,
-            position: m
+            link: m,
+            position: c
           }
         ),
-        a && /* @__PURE__ */ t.jsxs("p", { className: "mb-1 block px-4 text-sm leading-tight font-normal break-words text-black lg:px-0", children: [
+        t && /* @__PURE__ */ e.jsxs("p", { className: "mb-1 block px-4 text-sm leading-tight font-normal break-words text-black lg:px-0", children: [
           " ",
-          a
+          t
         ] }),
-        i && /* @__PURE__ */ t.jsxs("p", { className: "mb-1 block px-4 text-[11px] leading-tight break-words text-gray-600 lg:px-0", children: [
+        r && /* @__PURE__ */ e.jsxs("p", { className: "mb-1 block px-4 text-[11px] leading-tight break-words text-gray-600 lg:px-0", children: [
           " ",
-          i
+          r
         ] })
       ]
     }
   )
 );
-h.displayName = "Image";
+j.displayName = "Image";
 export {
-  h as Image
+  j as Image
 };
 //# sourceMappingURL=index.es19.js.map

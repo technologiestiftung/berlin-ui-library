@@ -1,6 +1,54 @@
-import * as e from "react";
-const L = (t) => /* @__PURE__ */ e.createElement("svg", { width: 14, height: 14, viewBox: "0 0 14 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M9.3458 7.00002L12.8649 3.48088C13.2974 3.04846 13.2974 2.34885 12.8649 1.91643L12.0845 1.13596C11.6521 0.70354 10.9524 0.70354 10.52 1.13596L7.00088 4.6551L3.48174 1.13596C3.04932 0.70354 2.34971 0.70354 1.91729 1.13596L1.13682 1.91995C0.704395 2.35237 0.704395 3.05198 1.13682 3.4844L4.65596 7.00002L1.13682 10.5192C0.704395 10.9516 0.704395 11.6512 1.13682 12.0836L1.91729 12.8641C2.34971 13.2965 3.04932 13.2965 3.48174 12.8641L7.00088 9.34495L10.52 12.8641C10.9524 13.2965 11.6521 13.2965 12.0845 12.8641L12.8649 12.0836C13.2974 11.6512 13.2974 10.9516 12.8649 10.5192L9.3458 7.00002Z", fill: "black" }));
+import { j as t } from "./index.es4.js";
+import { Drawer as u, DrawerContent as b } from "./index.es6.js";
+import { useLanguage as f, t as i } from "./index.es5.js";
+function m({
+  isOpen: r,
+  close: l,
+  accessibilityItems: s = []
+}) {
+  const { translations: n } = f(), a = [
+    {
+      question: i("accessibilityMenu.barrierefreiheit.question", n),
+      label: i("accessibilityMenu.barrierefreiheit", n),
+      href: "/accessibility-statement/"
+    },
+    {
+      question: i("accessibilityMenu.contact.question", n),
+      label: i("accessibilityMenu.contact", n),
+      href: "/accessibility-statement/#accessibility-contact"
+    },
+    {
+      question: i("accessibilityMenu.additionalInfo.question", n),
+      label: i("accessibilityMenu.additionalInfo", n),
+      href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
+      external: !0
+    }
+  ], o = s && s.length > 0 ? s : a;
+  return /* @__PURE__ */ t.jsx(u, { open: r, onOpenChange: (e) => !e && l(), children: /* @__PURE__ */ t.jsxs(b, { className: "flex flex-col gap-4 px-6 py-4 text-base", children: [
+    /* @__PURE__ */ t.jsx("div", { className: "mt-4 mb-6 flex flex-row items-center justify-between", children: /* @__PURE__ */ t.jsx("p", { className: "text-2xl font-bold", children: i("accessibilityMenu.title", n) }) }),
+    o.map((e, c) => /* @__PURE__ */ t.jsxs("div", { className: "mb-4", children: [
+      /* @__PURE__ */ t.jsx("p", { className: "mb-1 font-bold", children: e.question }),
+      e.external ? /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          href: e.href,
+          target: "_blank",
+          rel: "noreferrer",
+          children: e.label
+        }
+      ) : /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          href: e.href,
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          children: e.label
+        }
+      )
+    ] }, c))
+  ] }) });
+}
 export {
-  L as default
+  m as AccessibilityMenu
 };
 //# sourceMappingURL=index.es54.js.map

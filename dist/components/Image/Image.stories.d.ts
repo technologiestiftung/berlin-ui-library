@@ -10,6 +10,7 @@ export declare const WithCaptionAndCopyright: Story;
 export declare const WithOverlayTitle: Story;
 export declare const WithOverlayCopyright: Story;
 export declare const WithOverlayLink: Story;
+export declare const WithLink: Story;
 export declare const OverlayPositionBottom: Story;
 export declare const CustomStyles: Story;
 //# sourceMappingURL=Image.stories.d.ts.map
