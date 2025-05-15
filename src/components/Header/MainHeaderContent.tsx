@@ -76,7 +76,7 @@ export function MainHeaderContent({
 			</a>
 
 			{/* Action Buttons */}
-			<div className="mx-[0.65rem] flex h-full flex-0 items-end space-x-[1.05rem] pt-[0.65rem] pb-[0.2rem]">
+			<div className="mx-[0.65rem] flex h-full flex-0 items-end space-x-[1.05rem] pt-[0.69rem] pb-[0.22rem]">
 				<>
 					<AccessibilityButton onOpenAccessibility={handleOpenAccessibility} />
 					<AccessibilityMenu

@@ -21,7 +21,7 @@ export function AccessibilityButton({
 
 	return (
 		<button
-			className={`mb-[0.1rem] flex cursor-pointer flex-col items-center justify-between text-[11px] leading-normal ${className}`}
+			className={`-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${className}`}
 			onClick={onOpenAccessibility}
 			aria-label={label}
 		>

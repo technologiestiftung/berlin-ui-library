@@ -43,7 +43,7 @@ function z({
         ]
       }
     ),
-    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[1.05rem] pt-[0.65rem] pb-[0.2rem]", children: [
+    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[1.05rem] pt-[0.69rem] pb-[0.22rem]", children: [
       /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
         /* @__PURE__ */ e.jsx(C, { onOpenAccessibility: S }),
         /* @__PURE__ */ e.jsx(

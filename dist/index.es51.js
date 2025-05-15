@@ -1,19 +1,19 @@
 import { j as e } from "./index.es4.js";
-import a from "./index.es57.js";
-import { useLanguage as o, t as r } from "./index.es5.js";
+import n from "./index.es57.js";
+import { useLanguage as r, t as o } from "./index.es5.js";
 function p({
   onOpenAccessibility: t,
   className: i = ""
 }) {
-  const { translations: n } = o(), s = r("accessibility", n);
+  const { translations: a } = r(), s = o("accessibility", a);
   return /* @__PURE__ */ e.jsxs(
     "button",
     {
-      className: `mb-[0.1rem] flex cursor-pointer flex-col items-center justify-between text-[11px] leading-normal ${i}`,
+      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${i}`,
       onClick: t,
       "aria-label": s,
       children: [
-        /* @__PURE__ */ e.jsx(a, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
         /* @__PURE__ */ e.jsx("span", { className: "whitespace-nowrap", children: s })
       ]
     }
