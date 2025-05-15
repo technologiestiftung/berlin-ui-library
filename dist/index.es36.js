@@ -1,6 +1,11 @@
-import * as e from "react";
-const L = (t) => /* @__PURE__ */ e.createElement("svg", { width: 14, height: 14, viewBox: "0 0 14 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M9.3458 7.00002L12.8649 3.48088C13.2974 3.04846 13.2974 2.34885 12.8649 1.91643L12.0845 1.13596C11.6521 0.70354 10.9524 0.70354 10.52 1.13596L7.00088 4.6551L3.48174 1.13596C3.04932 0.70354 2.34971 0.70354 1.91729 1.13596L1.13682 1.91995C0.704395 2.35237 0.704395 3.05198 1.13682 3.4844L4.65596 7.00002L1.13682 10.5192C0.704395 10.9516 0.704395 11.6512 1.13682 12.0836L1.91729 12.8641C2.34971 13.2965 3.04932 13.2965 3.48174 12.8641L7.00088 9.34495L10.52 12.8641C10.9524 13.2965 11.6521 13.2965 12.0845 12.8641L12.8649 12.0836C13.2974 11.6512 13.2974 10.9516 12.8649 10.5192L9.3458 7.00002Z", fill: "black" }));
+import { __module as e } from "./index.es37.js";
+import { __require as t } from "./index.es38.js";
+import { __require as i } from "./index.es39.js";
+var r;
+function m() {
+  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
+}
 export {
-  L as default
+  m as __require
 };
 //# sourceMappingURL=index.es36.js.map
