@@ -1,19 +1,6 @@
-import { j as t } from "./index.es4.js";
-import * as i from "react";
-import { cn as s } from "./index.es21.js";
-const a = i.forwardRef(({ className: e, ...r }, o) => /* @__PURE__ */ t.jsx(
-  "textarea",
-  {
-    className: s(
-      "border-input ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full border bg-white px-3 py-2 text-base focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 lg:text-sm",
-      e
-    ),
-    ref: o,
-    ...r
-  }
-));
-a.displayName = "Textarea";
+import * as e from "react";
+const l = (t) => /* @__PURE__ */ e.createElement("svg", { width: 21, height: 19, viewBox: "0 0 21 19", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M10.4087 18.9365L0.9375 9.50049L10.4087 0.0634766L12.5259 2.18848L6.69336 8H20.5127V11H6.69287L12.5259 16.8115L10.4087 18.9365Z", fill: "black" }));
 export {
-  a as Textarea
+  l as default
 };
 //# sourceMappingURL=index.es23.js.map

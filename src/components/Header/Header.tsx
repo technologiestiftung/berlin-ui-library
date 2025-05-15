@@ -169,7 +169,7 @@ export function Header({
 		>
 			<header
 				ref={headerRef}
-				className={`sticky top-0 z-[20] box-border bg-white leading-[1.22rem] ${className}`}
+				className={`sticky top-0 z-20 box-border leading-[1.22rem] ${className}`}
 			>
 				{/* Logo Bar */}
 				<LogoBar
@@ -196,6 +196,7 @@ export function Header({
 					breadcrumbs={breadcrumbs}
 					showLanguageSelect={showLanguageSelect}
 					LinkComponent={LinkComponent}
+					isSticky={isSticky}
 				/>
 			</header>
 		</LanguageProvider>

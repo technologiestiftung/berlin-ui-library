@@ -5,24 +5,24 @@ import { SearchButton as w } from "./index.es49.js";
 import { AccessibilityButton as C } from "./index.es51.js";
 import { SearchMenu as I } from "./index.es52.js";
 import { MenuDrawer as N } from "./index.es53.js";
-import { AccessibilityMenu as B } from "./index.es54.js";
-function z({
+import { AccessibilityMenu as v } from "./index.es54.js";
+function q({
   header: c,
   caption: i,
   url: l,
-  showSearchButton: o,
-  onSearch: a,
-  showMenuButton: p,
-  menuItems: m,
+  showSearchButton: a,
+  onSearch: o,
+  showMenuButton: m,
+  menuItems: p,
   onOpenMenu: x
 }) {
-  const [h, n] = s(!1), [f, t] = s(!1), [d, r] = s(!1), u = () => {
-    n(!0), a();
+  const [h, n] = s(!1), [d, t] = s(!1), [f, r] = s(!1), u = () => {
+    n(!0), o();
   }, j = () => {
     n(!1);
-  }, O = (g) => {
+  }, b = (g) => {
     console.warn("Search term:", g);
-  }, b = () => {
+  }, O = () => {
     t(!0), x();
   }, y = () => {
     t(!1);
@@ -31,49 +31,49 @@ function z({
   }, M = () => {
     r(!1);
   };
-  return /* @__PURE__ */ e.jsxs("div", { className: "flex items-center justify-between px-4 py-[1rem] lg:px-6 lg:py-[0.7rem]", children: [
+  return /* @__PURE__ */ e.jsxs("div", { className: "relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]", children: [
     /* @__PURE__ */ e.jsxs(
       "a",
       {
         href: l,
-        className: "flex flex-col justify-center p-0 text-base leading-[1.2] break-words lg:p-[3px] lg:text-xl",
+        className: "flex flex-col justify-center p-0 text-[15px] leading-[1.2] break-words md:text-base lg:p-[3px] lg:text-xl",
         children: [
           /* @__PURE__ */ e.jsx("span", { children: c }),
           /* @__PURE__ */ e.jsx("span", { className: "block font-bold", children: i })
         ]
       }
     ),
-    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[1.05rem] pt-[0.69rem] pb-[0.22rem]", children: [
+    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[0.65rem] pt-[0.59rem] pb-[0.20rem] md:space-x-[1.05rem] md:pt-[0.69rem] md:pb-[0.22rem]", children: [
       /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
         /* @__PURE__ */ e.jsx(C, { onOpenAccessibility: S }),
         /* @__PURE__ */ e.jsx(
-          B,
+          v,
           {
-            isOpen: d,
+            isOpen: f,
             close: M,
             accessibilityItems: []
           }
         )
       ] }),
-      o && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+      a && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
         /* @__PURE__ */ e.jsx(w, { onOpenSearch: u }),
         /* @__PURE__ */ e.jsx(
           I,
           {
             isOpen: h,
             close: j,
-            onSearch: O
+            onSearch: b
           }
         )
       ] }),
-      p && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(A, { onOpenMenu: b }),
+      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(A, { onOpenMenu: O }),
         /* @__PURE__ */ e.jsx(
           N,
           {
-            isOpen: f,
+            isOpen: d,
             close: y,
-            menuItems: m
+            menuItems: p
           }
         )
       ] })
@@ -81,6 +81,6 @@ function z({
   ] });
 }
 export {
-  z as MainHeaderContent
+  q as MainHeaderContent
 };
 //# sourceMappingURL=index.es42.js.map

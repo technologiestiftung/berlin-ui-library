@@ -7,6 +7,7 @@ interface SubHeaderBarProps extends LinkComponentProps {
 	showBreadcrumbs: boolean;
 	breadcrumbs: BreadcrumbItem[];
 	showLanguageSelect: boolean;
+	isSticky?: boolean;
 }
 
 export function SubHeaderBar({
@@ -14,6 +15,7 @@ export function SubHeaderBar({
 	breadcrumbs,
 	showLanguageSelect,
 	LinkComponent,
+	isSticky = false,
 }: SubHeaderBarProps) {
 	// Render only if at least one section is shown
 	if (!showBreadcrumbs && !showLanguageSelect) {
@@ -21,7 +23,9 @@ export function SubHeaderBar({
 	}
 
 	return (
-		<div className="bg-block-colored px-4 shadow-inner lg:px-0">
+		<div
+			className={`relative z-10 bg-block-colored px-4 lg:px-0 ${isSticky ? "-translate-y-16" : "translate-y-0"} transition-transform duration-200 ease-in-out`}
+		>
 			<div className="mx-auto flex max-w-[61.25rem] justify-between">
 				{showBreadcrumbs && (
 					<Breadcrumbs items={breadcrumbs} LinkComponent={LinkComponent} />
