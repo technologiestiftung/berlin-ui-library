@@ -257,3 +257,48 @@ export const Vertical: Story = {
 		</Tabs>
 	),
 };
+
+export const ModuleVariant: Story = {
+	render: () => (
+		<Tabs defaultValue="tab1" className="w-[600px]">
+			<TabsList variant="module">
+				<TabsTrigger variant="module" value="tab1">
+					Information
+				</TabsTrigger>
+				<TabsTrigger variant="module" value="tab2">
+					Details
+				</TabsTrigger>
+				<TabsTrigger variant="module" value="tab3">
+					Resources
+				</TabsTrigger>
+			</TabsList>
+			<TabsContent variant="module" value="tab1">
+				<div className="bg-white p-4">
+					<h3 className="mb-2 font-medium">Module Tab Content 1</h3>
+					<p className="text-sm text-gray-600">
+						The module variant is ideal for content sections where a lighter
+						styling is desired.
+					</p>
+				</div>
+			</TabsContent>
+			<TabsContent variant="module" value="tab2">
+				<div className="bg-white p-4">
+					<h3 className="mb-2 font-medium">Module Tab Content 2</h3>
+					<p className="text-sm text-gray-600">
+						The module variant is ideal for content sections where a lighter
+						styling is desired.
+					</p>
+				</div>
+			</TabsContent>
+			<TabsContent variant="module" value="tab3">
+				<div className="bg-white p-4">
+					<h3 className="mb-2 font-medium">Module Tab Content 3</h3>
+					<p className="text-sm text-gray-600">
+						This variant follows the styling of the modul-tabs CSS from the
+						reference design.
+					</p>
+				</div>
+			</TabsContent>
+		</Tabs>
+	),
+};

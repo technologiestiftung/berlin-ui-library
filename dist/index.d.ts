@@ -13,4 +13,6 @@ export { Checkbox } from './components/Checkbox';
 export { Tabs, TabsList, TabsTrigger, TabsContent } from './components/Tabs';
 export { Image } from './components/Image';
 export { Toggle, toggleVariants } from './components/Toggle';
+export { Panel } from './components/Panel';
+export { Pill, pillVariants, FilterPillGroup } from './components/Pills';
 //# sourceMappingURL=index.d.ts.map

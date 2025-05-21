@@ -8,4 +8,5 @@ export declare const WithDisabledTab: Story;
 export declare const WithIcons: Story;
 export declare const CustomStyling: Story;
 export declare const Vertical: Story;
+export declare const ModuleVariant: Story;
 //# sourceMappingURL=Tabs.stories.d.ts.map
