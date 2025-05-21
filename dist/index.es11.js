@@ -94,7 +94,7 @@ const C = m.forwardRef(({ className: e, ...t }, r) => {
     {
       ref: r,
       id: o,
-      className: d("text-sm text-text-lightest", e),
+      className: d("text-text-lightest", e),
       ...t
     }
   );

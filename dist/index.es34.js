@@ -1,32 +1,6 @@
-import { j as r } from "./index.es4.js";
-import * as i from "react";
-import * as e from "@radix-ui/react-radio-group";
-import { Circle as l } from "lucide-react";
-import { cn as a } from "./index.es21.js";
-const c = i.forwardRef(({ className: o, ...s }, t) => /* @__PURE__ */ r.jsx(
-  e.Root,
-  {
-    className: a("grid gap-2", o),
-    ...s,
-    ref: t
-  }
-));
-c.displayName = e.Root.displayName;
-const d = i.forwardRef(({ className: o, ...s }, t) => /* @__PURE__ */ r.jsx(
-  e.Item,
-  {
-    ref: t,
-    className: a(
-      "ring-offset-background focus-visible:ring-ring aspect-square h-4 w-4 rounded-full border border-black bg-white text-tabfocus focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:text-text-disabled",
-      o
-    ),
-    ...s,
-    children: /* @__PURE__ */ r.jsx(e.Indicator, { className: "flex items-center justify-center", children: /* @__PURE__ */ r.jsx(l, { className: "h-2.5 w-2.5 fill-current text-current" }) })
-  }
-));
-d.displayName = e.Item.displayName;
+import * as e from "react";
+const a = (t) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 384 512", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" }));
 export {
-  c as RadioGroup,
-  d as RadioGroupItem
+  a as default
 };
 //# sourceMappingURL=index.es34.js.map
