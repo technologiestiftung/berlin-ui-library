@@ -281,7 +281,7 @@ const renderCheckboxField = (
 							/>
 							<Label
 								htmlFor={`${field.name}-${option.value}`}
-								className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+								className="leading-[1.2] peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 							>
 								{option.label || option.value}
 							</Label>
@@ -334,7 +334,7 @@ const renderRadioGroup = (
 					/>
 					<Label
 						htmlFor={`${field.name}-${option.value}`}
-						className="leading-none peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+						className="leading-[1.2] peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 					>
 						{option.label || option.value}
 					</Label>
@@ -506,10 +506,12 @@ function FormFieldWrapper({
 			render={({ field }) => (
 				<FormItem>
 					<div className="flex items-center justify-between">
-						<FormLabel className="font-bold">
+						<FormLabel className="relative font-bold">
 							{name}
 							{isRequired && (
-								<span className="ml-1 text-decorative-destructive">*</span>
+								<span className="absolute -top-2 ml-1 text-[1.75em] text-decorative-destructive">
+									*
+								</span>
 							)}
 						</FormLabel>
 						{helperText && renderTooltip(helperText)}

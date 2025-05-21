@@ -7,4 +7,4 @@ export {
 	FormDescription,
 	FormMessage,
 	FormField,
-} from "./Form.client";
+} from "./Form";
