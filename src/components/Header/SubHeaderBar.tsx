@@ -24,7 +24,7 @@ export function SubHeaderBar({
 
 	return (
 		<div
-			className={`relative z-10 bg-block-colored px-4 lg:px-0 ${isSticky ? "-translate-y-32" : "translate-y-0"} transition-transform duration-100 ease-in-out`}
+			className={`relative z-10 bg-block-colored px-4 lg:px-0 ${isSticky ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`}
 		>
 			<div className="mx-auto flex max-w-[61.25rem] justify-between">
 				{showBreadcrumbs && (

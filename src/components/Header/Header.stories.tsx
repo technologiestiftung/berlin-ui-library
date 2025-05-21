@@ -205,14 +205,14 @@ export const ScrollableContent: Story = {
 		<div className="h-full">
 			<Header {...args} />
 			<div className="p-4">
-				<h2 className="text-2xl font-bold mb-4">
+				<h2 className="mb-4 text-2xl font-bold">
 					Scroll Test for Sticky LogoBar
 				</h2>
 				<p className="mb-4">
 					Scroll down to see the LogoBar collapse to a thin line (3px height)
 					with a dark gray background. The logo will fade out as you scroll.
 				</p>
-				<div className="bg-gray-100 p-4 mb-4">
+				<div className="mb-4 bg-gray-100 p-4">
 					<p>
 						<strong>Expected Behavior:</strong>
 					</p>
@@ -226,7 +226,7 @@ export const ScrollableContent: Story = {
 				{Array.from({ length: 30 }, (_, i) => (
 					<p
 						key={i}
-						className={`mb-4 p-2 ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
+						className={`mb-4 p-2 ${i % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
 					>
 						This is scrollable content (row {i + 1}). Continue scrolling to test
 						the sticky behavior of the LogoBar.

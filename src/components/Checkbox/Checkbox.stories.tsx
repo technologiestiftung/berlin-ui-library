@@ -19,7 +19,7 @@ export const Default: Story = {
 			<Checkbox id="terms" />
 			<label
 				htmlFor="terms"
-				className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+				className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 			>
 				Accept terms and conditions
 			</label>
@@ -33,7 +33,7 @@ export const Checked: Story = {
 			<Checkbox id="checked" defaultChecked />
 			<label
 				htmlFor="checked"
-				className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+				className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 			>
 				This option is checked by default
 			</label>
@@ -47,7 +47,7 @@ export const Disabled: Story = {
 			<Checkbox id="disabled" disabled />
 			<label
 				htmlFor="disabled"
-				className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+				className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 			>
 				This option is disabled
 			</label>
@@ -61,7 +61,7 @@ export const DisabledChecked: Story = {
 			<Checkbox id="disabled-checked" disabled defaultChecked />
 			<label
 				htmlFor="disabled-checked"
-				className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+				className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 			>
 				This option is disabled and checked
 			</label>
@@ -76,7 +76,7 @@ export const WithDescription: Story = {
 			<div className="grid gap-1.5 leading-none">
 				<label
 					htmlFor="terms-with-description"
-					className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
+					className="text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 				>
 					Accept terms and conditions
 				</label>
@@ -94,19 +94,13 @@ export const StyledVariant: Story = {
 		<div className="flex flex-col gap-4">
 			<div className="flex items-center space-x-2">
 				<Checkbox id="styled-unchecked" variant="styled" />
-				<label
-					htmlFor="styled-unchecked"
-					className="text-sm leading-none font-medium"
-				>
+				<label htmlFor="styled-unchecked" className="text-sm font-medium">
 					Styled variant (unchecked)
 				</label>
 			</div>
 			<div className="flex items-center space-x-2">
 				<Checkbox id="styled-checked" variant="styled" defaultChecked />
-				<label
-					htmlFor="styled-checked"
-					className="text-sm leading-none font-medium"
-				>
+				<label htmlFor="styled-checked" className="text-sm font-medium">
 					Styled variant (checked)
 				</label>
 			</div>

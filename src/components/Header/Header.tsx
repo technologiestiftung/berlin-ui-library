@@ -123,40 +123,50 @@ export function Header({
 		const headerElement = headerRef.current;
 
 		if (headerElement) {
-			// Create a sentinel element that will be positioned at the top of the viewport
-			const sentinel = document.createElement("div");
-			sentinel.style.height = "1px";
-			sentinel.style.width = "100%";
-			sentinel.style.position = "absolute";
-			sentinel.style.top = "0";
-			sentinel.style.left = "0";
-			sentinel.style.zIndex = "-1";
+			// Add a small buffer to prevent flickering
+			let timeoutId: ReturnType<typeof setTimeout> | null = null;
+			const DEBOUNCE_TIME = 50; // Short debounce to avoid flickering
+			let currentIsSticky = false; // Track current state to prevent unnecessary updates
 
-			// Insert the sentinel before the header
-			headerElement.parentElement?.insertBefore(sentinel, headerElement);
+			const handleScroll = () => {
+				const scrollY = window.scrollY || window.pageYOffset;
+				// Use a small positive threshold when scrolling down, and a zero threshold when scrolling up
+				// This hysteresis prevents flickering at the boundary
+				const scrollThreshold = currentIsSticky ? 0 : 2;
 
-			// Create and configure the observer
-			const observer = new IntersectionObserver(
-				([entry]) => {
-					// When sentinel is not visible (scrolled out of view), header should be sticky
-					setIsSticky(!entry.isIntersecting);
-				},
-				{ threshold: [0] },
-			);
+				const newIsSticky = scrollY > scrollThreshold;
 
-			// Start observing the sentinel
-			observer.observe(sentinel);
+				// Only update if state actually changed
+				if (newIsSticky !== currentIsSticky) {
+					currentIsSticky = newIsSticky;
+
+					// Clear any pending timeout
+					if (timeoutId) {
+						clearTimeout(timeoutId);
+					}
+
+					// Set timeout to debounce rapid changes
+					timeoutId = setTimeout(() => {
+						setIsSticky(newIsSticky);
+					}, DEBOUNCE_TIME);
+				}
+			};
+
+			// Initial check
+			handleScroll();
+
+			// Add scroll event listener
+			window.addEventListener("scroll", handleScroll, { passive: true });
 
 			// Cleanup function
 			return () => {
-				observer.disconnect();
-				if (sentinel.parentElement) {
-					sentinel.parentElement.removeChild(sentinel);
+				if (timeoutId) {
+					clearTimeout(timeoutId);
 				}
+				window.removeEventListener("scroll", handleScroll);
 			};
 		}
 
-		// Return undefined for when headerElement doesn't exist
 		return undefined;
 	}, []);
 
