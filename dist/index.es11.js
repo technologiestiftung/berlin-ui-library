@@ -66,7 +66,7 @@ const h = m.forwardRef(({ className: e, children: t, ...r }, o) => {
       ...r,
       children: [
         t,
-        a && /* @__PURE__ */ i.jsx("span", { className: "text-destructive ml-1", children: "*" })
+        a && /* @__PURE__ */ i.jsx("span", { className: "text-destructive ml-1 text-[1.75em]", children: "*" })
       ]
     }
   );

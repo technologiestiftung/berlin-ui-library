@@ -7,7 +7,7 @@ const b = e.Root, n = o.forwardRef(({ className: s, ...i }, t) => /* @__PURE__ *
   {
     ref: t,
     className: r(
-      "flex h-12 w-full items-center justify-center gap-1",
+      "flex h-12 w-auto items-center justify-start gap-1",
       s
     ),
     ...i
@@ -19,14 +19,14 @@ const f = o.forwardRef(({ className: s, ...i }, t) => /* @__PURE__ */ a.jsx(
   {
     ref: t,
     className: r(
-      "ring-offset-background focus-visible:ring-ring data-[state=active]:text-foreground inline-flex h-full flex-grow cursor-pointer items-center justify-center bg-grey-dark px-3 py-1.5 text-base whitespace-nowrap transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-block-heavy data-[state=active]:shadow-[inset_0_4px_0_0_var(--color-red)]",
+      "ring-offset-background focus-visible:ring-ring data-[state=active]:text-foreground inline-flex h-full cursor-pointer items-center justify-center bg-grey-dark px-3 py-1.5 text-base whitespace-nowrap transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-block-heavy data-[state=active]:shadow-[inset_0_4px_0_0_var(--color-red)]",
       s
     ),
     ...i
   }
 ));
 f.displayName = e.Trigger.displayName;
-const l = o.forwardRef(({ className: s, ...i }, t) => /* @__PURE__ */ a.jsx(
+const c = o.forwardRef(({ className: s, ...i }, t) => /* @__PURE__ */ a.jsx(
   e.Content,
   {
     ref: t,
@@ -37,10 +37,10 @@ const l = o.forwardRef(({ className: s, ...i }, t) => /* @__PURE__ */ a.jsx(
     ...i
   }
 ));
-l.displayName = e.Content.displayName;
+c.displayName = e.Content.displayName;
 export {
   b as Tabs,
-  l as TabsContent,
+  c as TabsContent,
   n as TabsList,
   f as TabsTrigger
 };
