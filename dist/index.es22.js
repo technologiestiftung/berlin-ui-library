@@ -5,7 +5,7 @@ import v from "./index.es25.js";
 import d from "./index.es26.js";
 import w from "./index.es27.js";
 import h from "./index.es28.js";
-import { cn as i } from "./index.es23.js";
+import { cn as i } from "./index.es24.js";
 const N = b(
   "pill text-3.5 inline-flex w-auto min-w-[unset] items-center gap-[0.4em] rounded-full border border-transparent px-1.75 py-0.25 leading-[1.2] transition-colors",
   {

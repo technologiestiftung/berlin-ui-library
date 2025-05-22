@@ -2,12 +2,12 @@ import { j as s } from "./index.es4.js";
 import * as o from "react";
 import * as a from "@radix-ui/react-tabs";
 import { cva as l } from "class-variance-authority";
-import { cn as n } from "./index.es23.js";
+import { cn as n } from "./index.es24.js";
 const y = a.Root, c = l("flex w-auto items-center justify-start", {
   variants: {
     variant: {
       default: "h-12 gap-1",
-      module: "margin-0 box-shadow-[0px_-1px_0px_#ddd_inset] mb-[30px] p-0"
+      module: "margin-0 mb-[30px] border-b border-grey-dark p-0"
     }
   },
   defaultVariants: {
@@ -76,7 +76,7 @@ const m = l(
       variant: "default"
     }
   }
-), p = o.forwardRef(({ className: i, variant: t, ...e }, r) => /* @__PURE__ */ s.jsx(
+), g = o.forwardRef(({ className: i, variant: t, ...e }, r) => /* @__PURE__ */ s.jsx(
   a.Content,
   {
     ref: r,
@@ -84,10 +84,10 @@ const m = l(
     ...e
   }
 ));
-p.displayName = a.Content.displayName;
+g.displayName = a.Content.displayName;
 export {
   y as Tabs,
-  p as TabsContent,
+  g as TabsContent,
   b as TabsList,
   u as TabsTrigger
 };

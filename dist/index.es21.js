@@ -1,25 +1,25 @@
 import { j as r } from "./index.es4.js";
 import { forwardRef as n } from "react";
-import { cn as o } from "./index.es23.js";
-import i from "./index.es24.js";
+import { cn as o } from "./index.es24.js";
+import i from "./index.es43.js";
 const m = {
-  heavy: "p-[18px] bg-[#f5f5f5] border border-[#f5f5f5]",
+  heavy: "p-[18px] bg-grey border border-grey",
   dark: "p-[18px] bg-black border-0 text-white",
-  light: "p-[1.125em] bg-white border border-[#ddd]",
+  light: "p-[1.125em] bg-white border border-grey-dark",
   clean: "p-[1.125em] px-0 bg-transparent border border-transparent",
-  bordered: "py-[1.125em] px-0 border border-[#ddd] border-x-0 bg-transparent",
-  colored: "p-[18px] bg-[#f5f5f5] border border-[#f5f5f5] text-black",
+  bordered: "py-[1.125em] px-0 border border-grey-dark border-x-0 bg-transparent",
+  colored: "p-[18px] bg-grey border border-grey text-black",
   boxed: "p-[1.125em] bg-white border border-black",
   white: "p-[1.125em] bg-white border border-white",
   hint: "mt-4 mb-4 ml-[18px] pl-3 relative font-bold"
 }, s = n(
   ({
-    children: d,
+    children: b,
     variant: e = "light",
-    removeInnerPanels: b = !1,
+    removeInnerPanels: p = !1,
     footer: t,
-    className: p,
-    ...a
+    className: a,
+    ...d
   }, l) => /* @__PURE__ */ r.jsxs(
     "div",
     {
@@ -27,12 +27,12 @@ const m = {
       className: o(
         "panel",
         m[e],
-        b && e === "heavy" ? "panel--remove-inner-panels" : "",
+        p && e === "heavy" ? "panel--remove-inner-panels" : "",
         e === "heavy" && "has-inner-panels",
-        p
+        a
       ),
       "data-variant": e,
-      ...a,
+      ...d,
       children: [
         e === "hint" && /* @__PURE__ */ r.jsx(
           "img",
@@ -42,7 +42,7 @@ const m = {
             className: "absolute top-0 left-[-18px] h-[22px] w-[22px] text-black"
           }
         ),
-        d,
+        b,
         t && /* @__PURE__ */ r.jsx(
           "div",
           {

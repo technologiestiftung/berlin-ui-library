@@ -1,25 +1,26 @@
 import { j as e } from "./index.es4.js";
-import n from "./index.es35.js";
-import { useLanguage as o, t as m } from "./index.es5.js";
-function p({
-  onOpenSearch: t,
-  className: s = ""
-}) {
-  const { translations: a } = o(), r = m("search", a);
-  return /* @__PURE__ */ e.jsxs(
-    "button",
-    {
-      className: `-mt-[0.05rem] -ml-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] pr-[0.05rem] text-[11px] leading-normal ${s}`,
-      onClick: t,
-      "aria-label": r,
-      children: [
-        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
-        /* @__PURE__ */ e.jsx("span", { className: "text-[11px] whitespace-nowrap", children: r })
-      ]
-    }
-  );
+import { useLanguage as c, t as a } from "./index.es5.js";
+import { Drawer as i, DrawerContent as m } from "./index.es6.js";
+import { SearchForm as h } from "./index.es7.js";
+function d({ isOpen: n, close: s, onSearch: t }) {
+  const { translations: l } = c(), o = (r) => {
+    t && t(r), s();
+  };
+  return /* @__PURE__ */ e.jsx(i, { open: n, onOpenChange: (r) => !r && s(), children: /* @__PURE__ */ e.jsx(m, { size: "large", className: "flex flex-col gap-4", children: /* @__PURE__ */ e.jsx("div", { className: "flex flex-row justify-center", children: /* @__PURE__ */ e.jsxs("div", { className: "mt-[10vh] flex w-full flex-col gap-2 px-4 lg:mt-[30vh] lg:w-[50%]", children: [
+    /* @__PURE__ */ e.jsx("h1", { className: "font-bold", children: a("search.title", l) }),
+    /* @__PURE__ */ e.jsx(
+      h,
+      {
+        placeholder: a("search.placeholder", l),
+        onSubmit: o,
+        className: "w-full",
+        label: a("search.ariaLabel", l),
+        submitLabel: a("search.submit", l)
+      }
+    )
+  ] }) }) }) });
 }
 export {
-  p as SearchButton
+  d as SearchMenu
 };
 //# sourceMappingURL=index.es56.js.map

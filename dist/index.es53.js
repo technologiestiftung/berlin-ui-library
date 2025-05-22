@@ -1,6 +1,25 @@
-import * as e from "react";
-const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 19, height: 11, viewBox: "0 0 19 11", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M17.5 9.87084L9.5 2.12891L1.5 9.87084", stroke: "currentColor", strokeWidth: 3 }));
+import { j as e } from "./index.es4.js";
+import n from "./index.es32.js";
+import { useLanguage as o, t as m } from "./index.es5.js";
+function p({
+  onOpenSearch: t,
+  className: s = ""
+}) {
+  const { translations: a } = o(), r = m("search", a);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `-mt-[0.05rem] -ml-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] pr-[0.05rem] text-[11px] leading-normal ${s}`,
+      onClick: t,
+      "aria-label": r,
+      children: [
+        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "text-[11px] whitespace-nowrap", children: r })
+      ]
+    }
+  );
+}
 export {
-  o as default
+  p as SearchButton
 };
 //# sourceMappingURL=index.es53.js.map

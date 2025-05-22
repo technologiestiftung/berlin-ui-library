@@ -1,6 +1,25 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 76v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16z" }));
+import { j as e } from "./index.es4.js";
+import n from "./index.es65.js";
+import { useLanguage as r, t as o } from "./index.es5.js";
+function p({
+  onOpenAccessibility: t,
+  className: i = ""
+}) {
+  const { translations: a } = r(), s = o("accessibility", a);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${i}`,
+      onClick: t,
+      "aria-label": s,
+      children: [
+        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "whitespace-nowrap", children: s })
+      ]
+    }
+  );
+}
 export {
-  t as default
+  p as AccessibilityButton
 };
 //# sourceMappingURL=index.es55.js.map

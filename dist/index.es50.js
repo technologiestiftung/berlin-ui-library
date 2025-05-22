@@ -1,25 +1,6 @@
-import { j as e } from "./index.es4.js";
-import { LanguageSelect as s } from "./index.es51.js";
-import { Breadcrumbs as n } from "./index.es8.js";
-function f({
-  showBreadcrumbs: t,
-  breadcrumbs: r,
-  showLanguageSelect: a,
-  LinkComponent: i,
-  isSticky: o = !1
-}) {
-  return !t && !a ? null : /* @__PURE__ */ e.jsx(
-    "div",
-    {
-      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
-      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
-        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
-        a && /* @__PURE__ */ e.jsx(s, {})
-      ] })
-    }
-  );
-}
+import * as e from "react";
+const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 19, height: 11, viewBox: "0 0 19 11", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M17.5 9.87084L9.5 2.12891L1.5 9.87084", stroke: "currentColor", strokeWidth: 3 }));
 export {
-  f as SubHeaderBar
+  o as default
 };
 //# sourceMappingURL=index.es50.js.map

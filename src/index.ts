@@ -1,10 +1,10 @@
 import "./style.css";
 
 // Header components
-export { Header } from "./components/Header";
+export { Header } from "./elements/Header";
 
 // Footer components
-export { Footer } from "./components/Footer";
+export { Footer } from "./elements/Footer";
 
 // Drawer components
 export {
@@ -16,7 +16,7 @@ export {
 	DrawerHeader,
 	DrawerTitle,
 	DrawerTrigger,
-} from "./components/Drawer";
+} from "./elements/Drawer";
 
 // Breadcrumb components
 export {
@@ -26,10 +26,10 @@ export {
 	BreadcrumbList,
 	BreadcrumbPage,
 	BreadcrumbSeparator,
-} from "./components/Breadcrumb";
+} from "./elements/Breadcrumb";
 
 // Button components
-export { Button, buttonVariants } from "./components/Button";
+export { Button, buttonVariants } from "./elements/Button";
 
 // Form components
 export {
@@ -40,38 +40,40 @@ export {
 	FormItem,
 	FormLabel,
 	FormMessage,
-} from "./components/Form";
+} from "./elements/Form";
 
 // Form field wrapper components
 export {
 	FormFieldWrapper,
 	FormWrapper,
 	type FormProperty,
-} from "./components/FormWrapper";
+} from "./elements/FormWrapper";
 
 // Input component
-export { Input } from "./components/Input/Input";
+export { Input } from "./elements/Input/Input";
 
 // Label component
-export { Label } from "./components/Label/Label";
+export { Label } from "./elements/Label/Label";
 
-export { SearchForm } from "./components/SearchForm";
+export { SearchForm } from "./elements/SearchForm";
 
 export {
 	Accordion,
 	AccordionItem,
 	AccordionTrigger,
 	AccordionContent,
-} from "./components/Accordion";
+} from "./modules/Accordion";
 
-export { Checkbox } from "./components/Checkbox";
+export { Checkbox } from "./elements/Checkbox";
 
-export { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/Tabs";
+export { Tabs, TabsList, TabsTrigger, TabsContent } from "./elements/Tabs";
 
-export { Image } from "./components/Image";
+export { Image } from "./elements/Image";
 
-export { Toggle, toggleVariants } from "./components/Toggle";
+export { Toggle, toggleVariants } from "./elements/Toggle";
 
-export { Panel } from "./components/Panel";
+export { Panel } from "./elements/Panel";
 
-export { Pill, pillVariants, FilterPillGroup } from "./components/Pills";
+export { Pill, pillVariants, FilterPillGroup } from "./elements/Pills";
+
+export { DownloadItem, DownloadGroup } from "./modules/Download";

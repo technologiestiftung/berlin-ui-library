@@ -1,32 +1,6 @@
-import { j as r } from "./index.es4.js";
-import * as i from "react";
-import * as e from "@radix-ui/react-radio-group";
-import { Circle as l } from "lucide-react";
-import { cn as a } from "./index.es23.js";
-const c = i.forwardRef(({ className: o, ...s }, t) => /* @__PURE__ */ r.jsx(
-  e.Root,
-  {
-    className: a("", o),
-    ...s,
-    ref: t
-  }
-));
-c.displayName = e.Root.displayName;
-const d = i.forwardRef(({ className: o, ...s }, t) => /* @__PURE__ */ r.jsx(
-  e.Item,
-  {
-    ref: t,
-    className: a(
-      "ring-offset-background focus-visible:ring-ring aspect-square h-4 w-4 rounded-full border border-black bg-white text-tabfocus focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:text-text-disabled",
-      o
-    ),
-    ...s,
-    children: /* @__PURE__ */ r.jsx(e.Indicator, { className: "flex items-center justify-center", children: /* @__PURE__ */ r.jsx(l, { className: "h-2.5 w-2.5 fill-current text-current" }) })
-  }
-));
-d.displayName = e.Item.displayName;
+import * as e from "react";
+const a = (t) => /* @__PURE__ */ e.createElement("svg", { width: 24, height: 22, viewBox: "0 0 20 20", fill: "none", xmlns: "http://www.w3.org/2000/svg", className: "{className} ", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M14.0975 10L19.5026 4.3142C20.1659 3.61648 20.1659 2.48523 19.5026 1.78693L18.3013 0.523295C17.6381 -0.174432 16.5626 -0.174432 15.8988 0.523295L10.4937 6.20909L5.08855 0.523295C4.42527 -0.174432 3.34986 -0.174432 2.68603 0.523295L1.48477 1.78693C0.821483 2.48466 0.821483 3.61591 1.48477 4.3142L6.8899 10L1.48477 15.6858C0.821483 16.3835 0.821483 17.5148 1.48477 18.2131L2.68603 19.4767C3.34932 20.1744 4.42527 20.1744 5.08855 19.4767L10.4937 13.7909L15.8988 19.4767C16.5621 20.1744 17.6381 20.1744 18.3013 19.4767L19.5026 18.2131C20.1659 17.5153 20.1659 16.3841 19.5026 15.6858L14.0975 10Z", fill: "black" }));
 export {
-  c as RadioGroup,
-  d as RadioGroupItem
+  a as default
 };
 //# sourceMappingURL=index.es33.js.map
