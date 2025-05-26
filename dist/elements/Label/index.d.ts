@@ -1,2 +1,2 @@
-export { Label } from './Label';
+export { Label } from "./Label";
 //# sourceMappingURL=index.d.ts.map

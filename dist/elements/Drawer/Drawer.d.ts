@@ -1,6 +1,6 @@
-import { VariantProps } from 'class-variance-authority';
 import * as React from "react";
 import * as DrawerPrimitive from "@radix-ui/react-dialog";
+import { type VariantProps } from "class-variance-authority";
 declare const Drawer: React.FC<DrawerPrimitive.DialogProps>;
 declare const DrawerTrigger: React.ForwardRefExoticComponent<DrawerPrimitive.DialogTriggerProps & React.RefAttributes<HTMLButtonElement>>;
 declare const DrawerClose: React.ForwardRefExoticComponent<DrawerPrimitive.DialogCloseProps & React.RefAttributes<HTMLButtonElement>>;
@@ -9,7 +9,7 @@ declare const DrawerOverlay: React.ForwardRefExoticComponent<Omit<DrawerPrimitiv
 declare const drawerVariants: (props?: ({
     side?: "top" | "bottom" | "left" | "right" | null | undefined;
     size?: "default" | "large" | null | undefined;
-} & import('class-variance-authority/types').ClassProp) | undefined) => string;
+} & import("class-variance-authority/types").ClassProp) | undefined) => string;
 interface DrawerContentProps extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>, VariantProps<typeof drawerVariants> {
 }
 declare const DrawerContent: React.ForwardRefExoticComponent<DrawerContentProps & React.RefAttributes<HTMLDivElement>>;

@@ -1,4 +1,4 @@
-import { default as React, ReactNode } from 'react';
+import React, { ReactNode } from "react";
 export type PanelVariant = "heavy" | "dark" | "light" | "clean" | "bordered" | "colored" | "boxed" | "white" | "hint";
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
