@@ -1,10 +1,10 @@
+import { VariantProps } from 'class-variance-authority';
 import * as React from "react";
-import { type VariantProps } from "class-variance-authority";
 declare const pillVariants: (props?: ({
     variant?: "default" | "filter" | "error" | "message" | "success" | "info" | null | undefined;
     inverted?: boolean | null | undefined;
     size?: "default" | "big" | null | undefined;
-} & import("class-variance-authority/types").ClassProp) | undefined) => string;
+} & import('class-variance-authority/types').ClassProp) | undefined) => string;
 export interface PillProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof pillVariants> {
     /**
      * Whether the pill is active (primarily used with filter variant)

@@ -1,25 +1,6 @@
-import { j as e } from "./index.es4.js";
-import { LanguageSelect as s } from "./index.es48.js";
-import { Breadcrumbs as n } from "./index.es8.js";
-function f({
-  showBreadcrumbs: t,
-  breadcrumbs: r,
-  showLanguageSelect: a,
-  LinkComponent: i,
-  isSticky: o = !1
-}) {
-  return !t && !a ? null : /* @__PURE__ */ e.jsx(
-    "div",
-    {
-      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
-      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
-        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
-        a && /* @__PURE__ */ e.jsx(s, {})
-      ] })
-    }
-  );
-}
+import * as e from "react";
+const a = (t) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 384 512", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" }));
 export {
-  f as SubHeaderBar
+  a as default
 };
 //# sourceMappingURL=index.es47.js.map

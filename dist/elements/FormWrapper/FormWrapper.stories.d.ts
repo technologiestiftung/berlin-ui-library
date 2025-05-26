@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { FormWrapper } from "./FormWrapper";
+import { Meta, StoryObj } from '@storybook/react';
+import { FormWrapper } from './FormWrapper';
 declare const meta: Meta<typeof FormWrapper>;
 export default meta;
 type Story = StoryObj<typeof FormWrapper>;

@@ -1,4 +1,4 @@
-import { BreadcrumbItem, LinkComponentProps } from "./types";
+import { BreadcrumbItem, LinkComponentProps } from './types';
 interface SubHeaderBarProps extends LinkComponentProps {
     showBreadcrumbs: boolean;
     breadcrumbs: BreadcrumbItem[];

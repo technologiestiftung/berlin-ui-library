@@ -1,4 +1,4 @@
-import { __require as r } from "./index.es59.js";
+import { __require as r } from "./index.es30.js";
 var i = r();
 export {
   i as j
