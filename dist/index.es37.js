@@ -1,6 +1,6 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M256 8C119 8 8 119.1 8 256c0 137 111 248 248 248s248-111 248-248C504 119.1 393 8 256 8zm0 110c23.2 0 42 18.8 42 42s-18.8 42-42 42-42-18.8-42-42 18.8-42 42-42zm56 254c0 6.6-5.4 12-12 12h-88c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h12v-64h-12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h64c6.6 0 12 5.4 12 12v100h12c6.6 0 12 5.4 12 12v24z" }));
+import * as e from "react";
+const l = (t) => /* @__PURE__ */ e.createElement("svg", { width: 21, height: 19, viewBox: "0 0 21 19", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M10.4087 18.9365L0.9375 9.50049L10.4087 0.0634766L12.5259 2.18848L6.69336 8H20.5127V11H6.69287L12.5259 16.8115L10.4087 18.9365Z", fill: "black" }));
 export {
-  t as default
+  l as default
 };
 //# sourceMappingURL=index.es37.js.map
