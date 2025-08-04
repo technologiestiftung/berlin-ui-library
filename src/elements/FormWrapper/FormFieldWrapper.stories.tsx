@@ -361,10 +361,20 @@ export const RadioGroupInput: Story = {
 			],
 		};
 
+		const watchedValue = methods.watch("theme");
+
 		return (
 			<Form {...methods}>
 				<form>
 					<FormFieldWrapper formProperty={property} form={methods} />
+					<div className="mt-4 p-3 bg-gray-50 rounded-md">
+						<p className="text-sm text-gray-600">
+							<strong>Selected Value:</strong> {watchedValue}
+						</p>
+						<p className="text-xs text-gray-500 mt-1">
+							This updates in real-time when you select an option
+						</p>
+					</div>
 				</form>
 			</Form>
 		);
@@ -393,10 +403,20 @@ export const RadioGroupInputHorizontal: Story = {
 			],
 		};
 
+		const watchedValue = methods.watch("subscription");
+
 		return (
 			<Form {...methods}>
 				<form>
 					<FormFieldWrapper formProperty={property} form={methods} />
+					<div className="mt-4 p-3 bg-blue-50 rounded-md">
+						<p className="text-sm text-blue-800">
+							<strong>Selected Plan:</strong> {watchedValue || "None selected"}
+						</p>
+						<p className="text-xs text-blue-600 mt-1">
+							Watch the value change as you select different options
+						</p>
+					</div>
 				</form>
 			</Form>
 		);
