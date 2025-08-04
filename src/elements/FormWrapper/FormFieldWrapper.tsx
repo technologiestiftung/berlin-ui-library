@@ -322,7 +322,8 @@ const renderRadioGroup = (
 
 	return (
 		<RadioGroup
-			{...field}
+			value={field.value}
+			onValueChange={field.onChange}
 			disabled={isDisabled}
 			className={`flex ${direction === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-1"}`}
 		>
