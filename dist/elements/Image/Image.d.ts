@@ -1,4 +1,4 @@
-import { default as React } from 'react';
+import React from "react";
 interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
     /**
      * The source URL of the image.

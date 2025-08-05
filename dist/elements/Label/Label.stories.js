@@ -1,0 +1,18 @@
+import { Label } from "./Label";
+const meta = {
+    title: "Elements/Label",
+    component: Label,
+    args: {
+        htmlFor: "example-input",
+        children: "Example Label",
+    },
+    tags: ["autodocs"],
+};
+export default meta;
+export const Default = {};
+export const Error = {
+    args: {
+        className: "text-decorative-destructive",
+        children: "Error Label",
+    },
+};

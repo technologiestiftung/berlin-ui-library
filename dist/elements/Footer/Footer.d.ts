@@ -1,6 +1,6 @@
-import { default as React } from 'react';
-import { FooterColumn } from './types';
-import { Language } from '../Header/LanguageProvider';
+import React from "react";
+import { FooterColumn } from "./types";
+import { Language } from "../Header/LanguageProvider";
 export interface FooterProps {
     /**
      * Footer columns data for links and navigation

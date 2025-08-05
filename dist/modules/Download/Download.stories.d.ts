@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { DownloadItem, DownloadGroup } from './index';
+import type { Meta, StoryObj } from "@storybook/react";
+import { DownloadItem, DownloadGroup } from "./index";
 declare const meta: Meta<typeof DownloadItem>;
 export default meta;
 type Story = StoryObj<typeof DownloadItem>;

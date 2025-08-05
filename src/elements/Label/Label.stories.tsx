@@ -19,7 +19,7 @@ export const Default: Story = {};
 
 export const Error: Story = {
 	args: {
-		className: "text-destructive",
+		className: "text-decorative-destructive",
 		children: "Error Label",
 	},
 };

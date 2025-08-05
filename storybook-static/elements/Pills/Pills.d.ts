@@ -3,7 +3,7 @@ import * as React from "react";
 declare const pillVariants: (props?: ({
     variant?: "default" | "filter" | "error" | "message" | "success" | "info" | null | undefined;
     inverted?: boolean | null | undefined;
-    size?: "default" | "big" | null | undefined;
+    size?: "default" | "md" | "lg" | "xl" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
 export interface PillProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof pillVariants> {
     /**
@@ -18,6 +18,10 @@ export interface PillProps extends React.HTMLAttributes<HTMLDivElement>, Variant
      * Value of the pill (used for filter variant in FilterPillGroup)
      */
     value?: string;
+    /**
+     * Whether to show the icon (applies to all variants that have icons)
+     */
+    showIcon?: boolean;
 }
 declare const Pill: React.ForwardRefExoticComponent<PillProps & React.RefAttributes<HTMLDivElement>>;
 export interface FilterPillGroupProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -32,7 +36,7 @@ export interface FilterPillGroupProps extends React.HTMLAttributes<HTMLDivElemen
     /**
      * Size variant for all pills in the group
      */
-    size?: "default" | "big";
+    size?: "default" | "md" | "lg" | "xl";
 }
 declare const FilterPillGroup: React.ForwardRefExoticComponent<FilterPillGroupProps & React.RefAttributes<HTMLDivElement>>;
 export { Pill, pillVariants, FilterPillGroup };

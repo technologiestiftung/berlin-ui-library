@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Pill, FilterPillGroup } from './index';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Pill, FilterPillGroup } from "./index";
 declare const meta: Meta<typeof Pill>;
 export default meta;
 type Story = StoryObj<typeof Pill>;
@@ -13,10 +13,11 @@ export declare const FilterActive: Story;
 export declare const FilterToggle: Story;
 export declare const Inverted: Story;
 export declare const ErrorInverted: Story;
-export declare const BigPill: Story;
+export declare const SizeVariants: Story;
 export declare const WithIcon: Story;
 export declare const BuiltInIcons: Story;
 export declare const WithButton: Story;
 export declare const AllVariants: Story;
+export declare const OptionalIcons: Story;
 export declare const FilterPillGroupExample: StoryObj<typeof FilterPillGroup>;
 //# sourceMappingURL=Pills.stories.d.ts.map

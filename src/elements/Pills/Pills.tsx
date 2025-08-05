@@ -25,7 +25,9 @@ const pillVariants = cva(
 			},
 			size: {
 				default: "",
-				big: "text-3.5 rounded-full px-3.5 py-1.5 font-normal",
+				md: "text-3.5 rounded-full px-3.5 py-1.5 font-normal",
+				lg: "text-4 rounded-full px-4 py-2 font-medium",
+				xl: "text-4.5 rounded-full px-5 py-2.5 font-medium",
 			},
 		},
 		compoundVariants: [
@@ -78,6 +80,10 @@ export interface PillProps
 	 * Value of the pill (used for filter variant in FilterPillGroup)
 	 */
 	value?: string;
+	/**
+	 * Whether to show the icon (applies to all variants that have icons)
+	 */
+	showIcon?: boolean;
 }
 
 const Pill = React.forwardRef<HTMLDivElement, PillProps>(
@@ -90,6 +96,7 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 			size,
 			active,
 			onToggle,
+			showIcon = true,
 			children,
 			...props
 		},
@@ -116,42 +123,42 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 				onClick={handleClick}
 				{...props}
 			>
-				{variant === "info" && (
+				{showIcon && variant === "info" && (
 					<InfoIcon
 						className={cn(
 							inverted ? "fill-white" : "fill-blue",
-							size === "big" ? "size-4" : "size-3",
+							size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3",
 						)}
 					/>
 				)}
-				{variant === "message" && (
+				{showIcon && variant === "message" && (
 					<InfoIcon
 						className={cn(
 							inverted ? "fill-white" : "fill-text-base",
-							size === "big" ? "size-4" : "size-3",
+							size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3",
 						)}
 					/>
 				)}
-				{variant === "error" && (
+				{showIcon && variant === "error" && (
 					<ErrorIcon
 						className={cn(
 							inverted ? "fill-white" : "fill-text-error",
-							size === "big" ? "size-4" : "size-3",
+							size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3",
 						)}
 					/>
 				)}
-				{variant === "success" && (
+				{showIcon && variant === "success" && (
 					<SuccessIcon
 						className={cn(
 							inverted ? "fill-white" : "fill-text-success",
-							size === "big" ? "size-4" : "size-3",
+							size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3",
 						)}
 					/>
 				)}
 				{children}
-				{variant === "filter" && active && (
+				{showIcon && variant === "filter" && active && (
 					<TimesIcon
-						className={cn("fill-white", size === "big" ? "size-4" : "size-3")}
+						className={cn("fill-white", size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3")}
 					/>
 				)}
 			</div>
@@ -174,7 +181,7 @@ export interface FilterPillGroupProps
 	/**
 	 * Size variant for all pills in the group
 	 */
-	size?: "default" | "big";
+	size?: "default" | "md" | "lg" | "xl";
 }
 
 const FilterPillGroup = React.forwardRef<HTMLDivElement, FilterPillGroupProps>(

@@ -507,10 +507,10 @@ function FormFieldWrapper({
 			render={({ field }) => (
 				<FormItem>
 					<div className="flex items-center justify-between">
-						<FormLabel className="relative font-bold">
+						<FormLabel className="font-bold">
 							{name}
 							{isRequired && (
-								<span className="absolute -top-2 ml-1 text-[1.75em] text-decorative-destructive">
+								<span className="ml-1 text-[1.75em] text-decorative-destructive align-top leading-none">
 									*
 								</span>
 							)}
