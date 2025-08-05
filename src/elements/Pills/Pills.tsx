@@ -182,6 +182,10 @@ export interface FilterPillGroupProps
 	 * Size variant for all pills in the group
 	 */
 	size?: "default" | "md" | "lg" | "xl";
+	/**
+	 * Whether to show icons for all pills in the group
+	 */
+	showIcon?: boolean;
 }
 
 const FilterPillGroup = React.forwardRef<HTMLDivElement, FilterPillGroupProps>(
@@ -191,6 +195,7 @@ const FilterPillGroup = React.forwardRef<HTMLDivElement, FilterPillGroupProps>(
 			activeValues,
 			onValueToggle,
 			size = "default",
+			showIcon = true,
 			children,
 			...props
 		},
@@ -215,6 +220,7 @@ const FilterPillGroup = React.forwardRef<HTMLDivElement, FilterPillGroupProps>(
 				return React.cloneElement(child as React.ReactElement<PillProps>, {
 					active: isActive,
 					size,
+					showIcon,
 					onToggle: () => onValueToggle(value),
 					value,
 				});

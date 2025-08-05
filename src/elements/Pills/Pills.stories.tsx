@@ -410,6 +410,26 @@ export const FilterPillGroupExample: StoryObj<typeof FilterPillGroup> = {
 						</Pill>
 					</FilterPillGroup>
 				</div>
+
+				<div className="mt-4">
+					<h3 className="mb-2 text-lg font-bold">Filter Pills Without Icons</h3>
+					<FilterPillGroup
+						activeValues={activeFilters}
+						onValueToggle={handleFilterToggle}
+						size="md"
+						showIcon={false}
+					>
+						<Pill variant="filter" value="No Icon 1">
+							No Icon 1
+						</Pill>
+						<Pill variant="filter" value="No Icon 2">
+							No Icon 2
+						</Pill>
+						<Pill variant="filter" value="No Icon 3">
+							No Icon 3
+						</Pill>
+					</FilterPillGroup>
+				</div>
 			</div>
 		);
 	},
