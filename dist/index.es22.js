@@ -1,12 +1,12 @@
 import { j as s } from "./index.es4.js";
-import * as m from "react";
-import { cva as N } from "class-variance-authority";
-import w from "./index.es45.js";
-import g from "./index.es46.js";
-import h from "./index.es47.js";
-import j from "./index.es48.js";
+import * as d from "react";
+import { cva as h } from "class-variance-authority";
+import w from "./index.es41.js";
+import g from "./index.es42.js";
+import N from "./index.es43.js";
+import y from "./index.es44.js";
 import { cn as i } from "./index.es24.js";
-const y = N(
+const j = h(
   "pill text-3.5 inline-flex w-auto min-w-[unset] items-center gap-[0.4em] rounded-full border border-transparent px-1.75 py-0.25 leading-[1.2] transition-colors",
   {
     variants: {
@@ -16,7 +16,8 @@ const y = N(
         success: "bg-message-success text-text-success",
         info: "bg-message-info text-blue",
         message: "bg-message-default text-text-base",
-        filter: "bg-grey-dark text-black hover:bg-border-light data-[state=active]:bg-red data-[state=active]:text-white data-[state=active]:hover:bg-red"
+        filter: "bg-grey-dark text-black hover:bg-border-light data-[state=active]:bg-red data-[state=active]:text-white data-[state=active]:hover:bg-red",
+        "filter-outline": "hover:bg-grey-light border-2 border-grey-dark bg-white text-black data-[state=active]:border-red data-[state=active]:bg-red data-[state=active]:text-white data-[state=active]:hover:bg-red"
       },
       inverted: {
         true: ""
@@ -61,10 +62,10 @@ const y = N(
       inverted: !1
     }
   }
-), p = m.forwardRef(
+), p = d.forwardRef(
   // eslint-disable-next-line complexity
   ({
-    className: f,
+    className: u,
     variant: r,
     inverted: a,
     size: e,
@@ -72,20 +73,20 @@ const y = N(
     onToggle: c,
     showIcon: l = !0,
     value: x,
-    children: d,
+    children: f,
     ...t
   }, n) => {
-    const u = r === "filter" && c !== void 0, b = (v) => {
-      u && c?.(), t.onClick?.(v);
+    const m = (r === "filter" || r === "filter-outline") && c !== void 0, b = (v) => {
+      m && c?.(), t.onClick?.(v);
     };
     return /* @__PURE__ */ s.jsxs(
       "div",
       {
         ref: n,
         className: i(
-          y({ variant: r, inverted: a, size: e, className: f }),
+          j({ variant: r, inverted: a, size: e, className: u }),
           o && "data-[state=active]",
-          u && "cursor-pointer"
+          m && "cursor-pointer"
         ),
         "data-state": o ? "active" : "inactive",
         onClick: b,
@@ -110,7 +111,7 @@ const y = N(
             }
           ),
           l && r === "error" && /* @__PURE__ */ s.jsx(
-            h,
+            N,
             {
               className: i(
                 a ? "fill-white" : "fill-text-error",
@@ -119,7 +120,7 @@ const y = N(
             }
           ),
           l && r === "success" && /* @__PURE__ */ s.jsx(
-            j,
+            y,
             {
               className: i(
                 a ? "fill-white" : "fill-text-success",
@@ -127,11 +128,14 @@ const y = N(
               )
             }
           ),
-          d,
-          l && r === "filter" && o && /* @__PURE__ */ s.jsx(
+          f,
+          l && (r === "filter" || r === "filter-outline") && o && /* @__PURE__ */ s.jsx(
             w,
             {
-              className: i("fill-white", e === "md" || e === "lg" || e === "xl" ? "size-4" : "size-3")
+              className: i(
+                "fill-white",
+                e === "md" || e === "lg" || e === "xl" ? "size-4" : "size-3"
+              )
             }
           )
         ]
@@ -140,9 +144,9 @@ const y = N(
   }
 );
 p.displayName = "Pill";
-const k = m.forwardRef(
+const k = d.forwardRef(
   ({
-    className: f,
+    className: u,
     activeValues: r,
     onValueToggle: a,
     size: e = "default",
@@ -150,11 +154,11 @@ const k = m.forwardRef(
     children: c,
     ...l
   }, x) => {
-    const d = m.Children.map(c, (t) => {
-      if (m.isValidElement(t) && t.type === p && t.props.variant === "filter") {
-        const n = t.props.value || (typeof t.props.children == "string" ? t.props.children : ""), u = r.includes(n);
-        return m.cloneElement(t, {
-          active: u,
+    const f = d.Children.map(c, (t) => {
+      if (d.isValidElement(t) && t.type === p && (t.props.variant === "filter" || t.props.variant === "filter-outline")) {
+        const n = t.props.value || (typeof t.props.children == "string" ? t.props.children : ""), m = r.includes(n);
+        return d.cloneElement(t, {
+          active: m,
           size: e,
           showIcon: o,
           onToggle: () => a(n),
@@ -167,9 +171,9 @@ const k = m.forwardRef(
       "div",
       {
         ref: x,
-        className: i("flex flex-wrap gap-2", f),
+        className: i("flex flex-wrap gap-2", u),
         ...l,
-        children: d
+        children: f
       }
     );
   }
@@ -178,6 +182,6 @@ k.displayName = "FilterPillGroup";
 export {
   k as FilterPillGroup,
   p as Pill,
-  y as pillVariants
+  j as pillVariants
 };
 //# sourceMappingURL=index.es22.js.map

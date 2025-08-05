@@ -1,6 +1,6 @@
-import * as e from "react";
-const o = (t) => /* @__PURE__ */ e.createElement("svg", { width: 21, height: 21, viewBox: "0 0 11 12", fill: "currentColor", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { id: "Vector", d: "M8.83784 5.50883V9.60163C8.83784 9.9725 8.6919 10.3282 8.43214 10.5904C8.17238 10.8527 7.82006 11 7.4527 11H2.38514C2.01777 11 1.66546 10.8527 1.4057 10.5904C1.14593 10.3282 1 9.9725 1 9.60163V4.19913C1 3.82826 1.14593 3.47258 1.4057 3.21033C1.66546 2.94808 2.01777 2.80076 2.38514 2.80076H5.78378M10 3.94682V1M10 1H7.08108M10 1L3.5 8.5", stroke: "currentColor", fill: "none", strokeLinecap: "round", strokeLinejoin: "round" }));
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z" }));
 export {
-  o as default
+  t as default
 };
 //# sourceMappingURL=index.es32.js.map

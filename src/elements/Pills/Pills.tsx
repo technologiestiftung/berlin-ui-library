@@ -19,6 +19,8 @@ const pillVariants = cva(
 				message: "bg-message-default text-text-base",
 				filter:
 					"bg-grey-dark text-black hover:bg-border-light data-[state=active]:bg-red data-[state=active]:text-white data-[state=active]:hover:bg-red",
+				"filter-outline":
+					"hover:bg-grey-light border-2 border-grey-dark bg-white text-black data-[state=active]:border-red data-[state=active]:bg-red data-[state=active]:text-white data-[state=active]:hover:bg-red",
 			},
 			inverted: {
 				true: "",
@@ -103,7 +105,9 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 		},
 		ref,
 	) => {
-		const isToggleable = variant === "filter" && onToggle !== undefined;
+		const isToggleable =
+			(variant === "filter" || variant === "filter-outline") &&
+			onToggle !== undefined;
 
 		const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
 			if (isToggleable) {
@@ -128,7 +132,9 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 					<InfoIcon
 						className={cn(
 							inverted ? "fill-white" : "fill-blue",
-							size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3",
+							size === "md" || size === "lg" || size === "xl"
+								? "size-4"
+								: "size-3",
 						)}
 					/>
 				)}
@@ -136,7 +142,9 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 					<InfoIcon
 						className={cn(
 							inverted ? "fill-white" : "fill-text-base",
-							size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3",
+							size === "md" || size === "lg" || size === "xl"
+								? "size-4"
+								: "size-3",
 						)}
 					/>
 				)}
@@ -144,7 +152,9 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 					<ErrorIcon
 						className={cn(
 							inverted ? "fill-white" : "fill-text-error",
-							size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3",
+							size === "md" || size === "lg" || size === "xl"
+								? "size-4"
+								: "size-3",
 						)}
 					/>
 				)}
@@ -152,16 +162,25 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 					<SuccessIcon
 						className={cn(
 							inverted ? "fill-white" : "fill-text-success",
-							size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3",
+							size === "md" || size === "lg" || size === "xl"
+								? "size-4"
+								: "size-3",
 						)}
 					/>
 				)}
 				{children}
-				{showIcon && variant === "filter" && active && (
-					<TimesIcon
-						className={cn("fill-white", size === "md" || size === "lg" || size === "xl" ? "size-4" : "size-3")}
-					/>
-				)}
+				{showIcon &&
+					(variant === "filter" || variant === "filter-outline") &&
+					active && (
+						<TimesIcon
+							className={cn(
+								"fill-white",
+								size === "md" || size === "lg" || size === "xl"
+									? "size-4"
+									: "size-3",
+							)}
+						/>
+					)}
 			</div>
 		);
 	},
@@ -207,7 +226,8 @@ const FilterPillGroup = React.forwardRef<HTMLDivElement, FilterPillGroupProps>(
 			if (
 				React.isValidElement<PillProps>(child) &&
 				child.type === Pill &&
-				child.props.variant === "filter"
+				(child.props.variant === "filter" ||
+					child.props.variant === "filter-outline")
 			) {
 				// Get the value from the child's value prop or use the child's text content
 				const value =

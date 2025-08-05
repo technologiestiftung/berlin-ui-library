@@ -10,6 +10,8 @@ export declare const Info: Story;
 export declare const Message: Story;
 export declare const Filter: Story;
 export declare const FilterActive: Story;
+export declare const FilterOutline: Story;
+export declare const FilterOutlineActive: Story;
 export declare const FilterToggle: Story;
 export declare const Inverted: Story;
 export declare const ErrorInverted: Story;

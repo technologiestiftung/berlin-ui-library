@@ -1,7 +1,7 @@
 import { VariantProps } from 'class-variance-authority';
 import * as React from "react";
 declare const pillVariants: (props?: ({
-    variant?: "default" | "filter" | "error" | "message" | "success" | "info" | null | undefined;
+    variant?: "default" | "filter" | "error" | "message" | "success" | "info" | "filter-outline" | null | undefined;
     inverted?: boolean | null | undefined;
     size?: "default" | "md" | "lg" | "xl" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;

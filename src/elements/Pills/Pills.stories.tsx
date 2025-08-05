@@ -68,6 +68,21 @@ export const FilterActive: Story = {
 	},
 };
 
+export const FilterOutline: Story = {
+	args: {
+		children: "Outline Filter Pill",
+		variant: "filter-outline",
+	},
+};
+
+export const FilterOutlineActive: Story = {
+	args: {
+		children: "Active Outline Filter Pill",
+		variant: "filter-outline",
+		active: true,
+	},
+};
+
 export const FilterToggle: Story = {
 	render: () => {
 		// Using React hooks in Storybook render function
@@ -238,6 +253,10 @@ export const AllVariants: Story = {
 				<Pill variant="filter">Filter</Pill>
 				<Pill variant="filter" active>
 					Active Filter
+				</Pill>
+				<Pill variant="filter-outline">Filter Outline</Pill>
+				<Pill variant="filter-outline" active>
+					Active Filter Outline
 				</Pill>
 			</div>
 
