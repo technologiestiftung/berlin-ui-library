@@ -1,12 +1,12 @@
 import { j as a } from "./index.es4.js";
-import { FormField as b, FormItem as j, FormLabel as p, FormControl as g, FormDescription as C, FormMessage as F } from "./index.es11.js";
+import { FormField as j, FormItem as b, FormLabel as p, FormControl as g, FormDescription as C, FormMessage as F } from "./index.es11.js";
 import { Input as h } from "./index.es14.js";
-import { Textarea as N } from "./index.es37.js";
-import { Select as $, SelectTrigger as w, SelectValue as f, SelectContent as S, SelectGroup as T, SelectItem as k } from "./index.es38.js";
+import { Textarea as N } from "./index.es36.js";
+import { Select as $, SelectTrigger as w, SelectValue as f, SelectContent as S, SelectGroup as T, SelectItem as k } from "./index.es37.js";
 import { Checkbox as x } from "./index.es17.js";
-import { RadioGroup as D, RadioGroupItem as V } from "./index.es39.js";
+import { RadioGroup as D, RadioGroupItem as V } from "./index.es38.js";
 import { Info as I } from "lucide-react";
-import { TooltipProvider as R, Tooltip as A, TooltipTrigger as E, TooltipContent as G } from "./index.es40.js";
+import { TooltipProvider as R, Tooltip as A, TooltipTrigger as E, TooltipContent as G } from "./index.es39.js";
 import { Label as u } from "./index.es15.js";
 const z = (s, e) => {
   const { name: n, description: c, placeholder: t, isDisabled: l } = s, d = e.value !== void 0 ? e.value : "";
@@ -189,15 +189,15 @@ function ee({
 }) {
   const { id: n, name: c, description: t, isRequired: l, helperText: d } = s;
   return /* @__PURE__ */ a.jsx(
-    b,
+    j,
     {
       control: e.control,
       name: n,
-      render: ({ field: r }) => /* @__PURE__ */ a.jsxs(j, { children: [
+      render: ({ field: r }) => /* @__PURE__ */ a.jsxs(b, { children: [
         /* @__PURE__ */ a.jsxs("div", { className: "flex items-center justify-between", children: [
-          /* @__PURE__ */ a.jsxs(p, { className: "relative font-bold", children: [
+          /* @__PURE__ */ a.jsxs(p, { className: "font-bold", children: [
             c,
-            l && /* @__PURE__ */ a.jsx("span", { className: "absolute -top-2 ml-1 text-[1.75em] text-decorative-destructive", children: "*" })
+            l && /* @__PURE__ */ a.jsx("span", { className: "ml-1 text-[1.75em] text-decorative-destructive align-top leading-none", children: "*" })
           ] }),
           d && B(d)
         ] }),

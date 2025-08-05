@@ -1,12 +1,12 @@
-import { j as a } from "./index.es4.js";
-import * as n from "react";
-import { cva as b } from "class-variance-authority";
-import v from "./index.es41.js";
-import d from "./index.es42.js";
-import w from "./index.es43.js";
-import h from "./index.es44.js";
+import { j as s } from "./index.es4.js";
+import * as m from "react";
+import { cva as N } from "class-variance-authority";
+import w from "./index.es45.js";
+import g from "./index.es46.js";
+import h from "./index.es47.js";
+import j from "./index.es48.js";
 import { cn as i } from "./index.es24.js";
-const N = b(
+const y = N(
   "pill text-3.5 inline-flex w-auto min-w-[unset] items-center gap-[0.4em] rounded-full border border-transparent px-1.75 py-0.25 leading-[1.2] transition-colors",
   {
     variants: {
@@ -23,7 +23,9 @@ const N = b(
       },
       size: {
         default: "",
-        big: "text-3.5 rounded-full px-3.5 py-1.5 font-normal"
+        md: "text-3.5 rounded-full px-3.5 py-1.5 font-normal",
+        lg: "text-4 rounded-full px-4 py-2 font-medium",
+        xl: "text-4.5 rounded-full px-5 py-2.5 font-medium"
       }
     },
     compoundVariants: [
@@ -59,75 +61,77 @@ const N = b(
       inverted: !1
     }
   }
-), x = n.forwardRef(
+), p = m.forwardRef(
   // eslint-disable-next-line complexity
   ({
-    className: m,
-    variant: t,
-    inverted: r,
-    size: s,
+    className: f,
+    variant: r,
+    inverted: a,
+    size: e,
     active: o,
     onToggle: c,
-    children: u,
-    ...f
-  }, e) => {
-    const l = t === "filter" && c !== void 0, g = (p) => {
-      l && c?.(), f.onClick?.(p);
+    showIcon: l = !0,
+    value: x,
+    children: d,
+    ...t
+  }, n) => {
+    const u = r === "filter" && c !== void 0, b = (v) => {
+      u && c?.(), t.onClick?.(v);
     };
-    return /* @__PURE__ */ a.jsxs(
+    return /* @__PURE__ */ s.jsxs(
       "div",
       {
-        ref: e,
+        ref: n,
         className: i(
-          N({ variant: t, inverted: r, size: s, className: m }),
+          y({ variant: r, inverted: a, size: e, className: f }),
           o && "data-[state=active]",
-          l && "cursor-pointer"
+          u && "cursor-pointer"
         ),
         "data-state": o ? "active" : "inactive",
-        onClick: g,
-        ...f,
+        onClick: b,
+        ...t,
         children: [
-          t === "info" && /* @__PURE__ */ a.jsx(
-            d,
+          l && r === "info" && /* @__PURE__ */ s.jsx(
+            g,
             {
               className: i(
-                r ? "fill-white" : "fill-blue",
-                s === "big" ? "size-4" : "size-3"
+                a ? "fill-white" : "fill-blue",
+                e === "md" || e === "lg" || e === "xl" ? "size-4" : "size-3"
               )
             }
           ),
-          t === "message" && /* @__PURE__ */ a.jsx(
-            d,
+          l && r === "message" && /* @__PURE__ */ s.jsx(
+            g,
             {
               className: i(
-                r ? "fill-white" : "fill-text-base",
-                s === "big" ? "size-4" : "size-3"
+                a ? "fill-white" : "fill-text-base",
+                e === "md" || e === "lg" || e === "xl" ? "size-4" : "size-3"
               )
             }
           ),
-          t === "error" && /* @__PURE__ */ a.jsx(
-            w,
-            {
-              className: i(
-                r ? "fill-white" : "fill-text-error",
-                s === "big" ? "size-4" : "size-3"
-              )
-            }
-          ),
-          t === "success" && /* @__PURE__ */ a.jsx(
+          l && r === "error" && /* @__PURE__ */ s.jsx(
             h,
             {
               className: i(
-                r ? "fill-white" : "fill-text-success",
-                s === "big" ? "size-4" : "size-3"
+                a ? "fill-white" : "fill-text-error",
+                e === "md" || e === "lg" || e === "xl" ? "size-4" : "size-3"
               )
             }
           ),
-          u,
-          t === "filter" && o && /* @__PURE__ */ a.jsx(
-            v,
+          l && r === "success" && /* @__PURE__ */ s.jsx(
+            j,
             {
-              className: i("fill-white", s === "big" ? "size-4" : "size-3")
+              className: i(
+                a ? "fill-white" : "fill-text-success",
+                e === "md" || e === "lg" || e === "xl" ? "size-4" : "size-3"
+              )
+            }
+          ),
+          d,
+          l && r === "filter" && o && /* @__PURE__ */ s.jsx(
+            w,
+            {
+              className: i("fill-white", e === "md" || e === "lg" || e === "xl" ? "size-4" : "size-3")
             }
           )
         ]
@@ -135,43 +139,45 @@ const N = b(
     );
   }
 );
-x.displayName = "Pill";
-const j = n.forwardRef(
+p.displayName = "Pill";
+const k = m.forwardRef(
   ({
-    className: m,
-    activeValues: t,
-    onValueToggle: r,
-    size: s = "default",
-    children: o,
-    ...c
-  }, u) => {
-    const f = n.Children.map(o, (e) => {
-      if (n.isValidElement(e) && e.type === x && e.props.variant === "filter") {
-        const l = e.props.value || (typeof e.props.children == "string" ? e.props.children : ""), g = t.includes(l);
-        return n.cloneElement(e, {
-          active: g,
-          size: s,
-          onToggle: () => r(l),
-          value: l
+    className: f,
+    activeValues: r,
+    onValueToggle: a,
+    size: e = "default",
+    showIcon: o = !0,
+    children: c,
+    ...l
+  }, x) => {
+    const d = m.Children.map(c, (t) => {
+      if (m.isValidElement(t) && t.type === p && t.props.variant === "filter") {
+        const n = t.props.value || (typeof t.props.children == "string" ? t.props.children : ""), u = r.includes(n);
+        return m.cloneElement(t, {
+          active: u,
+          size: e,
+          showIcon: o,
+          onToggle: () => a(n),
+          value: n
         });
       }
-      return e;
+      return t;
     });
-    return /* @__PURE__ */ a.jsx(
+    return /* @__PURE__ */ s.jsx(
       "div",
       {
-        ref: u,
-        className: i("flex flex-wrap gap-2", m),
-        ...c,
-        children: f
+        ref: x,
+        className: i("flex flex-wrap gap-2", f),
+        ...l,
+        children: d
       }
     );
   }
 );
-j.displayName = "FilterPillGroup";
+k.displayName = "FilterPillGroup";
 export {
-  j as FilterPillGroup,
-  x as Pill,
-  N as pillVariants
+  k as FilterPillGroup,
+  p as Pill,
+  y as pillVariants
 };
 //# sourceMappingURL=index.es22.js.map

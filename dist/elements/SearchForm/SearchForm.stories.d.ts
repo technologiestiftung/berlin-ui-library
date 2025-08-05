@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { SearchForm } from "./SearchForm";
+import { Meta, StoryObj } from '@storybook/react';
+import { SearchForm } from './SearchForm';
 declare const meta: Meta<typeof SearchForm>;
 export default meta;
 type Story = StoryObj<typeof SearchForm>;

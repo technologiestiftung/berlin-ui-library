@@ -1,4 +1,4 @@
-import React from "react";
+import { default as React } from 'react';
 declare const ShareFacebookIcon: React.FC;
 export default ShareFacebookIcon;
 //# sourceMappingURL=share-facebook-icon.d.ts.map
