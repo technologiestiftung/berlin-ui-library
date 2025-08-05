@@ -97,6 +97,7 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 			active,
 			onToggle,
 			showIcon = true,
+			value: _value,
 			children,
 			...props
 		},
