@@ -37,6 +37,10 @@ export interface FilterPillGroupProps extends React.HTMLAttributes<HTMLDivElemen
      * Size variant for all pills in the group
      */
     size?: "default" | "md" | "lg" | "xl";
+    /**
+     * Whether to show icons for all pills in the group
+     */
+    showIcon?: boolean;
 }
 declare const FilterPillGroup: React.ForwardRefExoticComponent<FilterPillGroupProps & React.RefAttributes<HTMLDivElement>>;
 export { Pill, pillVariants, FilterPillGroup };
