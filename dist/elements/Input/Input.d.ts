@@ -7,6 +7,8 @@ declare const inputVariants: (props?: ({
 declare const Input: React.ForwardRefExoticComponent<Omit<React.ClassAttributes<HTMLInputElement> & React.InputHTMLAttributes<HTMLInputElement> & VariantProps<(props?: ({
     variant?: "default" | "outline" | null | undefined;
     size?: "default" | "md" | "lg" | null | undefined;
-} & import('class-variance-authority/types').ClassProp) | undefined) => string>, "ref"> & React.RefAttributes<HTMLInputElement>>;
+} & import('class-variance-authority/types').ClassProp) | undefined) => string> & {
+    invalid?: boolean;
+}, "ref"> & React.RefAttributes<HTMLInputElement>>;
 export { Input, inputVariants };
 //# sourceMappingURL=Input.d.ts.map

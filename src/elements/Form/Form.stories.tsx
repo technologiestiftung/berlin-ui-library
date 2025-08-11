@@ -76,11 +76,15 @@ export const WithError: Story = {
 						name="name"
 						rules={{ required: true }}
 						control={methods.control}
-						render={({ field }) => (
+						render={({ field, fieldState }) => (
 							<FormItem>
 								<FormLabel>Name</FormLabel>
 								<FormControl>
-									<Input {...field} placeholder="Your name" />
+									<Input
+										{...field}
+										placeholder="Your name"
+										invalid={!!fieldState.error}
+									/>
 								</FormControl>
 								<FormDescription>Enter your full name.</FormDescription>
 								<FormMessage />

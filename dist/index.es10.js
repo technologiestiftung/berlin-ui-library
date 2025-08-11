@@ -2,15 +2,15 @@ import { j as e } from "./index.es4.js";
 import { Slot as p } from "@radix-ui/react-slot";
 import { cva as f } from "class-variance-authority";
 import { cn as h } from "./index.es24.js";
-import u from "./index.es33.js";
-import n from "./index.es34.js";
-import m from "./index.es35.js";
-import y from "./index.es26.js";
-import w from "./index.es36.js";
-import i from "./index.es37.js";
-import j from "./index.es38.js";
-import k from "./index.es39.js";
-import v from "./index.es40.js";
+import u from "./index.es32.js";
+import n from "./index.es33.js";
+import m from "./index.es34.js";
+import y from "./index.es27.js";
+import w from "./index.es35.js";
+import i from "./index.es36.js";
+import j from "./index.es37.js";
+import k from "./index.es38.js";
+import v from "./index.es39.js";
 const N = (r, t) => {
   if (r === "light" || r === "white" || r === "clean" || r === "link" || r === "linkWithIcon")
     return null;

@@ -26,12 +26,18 @@ const inputVariants = cva(
 
 const Input = React.forwardRef<
 	HTMLInputElement,
-	React.ComponentProps<"input"> & VariantProps<typeof inputVariants>
->(({ className, type, variant, size, ...props }, ref) => {
+	React.ComponentProps<"input"> &
+		VariantProps<typeof inputVariants> & {
+			invalid?: boolean;
+		}
+>(({ className, type, variant, size, invalid, ...props }, ref) => {
 	return (
 		<input
 			type={type}
-			className={cn(inputVariants({ variant, size, className }))}
+			className={cn(
+				inputVariants({ variant, size, className }),
+				invalid && "border-2 border-l-[6px] border-decorative-destructive",
+			)}
 			ref={ref}
 			{...props}
 		/>
