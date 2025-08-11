@@ -117,18 +117,10 @@ const FormLabel = React.forwardRef<
 	React.ElementRef<typeof LabelPrimitive.Root>,
 	React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
 >(({ className, children, ...props }, ref) => {
-	const { error, formItemId, required } = useFormField();
+	const { formItemId, required } = useFormField();
 
 	return (
-		<Label
-			ref={ref}
-			className={cn(
-				error && "font-bold text-decorative-destructive",
-				className,
-			)}
-			htmlFor={formItemId}
-			{...props}
-		>
+		<Label ref={ref} className={cn(className)} htmlFor={formItemId} {...props}>
 			{children}
 			{required && (
 				<span className="ml-1 text-[1.75em] text-decorative-destructive">
@@ -143,7 +135,7 @@ FormLabel.displayName = "FormLabel";
 const FormControl = React.forwardRef<
 	React.ElementRef<typeof Slot>,
 	React.ComponentPropsWithoutRef<typeof Slot>
->(({ ...props }, ref) => {
+>(({ className, ...props }, ref) => {
 	const { error, formItemId, formDescriptionId, formMessageId } =
 		useFormField();
 
@@ -151,7 +143,11 @@ const FormControl = React.forwardRef<
 		<Slot
 			ref={ref}
 			id={formItemId}
-			className="p-2"
+			className={cn(
+				"p-2",
+				error && "border-2 border-l-[6px] border-decorative-destructive",
+				className,
+			)}
 			aria-describedby={
 				!error
 					? `${formDescriptionId}`
@@ -197,7 +193,7 @@ const FormMessage = React.forwardRef<
 			ref={ref}
 			id={formMessageId}
 			className={cn(
-				"text-sm font-medium text-decorative-destructive",
+				"mb-6 block w-fit min-w-full border border-red-50 bg-red-50 p-[18px] text-red-800",
 				className,
 			)}
 			{...props}

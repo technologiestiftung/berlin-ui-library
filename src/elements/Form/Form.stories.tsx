@@ -74,6 +74,7 @@ export const WithError: Story = {
 				<form onSubmit={methods.handleSubmit(() => {})} className="space-y-4">
 					<FormField<{ name: string }>
 						name="name"
+						rules={{ required: true }}
 						control={methods.control}
 						render={({ field }) => (
 							<FormItem>

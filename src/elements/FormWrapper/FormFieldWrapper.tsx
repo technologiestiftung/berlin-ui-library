@@ -510,7 +510,7 @@ function FormFieldWrapper({
 						<FormLabel className="font-bold">
 							{name}
 							{isRequired && (
-								<span className="ml-1 text-[1.75em] text-decorative-destructive align-top leading-none">
+								<span className="ml-1 align-top text-[1.75em] leading-none text-decorative-destructive">
 									*
 								</span>
 							)}
