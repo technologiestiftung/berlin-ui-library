@@ -1,4 +1,4 @@
-import SearchIcon from "@/assets/icons/search_icon.svg?react";
+import SearchIcon from "@/assets/icons/search.svg?react";
 import { useLanguage, t } from "./LanguageProvider";
 
 export interface SearchButtonProps {

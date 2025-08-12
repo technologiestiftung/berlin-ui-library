@@ -1,9 +1,9 @@
 import { j as e } from "./index.es4.js";
 import { useState as b } from "react";
 import { cn as x } from "./index.es24.js";
-import g from "./index.es34.js";
-import v from "./index.es32.js";
-function I({
+import g from "./index.es37.js";
+import v from "./index.es35.js";
+function C({
   placeholder: a = "Suchbegriff",
   onSubmit: i,
   defaultValue: o = "",
@@ -54,6 +54,6 @@ function I({
   ] }) }) });
 }
 export {
-  I as SearchForm
+  C as SearchForm
 };
 //# sourceMappingURL=index.es7.js.map

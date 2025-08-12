@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowUpIcon from "@/assets/icons/arrow_up_icon.svg?react";
+import ArrowUpIcon from "@/assets/icons/arrow-up.svg?react";
 import {
 	Accordion,
 	AccordionContent,

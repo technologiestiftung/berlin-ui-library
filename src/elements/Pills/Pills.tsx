@@ -1,9 +1,9 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import TimesIcon from "@/assets/icons/times_icon.svg?react";
-import InfoIcon from "@/assets/icons/info_icon.svg?react";
-import ErrorIcon from "@/assets/icons/error_icon.svg?react";
-import SuccessIcon from "@/assets/icons/success_icon.svg?react";
+import TimesIcon from "@/assets/icons/times.svg?react";
+import InfoIcon from "@/assets/icons/info.svg?react";
+import ErrorIcon from "@/assets/icons/error.svg?react";
+import SuccessIcon from "@/assets/icons/success.svg?react";
 
 import { cn } from "@/lib/utils";
 

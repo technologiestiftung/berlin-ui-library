@@ -5,7 +5,7 @@ import * as DrawerPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import CloseIcon from "@/assets/icons/close_icon.svg?react";
+import CloseIcon from "@/assets/icons/close.svg?react";
 
 const Drawer = DrawerPrimitive.Root;
 

@@ -1,6 +1,6 @@
 import React, { RefObject, useRef, useState } from "react";
-import ChevronDown from "@/assets/icons/chevron_down.svg?react";
-import ChevronUp from "@/assets/icons/chevron_up.svg?react";
+import ChevronDown from "@/assets/icons/chevron-down.svg?react";
+import ChevronUp from "@/assets/icons/chevron-up.svg?react";
 import { useLanguage, t } from "./LanguageProvider";
 
 /**

@@ -3,8 +3,8 @@
 import React, { useState, FormEvent } from "react";
 import { SearchFormProps } from "./types";
 import { cn } from "@/lib/utils";
-import SearchIcon from "@/assets/icons/search_icon.svg?react";
-import ArrowRightIcon from "@/assets/icons/arrow_right_icon.svg?react";
+import SearchIcon from "@/assets/icons/search.svg?react";
+import ArrowRightIcon from "@/assets/icons/arrow-right.svg?react";
 
 /**
  * SearchForm component for Berlin UI Library

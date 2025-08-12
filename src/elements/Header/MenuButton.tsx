@@ -1,4 +1,4 @@
-import BarsIcon from "@/assets/icons/bars_icon.svg?react";
+import BarsIcon from "@/assets/icons/bars.svg?react";
 import { useLanguage, t } from "./LanguageProvider";
 
 export interface MenuButtonProps {

@@ -4,15 +4,15 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import ArrowRightIcon from "@/assets/icons/arrow_right_icon.svg?react";
-import ArrowLeftIcon from "@/assets/icons/arrow_left_icon.svg?react";
-import SearchIcon from "@/assets/icons/search_icon.svg?react";
-import CloseIcon from "@/assets/icons/close_icon.svg?react";
-import FilterIcon from "@/assets/icons/filter_icon.svg?react";
-import LinkIcon from "@/assets/icons/link_icon.svg?react";
-import DownloadIcon from "@/assets/icons/download_icon.svg?react";
-import PlayIcon from "@/assets/icons/play_icon.svg?react";
-import CartIcon from "@/assets/icons/cart_icon.svg?react";
+import ArrowRightIcon from "@/assets/icons/arrow-right.svg?react";
+import ArrowLeftIcon from "@/assets/icons/arrow-left.svg?react";
+import SearchIcon from "@/assets/icons/search.svg?react";
+import CloseIcon from "@/assets/icons/close.svg?react";
+import FilterIcon from "@/assets/icons/filter.svg?react";
+import LinkIcon from "@/assets/icons/link.svg?react";
+import DownloadIcon from "@/assets/icons/download.svg?react";
+import PlayIcon from "@/assets/icons/play.svg?react";
+import CartIcon from "@/assets/icons/cart.svg?react";
 
 import { ButtonProps } from "./types";
 
@@ -33,7 +33,7 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 		return (
 			<span className="flex h-full w-full items-center justify-center">
 				<CloseIcon
-					className={`${isDisabled ? "text-gray-500" : "text-black"}`}
+					className={`size-6 ${isDisabled ? "text-gray-500" : "text-black"}`}
 				/>
 			</span>
 		);
@@ -44,9 +44,7 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 		return (
 			<span className="flex h-full w-full items-center justify-center">
 				<ArrowLeftIcon
-					className={`${isDisabled ? "text-gray-500" : "text-black"}`}
-					width="24"
-					height="24"
+					className={`size-6 ${isDisabled ? "text-gray-500" : "text-black"}`}
 				/>
 			</span>
 		);
@@ -56,9 +54,7 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 	if (variant === "back-link") {
 		return (
 			<ArrowLeftIcon
-				className={`mr-1 ${isDisabled ? "text-gray-500" : "text-[#0047d3]"}`}
-				width="16"
-				height="16"
+				className={`mr-1 size-4 ${isDisabled ? "text-gray-500" : "text-[#0047d3]"}`}
 			/>
 		);
 	}
@@ -75,19 +71,19 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 				variant === "colored" ||
 				variant === "fulltone" ||
 				variant === "light-fulltone" ? (
-					<ArrowRightIcon className="text-white" />
+					<ArrowRightIcon className="size-5 text-white" />
 				) : variant === "search" ? (
-					<SearchIcon className="size-[18px] fill-white" />
+					<SearchIcon className="size-[18px] text-white" />
 				) : variant === "filter" ? (
-					<FilterIcon className="fill-white" />
+					<FilterIcon className="size-4 text-white" />
 				) : variant === "extern" ? (
-					<LinkIcon className="text-white" />
+					<LinkIcon className="size-4 text-white" />
 				) : variant === "download" ? (
-					<DownloadIcon className="size-[18px] fill-white" />
+					<DownloadIcon className="size-[18px] text-white" />
 				) : variant === "addtocart" ? (
-					<CartIcon className="size-[18px] fill-white" />
+					<CartIcon className="size-[18px] text-white" />
 				) : variant === "play" ? (
-					<PlayIcon className="size-[18px] fill-white" />
+					<PlayIcon className="size-[18px] text-white" />
 				) : null}
 			</span>
 		</>

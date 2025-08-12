@@ -1,5 +1,5 @@
-import AccessibilityIcon from "@/assets/icons/accessibility_icon.svg?react";
 import { useLanguage, t } from "./LanguageProvider";
+import AccessibilityIcon from "@/assets/icons/universal-access.svg?react";
 
 export interface AccessibilityButtonProps {
 	/**
