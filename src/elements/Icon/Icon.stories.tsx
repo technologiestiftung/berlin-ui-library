@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Meta, StoryObj } from "@storybook/react";
 import { Icon } from "./Icon";
 
@@ -120,7 +121,6 @@ export const IconGallery: Story = {
 	render: () => (
 		<div className="grid max-w-6xl grid-cols-8 gap-4 p-4">
 			{[
-				"accessibility",
 				"arrow-down",
 				"arrow-left",
 				"arrow-right",
