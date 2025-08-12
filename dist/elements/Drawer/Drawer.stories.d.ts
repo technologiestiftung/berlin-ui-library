@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Drawer } from "./Drawer";
+import { Meta, StoryObj } from '@storybook/react';
+import { Drawer } from './Drawer';
 declare const meta: Meta<typeof Drawer>;
 export default meta;
 type Story = StoryObj<typeof Drawer>;

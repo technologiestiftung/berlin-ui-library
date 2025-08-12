@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { List } from "./List";
+import { Meta, StoryObj } from '@storybook/react';
+import { List } from './List';
 declare const meta: Meta<typeof List>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,3 +1,3 @@
-export { List, ListItem } from "./List";
-export type { ListProps, ListItemProps } from "./List";
+export { List, ListItem } from './List';
+export type { ListProps, ListItemProps } from './List';
 //# sourceMappingURL=index.d.ts.map

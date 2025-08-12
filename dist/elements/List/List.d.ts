@@ -1,4 +1,4 @@
-import React from "react";
+import { default as React } from 'react';
 export interface ListProps extends React.HTMLAttributes<HTMLElement> {
     variant?: "unordered" | "ordered";
     children: React.ReactNode;

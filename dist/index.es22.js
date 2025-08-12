@@ -1,10 +1,10 @@
 import { j as s } from "./index.es4.js";
-import * as d from "react";
+import * as m from "react";
 import { cva as h } from "class-variance-authority";
-import w from "./index.es47.js";
-import g from "./index.es48.js";
-import N from "./index.es49.js";
-import y from "./index.es50.js";
+import w from "./index.es61.js";
+import g from "./index.es62.js";
+import N from "./index.es63.js";
+import y from "./index.es64.js";
 import { cn as i } from "./index.es26.js";
 const j = h(
   "pill text-3.5 inline-flex w-auto min-w-[unset] items-center gap-[0.4em] rounded-full border border-transparent px-1.75 py-0.25 leading-[1.2] transition-colors",
@@ -62,7 +62,7 @@ const j = h(
       inverted: !1
     }
   }
-), p = d.forwardRef(
+), p = m.forwardRef(
   // eslint-disable-next-line complexity
   ({
     className: f,
@@ -70,14 +70,14 @@ const j = h(
     inverted: a,
     size: e,
     active: o,
-    onToggle: m,
+    onToggle: u,
     showIcon: l = !0,
     value: x,
     children: c,
     ...t
   }, n) => {
-    const u = (r === "filter" || r === "filter-outline") && m !== void 0, b = (v) => {
-      u && m?.(), t.onClick?.(v);
+    const d = (r === "filter" || r === "filter-outline") && u !== void 0, b = (v) => {
+      d && u?.(), t.onClick?.(v);
     };
     return /* @__PURE__ */ s.jsxs(
       "div",
@@ -86,10 +86,11 @@ const j = h(
         className: i(
           j({ variant: r, inverted: a, size: e, className: f }),
           o && "data-[state=active]",
-          u && "cursor-pointer"
+          d && "cursor-pointer"
         ),
         "data-state": o ? "active" : "inactive",
         onClick: b,
+        tabIndex: d ? 0 : void 0,
         ...t,
         children: [
           l && r === "info" && /* @__PURE__ */ s.jsx(
@@ -144,21 +145,21 @@ const j = h(
   }
 );
 p.displayName = "Pill";
-const k = d.forwardRef(
+const k = m.forwardRef(
   ({
     className: f,
     activeValues: r,
     onValueToggle: a,
     size: e = "default",
     showIcon: o = !0,
-    children: m,
+    children: u,
     ...l
   }, x) => {
-    const c = d.Children.map(m, (t) => {
-      if (d.isValidElement(t) && t.type === p && (t.props.variant === "filter" || t.props.variant === "filter-outline")) {
-        const n = t.props.value || (typeof t.props.children == "string" ? t.props.children : ""), u = r.includes(n);
-        return d.cloneElement(t, {
-          active: u,
+    const c = m.Children.map(u, (t) => {
+      if (m.isValidElement(t) && t.type === p && (t.props.variant === "filter" || t.props.variant === "filter-outline")) {
+        const n = t.props.value || (typeof t.props.children == "string" ? t.props.children : ""), d = r.includes(n);
+        return m.cloneElement(t, {
+          active: d,
           size: e,
           showIcon: o,
           onToggle: () => a(n),

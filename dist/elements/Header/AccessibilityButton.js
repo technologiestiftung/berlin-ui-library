@@ -1,8 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useLanguage, t } from "./LanguageProvider";
-import AccessibilityIcon from "@/assets/icons/universal-access.svg?react";
-export function AccessibilityButton({ onOpenAccessibility, className = "", }) {
-    const { translations } = useLanguage();
-    const label = t("accessibility", translations);
-    return (_jsxs("button", { className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${className}`, onClick: onOpenAccessibility, "aria-label": label, children: [_jsx(AccessibilityIcon, { className: "size-8" }), _jsx("span", { className: "whitespace-nowrap", children: label })] }));
-}

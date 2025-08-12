@@ -1,4 +1,4 @@
-import { MenuItem } from "./types";
+import { MenuItem } from './types';
 export interface MenuDrawerProps {
     /**
      * Whether the menu drawer is open

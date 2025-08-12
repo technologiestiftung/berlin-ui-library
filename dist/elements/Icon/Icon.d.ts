@@ -1,4 +1,4 @@
-import { IconName } from "./iconRegistry";
+import { IconName } from './iconRegistry';
 export type { IconName };
 export interface IconProps {
     /**

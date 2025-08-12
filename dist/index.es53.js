@@ -1,86 +1,63 @@
-import { j as e } from "./index.es4.js";
-import { useState as s } from "react";
-import { MenuButton as A } from "./index.es58.js";
-import { SearchButton as w } from "./index.es60.js";
-import { AccessibilityButton as C } from "./index.es62.js";
-import { SearchMenu as I } from "./index.es63.js";
-import { MenuDrawer as N } from "./index.es64.js";
-import { AccessibilityMenu as v } from "./index.es65.js";
-function q({
-  header: c,
-  caption: i,
-  url: l,
-  showSearchButton: a,
-  onSearch: o,
-  showMenuButton: m,
-  menuItems: p,
-  onOpenMenu: x
-}) {
-  const [h, n] = s(!1), [d, t] = s(!1), [f, r] = s(!1), u = () => {
-    n(!0), o();
-  }, j = () => {
-    n(!1);
-  }, b = (g) => {
-    console.warn("Search term:", g);
-  }, O = () => {
-    t(!0), x();
-  }, y = () => {
-    t(!1);
-  }, S = () => {
-    r(!0);
-  }, M = () => {
-    r(!1);
-  };
-  return /* @__PURE__ */ e.jsxs("div", { className: "relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]", children: [
-    /* @__PURE__ */ e.jsxs(
-      "a",
-      {
-        href: l,
-        className: "flex flex-col justify-center p-0 text-[15px] leading-[1.2] break-words md:text-base lg:p-[3px] lg:text-xl",
-        children: [
-          /* @__PURE__ */ e.jsx("span", { children: c }),
-          /* @__PURE__ */ e.jsx("span", { className: "block font-bold", children: i })
-        ]
-      }
-    ),
-    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[0.65rem] pt-[0.59rem] pb-[0.20rem] md:space-x-[1.05rem] md:pt-[0.69rem] md:pb-[0.22rem]", children: [
-      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(C, { onOpenAccessibility: S }),
-        /* @__PURE__ */ e.jsx(
-          v,
+import { j as r } from "./index.es4.js";
+import { Drawer as w, DrawerContent as C } from "./index.es6.js";
+import { useLanguage as D, t as d } from "./index.es5.js";
+import { ChevronDown as k } from "lucide-react";
+import { useState as I } from "react";
+function S({ isOpen: x, close: h, menuItems: a }) {
+  const { translations: o } = D(), [m, p] = I({}), c = (n) => {
+    p((s) => ({
+      ...s,
+      [n]: !s[n]
+    }));
+  }, f = (n) => n % 2 === 0 && n > 0 ? "bg-menu-background-dark pl-4" : n % 2 === 1 ? "bg-menu-background pl-4" : "border-t border-border-light", i = (n, s = 0, u = "") => n.map((e, g) => {
+    const l = `${u}${e.label}-${g}`, t = !!m[l], b = f(s), j = [
+      "flex h-[55px] items-center"
+      // Shadow class removed from here
+    ].join(" ").trim(), N = [
+      b,
+      t ? "shadow-[0_7px_7px_rgba(150,150,150,0.1)] relative z-10" : ""
+    ].join(" ").trim();
+    return /* @__PURE__ */ r.jsxs("div", { className: N, children: [
+      " ",
+      /* @__PURE__ */ r.jsxs("div", { className: j, children: [
+        e.icon && /* @__PURE__ */ r.jsx("span", { className: "mr-2", children: e.icon }),
+        /* @__PURE__ */ r.jsx(
+          "a",
           {
-            isOpen: f,
-            close: M,
-            accessibilityItems: []
+            href: e.href,
+            className: "m-[3px] flex w-full items-center px-[24px] py-[0.1rem] text-lg transition-colors duration-200 hover:underline",
+            onClick: (v) => {
+              e.href === "#" || e.href === "" ? (v.preventDefault(), e.children && e.children.length > 0 && c(l)) : e.children && e.children.length > 0;
+            },
+            children: e.label
+          }
+        ),
+        e.children && e.children.length > 0 && /* @__PURE__ */ r.jsx(
+          "div",
+          {
+            className: "mx-[3px] my-[0.5rem] cursor-pointer border-l border-black px-[0.7rem] pt-[0.3rem] pb-[0.4rem]",
+            onClick: () => c(l),
+            children: /* @__PURE__ */ r.jsx(
+              k,
+              {
+                className: `transform transition-transform duration-200 ${t ? "rotate-180" : ""}`
+              }
+            )
           }
         )
       ] }),
-      a && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(w, { onOpenSearch: u }),
-        /* @__PURE__ */ e.jsx(
-          I,
-          {
-            isOpen: h,
-            close: j,
-            onSearch: b
-          }
-        )
-      ] }),
-      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(A, { onOpenMenu: O }),
-        /* @__PURE__ */ e.jsx(
-          N,
-          {
-            isOpen: d,
-            close: y,
-            menuItems: p
-          }
-        )
+      t && e.children && e.children.length > 0 && /* @__PURE__ */ r.jsxs("div", { className: "flex flex-col", children: [
+        " ",
+        i(e.children, s + 1, `${l}-`)
       ] })
-    ] })
-  ] });
+    ] }, l);
+  });
+  return /* @__PURE__ */ r.jsx(w, { open: x, onOpenChange: (n) => !n && h(), children: /* @__PURE__ */ r.jsx(C, { className: "flex flex-col gap-2", children: /* @__PURE__ */ r.jsxs("div", { className: "text-base", children: [
+    /* @__PURE__ */ r.jsx("div", { className: "mb-5 flex flex-row items-center justify-between", children: /* @__PURE__ */ r.jsx("p", { className: "px-6 text-2xl font-bold", children: d("menu.title", o) || "Menu" }) }),
+    /* @__PURE__ */ r.jsx("div", { className: "flex flex-col gap-2", children: a.length > 0 ? i(a) : /* @__PURE__ */ r.jsx("p", { children: d("menu.noItems", o) || "No menu items available." }) })
+  ] }) }) });
 }
 export {
-  q as MainHeaderContent
+  S as MenuDrawer
 };
 //# sourceMappingURL=index.es53.js.map

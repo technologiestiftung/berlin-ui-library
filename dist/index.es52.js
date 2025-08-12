@@ -1,27 +1,26 @@
 import { j as e } from "./index.es4.js";
-import a from "./index.es61.js";
-function s({
-  logoUrl: o = "https://www.berlin.de",
-  logoComponent: t,
-  isSticky: r = !1
-}) {
-  return /* @__PURE__ */ e.jsx(
-    "div",
-    {
-      className: `sticky top-0 z-10 flex items-center justify-start border-b transition-[height,background-color,opacity,padding] duration-200 ease-in-out ${r ? "h-[3px] border-none bg-grey-darkest px-4 py-0 lg:px-6" : "h-11 border-gray-300 bg-white px-4 py-[0.25em] lg:px-6"}`,
-      children: /* @__PURE__ */ e.jsx(
-        "a",
-        {
-          href: o,
-          "aria-label": "Homepage Berlin.de",
-          className: `transition-opacity duration-200 ease-in-out ${r ? "opacity-0" : "opacity-100"}`,
-          children: t || /* @__PURE__ */ e.jsx("img", { src: a, alt: "Berlin.de Logo", className: "object-fill" })
-        }
-      )
-    }
-  );
+import { useLanguage as c, t as a } from "./index.es5.js";
+import { Drawer as i, DrawerContent as m } from "./index.es6.js";
+import { SearchForm as h } from "./index.es7.js";
+function d({ isOpen: n, close: s, onSearch: t }) {
+  const { translations: l } = c(), o = (r) => {
+    t && t(r), s();
+  };
+  return /* @__PURE__ */ e.jsx(i, { open: n, onOpenChange: (r) => !r && s(), children: /* @__PURE__ */ e.jsx(m, { size: "large", className: "flex flex-col gap-4", children: /* @__PURE__ */ e.jsx("div", { className: "flex flex-row justify-center", children: /* @__PURE__ */ e.jsxs("div", { className: "mt-[10vh] flex w-full flex-col gap-2 px-4 lg:mt-[30vh] lg:w-[50%]", children: [
+    /* @__PURE__ */ e.jsx("h1", { className: "font-bold", children: a("search.title", l) }),
+    /* @__PURE__ */ e.jsx(
+      h,
+      {
+        placeholder: a("search.placeholder", l),
+        onSubmit: o,
+        className: "w-full",
+        label: a("search.ariaLabel", l),
+        submitLabel: a("search.submit", l)
+      }
+    )
+  ] }) }) }) });
 }
 export {
-  s as LogoBar
+  d as SearchMenu
 };
 //# sourceMappingURL=index.es52.js.map
