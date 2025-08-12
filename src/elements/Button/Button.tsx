@@ -54,7 +54,7 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 	if (variant === "back-link") {
 		return (
 			<ArrowLeftIcon
-				className={`mr-1 size-4 ${isDisabled ? "text-gray-500" : "text-[#0047d3]"}`}
+				className={`mr-1 size-4 ${isDisabled ? "text-gray-500" : "text-black"} flex-shrink-0`}
 			/>
 		);
 	}
@@ -119,12 +119,12 @@ const buttonVariants = cva(
 					"h-[39px] min-h-0 w-[39px] border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
 				back: "flex h-[39px] min-h-0 w-[39px] items-center justify-center border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
 				"back-link":
-					"flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
+					"flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 text-text-link hover:underline disabled:text-gray-500 disabled:no-underline leading-none",
 				extern: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
-				link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
+				link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-text-link hover:underline disabled:text-gray-500 disabled:no-underline",
 				// New variant definition
 				linkWithIcon:
-					"m-0 inline-flex h-auto cursor-pointer items-center border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
+					"m-0 inline-flex h-auto cursor-pointer items-center border-0 bg-transparent p-0 text-left text-text-link hover:underline disabled:text-gray-500 disabled:no-underline",
 				"light-fulltone":
 					"border-0 bg-red px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
 				"negative-light":

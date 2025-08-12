@@ -1,6 +1,25 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 76v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16z", fill: "currentColor" }));
+import { j as e } from "./index.es4.js";
+import n from "./index.es29.js";
+import { useLanguage as o, t as m } from "./index.es5.js";
+function p({
+  onOpenSearch: t,
+  className: s = ""
+}) {
+  const { translations: a } = o(), r = m("search", a);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `-mt-[0.05rem] -ml-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] pr-[0.05rem] text-[11px] leading-normal ${s}`,
+      onClick: t,
+      "aria-label": r,
+      children: [
+        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "text-[11px] whitespace-nowrap", children: r })
+      ]
+    }
+  );
+}
 export {
-  t as default
+  p as SearchButton
 };
 //# sourceMappingURL=index.es56.js.map

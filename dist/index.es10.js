@@ -1,16 +1,16 @@
 import { j as e } from "./index.es4.js";
-import { Slot as c } from "@radix-ui/react-slot";
+import { Slot as p } from "@radix-ui/react-slot";
 import { cva as f } from "class-variance-authority";
-import { cn as u } from "./index.es24.js";
-import h from "./index.es25.js";
-import n from "./index.es26.js";
-import m from "./index.es27.js";
-import y from "./index.es28.js";
-import w from "./index.es29.js";
-import i from "./index.es30.js";
-import j from "./index.es31.js";
-import k from "./index.es32.js";
-import v from "./index.es33.js";
+import { cn as h } from "./index.es24.js";
+import u from "./index.es27.js";
+import n from "./index.es28.js";
+import m from "./index.es29.js";
+import y from "./index.es26.js";
+import w from "./index.es30.js";
+import i from "./index.es31.js";
+import j from "./index.es32.js";
+import k from "./index.es33.js";
+import v from "./index.es34.js";
 const N = (r, t) => {
   if (r === "light" || r === "white" || r === "clean" || r === "link" || r === "linkWithIcon")
     return null;
@@ -32,7 +32,7 @@ const N = (r, t) => {
     return /* @__PURE__ */ e.jsx(
       n,
       {
-        className: `mr-1 size-4 ${t ? "text-gray-500" : "text-[#0047d3]"}`
+        className: `mr-1 size-4 ${t ? "text-gray-500" : "text-black"} flex-shrink-0`
       }
     );
   const a = t ? "bg-gray-400" : "bg-red";
@@ -43,7 +43,7 @@ const N = (r, t) => {
         className: `absolute top-0 right-0 flex h-full w-[39px] items-center justify-center ${r.includes("fulltone") ? "" : "border-l-2"} ${t ? "border-gray-400" : "border-black"} ${a}`
       }
     ),
-    /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none absolute top-0 right-0 flex h-full w-[39px] items-center justify-center", children: r === "default" || r === "colored" || r === "fulltone" || r === "light-fulltone" ? /* @__PURE__ */ e.jsx(h, { className: "size-5 text-white" }) : r === "search" ? /* @__PURE__ */ e.jsx(m, { className: "size-[18px] text-white" }) : r === "filter" ? /* @__PURE__ */ e.jsx(w, { className: "size-4 text-white" }) : r === "extern" ? /* @__PURE__ */ e.jsx(i, { className: "size-4 text-white" }) : r === "download" ? /* @__PURE__ */ e.jsx(j, { className: "size-[18px] text-white" }) : r === "addtocart" ? /* @__PURE__ */ e.jsx(v, { className: "size-[18px] text-white" }) : r === "play" ? /* @__PURE__ */ e.jsx(k, { className: "size-[18px] text-white" }) : null })
+    /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none absolute top-0 right-0 flex h-full w-[39px] items-center justify-center", children: r === "default" || r === "colored" || r === "fulltone" || r === "light-fulltone" ? /* @__PURE__ */ e.jsx(u, { className: "size-5 text-white" }) : r === "search" ? /* @__PURE__ */ e.jsx(m, { className: "size-[18px] text-white" }) : r === "filter" ? /* @__PURE__ */ e.jsx(w, { className: "size-4 text-white" }) : r === "extern" ? /* @__PURE__ */ e.jsx(i, { className: "size-4 text-white" }) : r === "download" ? /* @__PURE__ */ e.jsx(j, { className: "size-[18px] text-white" }) : r === "addtocart" ? /* @__PURE__ */ e.jsx(v, { className: "size-[18px] text-white" }) : r === "play" ? /* @__PURE__ */ e.jsx(k, { className: "size-[18px] text-white" }) : null })
   ] });
 }, z = f(
   // base styles for all buttons
@@ -65,11 +65,11 @@ const N = (r, t) => {
         addtocart: "flex pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
         close: "h-[39px] min-h-0 w-[39px] border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
         back: "flex h-[39px] min-h-0 w-[39px] items-center justify-center border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
-        "back-link": "flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
+        "back-link": "flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 text-text-link hover:underline disabled:text-gray-500 disabled:no-underline leading-none",
         extern: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
-        link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
+        link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-text-link hover:underline disabled:text-gray-500 disabled:no-underline",
         // New variant definition
-        linkWithIcon: "m-0 inline-flex h-auto cursor-pointer items-center border-0 bg-transparent p-0 text-left text-[#0047d3] hover:underline disabled:text-gray-500 disabled:no-underline",
+        linkWithIcon: "m-0 inline-flex h-auto cursor-pointer items-center border-0 bg-transparent p-0 text-left text-text-link hover:underline disabled:text-gray-500 disabled:no-underline",
         "light-fulltone": "border-0 bg-red px-4 text-white hover:bg-[#fb203d] focus:bg-[#fb203d] disabled:bg-gray-400 disabled:text-white",
         "negative-light": "border-2 border-white bg-transparent text-white hover:bg-transparent focus:bg-transparent disabled:border-gray-500 disabled:bg-transparent disabled:text-gray-500"
       },
@@ -90,36 +90,36 @@ function q({
   variant: t = "default",
   size: a,
   asChild: b = !1,
-  booking: o = !1,
-  price: l,
+  booking: s = !1,
+  price: o,
   children: d,
-  disabled: s = !1,
+  disabled: l = !1,
   ...x
 }) {
-  const g = b ? c : "button", p = o && l ? /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-    /* @__PURE__ */ e.jsx("span", { className: "price mr-[0.7em] border-r border-black/60 pr-[0.7em]", children: l }),
+  const g = b ? p : "button", c = s && o ? /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+    /* @__PURE__ */ e.jsx("span", { className: "price mr-[0.7em] border-r border-black/60 pr-[0.7em]", children: o }),
     /* @__PURE__ */ e.jsx("span", { children: d })
   ] }) : d;
   return /* @__PURE__ */ e.jsxs(
     g,
     {
       "data-slot": "button",
-      className: u(
+      className: h(
         z({ variant: t, size: a, className: r }),
-        o ? "button--booking flex" : ""
+        s ? "button--booking flex" : ""
       ),
-      disabled: s,
+      disabled: l,
       ...x,
       children: [
-        p,
+        c,
         t === "linkWithIcon" && /* @__PURE__ */ e.jsx(
           i,
           {
-            className: `mb-2 ml-1 inline-block size-[16px] align-text-top leading-none ${s ? "text-gray-500" : "text-[#0047d3]"}`,
+            className: `mb-2 ml-1 inline-block size-[16px] align-text-top leading-none ${l ? "text-gray-500" : "text-[#0047d3]"}`,
             "aria-hidden": "true"
           }
         ),
-        N(t, s)
+        N(t, l)
       ]
     }
   );
