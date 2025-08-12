@@ -16,4 +16,6 @@ export { Toggle, toggleVariants } from './elements/Toggle';
 export { Panel } from './elements/Panel';
 export { Pill, pillVariants, FilterPillGroup } from './elements/Pills';
 export { DownloadItem, DownloadGroup } from './modules/Download';
+export { List, ListItem } from './elements/List';
+export { Icon } from './elements/Icon';
 //# sourceMappingURL=index.d.ts.map

@@ -1,4 +1,4 @@
-import { __exports as u } from "./index.es64.js";
+import { __exports as u } from "./index.es67.js";
 import B from "react";
 /**
  * @license React

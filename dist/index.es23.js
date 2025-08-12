@@ -1,6 +1,6 @@
 import { j as e } from "./index.es4.js";
 import * as m from "react";
-import { cn as i } from "./index.es24.js";
+import { cn as i } from "./index.es26.js";
 import { Button as c } from "./index.es10.js";
 const h = m.forwardRef(
   ({

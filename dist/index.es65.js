@@ -1,6 +1,54 @@
-import * as e from "react";
-const t = (s) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...s }, /* @__PURE__ */ e.createElement("path", { d: "M256 48c115 0 208 93 208 208 0 115-93 208-208 208-115 0-208-93-208-208 0-115 93-208 208-208m0-40C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 56C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64zm0 44c19.9 0 36 16.1 36 36s-16.1 36-36 36-36-16.1-36-36 16.1-36 36-36zm117.7 98c-28.7 6.8-55.5 12.7-82.1 15.8 .9 101 12.3 123.1 25 155.6 3.6 9.3-1 19.7-10.2 23.3-9.3 3.6-19.7-1-23.3-10.2-8.7-22.3-17.1-40.6-22.3-78.5h-9.7c-5.2 37.9-13.5 56.2-22.3 78.5-3.6 9.3-14.1 13.8-23.3 10.2-9.3-3.6-13.8-14.1-10.2-23.3 12.7-32.5 24.2-54.5 25-155.6-26.6-3.1-53.4-9-82.1-15.8-8.6-2-13.9-10.6-11.9-19.2s10.6-13.9 19.2-11.9c96.7 22.8 124.3 22.8 220.8 0 8.6-2 17.2 3.3 19.2 11.9 2 8.6-3.3 17.2-11.9 19.2z", fill: "currentColor" }));
+import { j as t } from "./index.es4.js";
+import { Drawer as u, DrawerContent as b } from "./index.es6.js";
+import { useLanguage as f, t as i } from "./index.es5.js";
+function m({
+  isOpen: r,
+  close: l,
+  accessibilityItems: s = []
+}) {
+  const { translations: n } = f(), a = [
+    {
+      question: i("accessibilityMenu.barrierefreiheit.question", n),
+      label: i("accessibilityMenu.barrierefreiheit", n),
+      href: "/accessibility-statement/"
+    },
+    {
+      question: i("accessibilityMenu.contact.question", n),
+      label: i("accessibilityMenu.contact", n),
+      href: "/accessibility-statement/#accessibility-contact"
+    },
+    {
+      question: i("accessibilityMenu.additionalInfo.question", n),
+      label: i("accessibilityMenu.additionalInfo", n),
+      href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
+      external: !0
+    }
+  ], o = s && s.length > 0 ? s : a;
+  return /* @__PURE__ */ t.jsx(u, { open: r, onOpenChange: (e) => !e && l(), children: /* @__PURE__ */ t.jsxs(b, { className: "flex flex-col gap-4 px-6 py-4 text-base", children: [
+    /* @__PURE__ */ t.jsx("div", { className: "mt-4 mb-6 flex flex-row items-center justify-between", children: /* @__PURE__ */ t.jsx("p", { className: "text-2xl font-bold", children: i("accessibilityMenu.title", n) }) }),
+    o.map((e, c) => /* @__PURE__ */ t.jsxs("div", { className: "mb-4", children: [
+      /* @__PURE__ */ t.jsx("p", { className: "mb-1 font-bold", children: e.question }),
+      e.external ? /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          href: e.href,
+          target: "_blank",
+          rel: "noreferrer",
+          children: e.label
+        }
+      ) : /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          href: e.href,
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          children: e.label
+        }
+      )
+    ] }, c))
+  ] }) });
+}
 export {
-  t as default
+  m as AccessibilityMenu
 };
 //# sourceMappingURL=index.es65.js.map

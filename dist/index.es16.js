@@ -2,7 +2,7 @@ import { j as o } from "./index.es4.js";
 import * as d from "react";
 import * as r from "@radix-ui/react-accordion";
 import { ChevronDown as m } from "lucide-react";
-import { cn as i } from "./index.es24.js";
+import { cn as i } from "./index.es26.js";
 const s = {
   default: {
     item: "border-t border-b border-gray-200",

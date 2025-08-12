@@ -1,6 +1,6 @@
 import { j as e } from "./index.es4.js";
 import g from "react";
-import { cn as n } from "./index.es24.js";
+import { cn as n } from "./index.es26.js";
 const u = ({ title: l, copyrightText: s, link: a, position: t }) => {
   if (!l && !s)
     return null;

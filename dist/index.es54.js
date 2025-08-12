@@ -1,22 +1,25 @@
 import { j as e } from "./index.es4.js";
-import a from "./index.es55.js";
-import { useLanguage as o, t as m } from "./index.es5.js";
-function p({ onOpenMenu: r, className: s = "" }) {
-  const { translations: n } = o(), t = m("menu", n);
-  return /* @__PURE__ */ e.jsxs(
-    "button",
+import { LanguageSelect as s } from "./index.es55.js";
+import { Breadcrumbs as n } from "./index.es8.js";
+function f({
+  showBreadcrumbs: t,
+  breadcrumbs: r,
+  showLanguageSelect: a,
+  LinkComponent: i,
+  isSticky: o = !1
+}) {
+  return !t && !a ? null : /* @__PURE__ */ e.jsx(
+    "div",
     {
-      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${s}`,
-      onClick: r,
-      "aria-label": t,
-      children: [
-        /* @__PURE__ */ e.jsx(a, { className: "h-8" }),
-        /* @__PURE__ */ e.jsx("span", { className: "-mr-[0.05rem] whitespace-nowrap", children: t })
-      ]
+      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
+      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
+        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
+        a && /* @__PURE__ */ e.jsx(s, {})
+      ] })
     }
   );
 }
 export {
-  p as MenuButton
+  f as SubHeaderBar
 };
 //# sourceMappingURL=index.es54.js.map

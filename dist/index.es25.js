@@ -1,6 +1,23 @@
-import * as t from "react";
-const r = (e) => /* @__PURE__ */ t.createElement("svg", { viewBox: "0 0 20 19", fill: "none", xmlns: "http://www.w3.org/2000/svg", transform: "rotate(-90)", ...e }, /* @__PURE__ */ t.createElement("path", { d: "M0 9.49989H17.1666M9.04529 17.874L17.45 9.49955L9.04529 1.12598", stroke: "currentColor", strokeWidth: 3 }));
+import { j as a } from "./index.es4.js";
+import { cn as e } from "./index.es26.js";
+import { iconRegistry as c } from "./index.es41.js";
+function u({
+  name: n,
+  className: r,
+  "aria-label": i,
+  "aria-hidden": t = !0
+}) {
+  const o = c[n];
+  return o ? /* @__PURE__ */ a.jsx(
+    o,
+    {
+      className: e("inline-block", r),
+      "aria-label": i,
+      "aria-hidden": t
+    }
+  ) : (console.warn(`Icon "${n}" not found`), null);
+}
 export {
-  r as default
+  u as Icon
 };
 //# sourceMappingURL=index.es25.js.map
