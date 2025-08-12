@@ -1,4 +1,4 @@
-import { AccessibilityItem } from './types';
+import { AccessibilityItem } from "./types";
 export interface AccessibilityMenuProps {
     /**
      * Whether the accessibility drawer is open

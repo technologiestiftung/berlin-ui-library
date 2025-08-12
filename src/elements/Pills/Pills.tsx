@@ -126,6 +126,7 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 				)}
 				data-state={active ? "active" : "inactive"}
 				onClick={handleClick}
+				tabIndex={isToggleable ? 0 : undefined}
 				{...props}
 			>
 				{showIcon && variant === "info" && (

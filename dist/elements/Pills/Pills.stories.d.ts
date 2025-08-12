@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Pill, FilterPillGroup } from './index';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Pill, FilterPillGroup } from "./index";
 declare const meta: Meta<typeof Pill>;
 export default meta;
 type Story = StoryObj<typeof Pill>;
