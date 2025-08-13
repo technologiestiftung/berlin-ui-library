@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index.cjs41.js");var t=e.__require();exports.jsxRuntimeExports=t;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index.cjs36.js");var t=e.__require();exports.jsxRuntimeExports=t;
 //# sourceMappingURL=index.cjs4.js.map

@@ -1,36 +1,6 @@
-import { __exports as e } from "./index.es66.js";
-/**
- * @license React
- * react-jsx-runtime.production.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var s;
-function a() {
-  if (s) return e;
-  s = 1;
-  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
-  function o(l, r, t) {
-    var u = null;
-    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
-      t = {};
-      for (var n in r)
-        n !== "key" && (t[n] = r[n]);
-    } else t = r;
-    return r = t.ref, {
-      $$typeof: i,
-      type: l,
-      key: u,
-      ref: r !== void 0 ? r : null,
-      props: t
-    };
-  }
-  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
-}
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z", fill: "currentColor" }));
 export {
-  a as __require
+  t as default
 };
 //# sourceMappingURL=index.es43.js.map
