@@ -116,6 +116,14 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 			props.onClick?.(e);
 		};
 
+		const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+			if (isToggleable && (e.key === "Enter" || e.key === " ")) {
+				e.preventDefault();
+				onToggle?.();
+			}
+			props.onKeyDown?.(e);
+		};
+
 		return (
 			<div
 				ref={ref}
@@ -126,6 +134,7 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 				)}
 				data-state={active ? "active" : "inactive"}
 				onClick={handleClick}
+				onKeyDown={handleKeyDown}
 				tabIndex={isToggleable ? 0 : undefined}
 				{...props}
 			>

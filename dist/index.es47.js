@@ -1,22 +1,6 @@
-import { j as e } from "./index.es4.js";
-import a from "./index.es48.js";
-import { useLanguage as o, t as m } from "./index.es5.js";
-function p({ onOpenMenu: r, className: s = "" }) {
-  const { translations: n } = o(), t = m("menu", n);
-  return /* @__PURE__ */ e.jsxs(
-    "button",
-    {
-      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${s}`,
-      onClick: r,
-      "aria-label": t,
-      children: [
-        /* @__PURE__ */ e.jsx(a, { className: "h-8" }),
-        /* @__PURE__ */ e.jsx("span", { className: "-mr-[0.05rem] whitespace-nowrap", children: t })
-      ]
-    }
-  );
-}
+import * as e from "react";
+const t = (c) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 352 512", ...c }, /* @__PURE__ */ e.createElement("path", { d: "M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z", fill: "currentColor" }));
 export {
-  p as MenuButton
+  t as default
 };
 //# sourceMappingURL=index.es47.js.map

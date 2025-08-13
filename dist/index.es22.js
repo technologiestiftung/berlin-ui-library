@@ -1,10 +1,10 @@
 import { j as s } from "./index.es4.js";
 import * as m from "react";
 import { cva as h } from "class-variance-authority";
-import w from "./index.es61.js";
-import g from "./index.es62.js";
-import N from "./index.es63.js";
-import y from "./index.es64.js";
+import y from "./index.es47.js";
+import p from "./index.es48.js";
+import N from "./index.es49.js";
+import k from "./index.es50.js";
 import { cn as i } from "./index.es26.js";
 const j = h(
   "pill text-3.5 inline-flex w-auto min-w-[unset] items-center gap-[0.4em] rounded-full border border-transparent px-1.75 py-0.25 leading-[1.2] transition-colors",
@@ -62,39 +62,42 @@ const j = h(
       inverted: !1
     }
   }
-), p = m.forwardRef(
+), b = m.forwardRef(
   // eslint-disable-next-line complexity
   ({
-    className: f,
+    className: c,
     variant: r,
     inverted: a,
     size: e,
-    active: o,
-    onToggle: u,
+    active: d,
+    onToggle: f,
     showIcon: l = !0,
-    value: x,
-    children: c,
+    value: g,
+    children: x,
     ...t
-  }, n) => {
-    const d = (r === "filter" || r === "filter-outline") && u !== void 0, b = (v) => {
-      d && u?.(), t.onClick?.(v);
+  }, u) => {
+    const o = (r === "filter" || r === "filter-outline") && f !== void 0, v = (n) => {
+      o && f?.(), t.onClick?.(n);
+    }, w = (n) => {
+      o && (n.key === "Enter" || n.key === " ") && (n.preventDefault(), f?.()), t.onKeyDown?.(n);
     };
     return /* @__PURE__ */ s.jsxs(
       "div",
       {
-        ref: n,
+        ref: u,
         className: i(
-          j({ variant: r, inverted: a, size: e, className: f }),
-          o && "data-[state=active]",
-          d && "cursor-pointer"
+          j({ variant: r, inverted: a, size: e, className: c }),
+          d && "data-[state=active]",
+          o && "cursor-pointer"
         ),
-        "data-state": o ? "active" : "inactive",
-        onClick: b,
-        tabIndex: d ? 0 : void 0,
+        "data-state": d ? "active" : "inactive",
+        onClick: v,
+        onKeyDown: w,
+        tabIndex: o ? 0 : void 0,
         ...t,
         children: [
           l && r === "info" && /* @__PURE__ */ s.jsx(
-            g,
+            p,
             {
               className: i(
                 a ? "fill-white" : "fill-blue",
@@ -103,7 +106,7 @@ const j = h(
             }
           ),
           l && r === "message" && /* @__PURE__ */ s.jsx(
-            g,
+            p,
             {
               className: i(
                 a ? "fill-white" : "fill-text-base",
@@ -121,7 +124,7 @@ const j = h(
             }
           ),
           l && r === "success" && /* @__PURE__ */ s.jsx(
-            y,
+            k,
             {
               className: i(
                 a ? "fill-white" : "fill-text-success",
@@ -129,9 +132,9 @@ const j = h(
               )
             }
           ),
-          c,
-          l && (r === "filter" || r === "filter-outline") && o && /* @__PURE__ */ s.jsx(
-            w,
+          x,
+          l && (r === "filter" || r === "filter-outline") && d && /* @__PURE__ */ s.jsx(
+            y,
             {
               className: i(
                 "fill-white",
@@ -144,26 +147,26 @@ const j = h(
     );
   }
 );
-p.displayName = "Pill";
-const k = m.forwardRef(
+b.displayName = "Pill";
+const C = m.forwardRef(
   ({
-    className: f,
+    className: c,
     activeValues: r,
     onValueToggle: a,
     size: e = "default",
-    showIcon: o = !0,
-    children: u,
+    showIcon: d = !0,
+    children: f,
     ...l
-  }, x) => {
-    const c = m.Children.map(u, (t) => {
-      if (m.isValidElement(t) && t.type === p && (t.props.variant === "filter" || t.props.variant === "filter-outline")) {
-        const n = t.props.value || (typeof t.props.children == "string" ? t.props.children : ""), d = r.includes(n);
+  }, g) => {
+    const x = m.Children.map(f, (t) => {
+      if (m.isValidElement(t) && t.type === b && (t.props.variant === "filter" || t.props.variant === "filter-outline")) {
+        const u = t.props.value || (typeof t.props.children == "string" ? t.props.children : ""), o = r.includes(u);
         return m.cloneElement(t, {
-          active: d,
+          active: o,
           size: e,
-          showIcon: o,
-          onToggle: () => a(n),
-          value: n
+          showIcon: d,
+          onToggle: () => a(u),
+          value: u
         });
       }
       return t;
@@ -171,18 +174,18 @@ const k = m.forwardRef(
     return /* @__PURE__ */ s.jsx(
       "div",
       {
-        ref: x,
-        className: i("flex flex-wrap gap-2", f),
+        ref: g,
+        className: i("flex flex-wrap gap-2", c),
         ...l,
-        children: c
+        children: x
       }
     );
   }
 );
-k.displayName = "FilterPillGroup";
+C.displayName = "FilterPillGroup";
 export {
-  k as FilterPillGroup,
-  p as Pill,
+  C as FilterPillGroup,
+  b as Pill,
   j as pillVariants
 };
 //# sourceMappingURL=index.es22.js.map

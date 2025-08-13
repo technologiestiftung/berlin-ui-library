@@ -1,6 +1,25 @@
-import * as e from "react";
-const r = (t) => /* @__PURE__ */ e.createElement("svg", { viewBox: "0 0 14 14", fill: "currentColor", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M9.3458 7.00002L12.8649 3.48088C13.2974 3.04846 13.2974 2.34885 12.8649 1.91643L12.0845 1.13596C11.6521 0.70354 10.9524 0.70354 10.52 1.13596L7.00088 4.6551L3.48174 1.13596C3.04932 0.70354 2.34971 0.70354 1.91729 1.13596L1.13682 1.91995C0.704395 2.35237 0.704395 3.05198 1.13682 3.4844L4.65596 7.00002L1.13682 10.5192C0.704395 10.9516 0.704395 11.6512 1.13682 12.0836L1.91729 12.8641C2.34971 13.2965 3.04932 13.2965 3.48174 12.8641L7.00088 9.34495L10.52 12.8641C10.9524 13.2965 11.6521 13.2965 12.0845 12.8641L12.8649 12.0836C13.2974 11.6512 13.2974 10.9516 12.8649 10.5192L9.3458 7.00002Z", fill: "currentColor" }));
+import { j as e } from "./index.es4.js";
+import n from "./index.es30.js";
+import { useLanguage as o, t as m } from "./index.es5.js";
+function p({
+  onOpenSearch: t,
+  className: s = ""
+}) {
+  const { translations: a } = o(), r = m("search", a);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `-mt-[0.05rem] -ml-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] pr-[0.05rem] text-[11px] leading-normal ${s}`,
+      onClick: t,
+      "aria-label": r,
+      children: [
+        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "text-[11px] whitespace-nowrap", children: r })
+      ]
+    }
+  );
+}
 export {
-  r as default
+  p as SearchButton
 };
 //# sourceMappingURL=index.es60.js.map

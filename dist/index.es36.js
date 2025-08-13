@@ -1,6 +1,6 @@
-import * as e from "react";
-const o = (t) => /* @__PURE__ */ e.createElement("svg", { viewBox: "0 0 11 12", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { id: "Vector", d: "M8.83784 5.50883V9.60163C8.83784 9.9725 8.6919 10.3282 8.43214 10.5904C8.17238 10.8527 7.82006 11 7.4527 11H2.38514C2.01777 11 1.66546 10.8527 1.4057 10.5904C1.14593 10.3282 1 9.9725 1 9.60163V4.19913C1 3.82826 1.14593 3.47258 1.4057 3.21033C1.66546 2.94808 2.01777 2.80076 2.38514 2.80076H5.78378M10 3.94682V1M10 1H7.08108M10 1L3.5 8.5", stroke: "currentColor", fill: "none", strokeLinecap: "round", strokeLinejoin: "round" }));
+import * as t from "react";
+const c = (e) => /* @__PURE__ */ t.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 576 512", ...e }, /* @__PURE__ */ t.createElement("path", { d: "M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z", fill: "currentColor" }));
 export {
-  o as default
+  c as default
 };
 //# sourceMappingURL=index.es36.js.map
