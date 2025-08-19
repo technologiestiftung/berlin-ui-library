@@ -1,0 +1,21 @@
+.spinner {
+	animation: rotate 2s linear infinite !important;
+}
+.spinner div {
+	animation: loading 1s ease infinite;
+}
+.spinner--text {
+	line-height: 100% !important;
+}
+
+@keyframes loading {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
