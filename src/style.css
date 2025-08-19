@@ -85,6 +85,22 @@
 			height: 0;
 		}
 	}
+
+	/* Define the animations for the spinner */
+	--animate-spin-outer: spin-outer 2s linear infinite;
+	--animate-spin-inner: spin-inner 1s ease infinite;
+
+	@keyframes spin-inner {
+		100% {
+			transform: rotate(1turn);
+		}
+	}
+
+	@keyframes spin-outer {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 }
 
 @layer base {

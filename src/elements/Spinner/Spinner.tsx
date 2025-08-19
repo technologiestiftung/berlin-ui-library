@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import "./Spinner.css";
 
 interface SpinnerProps {
 	/**
@@ -25,24 +24,25 @@ interface SpinnerProps {
 }
 
 const sizeMap = {
-	small: "h-[25px] w-[25px]",
-	mid: "h-[50px] w-[50px]",
-	large: "h-[75px] w-[75px]",
+	small: "h-[2rem] w-[2rem]",
+	mid: "h-[4rem] w-[4rem]",
+	large: "h-[5rem] w-[5rem]",
 };
+
 const sizeInnerCircle = {
-	small: "h-[19px] w-[19px] top-[3px] left-[3px] border-[3px]",
-	mid: "h-[40px] w-[40px] top-[5px] left-[5px] border-[5px]",
-	large: "h-[59px] w-[59px] top-[8px] left-[8px] border-[8px]",
+	small: "h-[1.5rem] w-[1.5rem] top-[0.25rem] left-[0.25rem] border-[0.25rem]",
+	mid: "h-[3rem] w-[3rem] top-[0.5rem] left-[0.5rem] border-[0.5rem]",
+	large: "h-[4rem] w-[4rem] top-[0.5rem] left-[0.5rem] border-[0.5rem]",
 };
 const sizeFontSize = {
-	small: "text-[16px]",
-	mid: "text-[20px]",
-	large: "text-[26px]",
+	small: "text-[1rem]",
+	mid: "text-[1.25rem]",
+	large: "text-[1.625rem]",
 };
 const sizeGap = {
-	small: "gap-2",
-	mid: "gap-4",
-	large: "gap-6",
+	small: "gap-[0.5rem]",
+	mid: "gap-[1rem]",
+	large: "gap-[1.5rem]",
 };
 
 /* eslint-disable-next-line complexity */
@@ -61,12 +61,12 @@ export function Spinner({
 			: "text-center";
 
 	const spinnerClass = cn(
-		"spinner relative inline-block rounded-full bg-red",
+		"animate-spin-outer relative inline-block rounded-full bg-red",
 		sizeMap[size],
 	);
 
 	const innerCircleClass = cn(
-		"absolute z-2 rounded-full border-white/80 border-t-transparent",
+		"animate-spin-inner absolute z-2 rounded-full border-white/80 border-t-transparent",
 		sizeInnerCircle[size],
 	);
 
