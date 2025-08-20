@@ -18,4 +18,5 @@ export { Pill, pillVariants, FilterPillGroup } from './elements/Pills';
 export { DownloadItem, DownloadGroup } from './modules/Download';
 export { List, ListItem } from './elements/List';
 export { Icon } from './elements/Icon';
+export { Spinner } from './elements/Spinner';
 //# sourceMappingURL=index.d.ts.map
