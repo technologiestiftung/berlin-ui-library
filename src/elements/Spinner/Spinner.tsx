@@ -24,25 +24,27 @@ interface SpinnerProps {
 }
 
 const sizeMap = {
-	small: "h-[2rem] w-[2rem]",
-	mid: "h-[4rem] w-[4rem]",
-	large: "h-[5rem] w-[5rem]",
+	small: "h-8 w-8",
+	mid: "h-16 w-16",
+	large: "h-20 w-20",
 };
 
 const sizeInnerCircle = {
-	small: "h-[1.5rem] w-[1.5rem] top-[0.25rem] left-[0.25rem] border-[0.25rem]",
-	mid: "h-[3rem] w-[3rem] top-[0.5rem] left-[0.5rem] border-[0.5rem]",
-	large: "h-[4rem] w-[4rem] top-[0.5rem] left-[0.5rem] border-[0.5rem]",
+	small: "h-6 w-6 top-1 left-1 border-[4px]",
+	mid: "h-12 w-12 top-2 left-2 border-[5px]",
+	large: "h-16 w-16 top-2 left-2 border-[6px]",
 };
+
 const sizeFontSize = {
-	small: "text-[1rem]",
-	mid: "text-[1.25rem]",
-	large: "text-[1.625rem]",
+	small: "text-base",
+	mid: "text-xl",
+	large: "text-2xl",
 };
+
 const sizeGap = {
-	small: "gap-[0.5rem]",
-	mid: "gap-[1rem]",
-	large: "gap-[1.5rem]",
+	small: "gap-2",
+	mid: "gap-4",
+	large: "gap-6",
 };
 
 /* eslint-disable-next-line complexity */
@@ -57,7 +59,7 @@ export function Spinner({
 
 	const wrapperClass =
 		position === "right" && isThereText
-			? cn("gap flex items-center justify-center", sizeGap[size])
+			? cn("flex items-center justify-center", sizeGap[size])
 			: "text-center";
 
 	const spinnerClass = cn(
@@ -66,14 +68,14 @@ export function Spinner({
 	);
 
 	const innerCircleClass = cn(
-		"animate-spin-inner absolute z-2 rounded-full border-white/80 border-t-transparent",
+		"animate-spin-inner absolute z-10 rounded-full border-white/80 border-t-transparent",
 		sizeInnerCircle[size],
 	);
 
 	const textClass = cn(
-		"spinner--text font-bold",
+		"font-bold",
 		textColor === "red" ? "text-red" : "text-black",
-		position === "under" || !position ? "my-[0.8em]" : "",
+		position === "under" || !position ? "my-2" : "",
 		sizeFontSize[size],
 	);
 
