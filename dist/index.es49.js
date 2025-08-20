@@ -1,24 +1,6 @@
-import { j as a } from "./index.es4.js";
-import * as d from "react";
-import * as o from "@radix-ui/react-tooltip";
-import { cn as s } from "./index.es26.js";
-const l = o.Provider, f = o.Root, c = o.Trigger, n = d.forwardRef(({ className: t, sideOffset: i = 4, ...e }, r) => /* @__PURE__ */ a.jsx(
-  o.Content,
-  {
-    ref: r,
-    sideOffset: i,
-    className: s(
-      "bg-popover text-popover-foreground z-50 origin-[--radix-tooltip-content-transform-origin] overflow-hidden border px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
-      t
-    ),
-    ...e
-  }
-));
-n.displayName = o.Content.displayName;
+import * as e from "react";
+const t = (c) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 352 512", ...c }, /* @__PURE__ */ e.createElement("path", { d: "M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z", fill: "currentColor" }));
 export {
-  f as Tooltip,
-  n as TooltipContent,
-  l as TooltipProvider,
-  c as TooltipTrigger
+  t as default
 };
 //# sourceMappingURL=index.es49.js.map
