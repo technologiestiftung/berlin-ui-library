@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 import React, { useRef, useState } from "react";
 import { cn } from "@/lib/utils"; // Assuming cn utility is available (e.g., from shadcn/ui)
 import MaximizeIcon from "@/assets/icons/maximize.svg?react";
@@ -136,24 +137,16 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 	) => {
 		const imgRef = useRef<HTMLImageElement | null>(null);
 		const [openImage, setOpenImage] = useState<OpenImage | null>(null);
-		const openFullScreenImage = () => {
-			const img = imgRef.current;
-			if (!img) {
-				return;
-			}
-			const availW = Math.min(980, window.innerWidth);
-			const availH = Math.min(735, window.innerHeight);
-			let scale = Math.min(availW / img.clientWidth, availH / img.clientHeight);
-			const renderW = Math.round(img.clientWidth * scale);
-			const renderH = Math.round(img.clientHeight * scale);
+		const isPortrait = (img?: { width?: number; height?: number }) =>
+			(img?.height ?? 0) >= (img?.width ?? 0);
+		const open = () =>
 			setOpenImage({
 				src,
 				alt,
 				caption,
-				height: renderH,
-				width: renderW,
+				width: imgRef?.current?.clientWidth ?? 0,
+				height: imgRef?.current?.clientHeight ?? 0,
 			});
-		};
 		return (
 			<>
 				<div
@@ -179,7 +172,7 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 								}
 								if (withZoomBox) {
 									e.preventDefault();
-									openFullScreenImage();
+									open();
 								}
 							}}
 							src={src}
@@ -189,7 +182,7 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 						{withZoomBox && (
 							<div
 								className="absolute right-1.5 bottom-1.5 flex items-center justify-center bg-white p-1.5"
-								onClick={openFullScreenImage}
+								onClick={open}
 							>
 								<MaximizeIcon className="size-6 text-white" />
 							</div>
@@ -225,17 +218,19 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 				{/* Optional FullScreen */}
 				{openImage?.src && (
 					<div
-						className="fixed inset-0 z-10000 flex h-[100dvh] w-[100dvw] items-center justify-center bg-black/80"
-						id="close"
+						id="overlay"
+						className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/80"
 						onClick={(e) => {
-							const target = e.target as HTMLElement;
-							if (target.id !== "close") {
-								return;
+							if ((e.target as HTMLElement).id === "overlay") {
+								setOpenImage(null);
 							}
-							setOpenImage(null);
 						}}
 					>
-						<div className="relative">
+						{/* This wrapper shrinks to the rendered frame width so caption matches via w-full */}
+						<div
+							className="relative inline-block"
+							onClick={(e) => e.stopPropagation()}
+						>
 							{/* Close Button */}
 							<div
 								className="absolute top-0 right-0 z-10 cursor-pointer bg-white p-2"
@@ -243,20 +238,33 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 							>
 								<TimesIcon className="size-6" />
 							</div>
-							{/* Image container (defines max bounds) */}
-							<img
-								src={openImage.src}
-								alt={openImage.alt || ""}
-								className="pointer-events-none"
-								style={{ height: openImage?.height, width: openImage?.width }}
-							/>
-							{/* Caption matches image width automatically */}
+
+							{/* Image Container */}
 							<div
-								className="bg-white px-2 py-1"
-								style={{ maxWidth: openImage?.width }}
+								className={
+									isPortrait(openImage)
+										? "relative flex h-[min(735px,90vh)] w-auto max-w-[min(980px,98vw)] items-center justify-center"
+										: "relative flex h-auto max-h-[min(735px,90vh)] w-[min(980px,98vw)] items-center justify-center"
+								}
 							>
-								<p>{openImage.caption}</p>
+								<img
+									src={openImage.src}
+									alt={openImage.alt || ""}
+									className={
+										isPortrait(openImage)
+											? "h-full w-auto object-contain select-none"
+											: "h-auto w-full object-contain select-none"
+									}
+									draggable={false}
+								/>
 							</div>
+
+							{/* Caption */}
+							{openImage.caption && (
+								<div className="w-full bg-white px-2 py-1">
+									{openImage.caption}
+								</div>
+							)}
 						</div>
 					</div>
 				)}
