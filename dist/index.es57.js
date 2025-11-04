@@ -1,6 +1,22 @@
-import * as e from "react";
-const o = (t) => /* @__PURE__ */ e.createElement("svg", { viewBox: "0 0 19 11", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { id: "Rectangle 128", d: "M1.5 1.12916L9.5 8.87109L17.5 1.12916", stroke: "currentColor", strokeWidth: 3 }));
+import { j as e } from "./index.es4.js";
+import a from "./index.es58.js";
+import { useLanguage as o, t as m } from "./index.es5.js";
+function p({ onOpenMenu: r, className: s = "" }) {
+  const { translations: n } = o(), t = m("menu", n);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${s}`,
+      onClick: r,
+      "aria-label": t,
+      children: [
+        /* @__PURE__ */ e.jsx(a, { className: "h-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "-mr-[0.05rem] whitespace-nowrap", children: t })
+      ]
+    }
+  );
+}
 export {
-  o as default
+  p as MenuButton
 };
 //# sourceMappingURL=index.es57.js.map

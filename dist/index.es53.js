@@ -1,27 +1,25 @@
 import { j as e } from "./index.es4.js";
-import a from "./index.es62.js";
-function s({
-  logoUrl: o = "https://www.berlin.de",
-  logoComponent: t,
-  isSticky: r = !1
+import { LanguageSelect as s } from "./index.es54.js";
+import { Breadcrumbs as n } from "./index.es8.js";
+function f({
+  showBreadcrumbs: t,
+  breadcrumbs: r,
+  showLanguageSelect: a,
+  LinkComponent: i,
+  isSticky: o = !1
 }) {
-  return /* @__PURE__ */ e.jsx(
+  return !t && !a ? null : /* @__PURE__ */ e.jsx(
     "div",
     {
-      className: `sticky top-0 z-10 flex items-center justify-start border-b transition-[height,background-color,opacity,padding] duration-200 ease-in-out ${r ? "h-[3px] border-none bg-grey-darkest px-4 py-0 lg:px-6" : "h-11 border-gray-300 bg-white px-4 py-[0.25em] lg:px-6"}`,
-      children: /* @__PURE__ */ e.jsx(
-        "a",
-        {
-          href: o,
-          "aria-label": "Homepage Berlin.de",
-          className: `transition-opacity duration-200 ease-in-out ${r ? "opacity-0" : "opacity-100"}`,
-          children: t || /* @__PURE__ */ e.jsx("img", { src: a, alt: "Berlin.de Logo", className: "object-fill" })
-        }
-      )
+      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
+      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
+        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
+        a && /* @__PURE__ */ e.jsx(s, {})
+      ] })
     }
   );
 }
 export {
-  s as LogoBar
+  f as SubHeaderBar
 };
 //# sourceMappingURL=index.es53.js.map
