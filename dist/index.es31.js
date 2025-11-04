@@ -1,25 +1,6 @@
-import { j as e } from "./index.es4.js";
-import { LanguageSelect as s } from "./index.es32.js";
-import { Breadcrumbs as n } from "./index.es8.js";
-function f({
-  showBreadcrumbs: t,
-  breadcrumbs: r,
-  showLanguageSelect: a,
-  LinkComponent: i,
-  isSticky: o = !1
-}) {
-  return !t && !a ? null : /* @__PURE__ */ e.jsx(
-    "div",
-    {
-      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
-      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
-        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
-        a && /* @__PURE__ */ e.jsx(s, {})
-      ] })
-    }
-  );
-}
+import * as e from "react";
+const l = (t) => /* @__PURE__ */ e.createElement("svg", { viewBox: "0 0 20 20", fill: "currentColor", xmlns: "http://www.w3.org/2000/svg", className: "{className}", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M14.0975 10L19.5026 4.3142C20.1659 3.61648 20.1659 2.48523 19.5026 1.78693L18.3013 0.523295C17.6381 -0.174432 16.5626 -0.174432 15.8988 0.523295L10.4937 6.20909L5.08855 0.523295C4.42527 -0.174432 3.34986 -0.174432 2.68603 0.523295L1.48477 1.78693C0.821483 2.48466 0.821483 3.61591 1.48477 4.3142L6.8899 10L1.48477 15.6858C0.821483 16.3835 0.821483 17.5148 1.48477 18.2131L2.68603 19.4767C3.34932 20.1744 4.42527 20.1744 5.08855 19.4767L10.4937 13.7909L15.8988 19.4767C16.5621 20.1744 17.6381 20.1744 18.3013 19.4767L19.5026 18.2131C20.1659 17.5153 20.1659 16.3841 19.5026 15.6858L14.0975 10Z", fill: "currentColor" }));
 export {
-  f as SubHeaderBar
+  l as default
 };
 //# sourceMappingURL=index.es31.js.map

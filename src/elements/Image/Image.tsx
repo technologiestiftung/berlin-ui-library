@@ -1,5 +1,8 @@
-import React from "react";
+/* eslint-disable complexity */
+import React, { useRef, useState } from "react";
 import { cn } from "@/lib/utils"; // Assuming cn utility is available (e.g., from shadcn/ui)
+import MaximizeIcon from "@/assets/icons/maximize.svg?react";
+import TimesIcon from "@/assets/icons/times.svg?react";
 
 interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -48,7 +51,19 @@ interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Optional additional class names for the `img` element itself.
 	 */
 	imgClassName?: string;
+	/**
+	 * Optional add the zoom/enlarge icon to onClick open the image full screen
+	 */
+	withZoomBox?: boolean;
 }
+
+type OpenImage = {
+	src: string;
+	caption?: string;
+	alt: string;
+	height: number;
+	width: number;
+};
 
 // Internal helper component for rendering the overlay to reduce complexity
 const ImageOverlay: React.FC<{
@@ -115,63 +130,145 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 			overlayPosition = "center",
 			darkenImage = false,
 			imgClassName,
+			withZoomBox,
 			...props
 		},
 		ref,
 	) => {
+		const imgRef = useRef<HTMLImageElement | null>(null);
+		const [openImage, setOpenImage] = useState<OpenImage | null>(null);
+		const isPortrait = (img?: { width?: number; height?: number }) =>
+			(img?.height ?? 0) >= (img?.width ?? 0);
+		const open = () =>
+			setOpenImage({
+				src,
+				alt,
+				caption,
+				width: imgRef?.current?.clientWidth ?? 0,
+				height: imgRef?.current?.clientHeight ?? 0,
+			});
 		return (
-			<div
-				className={cn("relative mb-3 block", className)} // Corresponds to 'image'
-				ref={ref}
-				{...props}
-			>
-				{/* Image container */}
+			<>
 				<div
-					className={cn(
-						(caption || copyright) && "mb-1", // Only add mb-1 if caption or copyright exists
-						darkenImage && "brightness-60 filter",
-						props.href && "cursor-pointer",
-					)}
+					className={cn("relative mb-3 block", className)} // Corresponds to 'image'
+					ref={ref}
+					{...props}
 				>
-					<img
+					{/* Image container */}
+					<div
+						className={cn(
+							(caption || copyright) && "mb-1", // Only add mb-1 if caption or copyright exists
+							darkenImage && "brightness-60 filter",
+							(props.href || withZoomBox) && "cursor-pointer",
+							"relative",
+						)}
+					>
+						<img
+							ref={imgRef}
+							onClick={(e) => {
+								if (props.href) {
+									e.preventDefault();
+									window.open(props.href, "_blank");
+								}
+								if (withZoomBox) {
+									e.preventDefault();
+									open();
+								}
+							}}
+							src={src}
+							alt={alt}
+							className={cn("block h-auto w-full", imgClassName)} // Basic image styling
+						/>
+						{withZoomBox && (
+							<div
+								className="absolute right-1.5 bottom-1.5 flex items-center justify-center bg-white p-1.5"
+								onClick={open}
+							>
+								<MaximizeIcon className="size-6 text-white" />
+							</div>
+						)}
+					</div>
+
+					{/* Render Overlay using the helper component */}
+					<ImageOverlay
+						title={overlayTitle}
+						copyrightText={overlayCopyright}
+						link={overlayLink}
+						position={overlayPosition}
+					/>
+
+					{/* Optional Caption */}
+					{caption && (
+						<p className="mb-1 block px-4 text-sm leading-tight font-normal break-words text-black lg:px-0">
+							{" "}
+							{/* Corresponds to 'image__caption' */}
+							{caption}
+						</p>
+					)}
+
+					{/* Optional Copyright (below image) */}
+					{copyright && (
+						<p className="mb-1 block px-4 text-[11px] leading-tight break-words text-gray-600 lg:px-0">
+							{" "}
+							{/* Corresponds to 'image__copyright' below image */}
+							{copyright}
+						</p>
+					)}
+				</div>
+				{/* Optional FullScreen */}
+				{openImage?.src && (
+					<div
+						id="overlay"
+						className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/80"
 						onClick={(e) => {
-							if (props.href) {
-								e.preventDefault();
-								window.open(props.href, "_blank");
+							if ((e.target as HTMLElement).id === "overlay") {
+								setOpenImage(null);
 							}
 						}}
-						src={src}
-						alt={alt}
-						className={cn("block h-auto w-full", imgClassName)} // Basic image styling
-					/>
-				</div>
+					>
+						{/* This wrapper shrinks to the rendered frame width so caption matches via w-full */}
+						<div
+							className="relative inline-block"
+							onClick={(e) => e.stopPropagation()}
+						>
+							{/* Close Button */}
+							<div
+								className="absolute top-0 right-0 z-10 cursor-pointer bg-white p-2"
+								onClick={() => setOpenImage(null)}
+							>
+								<TimesIcon className="size-6" />
+							</div>
 
-				{/* Render Overlay using the helper component */}
-				<ImageOverlay
-					title={overlayTitle}
-					copyrightText={overlayCopyright}
-					link={overlayLink}
-					position={overlayPosition}
-				/>
+							{/* Image Container */}
+							<div
+								className={
+									isPortrait(openImage)
+										? "relative flex h-[min(735px,90vh)] w-auto max-w-[min(980px,98vw)] items-center justify-center"
+										: "relative flex h-auto max-h-[min(735px,90vh)] w-[min(980px,98vw)] items-center justify-center"
+								}
+							>
+								<img
+									src={openImage.src}
+									alt={openImage.alt || ""}
+									className={
+										isPortrait(openImage)
+											? "h-full w-auto object-contain select-none"
+											: "h-auto w-full object-contain select-none"
+									}
+									draggable={false}
+								/>
+							</div>
 
-				{/* Optional Caption */}
-				{caption && (
-					<p className="mb-1 block px-4 text-sm leading-tight font-normal break-words text-black lg:px-0">
-						{" "}
-						{/* Corresponds to 'image__caption' */}
-						{caption}
-					</p>
+							{/* Caption */}
+							{openImage.caption && (
+								<div className="w-full bg-white px-2 py-1">
+									{openImage.caption}
+								</div>
+							)}
+						</div>
+					</div>
 				)}
-
-				{/* Optional Copyright (below image) */}
-				{copyright && (
-					<p className="mb-1 block px-4 text-[11px] leading-tight break-words text-gray-600 lg:px-0">
-						{" "}
-						{/* Corresponds to 'image__copyright' below image */}
-						{copyright}
-					</p>
-				)}
-			</div>
+			</>
 		);
 	},
 );
