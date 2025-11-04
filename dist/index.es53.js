@@ -1,6 +1,22 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z", fill: "currentColor" }));
+import { j as e } from "./index.es4.js";
+import a from "./index.es54.js";
+import { useLanguage as o, t as m } from "./index.es5.js";
+function p({ onOpenMenu: r, className: s = "" }) {
+  const { translations: n } = o(), t = m("menu", n);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${s}`,
+      onClick: r,
+      "aria-label": t,
+      children: [
+        /* @__PURE__ */ e.jsx(a, { className: "h-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "-mr-[0.05rem] whitespace-nowrap", children: t })
+      ]
+    }
+  );
+}
 export {
-  t as default
+  p as MenuButton
 };
 //# sourceMappingURL=index.es53.js.map

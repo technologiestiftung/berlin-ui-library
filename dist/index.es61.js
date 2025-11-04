@@ -1,25 +1,6 @@
-import { j as e } from "./index.es4.js";
-import n from "./index.es30.js";
-import { useLanguage as o, t as m } from "./index.es5.js";
-function p({
-  onOpenSearch: t,
-  className: s = ""
-}) {
-  const { translations: a } = o(), r = m("search", a);
-  return /* @__PURE__ */ e.jsxs(
-    "button",
-    {
-      className: `-mt-[0.05rem] -ml-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] pr-[0.05rem] text-[11px] leading-normal ${s}`,
-      onClick: t,
-      "aria-label": r,
-      children: [
-        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
-        /* @__PURE__ */ e.jsx("span", { className: "text-[11px] whitespace-nowrap", children: r })
-      ]
-    }
-  );
-}
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "Layer_1", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 448", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M168,0H24C10.7,0,0,10.7,0,24v144c0,9.7,5.8,18.5,14.8,22.2,9,3.7,19.3,1.6,26.2-5.2l40-40,79,79-79,79-40-40c-6.9-6.9-17.2-8.9-26.2-5.2-9,3.7-14.8,12.5-14.8,22.2v144c0,13.3,10.7,24,24,24h144c9.7,0,18.5-5.8,22.2-14.8,3.7-9,1.7-19.3-5.2-26.2l-40-40,79-79,79,79-40,40c-6.9,6.9-8.9,17.2-5.2,26.2,3.7,9,12.5,14.8,22.2,14.8h144c13.3,0,24-10.7,24-24v-144c0-9.7-5.8-18.5-14.8-22.2-9-3.7-19.3-1.7-26.2,5.2l-40,40-79-79,79-79,40,40c6.9,6.9,17.2,8.9,26.2,5.2,9-3.7,14.8-12.5,14.8-22.2V24c0-13.3-10.7-24-24-24h-144c-9.7,0-18.5,5.8-22.2,14.8-3.7,9-1.6,19.3,5.2,26.2l40,40-79,79-79-79,40-40c6.9-6.9,8.9-17.2,5.2-26.2-3.7-9-12.5-14.8-22.2-14.8Z" }));
 export {
-  p as SearchButton
+  t as default
 };
 //# sourceMappingURL=index.es61.js.map

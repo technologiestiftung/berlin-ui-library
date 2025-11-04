@@ -1,6 +1,26 @@
-import * as c from "react";
-const l = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z", fill: "currentColor" }));
+import { j as e } from "./index.es4.js";
+import { useLanguage as c, t as a } from "./index.es5.js";
+import { Drawer as i, DrawerContent as m } from "./index.es6.js";
+import { SearchForm as h } from "./index.es7.js";
+function d({ isOpen: n, close: s, onSearch: t }) {
+  const { translations: l } = c(), o = (r) => {
+    t && t(r), s();
+  };
+  return /* @__PURE__ */ e.jsx(i, { open: n, onOpenChange: (r) => !r && s(), children: /* @__PURE__ */ e.jsx(m, { size: "large", className: "flex flex-col gap-4", children: /* @__PURE__ */ e.jsx("div", { className: "flex flex-row justify-center", children: /* @__PURE__ */ e.jsxs("div", { className: "mt-[10vh] flex w-full flex-col gap-2 px-4 lg:mt-[30vh] lg:w-[50%]", children: [
+    /* @__PURE__ */ e.jsx("h1", { className: "font-bold", children: a("search.title", l) }),
+    /* @__PURE__ */ e.jsx(
+      h,
+      {
+        placeholder: a("search.placeholder", l),
+        onSubmit: o,
+        className: "w-full",
+        label: a("search.ariaLabel", l),
+        submitLabel: a("search.submit", l)
+      }
+    )
+  ] }) }) }) });
+}
 export {
-  l as default
+  d as SearchMenu
 };
 //# sourceMappingURL=index.es58.js.map
