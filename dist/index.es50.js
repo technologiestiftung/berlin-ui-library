@@ -1,6 +1,24 @@
-import * as e from "react";
-const c = (t) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 192 512", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z", fill: "currentColor" }));
+import { j as a } from "./index.es4.js";
+import * as d from "react";
+import * as o from "@radix-ui/react-tooltip";
+import { cn as s } from "./index.es27.js";
+const l = o.Provider, f = o.Root, c = o.Trigger, n = d.forwardRef(({ className: t, sideOffset: i = 4, ...e }, r) => /* @__PURE__ */ a.jsx(
+  o.Content,
+  {
+    ref: r,
+    sideOffset: i,
+    className: s(
+      "bg-popover text-popover-foreground z-50 origin-[--radix-tooltip-content-transform-origin] overflow-hidden border px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+      t
+    ),
+    ...e
+  }
+));
+n.displayName = o.Content.displayName;
 export {
-  c as default
+  f as Tooltip,
+  n as TooltipContent,
+  l as TooltipProvider,
+  c as TooltipTrigger
 };
 //# sourceMappingURL=index.es50.js.map
