@@ -110,3 +110,22 @@ export const CustomStyles: Story = {
 		imgClassName: "filter sepia",
 	},
 };
+
+// Images with zoom box
+export const WithZoomBoxVertical: Story = {
+	args: {
+		src: "https://media.istockphoto.com/id/500601834/photo/lake-moraine-and-canoe-dock-in-banff-national-park.jpg?s=612x612&w=0&k=20&c=TRuwRNk0hMinV-XA0pyvaZHKIhHEtdpGqzmcGy-VAlo=",
+		alt: "Sample placeholder image",
+		caption: "Vertical Sample Image with ZoomBox",
+		withZoomBox: true,
+	},
+};
+
+export const WithZoomBoxHorizontal: Story = {
+	args: {
+		src: "https://media.istockphoto.com/id/534037450/photo/red-autumn-and-fishing-pier.jpg?s=612x612&w=0&k=20&c=RNaPpiYq6-Zu8f6xdXZfI8AakcgjL8zP5ifdf4phlQs=",
+		alt: "Sample placeholder image",
+		caption: "Horizontal Sample Image with ZoomBox",
+		withZoomBox: true,
+	},
+};
