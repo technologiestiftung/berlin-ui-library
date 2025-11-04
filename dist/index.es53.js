@@ -1,27 +1,6 @@
-import { j as e } from "./index.es4.js";
-import a from "./index.es62.js";
-function s({
-  logoUrl: o = "https://www.berlin.de",
-  logoComponent: t,
-  isSticky: r = !1
-}) {
-  return /* @__PURE__ */ e.jsx(
-    "div",
-    {
-      className: `sticky top-0 z-10 flex items-center justify-start border-b transition-[height,background-color,opacity,padding] duration-200 ease-in-out ${r ? "h-[3px] border-none bg-grey-darkest px-4 py-0 lg:px-6" : "h-11 border-gray-300 bg-white px-4 py-[0.25em] lg:px-6"}`,
-      children: /* @__PURE__ */ e.jsx(
-        "a",
-        {
-          href: o,
-          "aria-label": "Homepage Berlin.de",
-          className: `transition-opacity duration-200 ease-in-out ${r ? "opacity-0" : "opacity-100"}`,
-          children: t || /* @__PURE__ */ e.jsx("img", { src: a, alt: "Berlin.de Logo", className: "object-fill" })
-        }
-      )
-    }
-  );
-}
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z", fill: "currentColor" }));
 export {
-  s as LogoBar
+  t as default
 };
 //# sourceMappingURL=index.es53.js.map

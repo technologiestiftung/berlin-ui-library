@@ -1,24 +1,54 @@
-import { j as a } from "./index.es4.js";
-import * as d from "react";
-import * as o from "@radix-ui/react-tooltip";
-import { cn as s } from "./index.es27.js";
-const l = o.Provider, f = o.Root, c = o.Trigger, n = d.forwardRef(({ className: t, sideOffset: i = 4, ...e }, r) => /* @__PURE__ */ a.jsx(
-  o.Content,
-  {
-    ref: r,
-    sideOffset: i,
-    className: s(
-      "bg-popover text-popover-foreground z-50 origin-[--radix-tooltip-content-transform-origin] overflow-hidden border px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
-      t
-    ),
-    ...e
-  }
-));
-n.displayName = o.Content.displayName;
+import { j as t } from "./index.es4.js";
+import { Drawer as u, DrawerContent as b } from "./index.es6.js";
+import { useLanguage as f, t as i } from "./index.es5.js";
+function m({
+  isOpen: r,
+  close: l,
+  accessibilityItems: s = []
+}) {
+  const { translations: n } = f(), a = [
+    {
+      question: i("accessibilityMenu.barrierefreiheit.question", n),
+      label: i("accessibilityMenu.barrierefreiheit", n),
+      href: "/accessibility-statement/"
+    },
+    {
+      question: i("accessibilityMenu.contact.question", n),
+      label: i("accessibilityMenu.contact", n),
+      href: "/accessibility-statement/#accessibility-contact"
+    },
+    {
+      question: i("accessibilityMenu.additionalInfo.question", n),
+      label: i("accessibilityMenu.additionalInfo", n),
+      href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
+      external: !0
+    }
+  ], o = s && s.length > 0 ? s : a;
+  return /* @__PURE__ */ t.jsx(u, { open: r, onOpenChange: (e) => !e && l(), children: /* @__PURE__ */ t.jsxs(b, { className: "flex flex-col gap-4 px-6 py-4 text-base", children: [
+    /* @__PURE__ */ t.jsx("div", { className: "mt-4 mb-6 flex flex-row items-center justify-between", children: /* @__PURE__ */ t.jsx("p", { className: "text-2xl font-bold", children: i("accessibilityMenu.title", n) }) }),
+    o.map((e, c) => /* @__PURE__ */ t.jsxs("div", { className: "mb-4", children: [
+      /* @__PURE__ */ t.jsx("p", { className: "mb-1 font-bold", children: e.question }),
+      e.external ? /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          href: e.href,
+          target: "_blank",
+          rel: "noreferrer",
+          children: e.label
+        }
+      ) : /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          href: e.href,
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          children: e.label
+        }
+      )
+    ] }, c))
+  ] }) });
+}
 export {
-  f as Tooltip,
-  n as TooltipContent,
-  l as TooltipProvider,
-  c as TooltipTrigger
+  m as AccessibilityMenu
 };
 //# sourceMappingURL=index.es43.js.map

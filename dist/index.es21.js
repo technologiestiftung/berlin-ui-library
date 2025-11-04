@@ -1,7 +1,7 @@
 import { j as r } from "./index.es4.js";
 import { forwardRef as n } from "react";
 import { cn as o } from "./index.es27.js";
-import i from "./index.es39.js";
+import i from "./index.es65.js";
 const m = {
   heavy: "p-[18px] bg-grey border border-grey",
   dark: "p-[18px] bg-black border-0 text-white",

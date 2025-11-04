@@ -1,26 +1,6 @@
-import { j as e } from "./index.es4.js";
-import { useLanguage as c, t as a } from "./index.es5.js";
-import { Drawer as i, DrawerContent as m } from "./index.es6.js";
-import { SearchForm as h } from "./index.es7.js";
-function d({ isOpen: n, close: s, onSearch: t }) {
-  const { translations: l } = c(), o = (r) => {
-    t && t(r), s();
-  };
-  return /* @__PURE__ */ e.jsx(i, { open: n, onOpenChange: (r) => !r && s(), children: /* @__PURE__ */ e.jsx(m, { size: "large", className: "flex flex-col gap-4", children: /* @__PURE__ */ e.jsx("div", { className: "flex flex-row justify-center", children: /* @__PURE__ */ e.jsxs("div", { className: "mt-[10vh] flex w-full flex-col gap-2 px-4 lg:mt-[30vh] lg:w-[50%]", children: [
-    /* @__PURE__ */ e.jsx("h1", { className: "font-bold", children: a("search.title", l) }),
-    /* @__PURE__ */ e.jsx(
-      h,
-      {
-        placeholder: a("search.placeholder", l),
-        onSubmit: o,
-        className: "w-full",
-        label: a("search.ariaLabel", l),
-        submitLabel: a("search.submit", l)
-      }
-    )
-  ] }) }) }) });
-}
+import * as e from "react";
+const r = (t) => /* @__PURE__ */ e.createElement("svg", { viewBox: "0 0 14 14", fill: "currentColor", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M9.3458 7.00002L12.8649 3.48088C13.2974 3.04846 13.2974 2.34885 12.8649 1.91643L12.0845 1.13596C11.6521 0.70354 10.9524 0.70354 10.52 1.13596L7.00088 4.6551L3.48174 1.13596C3.04932 0.70354 2.34971 0.70354 1.91729 1.13596L1.13682 1.91995C0.704395 2.35237 0.704395 3.05198 1.13682 3.4844L4.65596 7.00002L1.13682 10.5192C0.704395 10.9516 0.704395 11.6512 1.13682 12.0836L1.91729 12.8641C2.34971 13.2965 3.04932 13.2965 3.48174 12.8641L7.00088 9.34495L10.52 12.8641C10.9524 13.2965 11.6521 13.2965 12.0845 12.8641L12.8649 12.0836C13.2974 11.6512 13.2974 10.9516 12.8649 10.5192L9.3458 7.00002Z", fill: "currentColor" }));
 export {
-  d as SearchMenu
+  r as default
 };
 //# sourceMappingURL=index.es64.js.map
