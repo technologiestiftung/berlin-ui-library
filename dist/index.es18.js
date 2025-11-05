@@ -3,7 +3,7 @@ import * as o from "react";
 import * as a from "@radix-ui/react-tabs";
 import { cva as l } from "class-variance-authority";
 import { cn as n } from "./index.es27.js";
-const y = a.Root, c = l("flex w-auto items-center justify-start", {
+const j = a.Root, u = l("flex w-auto items-center justify-start", {
   variants: {
     variant: {
       default: "h-12 gap-1",
@@ -26,44 +26,54 @@ const y = a.Root, c = l("flex w-auto items-center justify-start", {
       variant: "default"
     }
   }
-), b = o.forwardRef(({ className: i, variant: t, ...e }, r) => /* @__PURE__ */ s.jsx(
+), m = o.forwardRef(({ className: i, variant: t, ...r }, e) => /* @__PURE__ */ s.jsx(
   a.List,
   {
-    ref: r,
-    className: n(c({ variant: t, className: i })),
-    ...e
+    ref: e,
+    className: n(u({ variant: t, className: i })),
+    ...r
   }
 ));
-b.displayName = a.List.displayName;
-const u = o.forwardRef(({ className: i, variant: t, children: e, ...r }, d) => t === "module" ? /* @__PURE__ */ s.jsx(
-  a.Trigger,
-  {
-    ref: d,
-    className: n(f({ variant: t, className: i })),
-    ...r,
-    children: /* @__PURE__ */ s.jsxs("span", { className: "relative", children: [
-      /* @__PURE__ */ s.jsx(
-        "span",
-        {
-          className: "invisible absolute left-0 font-bold",
-          "aria-hidden": "true",
-          children: e
-        }
+m.displayName = a.List.displayName;
+const v = o.forwardRef(({ className: i, variant: t, tabColor: r, children: e, ...d }, c) => {
+  if (t === "module")
+    return /* @__PURE__ */ s.jsx(
+      a.Trigger,
+      {
+        ref: c,
+        className: n(f({ variant: t, className: i })),
+        ...d,
+        children: /* @__PURE__ */ s.jsxs("span", { className: "relative", children: [
+          /* @__PURE__ */ s.jsx(
+            "span",
+            {
+              className: "invisible absolute left-0 font-bold",
+              "aria-hidden": "true",
+              children: e
+            }
+          ),
+          /* @__PURE__ */ s.jsx("span", { className: "relative", children: e })
+        ] })
+      }
+    );
+  const b = r ? { "--tab-color": r } : void 0;
+  return /* @__PURE__ */ s.jsx(
+    a.Trigger,
+    {
+      ref: c,
+      style: b,
+      className: n(
+        f({ variant: t }),
+        "data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
+        i
       ),
-      /* @__PURE__ */ s.jsx("span", { className: "relative", children: e })
-    ] })
-  }
-) : /* @__PURE__ */ s.jsx(
-  a.Trigger,
-  {
-    ref: d,
-    className: n(f({ variant: t, className: i })),
-    ...r,
-    children: e
-  }
-));
-u.displayName = a.Trigger.displayName;
-const m = l(
+      ...d,
+      children: e
+    }
+  );
+});
+v.displayName = a.Trigger.displayName;
+const g = l(
   "ring-offset-background focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
   {
     variants: {
@@ -76,19 +86,19 @@ const m = l(
       variant: "default"
     }
   }
-), g = o.forwardRef(({ className: i, variant: t, ...e }, r) => /* @__PURE__ */ s.jsx(
+), p = o.forwardRef(({ className: i, variant: t, ...r }, e) => /* @__PURE__ */ s.jsx(
   a.Content,
   {
-    ref: r,
-    className: n(m({ variant: t, className: i })),
-    ...e
+    ref: e,
+    className: n(g({ variant: t, className: i })),
+    ...r
   }
 ));
-g.displayName = a.Content.displayName;
+p.displayName = a.Content.displayName;
 export {
-  y as Tabs,
-  g as TabsContent,
-  b as TabsList,
-  u as TabsTrigger
+  j as Tabs,
+  p as TabsContent,
+  m as TabsList,
+  v as TabsTrigger
 };
 //# sourceMappingURL=index.es18.js.map
