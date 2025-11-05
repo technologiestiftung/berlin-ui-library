@@ -1,39 +1,39 @@
 import { j as e } from "./index.es4.js";
 import N, { useRef as k, useState as y } from "react";
-import { cn as c } from "./index.es27.js";
-import _ from "./index.es61.js";
-import z from "./index.es43.js";
-const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
-  if (!n && !i)
+import { cn as i } from "./index.es27.js";
+import z from "./index.es38.js";
+import _ from "./index.es39.js";
+const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
+  if (!r && !a)
     return null;
-  const r = a ? "a" : "span", m = a ? { href: a, "data-mainlink": "true" } : {};
+  const c = n ? "a" : "span", m = n ? { href: n, "data-mainlink": "true" } : {};
   return /* @__PURE__ */ e.jsxs(
     "div",
     {
-      className: c(
+      className: i(
         "absolute inset-0 flex flex-col p-6 text-white [text-shadow:1px_1px_4px_rgba(0,0,0,0.4)]",
         s === "bottom" ? "justify-end" : "justify-start"
         // Content alignment
       ),
       children: [
-        n && /* @__PURE__ */ e.jsx(
-          r,
+        r && /* @__PURE__ */ e.jsx(
+          c,
           {
             className: "text-lg leading-tight font-bold hover:underline lg:text-2xl",
             ...m,
-            children: n
+            children: r
           }
         ),
-        i && /* @__PURE__ */ e.jsx(
+        a && /* @__PURE__ */ e.jsx(
           "p",
           {
-            className: c(
+            className: i(
               "absolute text-xs text-white/40",
               // Corresponds to 'image__copyright' within overlay
               s === "bottom" ? "top-1 right-2" : "right-2 bottom-1"
               // Position depends on main content alignment
             ),
-            children: i
+            children: a
           }
         )
       ]
@@ -41,11 +41,11 @@ const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
   );
 }, I = N.forwardRef(
   ({
-    className: n,
-    src: i,
-    alt: a,
+    className: r,
+    src: a,
+    alt: n,
     caption: s,
-    copyright: r,
+    copyright: c,
     overlayTitle: m,
     overlayCopyright: g,
     overlayLink: b,
@@ -56,8 +56,8 @@ const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
     ...o
   }, w) => {
     const h = k(null), [l, d] = y(null), f = (t) => (t?.height ?? 0) >= (t?.width ?? 0), u = () => d({
-      src: i,
-      alt: a,
+      src: a,
+      alt: n,
       caption: s,
       width: h?.current?.clientWidth ?? 0,
       height: h?.current?.clientHeight ?? 0
@@ -66,15 +66,15 @@ const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
       /* @__PURE__ */ e.jsxs(
         "div",
         {
-          className: c("relative mb-3 block", n),
+          className: i("relative mb-3 block", r),
           ref: w,
           ...o,
           children: [
             /* @__PURE__ */ e.jsxs(
               "div",
               {
-                className: c(
-                  (s || r) && "mb-1",
+                className: i(
+                  (s || c) && "mb-1",
                   // Only add mb-1 if caption or copyright exists
                   j && "brightness-60 filter",
                   (o.href || x) && "cursor-pointer",
@@ -88,9 +88,9 @@ const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
                       onClick: (t) => {
                         o.href && (t.preventDefault(), window.open(o.href, "_blank")), x && (t.preventDefault(), u());
                       },
-                      src: i,
-                      alt: a,
-                      className: c("block h-auto w-full", v)
+                      src: a,
+                      alt: n,
+                      className: i("block h-auto w-full", v)
                     }
                   ),
                   x && /* @__PURE__ */ e.jsx(
@@ -98,7 +98,7 @@ const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
                     {
                       className: "absolute right-1.5 bottom-1.5 flex items-center justify-center bg-white p-1.5",
                       onClick: u,
-                      children: /* @__PURE__ */ e.jsx(_, { className: "size-6 text-white" })
+                      children: /* @__PURE__ */ e.jsx(z, { className: "size-6 text-white" })
                     }
                   )
                 ]
@@ -117,9 +117,9 @@ const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
               " ",
               s
             ] }),
-            r && /* @__PURE__ */ e.jsxs("p", { className: "mb-1 block px-4 text-[11px] leading-tight break-words text-gray-600 lg:px-0", children: [
+            c && /* @__PURE__ */ e.jsxs("p", { className: "mb-1 block px-4 text-[11px] leading-tight break-words text-gray-600 lg:px-0", children: [
               " ",
-              r
+              c
             ] })
           ]
         }
@@ -135,7 +135,7 @@ const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
           children: /* @__PURE__ */ e.jsxs(
             "div",
             {
-              className: "relative inline-block",
+              className: "relative inline-block h-fit w-fit",
               onClick: (t) => t.stopPropagation(),
               children: [
                 /* @__PURE__ */ e.jsx(
@@ -143,25 +143,31 @@ const C = ({ title: n, copyrightText: i, link: a, position: s }) => {
                   {
                     className: "absolute top-0 right-0 z-10 cursor-pointer bg-white p-2",
                     onClick: () => d(null),
-                    children: /* @__PURE__ */ e.jsx(z, { className: "size-6" })
+                    children: /* @__PURE__ */ e.jsx(_, { className: "size-6" })
                   }
                 ),
                 /* @__PURE__ */ e.jsx(
                   "div",
                   {
-                    className: f(l) ? "relative flex h-[min(735px,90vh)] w-auto max-w-[min(980px,98vw)] items-center justify-center" : "relative flex h-auto max-h-[min(735px,90vh)] w-[min(980px,98vw)] items-center justify-center",
+                    className: i(
+                      "relative flex items-center justify-center bg-white",
+                      f(l) ? "h-[min(980px,90vh)] w-auto max-w-[min(980px,90vh)]" : "h-auto max-h-[min(980px,90vh)] w-[min(980px,90vh)]"
+                    ),
                     children: /* @__PURE__ */ e.jsx(
                       "img",
                       {
                         src: l.src,
                         alt: l.alt || "",
-                        className: f(l) ? "h-full w-auto object-contain select-none" : "h-auto w-full object-contain select-none",
+                        className: i(
+                          "object-contain select-none",
+                          f(l) ? "h-full w-auto" : "h-auto w-full"
+                        ),
                         draggable: !1
                       }
                     )
                   }
                 ),
-                l.caption && /* @__PURE__ */ e.jsx("div", { className: "w-full bg-white px-2 py-1", children: l.caption })
+                l.caption && /* @__PURE__ */ e.jsx("div", { className: "absolute bottom-0 left-0 z-10 bg-white px-2 py-1", children: l.caption })
               ]
             }
           )
