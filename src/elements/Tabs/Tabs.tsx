@@ -55,12 +55,14 @@ TabsList.displayName = TabsPrimitive.List.displayName;
 
 interface TabsTriggerProps
 	extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>,
-		VariantProps<typeof tabsTriggerVariants> {}
+		VariantProps<typeof tabsTriggerVariants> {
+	tabColor?: string;
+}
 
 const TabsTrigger = React.forwardRef<
 	React.ElementRef<typeof TabsPrimitive.Trigger>,
 	TabsTriggerProps
->(({ className, variant, children, ...props }, ref) => {
+>(({ className, variant, tabColor, children, ...props }, ref) => {
 	// For module variant, we create a special wrapper to prevent text "jumping"
 	if (variant === "module") {
 		return (
@@ -82,11 +84,18 @@ const TabsTrigger = React.forwardRef<
 			</TabsPrimitive.Trigger>
 		);
 	}
+	const style: (React.CSSProperties & { "--tab-color"?: string }) | undefined =
+		tabColor ? { "--tab-color": tabColor } : undefined;
 
 	return (
 		<TabsPrimitive.Trigger
 			ref={ref}
-			className={cn(tabsTriggerVariants({ variant, className }))}
+			style={style}
+			className={cn(
+				tabsTriggerVariants({ variant }),
+				"data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
+				className,
+			)}
 			{...props}
 		>
 			{children}
