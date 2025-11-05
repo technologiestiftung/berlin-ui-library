@@ -78,6 +78,37 @@ export const WithDisabledTab: Story = {
 	),
 };
 
+export const WithColoredTab: Story = {
+	render: () => (
+		<Tabs defaultValue="overview" className="w-[400px]">
+			<TabsList>
+				<TabsTrigger value="overview" tabColor="#9BCFAF">
+					Overview
+				</TabsTrigger>
+				<TabsTrigger value="analytics" tabColor="#FFE70E">
+					Analytics
+				</TabsTrigger>
+			</TabsList>
+			<TabsContent value="overview">
+				<div className="mt-4 rounded-md border bg-white p-4">
+					<h3 className="mb-2 font-medium">Overview</h3>
+					<p className="text-sm text-gray-600">
+						View a summary of your account activity.
+					</p>
+				</div>
+			</TabsContent>
+			<TabsContent value="analytics">
+				<div className="mt-4 rounded-md border bg-white p-4">
+					<h3 className="mb-2 font-medium">Analytics</h3>
+					<p className="text-sm text-gray-600">
+						View detailed analytics for your account.
+					</p>
+				</div>
+			</TabsContent>
+		</Tabs>
+	),
+};
+
 export const WithIcons: Story = {
 	render: () => (
 		<Tabs defaultValue="profile" className="w-[400px]">
