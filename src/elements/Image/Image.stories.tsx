@@ -129,3 +129,12 @@ export const WithZoomBoxHorizontal: Story = {
 		withZoomBox: true,
 	},
 };
+
+export const WithZoomBoxQuadrant: Story = {
+	args: {
+		src: "/Wahrscheinlichkeiten.png",
+		alt: "Sample placeholder image",
+		caption: "Quadrant Sample Image with ZoomBox",
+		withZoomBox: true,
+	},
+};

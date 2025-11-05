@@ -226,9 +226,8 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 							}
 						}}
 					>
-						{/* This wrapper shrinks to the rendered frame width so caption matches via w-full */}
 						<div
-							className="relative inline-block"
+							className="relative inline-block h-fit w-fit"
 							onClick={(e) => e.stopPropagation()}
 						>
 							{/* Close Button */}
@@ -241,27 +240,27 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 
 							{/* Image Container */}
 							<div
-								className={
+								className={cn(
+									"relative flex items-center justify-center bg-white",
 									isPortrait(openImage)
-										? "relative flex h-[min(735px,90vh)] w-auto max-w-[min(980px,98vw)] items-center justify-center"
-										: "relative flex h-auto max-h-[min(735px,90vh)] w-[min(980px,98vw)] items-center justify-center"
-								}
+										? "h-[min(980px,90vh)] w-auto max-w-[min(980px,90vh)]"
+										: "h-auto max-h-[min(980px,90vh)] w-[min(980px,90vh)]",
+								)}
 							>
 								<img
 									src={openImage.src}
 									alt={openImage.alt || ""}
-									className={
-										isPortrait(openImage)
-											? "h-full w-auto object-contain select-none"
-											: "h-auto w-full object-contain select-none"
-									}
+									className={cn(
+										"object-contain select-none",
+										isPortrait(openImage) ? "h-full w-auto" : "h-auto w-full",
+									)}
 									draggable={false}
 								/>
 							</div>
 
 							{/* Caption */}
 							{openImage.caption && (
-								<div className="w-full bg-white px-2 py-1">
+								<div className="absolute bottom-0 left-0 z-10 bg-white px-2 py-1">
 									{openImage.caption}
 								</div>
 							)}
