@@ -243,7 +243,7 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 								className={cn(
 									"relative flex items-center justify-center bg-white",
 									isPortrait(openImage)
-										? "h-[min(980px,90vh)] w-auto max-w-[min(980px,90vh)]"
+										? "h-[min(980px,90vh)] w-auto max-w-[min(980px,95vw)] lg:max-w-[min(980px,90vh)]"
 										: "h-auto max-h-[min(980px,90vh)] w-[min(980px,95vw)] lg:w-[min(980px,90vh)]",
 								)}
 							>
@@ -260,7 +260,7 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 
 							{/* Caption */}
 							{openImage.caption && (
-								<div className="absolute bottom-0 left-0 z-10 bg-white px-2 py-1 text-sm lg:text-base">
+								<div className="absolute bottom-0 left-0 z-10 bg-white px-2 py-1 text-xs lg:text-base">
 									{openImage.caption}
 								</div>
 							)}
