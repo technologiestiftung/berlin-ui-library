@@ -1,5 +1,5 @@
 import { j as e } from "./index.es4.js";
-import n from "./index.es35.js";
+import n from "./index.es30.js";
 import { useLanguage as o, t as m } from "./index.es5.js";
 function p({
   onOpenSearch: t,

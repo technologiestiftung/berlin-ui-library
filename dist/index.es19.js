@@ -1,9 +1,9 @@
 import { j as e } from "./index.es4.js";
 import N, { useRef as k, useState as y } from "react";
 import { cn as i } from "./index.es27.js";
-import z from "./index.es45.js";
-import _ from "./index.es46.js";
-const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
+import z from "./index.es53.js";
+import _ from "./index.es48.js";
+const C = ({ title: r, copyrightText: a, link: n, position: l }) => {
   if (!r && !a)
     return null;
   const c = n ? "a" : "span", m = n ? { href: n, "data-mainlink": "true" } : {};
@@ -12,7 +12,7 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
     {
       className: i(
         "absolute inset-0 flex flex-col p-6 text-white [text-shadow:1px_1px_4px_rgba(0,0,0,0.4)]",
-        s === "bottom" ? "justify-end" : "justify-start"
+        l === "bottom" ? "justify-end" : "justify-start"
         // Content alignment
       ),
       children: [
@@ -30,7 +30,7 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
             className: i(
               "absolute text-xs text-white/40",
               // Corresponds to 'image__copyright' within overlay
-              s === "bottom" ? "top-1 right-2" : "right-2 bottom-1"
+              l === "bottom" ? "top-1 right-2" : "right-2 bottom-1"
               // Position depends on main content alignment
             ),
             children: a
@@ -44,21 +44,21 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
     className: r,
     src: a,
     alt: n,
-    caption: s,
+    caption: l,
     copyright: c,
     overlayTitle: m,
     overlayCopyright: u,
-    overlayLink: b,
-    overlayPosition: p = "center",
+    overlayLink: p,
+    overlayPosition: b = "center",
     darkenImage: j = !1,
     imgClassName: v,
     withZoomBox: x,
     ...o
   }, w) => {
-    const h = k(null), [l, d] = y(null), f = (t) => (t?.height ?? 0) >= (t?.width ?? 0), g = () => d({
+    const h = k(null), [s, d] = y(null), f = (t) => (t?.height ?? 0) >= (t?.width ?? 0), g = () => d({
       src: a,
       alt: n,
-      caption: s,
+      caption: l,
       width: h?.current?.clientWidth ?? 0,
       height: h?.current?.clientHeight ?? 0
     });
@@ -74,7 +74,7 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
               "div",
               {
                 className: i(
-                  (s || c) && "mb-1",
+                  (l || c) && "mb-1",
                   // Only add mb-1 if caption or copyright exists
                   j && "brightness-60 filter",
                   (o.href || x) && "cursor-pointer",
@@ -109,13 +109,13 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
               {
                 title: m,
                 copyrightText: u,
-                link: b,
-                position: p
+                link: p,
+                position: b
               }
             ),
-            s && /* @__PURE__ */ e.jsxs("p", { className: "mb-1 block px-4 text-sm leading-tight font-normal break-words text-black lg:px-0", children: [
+            l && /* @__PURE__ */ e.jsxs("p", { className: "mb-1 block px-4 text-sm leading-tight font-normal break-words text-black lg:px-0", children: [
               " ",
-              s
+              l
             ] }),
             c && /* @__PURE__ */ e.jsxs("p", { className: "mb-1 block px-4 text-[11px] leading-tight break-words text-gray-600 lg:px-0", children: [
               " ",
@@ -124,7 +124,7 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
           ]
         }
       ),
-      l?.src && /* @__PURE__ */ e.jsx(
+      s?.src && /* @__PURE__ */ e.jsx(
         "div",
         {
           id: "overlay",
@@ -151,23 +151,23 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
                   {
                     className: i(
                       "relative flex items-center justify-center bg-white",
-                      f(l) ? "h-[min(980px,90vh)] w-auto max-w-[min(980px,95vw)] lg:max-w-[min(980px,90vh)]" : "h-auto max-h-[min(980px,90vh)] w-[min(980px,95vw)] lg:w-[min(980px,90vh)]"
+                      f(s) ? "h-[min(980px,80vh)] w-auto max-w-[min(980px,90vw)] lg:max-w-[min(980px,90vh)]" : "h-auto max-h-[min(980px,90vh)] w-[min(980px,95vw)] lg:w-[min(980px,90vh)]"
                     ),
                     children: /* @__PURE__ */ e.jsx(
                       "img",
                       {
-                        src: l.src,
-                        alt: l.alt || "",
+                        src: s.src,
+                        alt: s.alt || "",
                         className: i(
                           "object-contain select-none",
-                          f(l) ? "h-full w-auto" : "h-auto w-full"
+                          f(s) ? "h-full w-auto" : "h-auto w-full"
                         ),
                         draggable: !1
                       }
                     )
                   }
                 ),
-                l.caption && /* @__PURE__ */ e.jsx("div", { className: "absolute bottom-0 left-0 z-10 bg-white px-2 py-1 text-xs lg:text-base", children: l.caption })
+                s.caption && /* @__PURE__ */ e.jsx("div", { className: "absolute bottom-0 left-0 z-10 w-full translate-y-[100%] bg-white px-1 py-0.5 text-xs lg:w-auto lg:translate-y-0 lg:px-2 lg:py-1 lg:text-base", children: s.caption })
               ]
             }
           )

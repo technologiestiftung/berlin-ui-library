@@ -1,36 +1,11 @@
-import { __exports as e } from "./index.es68.js";
-/**
- * @license React
- * react-jsx-runtime.production.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var s;
-function a() {
-  if (s) return e;
-  s = 1;
-  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
-  function o(l, r, t) {
-    var u = null;
-    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
-      t = {};
-      for (var n in r)
-        n !== "key" && (t[n] = r[n]);
-    } else t = r;
-    return r = t.ref, {
-      $$typeof: i,
-      type: l,
-      key: u,
-      ref: r !== void 0 ? r : null,
-      props: t
-    };
-  }
-  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
+import { __module as e } from "./index.es44.js";
+import { __require as t } from "./index.es45.js";
+import { __require as i } from "./index.es46.js";
+var r;
+function m() {
+  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
 }
 export {
-  a as __require
+  m as __require
 };
 //# sourceMappingURL=index.es43.js.map

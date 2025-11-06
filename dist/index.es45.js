@@ -1,6 +1,36 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "Layer_1", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 448", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M168,0H24C10.7,0,0,10.7,0,24v144c0,9.7,5.8,18.5,14.8,22.2,9,3.7,19.3,1.6,26.2-5.2l40-40,79,79-79,79-40-40c-6.9-6.9-17.2-8.9-26.2-5.2-9,3.7-14.8,12.5-14.8,22.2v144c0,13.3,10.7,24,24,24h144c9.7,0,18.5-5.8,22.2-14.8,3.7-9,1.7-19.3-5.2-26.2l-40-40,79-79,79,79-40,40c-6.9,6.9-8.9,17.2-5.2,26.2,3.7,9,12.5,14.8,22.2,14.8h144c13.3,0,24-10.7,24-24v-144c0-9.7-5.8-18.5-14.8-22.2-9-3.7-19.3-1.7-26.2,5.2l-40,40-79-79,79-79,40,40c6.9,6.9,17.2,8.9,26.2,5.2,9-3.7,14.8-12.5,14.8-22.2V24c0-13.3-10.7-24-24-24h-144c-9.7,0-18.5,5.8-22.2,14.8-3.7,9-1.6,19.3,5.2,26.2l40,40-79,79-79-79,40-40c6.9-6.9,8.9-17.2,5.2-26.2-3.7-9-12.5-14.8-22.2-14.8Z" }));
+import { __exports as e } from "./index.es68.js";
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var s;
+function a() {
+  if (s) return e;
+  s = 1;
+  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
+  function o(l, r, t) {
+    var u = null;
+    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
+      t = {};
+      for (var n in r)
+        n !== "key" && (t[n] = r[n]);
+    } else t = r;
+    return r = t.ref, {
+      $$typeof: i,
+      type: l,
+      key: u,
+      ref: r !== void 0 ? r : null,
+      props: t
+    };
+  }
+  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
+}
 export {
-  t as default
+  a as __require
 };
 //# sourceMappingURL=index.es45.js.map
