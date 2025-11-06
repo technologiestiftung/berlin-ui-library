@@ -1,24 +1,11 @@
-import { j as a } from "./index.es4.js";
-import * as d from "react";
-import * as o from "@radix-ui/react-tooltip";
-import { cn as s } from "./index.es27.js";
-const l = o.Provider, f = o.Root, c = o.Trigger, n = d.forwardRef(({ className: t, sideOffset: i = 4, ...e }, r) => /* @__PURE__ */ a.jsx(
-  o.Content,
-  {
-    ref: r,
-    sideOffset: i,
-    className: s(
-      "bg-popover text-popover-foreground z-50 origin-[--radix-tooltip-content-transform-origin] overflow-hidden border px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
-      t
-    ),
-    ...e
-  }
-));
-n.displayName = o.Content.displayName;
+import { __module as e } from "./index.es42.js";
+import { __require as t } from "./index.es43.js";
+import { __require as i } from "./index.es44.js";
+var r;
+function m() {
+  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
+}
 export {
-  f as Tooltip,
-  n as TooltipContent,
-  l as TooltipProvider,
-  c as TooltipTrigger
+  m as __require
 };
 //# sourceMappingURL=index.es41.js.map

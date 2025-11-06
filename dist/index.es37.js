@@ -1,5 +1,6 @@
-const e = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20448%20512'%3e%3c!--!Font%20Awesome%20Free%206.5.2%20by%20@fontawesome%20-%20https://fontawesome.com%20License%20-%20https://fontawesome.com/license/free%20Copyright%202024%20Fonticons,%20Inc.--%3e%3cpath%20d='M190.5%2066.9l22.2-22.2c9.4-9.4%2024.6-9.4%2033.9%200L441%20239c9.4%209.4%209.4%2024.6%200%2033.9L246.6%20467.3c-9.4%209.4-24.6%209.4-33.9%200l-22.2-22.2c-9.5-9.5-9.3-25%20.4-34.3L311.4%20296H24c-13.3%200-24-10.7-24-24v-32c0-13.3%2010.7-24%2024-24h287.4L190.9%20101.2c-9.8-9.3-10-24.8-.4-34.3z'%20fill='currentColor'%3e%3c/path%3e%3c/svg%3e";
+import * as e from "react";
+const o = (t) => /* @__PURE__ */ e.createElement("svg", { viewBox: "0 0 11 12", xmlns: "http://www.w3.org/2000/svg", ...t }, /* @__PURE__ */ e.createElement("path", { id: "Vector", d: "M8.83784 5.50883V9.60163C8.83784 9.9725 8.6919 10.3282 8.43214 10.5904C8.17238 10.8527 7.82006 11 7.4527 11H2.38514C2.01777 11 1.66546 10.8527 1.4057 10.5904C1.14593 10.3282 1 9.9725 1 9.60163V4.19913C1 3.82826 1.14593 3.47258 1.4057 3.21033C1.66546 2.94808 2.01777 2.80076 2.38514 2.80076H5.78378M10 3.94682V1M10 1H7.08108M10 1L3.5 8.5", stroke: "currentColor", fill: "none", strokeLinecap: "round", strokeLinejoin: "round" }));
 export {
-  e as default
+  o as default
 };
 //# sourceMappingURL=index.es37.js.map

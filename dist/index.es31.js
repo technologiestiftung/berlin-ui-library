@@ -1,6 +1,24 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "Layer_1", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 448", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M168,0H24C10.7,0,0,10.7,0,24v144c0,9.7,5.8,18.5,14.8,22.2,9,3.7,19.3,1.6,26.2-5.2l40-40,79,79-79,79-40-40c-6.9-6.9-17.2-8.9-26.2-5.2-9,3.7-14.8,12.5-14.8,22.2v144c0,13.3,10.7,24,24,24h144c9.7,0,18.5-5.8,22.2-14.8,3.7-9,1.7-19.3-5.2-26.2l-40-40,79-79,79,79-40,40c-6.9,6.9-8.9,17.2-5.2,26.2,3.7,9,12.5,14.8,22.2,14.8h144c13.3,0,24-10.7,24-24v-144c0-9.7-5.8-18.5-14.8-22.2-9-3.7-19.3-1.7-26.2,5.2l-40,40-79-79,79-79,40,40c6.9,6.9,17.2,8.9,26.2,5.2,9-3.7,14.8-12.5,14.8-22.2V24c0-13.3-10.7-24-24-24h-144c-9.7,0-18.5,5.8-22.2,14.8-3.7,9-1.6,19.3,5.2,26.2l40,40-79,79-79-79,40-40c6.9-6.9,8.9-17.2,5.2-26.2-3.7-9-12.5-14.8-22.2-14.8Z" }));
+import { j as a } from "./index.es4.js";
+import * as d from "react";
+import * as o from "@radix-ui/react-tooltip";
+import { cn as s } from "./index.es27.js";
+const l = o.Provider, f = o.Root, c = o.Trigger, n = d.forwardRef(({ className: t, sideOffset: i = 4, ...e }, r) => /* @__PURE__ */ a.jsx(
+  o.Content,
+  {
+    ref: r,
+    sideOffset: i,
+    className: s(
+      "bg-popover text-popover-foreground z-50 origin-[--radix-tooltip-content-transform-origin] overflow-hidden border px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+      t
+    ),
+    ...e
+  }
+));
+n.displayName = o.Content.displayName;
 export {
-  t as default
+  f as Tooltip,
+  n as TooltipContent,
+  l as TooltipProvider,
+  c as TooltipTrigger
 };
 //# sourceMappingURL=index.es31.js.map

@@ -1,5 +1,5 @@
 import { j as e } from "./index.es4.js";
-import f from "./index.es29.js";
+import f from "./index.es47.js";
 import { Accordion as h, AccordionItem as j, AccordionTrigger as g, AccordionContent as u } from "./index.es16.js";
 import { LanguageProvider as m, useLanguage as p, t as w } from "./index.es5.js";
 function v({

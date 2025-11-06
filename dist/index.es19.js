@@ -1,8 +1,8 @@
 import { j as e } from "./index.es4.js";
 import N, { useRef as k, useState as y } from "react";
 import { cn as i } from "./index.es27.js";
-import z from "./index.es31.js";
-import _ from "./index.es32.js";
+import z from "./index.es45.js";
+import _ from "./index.es46.js";
 const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
   if (!r && !a)
     return null;
@@ -151,7 +151,7 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
                   {
                     className: i(
                       "relative flex items-center justify-center bg-white",
-                      f(l) ? "h-[min(980px,90vh)] w-auto max-w-[min(980px,90vh)]" : "h-auto max-h-[min(980px,90vh)] w-[min(980px,95vw)] lg:w-[min(980px,90vh)]"
+                      f(l) ? "h-[min(980px,90vh)] w-auto max-w-[min(980px,95vw)] lg:max-w-[min(980px,90vh)]" : "h-auto max-h-[min(980px,90vh)] w-[min(980px,95vw)] lg:w-[min(980px,90vh)]"
                     ),
                     children: /* @__PURE__ */ e.jsx(
                       "img",
@@ -167,7 +167,7 @@ const C = ({ title: r, copyrightText: a, link: n, position: s }) => {
                     )
                   }
                 ),
-                l.caption && /* @__PURE__ */ e.jsx("div", { className: "absolute bottom-0 left-0 z-10 bg-white px-2 py-1 text-sm lg:text-base", children: l.caption })
+                l.caption && /* @__PURE__ */ e.jsx("div", { className: "absolute bottom-0 left-0 z-10 bg-white px-2 py-1 text-xs lg:text-base", children: l.caption })
               ]
             }
           )
