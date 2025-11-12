@@ -201,13 +201,15 @@ export function Header({
 				/>
 
 				{/* Sub Header Bar */}
-				<SubHeaderBar
-					showBreadcrumbs={showBreadcrumbs}
-					breadcrumbs={breadcrumbs}
-					showLanguageSelect={showLanguageSelect}
-					LinkComponent={LinkComponent}
-					isSticky={isSticky}
-				/>
+				{!isSticky && (
+					<SubHeaderBar
+						showBreadcrumbs={showBreadcrumbs}
+						breadcrumbs={breadcrumbs}
+						showLanguageSelect={showLanguageSelect}
+						LinkComponent={LinkComponent}
+						isSticky={isSticky}
+					/>
+				)}
 			</header>
 		</LanguageProvider>
 	);
