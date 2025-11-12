@@ -1,8 +1,8 @@
 import { j as r } from "./index.es4.js";
 import { useState as L, useRef as B, useEffect as Y } from "react";
-import { LogoBar as D } from "./index.es54.js";
-import { MainHeaderContent as H } from "./index.es55.js";
-import { SubHeaderBar as R } from "./index.es56.js";
+import { LogoBar as D } from "./index.es49.js";
+import { MainHeaderContent as H } from "./index.es50.js";
+import { SubHeaderBar as R } from "./index.es51.js";
 import { LanguageProvider as C } from "./index.es5.js";
 function A({
   header: i = "Design System",
@@ -31,20 +31,20 @@ function A({
   },
   className: T = ""
 }) {
-  const [n, k] = L(!1), l = B(null);
+  const [t, k] = L(!1), l = B(null);
   return Y(() => {
     if (l.current) {
       let e = null;
       const I = 50;
-      let t = !1;
-      const o = () => {
-        const s = (window.scrollY || window.pageYOffset) > (t ? 0 : 2);
-        s !== t && (t = s, e && clearTimeout(e), e = setTimeout(() => {
-          k(s);
+      let o = !1;
+      const s = () => {
+        const n = (window.scrollY || window.pageYOffset) > (o ? 0 : 2);
+        n !== o && (o = n, e && clearTimeout(e), e = setTimeout(() => {
+          k(n);
         }, I));
       };
-      return o(), window.addEventListener("scroll", o, { passive: !0 }), () => {
-        e && clearTimeout(e), window.removeEventListener("scroll", o);
+      return s(), window.addEventListener("scroll", s, { passive: !0 }), () => {
+        e && clearTimeout(e), window.removeEventListener("scroll", s);
       };
     }
   }, []), /* @__PURE__ */ r.jsx(
@@ -65,7 +65,7 @@ function A({
               {
                 logoUrl: d,
                 logoComponent: u,
-                isSticky: n
+                isSticky: t
               }
             ),
             /* @__PURE__ */ r.jsx(
@@ -81,14 +81,14 @@ function A({
                 onOpenMenu: y
               }
             ),
-            /* @__PURE__ */ r.jsx(
+            !t && /* @__PURE__ */ r.jsx(
               R,
               {
                 showBreadcrumbs: h,
                 breadcrumbs: f,
                 showLanguageSelect: p,
                 LinkComponent: m,
-                isSticky: n
+                isSticky: t
               }
             )
           ]

@@ -1,63 +1,6 @@
-import { j as r } from "./index.es4.js";
-import { Drawer as w, DrawerContent as C } from "./index.es6.js";
-import { useLanguage as D, t as d } from "./index.es5.js";
-import { ChevronDown as k } from "lucide-react";
-import { useState as I } from "react";
-function S({ isOpen: x, close: h, menuItems: a }) {
-  const { translations: o } = D(), [m, p] = I({}), c = (n) => {
-    p((s) => ({
-      ...s,
-      [n]: !s[n]
-    }));
-  }, f = (n) => n % 2 === 0 && n > 0 ? "bg-menu-background-dark pl-4" : n % 2 === 1 ? "bg-menu-background pl-4" : "border-t border-border-light", i = (n, s = 0, u = "") => n.map((e, g) => {
-    const l = `${u}${e.label}-${g}`, t = !!m[l], b = f(s), j = [
-      "flex h-[55px] items-center"
-      // Shadow class removed from here
-    ].join(" ").trim(), N = [
-      b,
-      t ? "shadow-[0_7px_7px_rgba(150,150,150,0.1)] relative z-10" : ""
-    ].join(" ").trim();
-    return /* @__PURE__ */ r.jsxs("div", { className: N, children: [
-      " ",
-      /* @__PURE__ */ r.jsxs("div", { className: j, children: [
-        e.icon && /* @__PURE__ */ r.jsx("span", { className: "mr-2", children: e.icon }),
-        /* @__PURE__ */ r.jsx(
-          "a",
-          {
-            href: e.href,
-            className: "m-[3px] flex w-full items-center px-[24px] py-[0.1rem] text-lg transition-colors duration-200 hover:underline",
-            onClick: (v) => {
-              e.href === "#" || e.href === "" ? (v.preventDefault(), e.children && e.children.length > 0 && c(l)) : e.children && e.children.length > 0;
-            },
-            children: e.label
-          }
-        ),
-        e.children && e.children.length > 0 && /* @__PURE__ */ r.jsx(
-          "div",
-          {
-            className: "mx-[3px] my-[0.5rem] cursor-pointer border-l border-black px-[0.7rem] pt-[0.3rem] pb-[0.4rem]",
-            onClick: () => c(l),
-            children: /* @__PURE__ */ r.jsx(
-              k,
-              {
-                className: `transform transition-transform duration-200 ${t ? "rotate-180" : ""}`
-              }
-            )
-          }
-        )
-      ] }),
-      t && e.children && e.children.length > 0 && /* @__PURE__ */ r.jsxs("div", { className: "flex flex-col", children: [
-        " ",
-        i(e.children, s + 1, `${l}-`)
-      ] })
-    ] }, l);
-  });
-  return /* @__PURE__ */ r.jsx(w, { open: x, onOpenChange: (n) => !n && h(), children: /* @__PURE__ */ r.jsx(C, { className: "flex flex-col gap-2", children: /* @__PURE__ */ r.jsxs("div", { className: "text-base", children: [
-    /* @__PURE__ */ r.jsx("div", { className: "mb-5 flex flex-row items-center justify-between", children: /* @__PURE__ */ r.jsx("p", { className: "px-6 text-2xl font-bold", children: d("menu.title", o) || "Menu" }) }),
-    /* @__PURE__ */ r.jsx("div", { className: "flex flex-col gap-2", children: a.length > 0 ? i(a) : /* @__PURE__ */ r.jsx("p", { children: d("menu.noItems", o) || "No menu items available." }) })
-  ] }) }) });
-}
+import * as c from "react";
+const l = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z", fill: "currentColor" }));
 export {
-  S as MenuDrawer
+  l as default
 };
 //# sourceMappingURL=index.es66.js.map

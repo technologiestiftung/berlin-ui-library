@@ -1,6 +1,25 @@
-import * as e from "react";
-const t = (c) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...c }, /* @__PURE__ */ e.createElement("path", { d: "M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z", fill: "currentColor" }));
+import { j as e } from "./index.es4.js";
+import { LanguageSelect as s } from "./index.es52.js";
+import { Breadcrumbs as n } from "./index.es8.js";
+function f({
+  showBreadcrumbs: t,
+  breadcrumbs: r,
+  showLanguageSelect: a,
+  LinkComponent: i,
+  isSticky: o = !1
+}) {
+  return !t && !a ? null : /* @__PURE__ */ e.jsx(
+    "div",
+    {
+      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
+      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
+        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
+        a && /* @__PURE__ */ e.jsx(s, {})
+      ] })
+    }
+  );
+}
 export {
-  t as default
+  f as SubHeaderBar
 };
 //# sourceMappingURL=index.es51.js.map
