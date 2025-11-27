@@ -54,7 +54,7 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 	if (variant === "back-link") {
 		return (
 			<ArrowLeftIcon
-				className={`mr-1 size-4 ${isDisabled ? "text-gray-500" : "text-black"} flex-shrink-0`}
+				className={`mr-1 size-4 ${isDisabled ? "text-gray-500" : "text-black"} flex-shrink-0 max-sm:scale-x-[-1] max-sm:transform`}
 			/>
 		);
 	}
@@ -119,7 +119,7 @@ const buttonVariants = cva(
 					"h-[39px] min-h-0 w-[39px] border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
 				back: "flex h-[39px] min-h-0 w-[39px] items-center justify-center border-0 border-transparent bg-transparent p-0 disabled:opacity-50",
 				"back-link":
-					"flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 text-text-link hover:underline disabled:text-gray-500 disabled:no-underline leading-none",
+					"flex h-auto min-h-0 flex-row-reverse items-center justify-start border-0 border-transparent bg-transparent p-0 leading-none text-text-link hover:underline disabled:text-gray-500 disabled:no-underline",
 				extern: "pr-[59px] disabled:border-gray-400 disabled:text-gray-500",
 				link: "m-0 h-auto cursor-pointer border-0 bg-transparent p-0 text-left text-text-link hover:underline disabled:text-gray-500 disabled:no-underline",
 				// New variant definition
