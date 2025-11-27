@@ -1,27 +1,6 @@
-import { j as e } from "./index.es4.js";
-import a from "./index.es58.js";
-function s({
-  logoUrl: o = "https://www.berlin.de",
-  logoComponent: t,
-  isSticky: r = !1
-}) {
-  return /* @__PURE__ */ e.jsx(
-    "div",
-    {
-      className: `sticky top-0 z-10 flex items-center justify-start border-b transition-[height,background-color,opacity,padding] duration-200 ease-in-out ${r ? "h-[3px] border-none bg-grey-darkest px-4 py-0 lg:px-6" : "h-11 border-gray-300 bg-white px-4 py-[0.25em] lg:px-6"}`,
-      children: /* @__PURE__ */ e.jsx(
-        "a",
-        {
-          href: o,
-          "aria-label": "Homepage Berlin.de",
-          className: `transition-opacity duration-200 ease-in-out ${r ? "opacity-0" : "opacity-100"}`,
-          children: t || /* @__PURE__ */ e.jsx("img", { src: a, alt: "Berlin.de Logo", className: "object-fill" })
-        }
-      )
-    }
-  );
-}
+import * as e from "react";
+const t = (c) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 352 512", ...c }, /* @__PURE__ */ e.createElement("path", { d: "M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z", fill: "currentColor" }));
 export {
-  s as LogoBar
+  t as default
 };
 //# sourceMappingURL=index.es49.js.map

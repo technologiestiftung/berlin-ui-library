@@ -1,6 +1,54 @@
-import * as e from "react";
-const t = (c) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...c }, /* @__PURE__ */ e.createElement("path", { d: "M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z", fill: "currentColor" }));
+import { j as t } from "./index.es4.js";
+import { Drawer as u, DrawerContent as b } from "./index.es6.js";
+import { useLanguage as f, t as i } from "./index.es5.js";
+function m({
+  isOpen: r,
+  close: l,
+  accessibilityItems: s = []
+}) {
+  const { translations: n } = f(), a = [
+    {
+      question: i("accessibilityMenu.barrierefreiheit.question", n),
+      label: i("accessibilityMenu.barrierefreiheit", n),
+      href: "/accessibility-statement/"
+    },
+    {
+      question: i("accessibilityMenu.contact.question", n),
+      label: i("accessibilityMenu.contact", n),
+      href: "/accessibility-statement/#accessibility-contact"
+    },
+    {
+      question: i("accessibilityMenu.additionalInfo.question", n),
+      label: i("accessibilityMenu.additionalInfo", n),
+      href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
+      external: !0
+    }
+  ], o = s && s.length > 0 ? s : a;
+  return /* @__PURE__ */ t.jsx(u, { open: r, onOpenChange: (e) => !e && l(), children: /* @__PURE__ */ t.jsxs(b, { className: "flex flex-col gap-4 px-6 py-4 text-base", children: [
+    /* @__PURE__ */ t.jsx("div", { className: "mt-4 mb-6 flex flex-row items-center justify-between", children: /* @__PURE__ */ t.jsx("p", { className: "text-2xl font-bold", children: i("accessibilityMenu.title", n) }) }),
+    o.map((e, c) => /* @__PURE__ */ t.jsxs("div", { className: "mb-4", children: [
+      /* @__PURE__ */ t.jsx("p", { className: "mb-1 font-bold", children: e.question }),
+      e.external ? /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          href: e.href,
+          target: "_blank",
+          rel: "noreferrer",
+          children: e.label
+        }
+      ) : /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          href: e.href,
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          children: e.label
+        }
+      )
+    ] }, c))
+  ] }) });
+}
 export {
-  t as default
+  m as AccessibilityMenu
 };
 //# sourceMappingURL=index.es67.js.map
