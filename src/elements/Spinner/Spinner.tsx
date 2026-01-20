@@ -86,7 +86,7 @@ export function Spinner({
 
 	const innerCircleClass = cn(
 		"animate-spin-inner absolute z-10 rounded-full border-white/80 border-t-transparent",
-		innerOnly ? `${sizeMap[size]}` : sizeInnerCircle[size],
+		innerOnly ? sizeMap[size] : sizeInnerCircle[size],
 		borderInnerCircle[size],
 	);
 
