@@ -8,4 +8,5 @@ export interface ButtonProps
 	link?: string;
 	booking?: boolean;
 	price?: string;
+	loading?: boolean;
 }

@@ -33,6 +33,13 @@ export const DefaultDisabled: Story = {
 	},
 };
 
+export const DefaultLoading: Story = {
+	args: {
+		children: "Lädt...",
+		loading: true,
+	},
+};
+
 export const Light: Story = {
 	args: {
 		children: "Light Button",
