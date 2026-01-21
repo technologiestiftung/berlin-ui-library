@@ -15,9 +15,14 @@ import PlayIcon from "@/assets/icons/play.svg?react";
 import CartIcon from "@/assets/icons/cart.svg?react";
 
 import { ButtonProps } from "./types";
+import { Spinner } from "../Spinner";
 
 // Additional icon imports can be added as needed
-const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
+const renderIconAndBackground = (
+	variant: string,
+	isDisabled: boolean,
+	loading: boolean,
+) => {
 	if (
 		variant === "light" ||
 		variant === "white" ||
@@ -71,7 +76,13 @@ const renderIconAndBackground = (variant: string, isDisabled: boolean) => {
 				variant === "colored" ||
 				variant === "fulltone" ||
 				variant === "light-fulltone" ? (
-					<ArrowRightIcon className="size-5 text-white" />
+					<>
+						{loading ? (
+							<Spinner size="extraSmall" innerOnly />
+						) : (
+							<ArrowRightIcon className="size-5 text-white" />
+						)}
+					</>
 				) : variant === "search" ? (
 					<SearchIcon className="size-[18px] text-white" />
 				) : variant === "filter" ? (
@@ -151,6 +162,7 @@ function Button({
 	booking = false,
 	price,
 	children,
+	loading = false,
 	disabled = false,
 	...props
 }: ButtonProps) {
@@ -186,7 +198,7 @@ function Button({
 					aria-hidden="true"
 				/>
 			)}
-			{renderIconAndBackground(variant as string, disabled)}
+			{renderIconAndBackground(variant as string, disabled, loading)}
 		</Comp>
 	);
 }
