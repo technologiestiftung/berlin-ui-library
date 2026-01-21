@@ -1,51 +1,52 @@
 import { j as e } from "./index.es4.js";
-import { Slot as p } from "@radix-ui/react-slot";
-import { cva as f } from "class-variance-authority";
-import { cn as h } from "./index.es27.js";
-import u from "./index.es33.js";
-import n from "./index.es34.js";
-import m from "./index.es35.js";
-import y from "./index.es28.js";
-import w from "./index.es36.js";
-import i from "./index.es37.js";
-import j from "./index.es38.js";
-import k from "./index.es39.js";
-import v from "./index.es40.js";
-const N = (r, t) => {
+import { Slot as f } from "@radix-ui/react-slot";
+import { cva as h } from "class-variance-authority";
+import { cn as u } from "./index.es27.js";
+import m from "./index.es32.js";
+import i from "./index.es33.js";
+import y from "./index.es34.js";
+import w from "./index.es35.js";
+import j from "./index.es36.js";
+import b from "./index.es37.js";
+import k from "./index.es38.js";
+import v from "./index.es39.js";
+import N from "./index.es40.js";
+import { Spinner as z } from "./index.es26.js";
+const S = (r, t, a) => {
   if (r === "light" || r === "white" || r === "clean" || r === "link" || r === "linkWithIcon")
     return null;
   if (r === "close")
     return /* @__PURE__ */ e.jsx("span", { className: "flex h-full w-full items-center justify-center", children: /* @__PURE__ */ e.jsx(
-      y,
+      w,
       {
         className: `size-6 ${t ? "text-gray-500" : "text-black"}`
       }
     ) });
   if (r === "back")
     return /* @__PURE__ */ e.jsx("span", { className: "flex h-full w-full items-center justify-center", children: /* @__PURE__ */ e.jsx(
-      n,
+      i,
       {
         className: `size-6 ${t ? "text-gray-500" : "text-black"}`
       }
     ) });
   if (r === "back-link")
     return /* @__PURE__ */ e.jsx(
-      n,
+      i,
       {
         className: `mr-1 size-4 ${t ? "text-gray-500" : "text-black"} flex-shrink-0 max-sm:scale-x-[-1] max-sm:transform`
       }
     );
-  const a = t ? "bg-gray-400" : "bg-red";
+  const l = t ? "bg-gray-400" : "bg-red";
   return /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     /* @__PURE__ */ e.jsx(
       "span",
       {
-        className: `absolute top-0 right-0 flex h-full w-[39px] items-center justify-center ${r.includes("fulltone") ? "" : "border-l-2"} ${t ? "border-gray-400" : "border-black"} ${a}`
+        className: `absolute top-0 right-0 flex h-full w-[39px] items-center justify-center ${r.includes("fulltone") ? "" : "border-l-2"} ${t ? "border-gray-400" : "border-black"} ${l}`
       }
     ),
-    /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none absolute top-0 right-0 flex h-full w-[39px] items-center justify-center", children: r === "default" || r === "colored" || r === "fulltone" || r === "light-fulltone" ? /* @__PURE__ */ e.jsx(u, { className: "size-5 text-white" }) : r === "search" ? /* @__PURE__ */ e.jsx(m, { className: "size-[18px] text-white" }) : r === "filter" ? /* @__PURE__ */ e.jsx(w, { className: "size-4 text-white" }) : r === "extern" ? /* @__PURE__ */ e.jsx(i, { className: "size-4 text-white" }) : r === "download" ? /* @__PURE__ */ e.jsx(j, { className: "size-[18px] text-white" }) : r === "addtocart" ? /* @__PURE__ */ e.jsx(v, { className: "size-[18px] text-white" }) : r === "play" ? /* @__PURE__ */ e.jsx(k, { className: "size-[18px] text-white" }) : null })
+    /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none absolute top-0 right-0 flex h-full w-[39px] items-center justify-center", children: r === "default" || r === "colored" || r === "fulltone" || r === "light-fulltone" ? /* @__PURE__ */ e.jsx(e.Fragment, { children: a ? /* @__PURE__ */ e.jsx(z, { size: "extraSmall", innerOnly: !0 }) : /* @__PURE__ */ e.jsx(m, { className: "size-5 text-white" }) }) : r === "search" ? /* @__PURE__ */ e.jsx(y, { className: "size-[18px] text-white" }) : r === "filter" ? /* @__PURE__ */ e.jsx(j, { className: "size-4 text-white" }) : r === "extern" ? /* @__PURE__ */ e.jsx(b, { className: "size-4 text-white" }) : r === "download" ? /* @__PURE__ */ e.jsx(k, { className: "size-[18px] text-white" }) : r === "addtocart" ? /* @__PURE__ */ e.jsx(N, { className: "size-[18px] text-white" }) : r === "play" ? /* @__PURE__ */ e.jsx(v, { className: "size-[18px] text-white" }) : null })
   ] });
-}, z = f(
+}, $ = h(
   // base styles for all buttons
   "relative inline-block min-h-[43px] w-auto cursor-pointer justify-center overflow-visible rounded-none border-2 border-black bg-white px-4 py-[10px] text-center font-sans text-base leading-[1.2] text-black no-underline transition-colors duration-200 ease-out disabled:cursor-not-allowed",
   {
@@ -85,47 +86,48 @@ const N = (r, t) => {
     }
   }
 );
-function q({
+function H({
   className: r,
   variant: t = "default",
   size: a,
-  asChild: b = !1,
-  booking: l = !1,
-  price: o,
+  asChild: l = !1,
+  booking: o = !1,
+  price: n,
   children: d,
+  loading: x = !1,
   disabled: s = !1,
-  ...x
+  ...g
 }) {
-  const g = b ? p : "button", c = l && o ? /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-    /* @__PURE__ */ e.jsx("span", { className: "price mr-[0.7em] border-r border-black/60 pr-[0.7em]", children: o }),
+  const c = l ? f : "button", p = o && n ? /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+    /* @__PURE__ */ e.jsx("span", { className: "price mr-[0.7em] border-r border-black/60 pr-[0.7em]", children: n }),
     /* @__PURE__ */ e.jsx("span", { children: d })
   ] }) : d;
   return /* @__PURE__ */ e.jsxs(
-    g,
+    c,
     {
       "data-slot": "button",
-      className: h(
-        z({ variant: t, size: a, className: r }),
-        l ? "button--booking flex" : ""
+      className: u(
+        $({ variant: t, size: a, className: r }),
+        o ? "button--booking flex" : ""
       ),
       disabled: s,
-      ...x,
+      ...g,
       children: [
-        c,
+        p,
         t === "linkWithIcon" && /* @__PURE__ */ e.jsx(
-          i,
+          b,
           {
             className: `mb-2 ml-1 inline-block size-[16px] align-text-top leading-none ${s ? "text-gray-500" : "text-[#0047d3]"}`,
             "aria-hidden": "true"
           }
         ),
-        N(t, s)
+        S(t, s, x)
       ]
     }
   );
 }
 export {
-  q as Button,
-  z as buttonVariants
+  H as Button,
+  $ as buttonVariants
 };
 //# sourceMappingURL=index.es10.js.map
