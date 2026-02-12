@@ -137,7 +137,8 @@ const renderNumberField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
 ) => {
-	const { name, description, placeholder, isDisabled, helperText, id } = property;
+	const { name, description, placeholder, isDisabled, helperText, id } =
+		property;
 
 	const displayValue = field.value !== undefined ? field.value : "";
 	const helperId = helperText ? `${id}Help` : undefined;
@@ -169,7 +170,8 @@ const renderSimpleField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
 ) => {
-	const { name, description, placeholder, isDisabled, helperText, id } = property;
+	const { name, description, placeholder, isDisabled, helperText, id } =
+		property;
 	const helperId = helperText ? `${id}Help` : undefined;
 	return (
 		<Input
@@ -186,7 +188,8 @@ const renderTextareaField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
 ) => {
-	const { name, description, placeholder, isDisabled, helperText, id } = property;
+	const { name, description, placeholder, isDisabled, helperText, id } =
+		property;
 	const helperId = helperText ? `${id}Help` : undefined;
 	return (
 		<Textarea
@@ -503,12 +506,16 @@ function FormFieldWrapper({
 						</FormLabel>
 					</div>
 					<FormControl>{renderField(formProperty, field)}</FormControl>
-					<FormDescription className="text-sm text-text-lightest">
-						{helperText}
-					</FormDescription>
-					<FormDescription className="text-sm text-text-lightest">
-						{description}
-					</FormDescription>
+					{helperText && (
+						<FormDescription className="text-sm text-text-lightest">
+							{helperText}
+						</FormDescription>
+					)}
+					{description && (
+						<FormDescription className="text-sm text-text-lightest">
+							{description}
+						</FormDescription>
+					)}
 					<FormMessage />
 				</FormItem>
 			)}
