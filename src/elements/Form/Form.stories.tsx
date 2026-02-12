@@ -62,6 +62,7 @@ export const WithError: Story = {
 		const methods = useForm({
 			defaultValues: { name: "" },
 			mode: "onSubmit",
+			// @ts-expect-error - Custom resolver implementation
 			resolver: async (values) => ({
 				values: values,
 				errors: values.name
