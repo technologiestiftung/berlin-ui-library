@@ -1,5 +1,12 @@
 /* eslint-disable complexity */
-import { JSX } from "react";
+import { Info } from "lucide-react";
+import { JSX, useState } from "react";
+import {
+	ControllerRenderProps,
+	FieldValues,
+	UseFormReturn,
+} from "react-hook-form";
+import { Checkbox } from "../Checkbox";
 import {
 	FormControl,
 	FormDescription,
@@ -9,12 +16,8 @@ import {
 	FormMessage,
 } from "../Form";
 import { Input } from "../Input/Input";
-import {
-	ControllerRenderProps,
-	FieldValues,
-	UseFormReturn,
-} from "react-hook-form";
-import { Textarea } from "../Textarea";
+import { Label } from "../Label";
+import { RadioGroup, RadioGroupItem } from "../RadioGroup/RadioGroup";
 import {
 	Select,
 	SelectContent,
@@ -23,16 +26,13 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "../Select";
-import { Checkbox } from "../Checkbox";
-import { RadioGroup, RadioGroupItem } from "../RadioGroup/RadioGroup";
-import { Info } from "lucide-react";
+import { Textarea } from "../Textarea";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
 } from "../Tooltip";
-import { Label } from "../Label";
 
 /**
  * FormProperty interface defines the structure of a form field property
@@ -376,19 +376,29 @@ const renderField = (
 	}
 };
 
-// Helper function to render a tooltip
-const renderTooltip = (content: string) => (
-	<TooltipProvider>
-		<Tooltip>
-			<TooltipTrigger asChild>
-				<Info className="text-muted-foreground h-4 w-4" />
-			</TooltipTrigger>
-			<TooltipContent>
-				<p>{content}</p>
-			</TooltipContent>
-		</Tooltip>
-	</TooltipProvider>
-);
+const renderTooltip = (content: string) => {
+	const TooltipWrapper = () => {
+		const [open, setOpen] = useState(false);
+
+		return (
+			<TooltipProvider>
+				<Tooltip open={open} onOpenChange={setOpen}>
+					<TooltipTrigger asChild>
+						<Info 
+							className="text-muted-foreground h-4 w-4 cursor-pointer" 
+							onClick={() => setOpen(!open)}
+						/>
+					</TooltipTrigger>
+					<TooltipContent>
+						<p>{content}</p>
+					</TooltipContent>
+				</Tooltip>
+			</TooltipProvider>
+		);
+	};
+
+	return <TooltipWrapper />;
+};
 
 /**
  * Props for the FormFieldWrapper component
