@@ -64,6 +64,7 @@ git clone <repository-url>
 cd berlin-ui-library
 npm install
 npm run dev
+npm run storybook
 ```
 
 Runs Storybook at http://localhost:6006
