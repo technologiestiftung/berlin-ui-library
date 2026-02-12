@@ -1,91 +1,92 @@
 import { j as a } from "./index.es4.js";
-import { FormField as j, FormItem as b, FormLabel as p, FormControl as g, FormDescription as C, FormMessage as F } from "./index.es11.js";
-import { Input as h } from "./index.es14.js";
-import { Textarea as N } from "./index.es28.js";
-import { Select as $, SelectTrigger as w, SelectValue as f, SelectContent as S, SelectGroup as T, SelectItem as k } from "./index.es29.js";
-import { Checkbox as x } from "./index.es17.js";
-import { RadioGroup as D, RadioGroupItem as V } from "./index.es30.js";
-import { Info as I } from "lucide-react";
-import { TooltipProvider as R, Tooltip as A, TooltipTrigger as E, TooltipContent as G } from "./index.es31.js";
-import { Label as u } from "./index.es15.js";
-const z = (s, e) => {
-  const { name: n, description: c, placeholder: t, isDisabled: l } = s, d = e.value !== void 0 ? e.value : "";
+import { Checkbox as h } from "./index.es17.js";
+import { FormField as p, FormItem as j, FormLabel as g, FormControl as F, FormDescription as v, FormMessage as $ } from "./index.es11.js";
+import { Input as b } from "./index.es14.js";
+import { Label as x } from "./index.es15.js";
+import { RadioGroup as C, RadioGroupItem as N } from "./index.es50.js";
+import { Select as w, SelectTrigger as S, SelectValue as I, SelectContent as T, SelectGroup as k, SelectItem as D } from "./index.es51.js";
+import { Textarea as V } from "./index.es52.js";
+const f = (s, e) => {
+  const { name: c, description: d, placeholder: t, isDisabled: r, helperText: n, id: l } = s, o = e.value !== void 0 ? e.value : "", u = n ? `${l}Help` : void 0;
   return /* @__PURE__ */ a.jsx(
-    h,
+    b,
     {
       ...e,
       type: "number",
       min: s.min,
       max: s.max,
       step: s.step || 1,
-      placeholder: t || `Enter ${c || n}`,
-      disabled: l,
-      onChange: (r) => {
-        const o = r.target.value;
-        o === "" ? e.onChange("") : e.onChange(Number(o));
+      placeholder: t || `Enter ${d || c}`,
+      disabled: r,
+      "aria-describedby": u,
+      onChange: (i) => {
+        const m = i.target.value;
+        m === "" ? e.onChange("") : e.onChange(Number(m));
       },
-      value: d
-    }
-  );
-}, L = (s, e) => {
-  const { name: n, description: c, placeholder: t, isDisabled: l } = s;
-  return /* @__PURE__ */ a.jsx(
-    h,
-    {
-      ...e,
-      type: s.type,
-      placeholder: t || `Enter ${c || n}`,
-      disabled: l
-    }
-  );
-}, q = (s, e) => {
-  const { name: n, description: c, placeholder: t, isDisabled: l } = s;
-  return /* @__PURE__ */ a.jsx(
-    N,
-    {
-      ...e,
-      placeholder: t || `Enter ${c || n}`,
-      disabled: l
+      value: o
     }
   );
 }, y = (s, e) => {
-  const { name: n, description: c, options: t, isDisabled: l } = s, d = e.value !== void 0 ? e.value : "";
-  return /* @__PURE__ */ a.jsxs(
-    $,
+  const { name: c, description: d, placeholder: t, isDisabled: r, helperText: n, id: l } = s, o = n ? `${l}Help` : void 0;
+  return /* @__PURE__ */ a.jsx(
+    b,
     {
-      disabled: l,
+      ...e,
+      type: s.type,
+      placeholder: t || `Enter ${d || c}`,
+      disabled: r,
+      "aria-describedby": o
+    }
+  );
+}, R = (s, e) => {
+  const { name: c, description: d, placeholder: t, isDisabled: r, helperText: n, id: l } = s, o = n ? `${l}Help` : void 0;
+  return /* @__PURE__ */ a.jsx(
+    V,
+    {
+      ...e,
+      placeholder: t || `Enter ${d || c}`,
+      disabled: r,
+      "aria-describedby": o
+    }
+  );
+}, A = (s, e) => {
+  const { name: c, description: d, options: t, isDisabled: r, helperText: n, id: l } = s, o = e.value !== void 0 ? e.value : "", u = n ? `${l}Help` : void 0;
+  return /* @__PURE__ */ a.jsxs(
+    w,
+    {
+      disabled: r,
       onValueChange: e.onChange,
-      value: d,
-      defaultValue: d,
+      value: o,
+      defaultValue: o,
       children: [
-        /* @__PURE__ */ a.jsx(w, { className: "w-full", children: /* @__PURE__ */ a.jsx(f, { placeholder: `Select ${c || n}` }) }),
-        /* @__PURE__ */ a.jsx(S, { children: /* @__PURE__ */ a.jsx(T, { children: t?.map((r) => /* @__PURE__ */ a.jsx(k, { value: r.value, children: r.label || r.value }, r.value)) }) })
+        /* @__PURE__ */ a.jsx(S, { className: "w-full", "aria-describedby": u, children: /* @__PURE__ */ a.jsx(I, { placeholder: `Select ${d || c}` }) }),
+        /* @__PURE__ */ a.jsx(T, { children: /* @__PURE__ */ a.jsx(k, { children: t?.map((i) => /* @__PURE__ */ a.jsx(D, { value: i.value, children: i.label || i.value }, i.value)) }) })
       ]
     }
   );
-}, M = (s, e) => {
-  const { name: n, isDisabled: c, options: t, direction: l } = s;
+}, E = (s, e) => {
+  const { name: c, isDisabled: d, options: t, direction: r } = s;
   if (t && Array.isArray(t) && t.length > 0) {
-    let d = [];
-    return Array.isArray(e.value) ? d = e.value : e.value && (d = [e.value]), /* @__PURE__ */ a.jsx(
+    let n = [];
+    return Array.isArray(e.value) ? n = e.value : e.value && (n = [e.value]), /* @__PURE__ */ a.jsx(
       "div",
       {
-        className: `flex ${l === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-2"}`,
-        children: t.map((r) => {
-          const o = d.includes(r.value);
+        className: `flex ${r === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-2"}`,
+        children: t.map((l) => {
+          const o = n.includes(l.value);
           return /* @__PURE__ */ a.jsxs("div", { className: "flex items-center space-x-2", children: [
             /* @__PURE__ */ a.jsx(
-              x,
+              h,
               {
-                id: `${e.name}-${r.value}`,
-                disabled: c,
+                id: `${e.name}-${l.value}`,
+                disabled: d,
                 checked: o,
-                onCheckedChange: (v) => {
-                  const i = [...d];
-                  if (v)
-                    i.includes(r.value) || i.push(r.value);
+                onCheckedChange: (u) => {
+                  const i = [...n];
+                  if (u)
+                    i.includes(l.value) || i.push(l.value);
                   else {
-                    const m = i.indexOf(r.value);
+                    const m = i.indexOf(l.value);
                     m > -1 && i.splice(m, 1);
                   }
                   e.onChange(i);
@@ -93,71 +94,71 @@ const z = (s, e) => {
               }
             ),
             /* @__PURE__ */ a.jsx(
-              u,
+              x,
               {
-                htmlFor: `${e.name}-${r.value}`,
+                htmlFor: `${e.name}-${l.value}`,
                 className: "leading-[1.2] peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled",
-                children: r.label || r.value
+                children: l.label || l.value
               }
             )
-          ] }, r.value);
+          ] }, l.value);
         })
       }
     );
   }
   return /* @__PURE__ */ a.jsxs("div", { className: "flex items-center space-x-2", children: [
     /* @__PURE__ */ a.jsx(
-      x,
+      h,
       {
         ...e,
         id: e.name,
-        disabled: c,
+        disabled: d,
         checked: e.value,
-        onCheckedChange: (d) => {
-          e.onChange(d);
+        onCheckedChange: (n) => {
+          e.onChange(n);
         }
       }
     ),
     /* @__PURE__ */ a.jsx(
-      u,
+      x,
       {
         htmlFor: e.name,
         className: "text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled",
-        children: n
+        children: c
       }
     )
   ] });
-}, O = (s, e) => {
-  const { options: n, isDisabled: c, direction: t } = s;
+}, G = (s, e) => {
+  const { options: c, isDisabled: d, direction: t } = s;
   return /* @__PURE__ */ a.jsx(
-    D,
+    C,
     {
       value: e.value,
       onValueChange: e.onChange,
-      disabled: c,
+      disabled: d,
       className: `flex ${t === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-1"}`,
-      children: n?.map((l) => /* @__PURE__ */ a.jsxs("div", { className: "flex items-center space-x-2", children: [
+      children: c?.map((r) => /* @__PURE__ */ a.jsxs("div", { className: "flex items-center space-x-2", children: [
         /* @__PURE__ */ a.jsx(
-          V,
+          N,
           {
-            id: `${e.name}-${l.value}`,
-            value: l.value
+            id: `${e.name}-${r.value}`,
+            value: r.value
           }
         ),
         /* @__PURE__ */ a.jsx(
-          u,
+          x,
           {
-            htmlFor: `${e.name}-${l.value}`,
+            htmlFor: `${e.name}-${r.value}`,
             className: "leading-[1.2] peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled",
-            children: l.label || l.value
+            children: r.label || r.value
           }
         )
-      ] }, l.value))
+      ] }, r.value))
     }
   );
-}, W = (s, e) => {
-  const { type: n } = s;
-  switch (n) {
+}, H = (s, e) => {
+  const { type: c } = s;
+  switch (c) {
     case "text":
     case "email":
     case "password":
@@ -165,51 +166,46 @@ const z = (s, e) => {
     case "tel":
     case "date":
     case "datetime-local":
-      return L(s, e);
-    case "textarea":
-      return q(s, e);
-    case "number":
-      return z(s, e);
-    case "checkbox":
-      return M(s, e);
-    case "radio":
-      return O(s, e);
-    case "select":
       return y(s, e);
+    case "textarea":
+      return R(s, e);
+    case "number":
+      return f(s, e);
+    case "checkbox":
+      return E(s, e);
+    case "radio":
+      return G(s, e);
+    case "select":
+      return A(s, e);
     default:
       return null;
   }
-}, B = (s) => /* @__PURE__ */ a.jsx(R, { children: /* @__PURE__ */ a.jsxs(A, { children: [
-  /* @__PURE__ */ a.jsx(E, { asChild: !0, children: /* @__PURE__ */ a.jsx(I, { className: "text-muted-foreground h-4 w-4" }) }),
-  /* @__PURE__ */ a.jsx(G, { children: /* @__PURE__ */ a.jsx("p", { children: s }) })
-] }) });
-function ee({
+};
+function K({
   formProperty: s,
   form: e
 }) {
-  const { id: n, name: c, description: t, isRequired: l, helperText: d } = s;
+  const { id: c, name: d, description: t, isRequired: r, helperText: n } = s;
   return /* @__PURE__ */ a.jsx(
-    j,
+    p,
     {
       control: e.control,
-      name: n,
-      render: ({ field: r }) => /* @__PURE__ */ a.jsxs(b, { children: [
-        /* @__PURE__ */ a.jsxs("div", { className: "flex items-center justify-between", children: [
-          /* @__PURE__ */ a.jsxs(p, { className: "font-bold", children: [
-            c,
-            l && /* @__PURE__ */ a.jsx("span", { className: "ml-1 align-top text-[1.75em] leading-none text-decorative-destructive", children: "*" })
-          ] }),
-          d && B(d)
-        ] }),
-        /* @__PURE__ */ a.jsx(g, { children: W(s, r) }),
-        /* @__PURE__ */ a.jsx(C, { className: "text-sm text-text-lightest", children: t }),
-        /* @__PURE__ */ a.jsx(F, {})
+      name: c,
+      render: ({ field: l }) => /* @__PURE__ */ a.jsxs(j, { children: [
+        /* @__PURE__ */ a.jsx("div", { className: "flex items-center justify-between", children: /* @__PURE__ */ a.jsxs(g, { className: "font-bold", children: [
+          d,
+          r && /* @__PURE__ */ a.jsx("span", { className: "ml-1 align-top text-[1.75em] leading-none text-decorative-destructive", children: "*" })
+        ] }) }),
+        /* @__PURE__ */ a.jsx(F, { children: H(s, l) }),
+        n && /* @__PURE__ */ a.jsx(v, { className: "text-sm text-text-lightest", children: n }),
+        t && /* @__PURE__ */ a.jsx(v, { className: "text-sm text-text-lightest", children: t }),
+        /* @__PURE__ */ a.jsx($, {})
       ] })
     },
-    n
+    c
   );
 }
 export {
-  ee as FormFieldWrapper
+  K as FormFieldWrapper
 };
 //# sourceMappingURL=index.es12.js.map

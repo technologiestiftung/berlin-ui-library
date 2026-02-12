@@ -1,7 +1,7 @@
 import { j as s } from "./index.es4.js";
 import * as m from "react";
 import { cva as h } from "class-variance-authority";
-import y from "./index.es42.js";
+import y from "./index.es41.js";
 import p from "./index.es43.js";
 import N from "./index.es44.js";
 import k from "./index.es45.js";

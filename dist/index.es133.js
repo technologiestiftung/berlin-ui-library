@@ -1,6 +1,28 @@
-import * as c from "react";
-const l = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 250 250", ...e }, /* @__PURE__ */ c.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", fill: "#A5027D", d: "M250,125C250,56.1,193.9,0,125,0C56.1,0,0,56.1,0,125c0,68.9,56.1,125,125,125C193.9,250,250,193.9,250,125" }), /* @__PURE__ */ c.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", fill: "#FFFFFF", d: "M86.4,144.7c0,15.8-10.6,23.5-31.9,23.5H27.6V84.8h28.9c20.6,0,29.2,9,29.2,21c0,10.6-5,16-14.9,19.2C81.2,126.6,86.4,133.6,86.4,144.7 M65.3,143.1c0-6.6-2.5-10.2-9.5-10.2h-6.8V153h6.3C61.9,153,65.3,149.4,65.3,143.1 M64.2,109.9c0-6.8-4.3-9.5-10.9-9.5h-4.3v18.8h4.3C59.9,119.1,64.2,115.3,64.2,109.9 M162.1,137.7c0,19.9-11.1,31.4-31.6,31.4c-21.7,0-31.9-11.3-31.9-28.3V84.8h22.6v53.3c0,9.3,3.2,13.6,9.7,13.6c7.2,0,10.2-4.1,10.2-15.1V84.8h21V137.7z M229.7,142c0,16.3-11.8,27.1-31.6,27.1c-7.2,0-14.2-0.9-22.8-2.7l1.1-18.3c6.8,2.9,12.4,3.6,18.3,3.6c7,0,11.8-2.3,11.8-7.2c0-4.7-2.5-7.5-14.9-11.8c-12-4.1-17.9-12.4-17.9-24.4c0-14.9,12-24.4,30.1-24.4c7,0,13.8,0.9,21.7,2.7l-0.9,16.3c-5.2-2.5-11.8-4.1-17-4.1c-7.5,0-10.9,3.2-10.9,7.7c0,4.3,2.7,7.2,13.8,11.5C224.5,123.4,229.7,130.7,229.7,142" }));
+import * as t from "react";
+const r = (e) => /* @__PURE__ */ t.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16", ...e }, /* @__PURE__ */ t.createElement("g", { transform: "matrix(0.07617161,0,0,0.07618634,0.00230493,-64.17598)" }, /* @__PURE__ */ t.createElement("g", { transform: "translate(-462.85695,323.19699)" }, /* @__PURE__ */ t.createElement("path", { style: {
+  opacity: 1,
+  fill: "#f47920",
+  fillOpacity: 1,
+  fillRule: "nonzero",
+  stroke: "#ffffff",
+  strokeWidth: 0.30000001,
+  strokeLinejoin: "round",
+  strokeMiterlimit: 4,
+  strokeDasharray: "none",
+  strokeDashoffset: 0,
+  strokeOpacity: 1
+}, transform: "matrix(3.5532295,0,0,3.2148268,232.37933,-1524.984)", d: "m 123.82275,668.51166 c 0.005,17.95522 -13.1627,32.51385 -29.407903,32.51385 -16.245205,0 -29.413091,-14.55863 -29.407902,-32.51385 -0.0052,-17.95522 13.162697,-32.51385 29.407903,-32.51385 16.245202,0 29.413092,14.55863 29.407902,32.51385 l 0,0 z" }), /* @__PURE__ */ t.createElement("path", { style: {
+  fill: "#ffffff",
+  fillRule: "evenodd",
+  stroke: "#ffffff",
+  strokeWidth: 1.19277203,
+  strokeLinecap: "butt",
+  strokeLinejoin: "miter",
+  strokeMiterlimit: 4,
+  strokeDasharray: "none",
+  strokeOpacity: 1
+}, d: "m 494.53605,683.91016 26.92309,-123.07693 36.15383,0 4.6154,84.61536 43.07692,-84.61536 35.38461,0 -23.84614,124.61536 -23.84617,-0.76922 16.15387,-92.3077 -43.84618,93.07692 -19.23074,0 -9.23079,-91.53845 -18.46152,90.76923 -23.84618,-0.76921 z" }))));
 export {
-  l as default
+  r as default
 };
 //# sourceMappingURL=index.es133.js.map

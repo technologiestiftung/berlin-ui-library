@@ -1,6 +1,6 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M501.6 92.1L267.2 2a32 32 0 0 0 -22.5 0L10.4 92.1A16 16 0 0 0 0 107.1V144c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-36.9c0-6.7-4.1-12.6-10.4-15zM64 192v160H48c-8.8 0-16 7.2-16 16v48h448v-48c0-8.8-7.2-16-16-16h-16V192h-64v160h-96V192h-64v160h-96V192H64zm432 256H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z", fill: "currentColor" }));
+import * as e from "react";
+const c = (t) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 576 512", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M352 144c0-44.2 35.8-80 80-80s80 35.8 80 80v48c0 17.7 14.3 32 32 32s32-14.3 32-32V144C576 64.5 511.5 0 432 0S288 64.5 288 144v48H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H352V144z", fill: "currentColor" }));
 export {
-  t as default
+  c as default
 };
 //# sourceMappingURL=index.es92.js.map

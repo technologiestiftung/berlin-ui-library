@@ -2,15 +2,15 @@ import { j as e } from "./index.es4.js";
 import { Slot as f } from "@radix-ui/react-slot";
 import { cva as h } from "class-variance-authority";
 import { cn as u } from "./index.es27.js";
-import m from "./index.es32.js";
-import i from "./index.es33.js";
-import y from "./index.es34.js";
-import w from "./index.es35.js";
-import j from "./index.es36.js";
-import b from "./index.es37.js";
-import k from "./index.es38.js";
-import v from "./index.es39.js";
-import N from "./index.es40.js";
+import m from "./index.es30.js";
+import i from "./index.es31.js";
+import y from "./index.es32.js";
+import w from "./index.es33.js";
+import j from "./index.es34.js";
+import b from "./index.es35.js";
+import k from "./index.es36.js";
+import v from "./index.es37.js";
+import N from "./index.es38.js";
 import { Spinner as z } from "./index.es26.js";
 const S = (r, t, a) => {
   if (r === "light" || r === "white" || r === "clean" || r === "link" || r === "linkWithIcon")

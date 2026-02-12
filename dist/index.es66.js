@@ -1,63 +1,54 @@
-import { j as r } from "./index.es4.js";
-import { Drawer as w, DrawerContent as C } from "./index.es6.js";
-import { useLanguage as D, t as d } from "./index.es5.js";
-import { ChevronDown as k } from "lucide-react";
-import { useState as I } from "react";
-function S({ isOpen: x, close: h, menuItems: a }) {
-  const { translations: o } = D(), [m, p] = I({}), c = (n) => {
-    p((s) => ({
-      ...s,
-      [n]: !s[n]
-    }));
-  }, f = (n) => n % 2 === 0 && n > 0 ? "bg-menu-background-dark pl-4" : n % 2 === 1 ? "bg-menu-background pl-4" : "border-t border-border-light", i = (n, s = 0, u = "") => n.map((e, g) => {
-    const l = `${u}${e.label}-${g}`, t = !!m[l], b = f(s), j = [
-      "flex h-[55px] items-center"
-      // Shadow class removed from here
-    ].join(" ").trim(), N = [
-      b,
-      t ? "shadow-[0_7px_7px_rgba(150,150,150,0.1)] relative z-10" : ""
-    ].join(" ").trim();
-    return /* @__PURE__ */ r.jsxs("div", { className: N, children: [
-      " ",
-      /* @__PURE__ */ r.jsxs("div", { className: j, children: [
-        e.icon && /* @__PURE__ */ r.jsx("span", { className: "mr-2", children: e.icon }),
-        /* @__PURE__ */ r.jsx(
-          "a",
-          {
-            href: e.href,
-            className: "m-[3px] flex w-full items-center px-[24px] py-[0.1rem] text-lg transition-colors duration-200 hover:underline",
-            onClick: (v) => {
-              e.href === "#" || e.href === "" ? (v.preventDefault(), e.children && e.children.length > 0 && c(l)) : e.children && e.children.length > 0;
-            },
-            children: e.label
-          }
-        ),
-        e.children && e.children.length > 0 && /* @__PURE__ */ r.jsx(
-          "div",
-          {
-            className: "mx-[3px] my-[0.5rem] cursor-pointer border-l border-black px-[0.7rem] pt-[0.3rem] pb-[0.4rem]",
-            onClick: () => c(l),
-            children: /* @__PURE__ */ r.jsx(
-              k,
-              {
-                className: `transform transition-transform duration-200 ${t ? "rotate-180" : ""}`
-              }
-            )
-          }
-        )
-      ] }),
-      t && e.children && e.children.length > 0 && /* @__PURE__ */ r.jsxs("div", { className: "flex flex-col", children: [
-        " ",
-        i(e.children, s + 1, `${l}-`)
-      ] })
-    ] }, l);
-  });
-  return /* @__PURE__ */ r.jsx(w, { open: x, onOpenChange: (n) => !n && h(), children: /* @__PURE__ */ r.jsx(C, { className: "flex flex-col gap-2", children: /* @__PURE__ */ r.jsxs("div", { className: "text-base", children: [
-    /* @__PURE__ */ r.jsx("div", { className: "mb-5 flex flex-row items-center justify-between", children: /* @__PURE__ */ r.jsx("p", { className: "px-6 text-2xl font-bold", children: d("menu.title", o) || "Menu" }) }),
-    /* @__PURE__ */ r.jsx("div", { className: "flex flex-col gap-2", children: a.length > 0 ? i(a) : /* @__PURE__ */ r.jsx("p", { children: d("menu.noItems", o) || "No menu items available." }) })
-  ] }) }) });
+import { j as t } from "./index.es4.js";
+import { Drawer as u, DrawerContent as b } from "./index.es6.js";
+import { useLanguage as f, t as i } from "./index.es5.js";
+function m({
+  isOpen: r,
+  close: l,
+  accessibilityItems: s = []
+}) {
+  const { translations: n } = f(), a = [
+    {
+      question: i("accessibilityMenu.barrierefreiheit.question", n),
+      label: i("accessibilityMenu.barrierefreiheit", n),
+      href: "/accessibility-statement/"
+    },
+    {
+      question: i("accessibilityMenu.contact.question", n),
+      label: i("accessibilityMenu.contact", n),
+      href: "/accessibility-statement/#accessibility-contact"
+    },
+    {
+      question: i("accessibilityMenu.additionalInfo.question", n),
+      label: i("accessibilityMenu.additionalInfo", n),
+      href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
+      external: !0
+    }
+  ], o = s && s.length > 0 ? s : a;
+  return /* @__PURE__ */ t.jsx(u, { open: r, onOpenChange: (e) => !e && l(), children: /* @__PURE__ */ t.jsxs(b, { className: "flex flex-col gap-4 px-6 py-4 text-base", children: [
+    /* @__PURE__ */ t.jsx("div", { className: "mt-4 mb-6 flex flex-row items-center justify-between", children: /* @__PURE__ */ t.jsx("p", { className: "text-2xl font-bold", children: i("accessibilityMenu.title", n) }) }),
+    o.map((e, c) => /* @__PURE__ */ t.jsxs("div", { className: "mb-4", children: [
+      /* @__PURE__ */ t.jsx("p", { className: "mb-1 font-bold", children: e.question }),
+      e.external ? /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          href: e.href,
+          target: "_blank",
+          rel: "noreferrer",
+          children: e.label
+        }
+      ) : /* @__PURE__ */ t.jsx(
+        "a",
+        {
+          href: e.href,
+          className: "text-text-link transition-colors duration-200 hover:underline",
+          children: e.label
+        }
+      )
+    ] }, c))
+  ] }) });
 }
 export {
-  S as MenuDrawer
+  m as AccessibilityMenu
 };
 //# sourceMappingURL=index.es66.js.map
