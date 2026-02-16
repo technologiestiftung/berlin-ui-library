@@ -1,5 +1,6 @@
 /* eslint-disable complexity */
-import { JSX } from "react";
+import { Info } from "lucide-react";
+import { JSX, useState } from "react";
 import {
 	ControllerRenderProps,
 	FieldValues,
@@ -26,6 +27,12 @@ import {
 	SelectValue,
 } from "../Select";
 import { Textarea } from "../Textarea";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "../Tooltip";
 
 /**
  * FormProperty interface defines the structure of a form field property
@@ -137,11 +144,9 @@ const renderNumberField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
 ) => {
-	const { name, description, placeholder, isDisabled, helperText, id } =
-		property;
+	const { name, description, placeholder, isDisabled } = property;
 
 	const displayValue = field.value !== undefined ? field.value : "";
-	const helperId = helperText ? `${id}Help` : undefined;
 
 	return (
 		<Input
@@ -152,7 +157,6 @@ const renderNumberField = (
 			step={property.step || 1}
 			placeholder={placeholder || `Enter ${description || name}`}
 			disabled={isDisabled}
-			aria-describedby={helperId}
 			onChange={(e) => {
 				const value = e.target.value;
 				if (value === "") {
@@ -170,16 +174,13 @@ const renderSimpleField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
 ) => {
-	const { name, description, placeholder, isDisabled, helperText, id } =
-		property;
-	const helperId = helperText ? `${id}Help` : undefined;
+	const { name, description, placeholder, isDisabled } = property;
 	return (
 		<Input
 			{...field}
 			type={property.type}
 			placeholder={placeholder || `Enter ${description || name}`}
 			disabled={isDisabled}
-			aria-describedby={helperId}
 		/>
 	);
 };
@@ -188,15 +189,12 @@ const renderTextareaField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
 ) => {
-	const { name, description, placeholder, isDisabled, helperText, id } =
-		property;
-	const helperId = helperText ? `${id}Help` : undefined;
+	const { name, description, placeholder, isDisabled } = property;
 	return (
 		<Textarea
 			{...field}
 			placeholder={placeholder || `Enter ${description || name}`}
 			disabled={isDisabled}
-			aria-describedby={helperId}
 		/>
 	);
 };
@@ -205,10 +203,9 @@ const renderSelectField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
 ) => {
-	const { name, description, options, isDisabled, helperText, id } = property;
+	const { name, description, options, isDisabled } = property;
 	// Use field.value instead of property.defaultValue to ensure form state is used
 	const value = field.value !== undefined ? field.value : "";
-	const helperId = helperText ? `${id}Help` : undefined;
 
 	return (
 		<Select
@@ -217,7 +214,7 @@ const renderSelectField = (
 			value={value}
 			defaultValue={value}
 		>
-			<SelectTrigger className="w-full" aria-describedby={helperId}>
+			<SelectTrigger className="w-full">
 				<SelectValue placeholder={`Select ${description || name}`} />
 			</SelectTrigger>
 			<SelectContent>
@@ -379,6 +376,30 @@ const renderField = (
 	}
 };
 
+const renderTooltip = (content: string) => {
+	const TooltipWrapper = () => {
+		const [open, setOpen] = useState(false);
+
+		return (
+			<TooltipProvider>
+				<Tooltip open={open} onOpenChange={setOpen}>
+					<TooltipTrigger asChild>
+						<Info
+							className="text-muted-foreground h-4 w-4 cursor-pointer"
+							onClick={() => setOpen(!open)}
+						/>
+					</TooltipTrigger>
+					<TooltipContent>
+						<p>{content}</p>
+					</TooltipContent>
+				</Tooltip>
+			</TooltipProvider>
+		);
+	};
+
+	return <TooltipWrapper />;
+};
+
 /**
  * Props for the FormFieldWrapper component
  */
@@ -504,13 +525,9 @@ function FormFieldWrapper({
 								</span>
 							)}
 						</FormLabel>
+						{helperText && renderTooltip(helperText)}
 					</div>
 					<FormControl>{renderField(formProperty, field)}</FormControl>
-					{helperText && (
-						<FormDescription className="text-sm text-text-lightest">
-							{helperText}
-						</FormDescription>
-					)}
 					{description && (
 						<FormDescription className="text-sm text-text-lightest">
 							{description}
