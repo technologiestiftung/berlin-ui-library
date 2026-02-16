@@ -25,6 +25,10 @@ export interface DownloadItemProps
 	 */
 	downloadUrl: string;
 	/**
+	 * Function to call when the download button is clicked
+	 */
+	onClickDownloadItem?: () => void;
+	/**
 	 * Text to display on the download button
 	 */
 	buttonText?: string;
@@ -40,6 +44,7 @@ export const DownloadItem = React.forwardRef<HTMLDivElement, DownloadItemProps>(
 			date,
 			downloadUrl,
 			buttonText = "Download",
+			onClickDownloadItem,
 			...props
 		},
 		ref,
@@ -69,14 +74,29 @@ export const DownloadItem = React.forwardRef<HTMLDivElement, DownloadItemProps>(
 					)}
 				</div>
 				<div className="mt-4 md:mt-0 md:flex-shrink-0 md:pl-[18px]">
-					<a href={downloadUrl} className="inline-block">
+					{downloadUrl ? (
+						<a href={downloadUrl} className="inline-block">
+							<Button
+								variant="download"
+								className="min-h-[43px] w-auto text-base"
+							>
+								{buttonText}
+							</Button>
+						</a>
+					) : (
 						<Button
 							variant="download"
 							className="min-h-[43px] w-auto text-base"
+							onClick={(e) => {
+								e.preventDefault();
+								if (onClickDownloadItem) {
+									onClickDownloadItem();
+								}
+							}}
 						>
 							{buttonText}
 						</Button>
-					</a>
+					)}
 				</div>
 			</div>
 		);
