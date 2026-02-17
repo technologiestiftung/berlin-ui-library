@@ -21,6 +21,10 @@ export interface DownloadItemProps extends React.HTMLAttributes<HTMLDivElement> 
      */
     downloadUrl: string;
     /**
+     * Function to call when the download button is clicked
+     */
+    onClickDownloadItem?: () => void;
+    /**
      * Text to display on the download button
      */
     buttonText?: string;

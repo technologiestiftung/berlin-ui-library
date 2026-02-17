@@ -1,19 +1,6 @@
-import { j as t } from "./index.es4.js";
-import * as i from "react";
-import { cn as s } from "./index.es27.js";
-const a = i.forwardRef(({ className: e, ...r }, o) => /* @__PURE__ */ t.jsx(
-  "textarea",
-  {
-    className: s(
-      "border-input ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full border bg-white px-3 py-2 text-base focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 lg:text-sm",
-      e
-    ),
-    ref: o,
-    ...r
-  }
-));
-a.displayName = "Textarea";
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "Layer_1", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 448", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M168,0H24C10.7,0,0,10.7,0,24v144c0,9.7,5.8,18.5,14.8,22.2,9,3.7,19.3,1.6,26.2-5.2l40-40,79,79-79,79-40-40c-6.9-6.9-17.2-8.9-26.2-5.2-9,3.7-14.8,12.5-14.8,22.2v144c0,13.3,10.7,24,24,24h144c9.7,0,18.5-5.8,22.2-14.8,3.7-9,1.7-19.3-5.2-26.2l-40-40,79-79,79,79-40,40c-6.9,6.9-8.9,17.2-5.2,26.2,3.7,9,12.5,14.8,22.2,14.8h144c13.3,0,24-10.7,24-24v-144c0-9.7-5.8-18.5-14.8-22.2-9-3.7-19.3-1.7-26.2,5.2l-40,40-79-79,79-79,40,40c6.9,6.9,17.2,8.9,26.2,5.2,9-3.7,14.8-12.5,14.8-22.2V24c0-13.3-10.7-24-24-24h-144c-9.7,0-18.5,5.8-22.2,14.8-3.7,9-1.6,19.3,5.2,26.2l40,40-79,79-79-79,40-40c6.9-6.9,8.9-17.2,5.2-26.2-3.7-9-12.5-14.8-22.2-14.8Z" }));
 export {
-  a as Textarea
+  t as default
 };
 //# sourceMappingURL=index.es52.js.map

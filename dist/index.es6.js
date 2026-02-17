@@ -3,7 +3,7 @@ import * as i from "react";
 import * as e from "@radix-ui/react-dialog";
 import { cva as f } from "class-variance-authority";
 import { cn as r } from "./index.es27.js";
-import p from "./index.es33.js";
+import p from "./index.es32.js";
 const v = e.Root, C = e.Trigger, R = e.Close, x = e.Portal, d = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
   e.Overlay,
   {
@@ -52,7 +52,7 @@ const u = f(
         children: [
           /* @__PURE__ */ o.jsx(n, { className: "px-[0.8rem] text-xl font-bold", children: l.title }),
           c,
-          /* @__PURE__ */ o.jsx(e.Close, { className: "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-5.5 right-5.5 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none", children: /* @__PURE__ */ o.jsx(p, { className: "text-black" }) })
+          /* @__PURE__ */ o.jsx(e.Close, { className: "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-5.5 right-5.5 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none", children: /* @__PURE__ */ o.jsx(p, { className: "size-4 text-black" }) })
         ]
       }
     )

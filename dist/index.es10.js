@@ -2,15 +2,15 @@ import { j as e } from "./index.es4.js";
 import { Slot as f } from "@radix-ui/react-slot";
 import { cva as h } from "class-variance-authority";
 import { cn as u } from "./index.es27.js";
-import m from "./index.es30.js";
-import i from "./index.es31.js";
-import y from "./index.es32.js";
-import w from "./index.es33.js";
-import j from "./index.es34.js";
-import b from "./index.es35.js";
-import k from "./index.es36.js";
-import v from "./index.es37.js";
-import N from "./index.es38.js";
+import m from "./index.es29.js";
+import i from "./index.es30.js";
+import y from "./index.es31.js";
+import w from "./index.es32.js";
+import j from "./index.es33.js";
+import b from "./index.es34.js";
+import k from "./index.es35.js";
+import v from "./index.es36.js";
+import N from "./index.es37.js";
 import { Spinner as z } from "./index.es26.js";
 const S = (r, t, a) => {
   if (r === "light" || r === "white" || r === "clean" || r === "link" || r === "linkWithIcon")
@@ -33,7 +33,7 @@ const S = (r, t, a) => {
     return /* @__PURE__ */ e.jsx(
       i,
       {
-        className: `mr-1 size-4 ${t ? "text-gray-500" : "text-black"} flex-shrink-0 max-sm:scale-x-[-1] max-sm:transform`
+        className: `mr-1 size-4 ${t ? "text-gray-500" : "text-black"} flex-shrink-0 scale-x-[-1] transform`
       }
     );
   const l = t ? "bg-gray-400" : "bg-red";
