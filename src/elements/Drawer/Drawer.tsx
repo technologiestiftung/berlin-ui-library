@@ -83,7 +83,7 @@ const DrawerContent = React.forwardRef<
 					</DrawerTitle>
 					{children}
 					<DrawerPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-5.5 right-5.5 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
-						<CloseIcon className="text-black" />
+						<CloseIcon className="size-4 text-black" />
 					</DrawerPrimitive.Close>
 				</DrawerPrimitive.Content>
 			</DrawerPortal>

@@ -59,7 +59,7 @@ const renderIconAndBackground = (
 	if (variant === "back-link") {
 		return (
 			<ArrowLeftIcon
-				className={`mr-1 size-4 ${isDisabled ? "text-gray-500" : "text-black"} flex-shrink-0 max-sm:scale-x-[-1] max-sm:transform`}
+				className={`mr-1 size-4 ${isDisabled ? "text-gray-500" : "text-black"} flex-shrink-0 scale-x-[-1] transform`}
 			/>
 		);
 	}

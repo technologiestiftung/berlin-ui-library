@@ -320,7 +320,7 @@ export const CheckboxGroupInput: Story = {
 			options: [
 				{ value: "technology", label: "Technology" },
 				{ value: "arts", label: "Arts & Culture" },
-				{ value: "sports", label: "Sports & Recreation" },
+				{ value: "sports", label: "<i>Sports</i> & Recreation" },
 				{ value: "science", label: "Science & Education" },
 			],
 		};
@@ -357,7 +357,7 @@ export const RadioGroupInput: Story = {
 			options: [
 				{ value: "light", label: "Light Theme" },
 				{ value: "dark", label: "Dark Theme" },
-				{ value: "system", label: "System Default" },
+				{ value: "system", label: "<b>System Default</b>" },
 			],
 		};
 
@@ -367,11 +367,11 @@ export const RadioGroupInput: Story = {
 			<Form {...methods}>
 				<form>
 					<FormFieldWrapper formProperty={property} form={methods} />
-					<div className="mt-4 p-3 bg-gray-50 rounded-md">
+					<div className="mt-4 rounded-md bg-gray-50 p-3">
 						<p className="text-sm text-gray-600">
 							<strong>Selected Value:</strong> {watchedValue}
 						</p>
-						<p className="text-xs text-gray-500 mt-1">
+						<p className="mt-1 text-xs text-gray-500">
 							This updates in real-time when you select an option
 						</p>
 					</div>
@@ -409,11 +409,11 @@ export const RadioGroupInputHorizontal: Story = {
 			<Form {...methods}>
 				<form>
 					<FormFieldWrapper formProperty={property} form={methods} />
-					<div className="mt-4 p-3 bg-blue-50 rounded-md">
+					<div className="mt-4 rounded-md bg-blue-50 p-3">
 						<p className="text-sm text-blue-800">
 							<strong>Selected Plan:</strong> {watchedValue || "None selected"}
 						</p>
-						<p className="text-xs text-blue-600 mt-1">
+						<p className="mt-1 text-xs text-blue-600">
 							Watch the value change as you select different options
 						</p>
 					</div>
