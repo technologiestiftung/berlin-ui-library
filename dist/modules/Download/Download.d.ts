@@ -19,7 +19,7 @@ export interface DownloadItemProps extends React.HTMLAttributes<HTMLDivElement> 
     /**
      * URL or path for downloading the file
      */
-    downloadUrl: string;
+    downloadUrl?: string;
     /**
      * Function to call when the download button is clicked
      */

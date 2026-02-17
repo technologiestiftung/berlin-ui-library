@@ -1,5 +1,183 @@
-const e = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20448%20512'%3e%3c!--!Font%20Awesome%20Free%206.5.2%20by%20@fontawesome%20-%20https://fontawesome.com%20License%20-%20https://fontawesome.com/license/free%20Copyright%202024%20Fonticons,%20Inc.--%3e%3cpath%20d='M190.5%2066.9l22.2-22.2c9.4-9.4%2024.6-9.4%2033.9%200L441%20239c9.4%209.4%209.4%2024.6%200%2033.9L246.6%20467.3c-9.4%209.4-24.6%209.4-33.9%200l-22.2-22.2c-9.5-9.5-9.3-25%20.4-34.3L311.4%20296H24c-13.3%200-24-10.7-24-24v-32c0-13.3%2010.7-24%2024-24h287.4L190.9%20101.2c-9.8-9.3-10-24.8-.4-34.3z'%20fill='currentColor'%3e%3c/path%3e%3c/svg%3e";
+import r from "./index.es70.js";
+import o from "./index.es30.js";
+import m from "./index.es29.js";
+import t from "./index.es28.js";
+import i from "./index.es61.js";
+import e from "./index.es71.js";
+import f from "./index.es37.js";
+import a from "./index.es72.js";
+import p from "./index.es58.js";
+import g from "./index.es73.js";
+import S from "./index.es59.js";
+import v from "./index.es74.js";
+import c from "./index.es75.js";
+import s from "./index.es76.js";
+import n from "./index.es32.js";
+import l from "./index.es77.js";
+import h from "./index.es78.js";
+import u from "./index.es79.js";
+import k from "./index.es80.js";
+import d from "./index.es81.js";
+import w from "./index.es35.js";
+import b from "./index.es82.js";
+import T from "./index.es83.js";
+import C from "./index.es49.js";
+import q from "./index.es84.js";
+import L from "./index.es85.js";
+import x from "./index.es86.js";
+import D from "./index.es87.js";
+import y from "./index.es33.js";
+import F from "./index.es88.js";
+import U from "./index.es89.js";
+import A from "./index.es48.js";
+import B from "./index.es90.js";
+import E from "./index.es91.js";
+import M from "./index.es92.js";
+import P from "./index.es93.js";
+import R from "./index.es34.js";
+import I from "./index.es94.js";
+import X from "./index.es95.js";
+import H from "./index.es96.js";
+import O from "./index.es97.js";
+import Q from "./index.es98.js";
+import W from "./index.es99.js";
+import Y from "./index.es100.js";
+import j from "./index.es101.js";
+import z from "./index.es102.js";
+import G from "./index.es103.js";
+import J from "./index.es36.js";
+import K from "./index.es104.js";
+import N from "./index.es105.js";
+import V from "./index.es106.js";
+import Z from "./index.es107.js";
+import _ from "./index.es31.js";
+import $ from "./index.es108.js";
+import rr from "./index.es109.js";
+import or from "./index.es110.js";
+import mr from "./index.es111.js";
+import tr from "./index.es112.js";
+import ir from "./index.es113.js";
+import er from "./index.es114.js";
+import fr from "./index.es115.js";
+import ar from "./index.es116.js";
+import pr from "./index.es117.js";
+import gr from "./index.es118.js";
+import Sr from "./index.es119.js";
+import vr from "./index.es120.js";
+import cr from "./index.es50.js";
+import sr from "./index.es121.js";
+import nr from "./index.es122.js";
+import lr from "./index.es123.js";
+import hr from "./index.es47.js";
+import ur from "./index.es124.js";
+import kr from "./index.es125.js";
+import dr from "./index.es126.js";
+import wr from "./index.es127.js";
+import br from "./index.es128.js";
+import Tr from "./index.es129.js";
+import Cr from "./index.es130.js";
+import qr from "./index.es51.js";
+import Lr from "./index.es131.js";
+import xr from "./index.es132.js";
+import Dr from "./index.es133.js";
+import yr from "./index.es134.js";
+import Fr from "./index.es135.js";
+import Ur from "./index.es136.js";
+import Ar from "./index.es137.js";
+import Br from "./index.es138.js";
+import Er from "./index.es139.js";
+const lm = {
+  "arrow-down": r,
+  "arrow-left": o,
+  "arrow-right": m,
+  "arrow-up": t,
+  bars: i,
+  calendar: e,
+  cart: f,
+  "check-circle": a,
+  "chevron-down": p,
+  "chevron-right": g,
+  "chevron-up": S,
+  "circle-down": v,
+  clock: c,
+  "clock-circle": s,
+  close: n,
+  comment: l,
+  "comment-dots": h,
+  comments: u,
+  desktop: k,
+  dgs: d,
+  download: w,
+  edit: b,
+  envelope: T,
+  error: C,
+  "euro-sign": q,
+  "external-link": L,
+  facebook: x,
+  fax: D,
+  filter: y,
+  flickr: F,
+  heart: U,
+  info: A,
+  "info-circle": B,
+  instagram: E,
+  landmark: M,
+  "leichte-sprache": P,
+  link: R,
+  lock: I,
+  "lock-open": X,
+  login: H,
+  logout: O,
+  map: Q,
+  "map-marker": W,
+  mobile: Y,
+  pause: j,
+  phone: z,
+  pinterest: G,
+  play: J,
+  print: K,
+  "quote-left": N,
+  right: V,
+  rss: Z,
+  search: _,
+  seeding: $,
+  snapchat: rr,
+  "square-bluesky": or,
+  "square-facebook": mr,
+  "square-instagram": tr,
+  "square-linkedin": ir,
+  "square-threads": er,
+  "square-x-twitter": fr,
+  "square-xing": ar,
+  "square-youtube": pr,
+  star: gr,
+  "star-half-stroke": Sr,
+  "star-solid": vr,
+  success: cr,
+  tablet: sr,
+  threads: nr,
+  ticket: lr,
+  times: hr,
+  "times-circle": ur,
+  trash: kr,
+  twitter: dr,
+  "universal-access": wr,
+  user: br,
+  "user-check": Tr,
+  whatsapp: Cr,
+  x: qr,
+  "x-twitter": Lr,
+  // Traffic icons (preserve original colors)
+  "traffic-bahn": xr,
+  "traffic-bus": Dr,
+  "traffic-bvg": yr,
+  "traffic-faehre": Fr,
+  "traffic-metrobus": Ur,
+  "traffic-sbahn": Ar,
+  "traffic-tram": Br,
+  "traffic-ubahn": Er
+};
 export {
-  e as default
+  lm as iconRegistry
 };
 //# sourceMappingURL=index.es53.js.map
