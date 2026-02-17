@@ -185,6 +185,33 @@ const renderSimpleField = (
 	);
 };
 
+const RichText = ({ children }: { children: React.ReactNode }) => {
+	if (typeof children !== "string") return <>{children}</>;
+
+	const parse = (text: string): React.ReactNode[] => {
+		const regex = /<(b|i|u)>(.*?)<\/\1>/i;
+		const match = regex.exec(text);
+
+		if (!match || match.index === undefined) {
+			return [text];
+		}
+
+		const [fullMatch, tag, inner] = match;
+		const before = text.slice(0, match.index);
+		const after = text.slice(match.index + fullMatch.length);
+
+		const Tag = tag as keyof JSX.IntrinsicElements;
+
+		return [
+			...(before ? parse(before) : []),
+			<Tag key={match.index}>{parse(inner)}</Tag>,
+			...(after ? parse(after) : []),
+		];
+	};
+
+	return <>{parse(children)}</>;
+};
+
 const renderTextareaField = (
 	property: FormProperty,
 	field: ControllerRenderProps<FieldValues, string>,
@@ -283,7 +310,7 @@ const renderCheckboxField = (
 								htmlFor={`${field.name}-${option.value}`}
 								className="leading-[1.2] peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 							>
-								{option.label || option.value}
+								<RichText>{option.label || option.value}</RichText>
 							</Label>
 						</div>
 					);
@@ -337,7 +364,7 @@ const renderRadioGroup = (
 						htmlFor={`${field.name}-${option.value}`}
 						className="leading-[1.2] peer-disabled:cursor-not-allowed peer-disabled:text-text-disabled"
 					>
-						{option.label || option.value}
+						<RichText>{option.label || option.value}</RichText>
 					</Label>
 				</div>
 			))}
