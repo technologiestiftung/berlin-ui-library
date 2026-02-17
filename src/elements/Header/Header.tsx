@@ -66,6 +66,10 @@ export interface HeaderProps extends LinkComponentProps {
 	 */
 	onSearch?: () => void;
 	/**
+	 * Whether to use the Berlin search functionality
+	 */
+	doBerlinSearch?: boolean;
+	/**
 	 * Whether to show the menu button
 	 */
 	showMenuButton?: boolean;
@@ -111,6 +115,7 @@ export function Header({
 	onLanguageChange = () => {},
 	showSearchButton = true,
 	onSearch = () => {},
+	doBerlinSearch,
 	showMenuButton = true,
 	menuItems = [],
 	onOpenMenu = () => {},
@@ -195,6 +200,7 @@ export function Header({
 					url={url}
 					showSearchButton={showSearchButton}
 					onSearch={onSearch}
+					doBerlinSearch={doBerlinSearch}
 					showMenuButton={showMenuButton}
 					menuItems={menuItems}
 					onOpenMenu={onOpenMenu}
