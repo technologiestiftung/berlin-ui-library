@@ -71,6 +71,7 @@ const DrawerContent = React.forwardRef<
 				<DrawerOverlay />
 				<DrawerPrimitive.Content
 					ref={ref}
+					onOpenAutoFocus={(e) => e.preventDefault()}
 					className={cn(
 						drawerVariants({ side, size }),
 						"overflow-y-auto",
