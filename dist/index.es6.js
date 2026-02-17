@@ -1,10 +1,10 @@
 import { j as o } from "./index.es4.js";
 import * as i from "react";
 import * as e from "@radix-ui/react-dialog";
-import { cva as f } from "class-variance-authority";
+import { cva as p } from "class-variance-authority";
 import { cn as r } from "./index.es27.js";
-import p from "./index.es32.js";
-const v = e.Root, C = e.Trigger, R = e.Close, x = e.Portal, d = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
+import x from "./index.es29.js";
+const C = e.Root, R = e.Trigger, z = e.Close, u = e.Portal, n = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
   e.Overlay,
   {
     className: r(
@@ -15,8 +15,8 @@ const v = e.Root, C = e.Trigger, R = e.Close, x = e.Portal, d = i.forwardRef(({ 
     ref: s
   }
 ));
-d.displayName = e.Overlay.displayName;
-const u = f(
+n.displayName = e.Overlay.displayName;
+const g = p(
   "fixed z-50 gap-4 bg-white pt-[0.7em] shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=closed]:animate-out data-[state=open]:duration-500 data-[state=open]:animate-in",
   {
     variants: {
@@ -36,30 +36,31 @@ const u = f(
       size: "default"
     }
   }
-), g = i.forwardRef(
-  ({ side: t = "right", size: a = "default", className: s, children: c, ...l }, m) => /* @__PURE__ */ o.jsxs(x, { children: [
-    /* @__PURE__ */ o.jsx(d, {}),
+), w = i.forwardRef(
+  ({ side: t = "right", size: a = "default", className: s, children: c, ...l }, f) => /* @__PURE__ */ o.jsxs(u, { children: [
+    /* @__PURE__ */ o.jsx(n, {}),
     /* @__PURE__ */ o.jsxs(
       e.Content,
       {
-        ref: m,
+        ref: f,
+        onOpenAutoFocus: (m) => m.preventDefault(),
         className: r(
-          u({ side: t, size: a }),
+          g({ side: t, size: a }),
           "overflow-y-auto",
           s
         ),
         ...l,
         children: [
-          /* @__PURE__ */ o.jsx(n, { className: "px-[0.8rem] text-xl font-bold", children: l.title }),
+          /* @__PURE__ */ o.jsx(d, { className: "px-[0.8rem] text-xl font-bold", children: l.title }),
           c,
-          /* @__PURE__ */ o.jsx(e.Close, { className: "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-5.5 right-5.5 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none", children: /* @__PURE__ */ o.jsx(p, { className: "size-4 text-black" }) })
+          /* @__PURE__ */ o.jsx(e.Close, { className: "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-5.5 right-5.5 cursor-pointer rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none", children: /* @__PURE__ */ o.jsx(x, { className: "size-4 text-black" }) })
         ]
       }
     )
   ] })
 );
-g.displayName = e.Content.displayName;
-const w = ({
+w.displayName = e.Content.displayName;
+const y = ({
   className: t,
   ...a
 }) => /* @__PURE__ */ o.jsx(
@@ -72,8 +73,8 @@ const w = ({
     ...a
   }
 );
-w.displayName = "DrawerHeader";
-const y = ({
+y.displayName = "DrawerHeader";
+const b = ({
   className: t,
   ...a
 }) => /* @__PURE__ */ o.jsx(
@@ -86,8 +87,8 @@ const y = ({
     ...a
   }
 );
-y.displayName = "DrawerFooter";
-const n = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
+b.displayName = "DrawerFooter";
+const d = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
   e.Title,
   {
     ref: s,
@@ -95,8 +96,8 @@ const n = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
     ...a
   }
 ));
-n.displayName = e.Title.displayName;
-const b = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
+d.displayName = e.Title.displayName;
+const N = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
   e.Description,
   {
     ref: s,
@@ -104,17 +105,17 @@ const b = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
     ...a
   }
 ));
-b.displayName = e.Description.displayName;
+N.displayName = e.Description.displayName;
 export {
-  v as Drawer,
-  R as DrawerClose,
-  g as DrawerContent,
-  b as DrawerDescription,
-  y as DrawerFooter,
-  w as DrawerHeader,
-  d as DrawerOverlay,
-  x as DrawerPortal,
-  n as DrawerTitle,
-  C as DrawerTrigger
+  C as Drawer,
+  z as DrawerClose,
+  w as DrawerContent,
+  N as DrawerDescription,
+  b as DrawerFooter,
+  y as DrawerHeader,
+  n as DrawerOverlay,
+  u as DrawerPortal,
+  d as DrawerTitle,
+  R as DrawerTrigger
 };
 //# sourceMappingURL=index.es6.js.map
