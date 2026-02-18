@@ -14,6 +14,7 @@ interface MainHeaderContentProps {
 	url: string;
 	showSearchButton: boolean;
 	onSearch: () => void;
+	doBerlinSearch?: boolean | undefined;
 	showMenuButton: boolean;
 	menuItems: MenuItem[];
 	onOpenMenu: () => void;
@@ -28,6 +29,7 @@ export function MainHeaderContent({
 	showMenuButton,
 	menuItems,
 	onOpenMenu,
+	doBerlinSearch,
 }: MainHeaderContentProps) {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -93,6 +95,7 @@ export function MainHeaderContent({
 							isOpen={isSearchOpen}
 							close={handleCloseSearch}
 							onSearch={handleSearch}
+							doBerlinSearch={doBerlinSearch}
 						/>
 					</>
 				)}

@@ -22,6 +22,7 @@ const deTranslations = {
 	collapse: "Einklappen",
 	"search.title": "Suche",
 	"search.placeholder": "Suchbegriff",
+	"search.berlinSearchInfo": "Die Suche wird auf berlin.de durchgeführt.",
 	"search.ariaLabel": "Suche",
 	"search.button": "Suchen",
 	"search.submit": "Suchen",
@@ -162,6 +163,13 @@ export const WithoutSearch: Story = {
 	args: {
 		...Default.args,
 		showSearchButton: false,
+	},
+};
+
+export const WithBerlinSearch: Story = {
+	args: {
+		...Default.args,
+		doBerlinSearch: true,
 	},
 };
 

@@ -15,12 +15,28 @@ export interface SearchMenuProps {
 	 * Function called when search is submitted
 	 */
 	onSearch?: (searchTerm: string) => void;
+	/**
+	 * Whether to perform a search on berlin.de instead of using the onSearch callback
+	 */
+	doBerlinSearch: boolean | undefined;
 }
 
-export function SearchMenu({ isOpen, close, onSearch }: SearchMenuProps) {
+export function SearchMenu({
+	isOpen,
+	close,
+	onSearch,
+	doBerlinSearch,
+}: SearchMenuProps) {
 	const { translations } = useLanguage();
 
 	const handleSearch = (searchTerm: string) => {
+		if (doBerlinSearch) {
+			close();
+			return window.open(
+				`https://www.berlin.de/suche/?q=${encodeURIComponent(searchTerm)}`,
+				"_blank",
+			);
+		}
 		if (onSearch) {
 			onSearch(searchTerm);
 		}
@@ -40,6 +56,11 @@ export function SearchMenu({ isOpen, close, onSearch }: SearchMenuProps) {
 							label={t("search.ariaLabel", translations)}
 							submitLabel={t("search.submit", translations)}
 						/>
+						{doBerlinSearch && (
+							<p className="mt-1 text-sm text-gray-500">
+								{t("search.berlinSearchInfo", translations)}
+							</p>
+						)}
 					</div>
 				</div>
 			</DrawerContent>
