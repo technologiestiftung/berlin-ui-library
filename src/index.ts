@@ -20,11 +20,11 @@ export {
 
 // Breadcrumb components
 export {
-	Breadcrumbs,
 	BreadcrumbItem,
 	BreadcrumbLink,
 	BreadcrumbList,
 	BreadcrumbPage,
+	Breadcrumbs,
 	BreadcrumbSeparator,
 } from "./elements/Breadcrumb";
 
@@ -59,14 +59,14 @@ export { SearchForm } from "./elements/SearchForm";
 
 export {
 	Accordion,
+	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-	AccordionContent,
 } from "./modules/Accordion";
 
 export { Checkbox } from "./elements/Checkbox";
 
-export { Tabs, TabsList, TabsTrigger, TabsContent } from "./elements/Tabs";
+export { Tabs, TabsContent, TabsList, TabsTrigger } from "./elements/Tabs";
 
 export { Image } from "./elements/Image";
 
@@ -74,12 +74,14 @@ export { Toggle, toggleVariants } from "./elements/Toggle";
 
 export { Panel } from "./elements/Panel";
 
-export { Pill, pillVariants, FilterPillGroup } from "./elements/Pills";
+export { FilterPillGroup, Pill, pillVariants } from "./elements/Pills";
 
-export { DownloadItem, DownloadGroup } from "./modules/Download";
+export { DownloadGroup, DownloadItem } from "./modules/Download";
 
 export { List, ListItem } from "./elements/List";
 
 export { Icon } from "./elements/Icon";
 
 export { Spinner } from "./elements/Spinner";
+
+export { Link, linkVariants } from "./elements/Link";
