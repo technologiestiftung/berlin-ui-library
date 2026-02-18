@@ -44,7 +44,7 @@ const drawerVariants = cva(
 			},
 			size: {
 				default: "",
-				large: "w-[90vw]",
+				large: "w-[100vw] md:w-[90vw]",
 			},
 		},
 		defaultVariants: {
