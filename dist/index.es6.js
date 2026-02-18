@@ -3,7 +3,7 @@ import * as i from "react";
 import * as e from "@radix-ui/react-dialog";
 import { cva as p } from "class-variance-authority";
 import { cn as r } from "./index.es28.js";
-import x from "./index.es36.js";
+import x from "./index.es29.js";
 const C = e.Root, R = e.Trigger, z = e.Close, u = e.Portal, n = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
   e.Overlay,
   {
@@ -16,7 +16,7 @@ const C = e.Root, R = e.Trigger, z = e.Close, u = e.Portal, n = i.forwardRef(({ 
   }
 ));
 n.displayName = e.Overlay.displayName;
-const g = p(
+const w = p(
   "fixed z-50 gap-4 bg-white pt-[0.7em] shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=closed]:animate-out data-[state=open]:duration-500 data-[state=open]:animate-in",
   {
     variants: {
@@ -28,7 +28,7 @@ const g = p(
       },
       size: {
         default: "",
-        large: "w-[90vw]"
+        large: "w-[100vw] md:w-[90vw]"
       }
     },
     defaultVariants: {
@@ -36,7 +36,7 @@ const g = p(
       size: "default"
     }
   }
-), w = i.forwardRef(
+), g = i.forwardRef(
   ({ side: t = "right", size: a = "default", className: s, children: c, ...l }, m) => /* @__PURE__ */ o.jsxs(u, { children: [
     /* @__PURE__ */ o.jsx(n, {}),
     /* @__PURE__ */ o.jsxs(
@@ -45,7 +45,7 @@ const g = p(
         ref: m,
         onOpenAutoFocus: (f) => f.preventDefault(),
         className: r(
-          g({ side: t, size: a }),
+          w({ side: t, size: a }),
           "overflow-y-auto",
           s
         ),
@@ -59,7 +59,7 @@ const g = p(
     )
   ] })
 );
-w.displayName = e.Content.displayName;
+g.displayName = e.Content.displayName;
 const y = ({
   className: t,
   ...a
@@ -109,7 +109,7 @@ N.displayName = e.Description.displayName;
 export {
   C as Drawer,
   z as DrawerClose,
-  w as DrawerContent,
+  g as DrawerContent,
   N as DrawerDescription,
   b as DrawerFooter,
   y as DrawerHeader,

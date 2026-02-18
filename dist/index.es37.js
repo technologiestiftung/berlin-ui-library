@@ -1,6 +1,11 @@
-import * as t from "react";
-const r = (e) => /* @__PURE__ */ t.createElement("svg", { viewBox: "0 0 20 19", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...e }, /* @__PURE__ */ t.createElement("path", { d: "M0 9.49989H17.1666M9.04529 17.874L17.45 9.49955L9.04529 1.12598", stroke: "currentColor", strokeWidth: 3 }));
+import { __module as e } from "./index.es38.js";
+import { __require as t } from "./index.es39.js";
+import { __require as i } from "./index.es40.js";
+var r;
+function m() {
+  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
+}
 export {
-  r as default
+  m as __require
 };
 //# sourceMappingURL=index.es37.js.map
