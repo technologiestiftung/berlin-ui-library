@@ -3,8 +3,6 @@ import { useForm } from "react-hook-form";
 
 import { Input } from "../Input/Input";
 
-// @ts-expect-error TS6133 - Required for Storybook setup despite react-jsx transform
-import * as React from "react";
 import { Button } from "../Button/Button";
 import {
 	Form,
@@ -62,6 +60,7 @@ export const WithError: Story = {
 		const methods = useForm({
 			defaultValues: { name: "" },
 			mode: "onSubmit",
+			// @ts-expect-error Custom resolver for demo purposes doesn't match RHF resolver type
 			resolver: async (values) => ({
 				values: values,
 				errors: values.name
