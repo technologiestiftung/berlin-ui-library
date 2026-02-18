@@ -1,28 +1,10 @@
-import * as t from "react";
-const r = (e) => /* @__PURE__ */ t.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16", ...e }, /* @__PURE__ */ t.createElement("g", { transform: "matrix(0.07617161,0,0,0.07618634,0.00230493,-64.17598)" }, /* @__PURE__ */ t.createElement("g", { transform: "translate(-462.85695,323.19699)" }, /* @__PURE__ */ t.createElement("path", { style: {
-  opacity: 1,
-  fill: "#f47920",
-  fillOpacity: 1,
-  fillRule: "nonzero",
-  stroke: "#ffffff",
-  strokeWidth: 0.30000001,
-  strokeLinejoin: "round",
-  strokeMiterlimit: 4,
-  strokeDasharray: "none",
-  strokeDashoffset: 0,
-  strokeOpacity: 1
-}, transform: "matrix(3.5532295,0,0,3.2148268,232.37933,-1524.984)", d: "m 123.82275,668.51166 c 0.005,17.95522 -13.1627,32.51385 -29.407903,32.51385 -16.245205,0 -29.413091,-14.55863 -29.407902,-32.51385 -0.0052,-17.95522 13.162697,-32.51385 29.407903,-32.51385 16.245202,0 29.413092,14.55863 29.407902,32.51385 l 0,0 z" }), /* @__PURE__ */ t.createElement("path", { style: {
-  fill: "#ffffff",
-  fillRule: "evenodd",
-  stroke: "#ffffff",
-  strokeWidth: 1.19277203,
-  strokeLinecap: "butt",
-  strokeLinejoin: "miter",
-  strokeMiterlimit: 4,
-  strokeDasharray: "none",
-  strokeOpacity: 1
-}, d: "m 494.53605,683.91016 26.92309,-123.07693 36.15383,0 4.6154,84.61536 43.07692,-84.61536 35.38461,0 -23.84614,124.61536 -23.84617,-0.76922 16.15387,-92.3077 -43.84618,93.07692 -19.23074,0 -9.23079,-91.53845 -18.46152,90.76923 -23.84618,-0.76921 z" }))));
+import * as e from "react";
+const a = (t) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", xmlSpace: "preserve", enableBackground: "new 0 0 350 353", viewBox: "0 0 16 16", y: "0px", x: "0px", ...t }, /* @__PURE__ */ e.createElement("g", { transform: "matrix(0.04822182,0,0,0.04822182,-0.45815552,-0.4719)" }, /* @__PURE__ */ e.createElement("path", { style: {
+  fill: "#006f35"
+}, d: "m 175.4,341.586 c -91.5,0 -165.899,-74.399 -165.899,-165.9 0,-91.5 74.399,-165.9 165.899,-165.9 91.501,0 165.901,74.4 165.901,165.9 0.002,91.501 -74.4,165.9 -165.901,165.9 z" }), /* @__PURE__ */ e.createElement("path", { style: {
+  fill: "#ffffff"
+}, d: "m 133.4,102.186 c 0,-14.4 13.2,-26.7 36.301,-26.7 40.8,0 75.6,21.9 98.7,46.8 l 0,-43.5 c -26.7,-20.7 -60.301,-33 -97.801,-33 -45,0 -95.1,27.601 -95.1,78.9 0,97.801 148.5,62.701 148.5,119.4 0,15 -19.799,29.101 -44.399,29.101 -40.2,0 -80.1,-24.3 -102,-55.8 l 0,52.199 c 23.1,20.7 65.4,37.2 102,37.2 65.7,0 104.701,-46.801 104.701,-87.001 C 284.303,120.186 133.4,162.784 133.4,102.186 Z" })));
 export {
-  r as default
+  a as default
 };
 //# sourceMappingURL=index.es136.js.map

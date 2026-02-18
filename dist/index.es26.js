@@ -1,5 +1,5 @@
 import { j as r } from "./index.es4.js";
-import { cn as t } from "./index.es27.js";
+import { cn as t } from "./index.es28.js";
 const o = {
   extraSmall: "h-6 w-6",
   small: "h-8 w-8",

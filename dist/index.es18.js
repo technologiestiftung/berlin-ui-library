@@ -2,7 +2,7 @@ import { j as s } from "./index.es4.js";
 import * as o from "react";
 import * as a from "@radix-ui/react-tabs";
 import { cva as l } from "class-variance-authority";
-import { cn as n } from "./index.es27.js";
+import { cn as n } from "./index.es28.js";
 const j = a.Root, u = l("flex w-auto items-center justify-start", {
   variants: {
     variant: {
