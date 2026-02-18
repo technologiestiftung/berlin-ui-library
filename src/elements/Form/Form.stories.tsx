@@ -60,7 +60,6 @@ export const WithError: Story = {
 		const methods = useForm({
 			defaultValues: { name: "" },
 			mode: "onSubmit",
-			// @ts-expect-error Custom resolver for demo purposes doesn't match RHF resolver type
 			resolver: async (values) => ({
 				values: values,
 				errors: values.name

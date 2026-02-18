@@ -59,6 +59,10 @@ export interface HeaderProps extends LinkComponentProps {
      */
     onSearch?: () => void;
     /**
+     * Whether to use the Berlin search functionality
+     */
+    doBerlinSearch?: boolean;
+    /**
      * Whether to show the menu button
      */
     showMenuButton?: boolean;
@@ -84,5 +88,5 @@ export interface HeaderProps extends LinkComponentProps {
  * - Optional breadcrumbs and language selector
  * - Built-in accessibility menu drawer
  */
-export declare function Header({ header, caption, url, logoUrl, logoComponent, LinkComponent, breadcrumbs, showBreadcrumbs, showLanguageSelect, language, languages, translations, onLanguageChange, showSearchButton, onSearch, showMenuButton, menuItems, onOpenMenu, className, }: HeaderProps): import("react/jsx-runtime").JSX.Element;
+export declare function Header({ header, caption, url, logoUrl, logoComponent, LinkComponent, breadcrumbs, showBreadcrumbs, showLanguageSelect, language, languages, translations, onLanguageChange, showSearchButton, onSearch, doBerlinSearch, showMenuButton, menuItems, onOpenMenu, className, }: HeaderProps): import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Header.d.ts.map

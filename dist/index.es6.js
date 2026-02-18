@@ -3,7 +3,7 @@ import * as i from "react";
 import * as e from "@radix-ui/react-dialog";
 import { cva as p } from "class-variance-authority";
 import { cn as r } from "./index.es28.js";
-import x from "./index.es38.js";
+import x from "./index.es36.js";
 const C = e.Root, R = e.Trigger, z = e.Close, u = e.Portal, n = i.forwardRef(({ className: t, ...a }, s) => /* @__PURE__ */ o.jsx(
   e.Overlay,
   {
@@ -23,8 +23,8 @@ const g = p(
       side: {
         top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
         bottom: "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
-        left: "inset-y-0 left-0 h-full w-[35rem] border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
-        right: "inset-y-0 right-0 h-full w-[35rem] border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right"
+        left: "inset-y-0 left-0 h-full w-[35rem] max-w-[100vw] border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
+        right: "inset-y-0 right-0 h-full w-[35rem] max-w-[100vw] border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right"
       },
       size: {
         default: "",
@@ -37,13 +37,13 @@ const g = p(
     }
   }
 ), w = i.forwardRef(
-  ({ side: t = "right", size: a = "default", className: s, children: c, ...l }, f) => /* @__PURE__ */ o.jsxs(u, { children: [
+  ({ side: t = "right", size: a = "default", className: s, children: c, ...l }, m) => /* @__PURE__ */ o.jsxs(u, { children: [
     /* @__PURE__ */ o.jsx(n, {}),
     /* @__PURE__ */ o.jsxs(
       e.Content,
       {
-        ref: f,
-        onOpenAutoFocus: (m) => m.preventDefault(),
+        ref: m,
+        onOpenAutoFocus: (f) => f.preventDefault(),
         className: r(
           g({ side: t, size: a }),
           "overflow-y-auto",

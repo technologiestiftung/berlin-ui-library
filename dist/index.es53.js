@@ -1,4 +1,4 @@
-import { __exports as e } from "./index.es139.js";
+import { __exports as e } from "./index.es69.js";
 /**
  * @license React
  * react-jsx-runtime.production.js

@@ -1,10 +1,10 @@
 import { j as r } from "./index.es4.js";
-import { useState as L, useRef as B, useEffect as Y } from "react";
-import { LogoBar as D } from "./index.es55.js";
-import { MainHeaderContent as H } from "./index.es56.js";
-import { SubHeaderBar as R } from "./index.es57.js";
-import { LanguageProvider as C } from "./index.es5.js";
-function A({
+import { useState as B, useRef as Y, useEffect as D } from "react";
+import { LogoBar as H } from "./index.es55.js";
+import { MainHeaderContent as R } from "./index.es56.js";
+import { SubHeaderBar as C } from "./index.es57.js";
+import { LanguageProvider as M } from "./index.es5.js";
+function F({
   header: i = "Design System",
   caption: c = "Berlin.de",
   url: a = "/",
@@ -25,30 +25,31 @@ function A({
   showSearchButton: S = !0,
   onSearch: j = () => {
   },
-  showMenuButton: b = !0,
-  menuItems: v = [],
-  onOpenMenu: y = () => {
+  doBerlinSearch: b,
+  showMenuButton: v = !0,
+  menuItems: y = [],
+  onOpenMenu: T = () => {
   },
-  className: T = ""
+  className: k = ""
 }) {
-  const [t, k] = L(!1), l = B(null);
-  return Y(() => {
+  const [t, I] = B(!1), l = Y(null);
+  return D(() => {
     if (l.current) {
       let e = null;
-      const I = 50;
+      const L = 50;
       let o = !1;
       const s = () => {
         const n = (window.scrollY || window.pageYOffset) > (o ? 0 : 2);
         n !== o && (o = n, e && clearTimeout(e), e = setTimeout(() => {
-          k(n);
-        }, I));
+          I(n);
+        }, L));
       };
       return s(), window.addEventListener("scroll", s, { passive: !0 }), () => {
         e && clearTimeout(e), window.removeEventListener("scroll", s);
       };
     }
   }, []), /* @__PURE__ */ r.jsx(
-    C,
+    M,
     {
       initialLanguage: w,
       languages: E,
@@ -58,10 +59,10 @@ function A({
         "header",
         {
           ref: l,
-          className: `sticky top-0 z-20 box-border leading-[1.22rem] ${T}`,
+          className: `sticky top-0 z-20 box-border leading-[1.22rem] ${k}`,
           children: [
             /* @__PURE__ */ r.jsx(
-              D,
+              H,
               {
                 logoUrl: d,
                 logoComponent: u,
@@ -69,20 +70,21 @@ function A({
               }
             ),
             /* @__PURE__ */ r.jsx(
-              H,
+              R,
               {
                 header: i,
                 caption: c,
                 url: a,
                 showSearchButton: S,
                 onSearch: j,
-                showMenuButton: b,
-                menuItems: v,
-                onOpenMenu: y
+                doBerlinSearch: b,
+                showMenuButton: v,
+                menuItems: y,
+                onOpenMenu: T
               }
             ),
             !t && /* @__PURE__ */ r.jsx(
-              R,
+              C,
               {
                 showBreadcrumbs: h,
                 breadcrumbs: f,
@@ -98,6 +100,6 @@ function A({
   );
 }
 export {
-  A as Header
+  F as Header
 };
 //# sourceMappingURL=index.es3.js.map

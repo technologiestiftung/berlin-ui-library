@@ -1,12 +1,12 @@
 import { j as e } from "./index.es4.js";
 import { useState as s } from "react";
-import { MenuButton as A } from "./index.es61.js";
-import { SearchButton as w } from "./index.es63.js";
-import { AccessibilityButton as C } from "./index.es65.js";
-import { SearchMenu as I } from "./index.es66.js";
-import { MenuDrawer as N } from "./index.es67.js";
-import { AccessibilityMenu as v } from "./index.es68.js";
-function q({
+import { MenuButton as w } from "./index.es61.js";
+import { SearchButton as C } from "./index.es63.js";
+import { AccessibilityButton as I } from "./index.es65.js";
+import { SearchMenu as N } from "./index.es66.js";
+import { MenuDrawer as v } from "./index.es67.js";
+import { AccessibilityMenu as B } from "./index.es68.js";
+function G({
   header: c,
   caption: i,
   url: l,
@@ -14,21 +14,22 @@ function q({
   onSearch: o,
   showMenuButton: m,
   menuItems: p,
-  onOpenMenu: x
+  onOpenMenu: x,
+  doBerlinSearch: h
 }) {
-  const [h, n] = s(!1), [d, t] = s(!1), [f, r] = s(!1), u = () => {
+  const [d, n] = s(!1), [f, t] = s(!1), [u, r] = s(!1), j = () => {
     n(!0), o();
-  }, j = () => {
+  }, b = () => {
     n(!1);
-  }, b = (g) => {
-    console.warn("Search term:", g);
-  }, O = () => {
-    t(!0), x();
+  }, O = (A) => {
+    console.warn("Search term:", A);
   }, y = () => {
-    t(!1);
+    t(!0), x();
   }, S = () => {
-    r(!0);
+    t(!1);
   }, M = () => {
+    r(!0);
+  }, g = () => {
     r(!1);
   };
   return /* @__PURE__ */ e.jsxs("div", { className: "relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]", children: [
@@ -45,34 +46,35 @@ function q({
     ),
     /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[0.65rem] pt-[0.59rem] pb-[0.20rem] md:space-x-[1.05rem] md:pt-[0.69rem] md:pb-[0.22rem]", children: [
       /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(C, { onOpenAccessibility: S }),
+        /* @__PURE__ */ e.jsx(I, { onOpenAccessibility: M }),
         /* @__PURE__ */ e.jsx(
-          v,
+          B,
           {
-            isOpen: f,
-            close: M,
+            isOpen: u,
+            close: g,
             accessibilityItems: []
           }
         )
       ] }),
       a && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(w, { onOpenSearch: u }),
-        /* @__PURE__ */ e.jsx(
-          I,
-          {
-            isOpen: h,
-            close: j,
-            onSearch: b
-          }
-        )
-      ] }),
-      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(A, { onOpenMenu: O }),
+        /* @__PURE__ */ e.jsx(C, { onOpenSearch: j }),
         /* @__PURE__ */ e.jsx(
           N,
           {
             isOpen: d,
-            close: y,
+            close: b,
+            onSearch: O,
+            doBerlinSearch: h
+          }
+        )
+      ] }),
+      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(w, { onOpenMenu: y }),
+        /* @__PURE__ */ e.jsx(
+          v,
+          {
+            isOpen: f,
+            close: S,
             menuItems: p
           }
         )
@@ -81,6 +83,6 @@ function q({
   ] });
 }
 export {
-  q as MainHeaderContent
+  G as MainHeaderContent
 };
 //# sourceMappingURL=index.es56.js.map
