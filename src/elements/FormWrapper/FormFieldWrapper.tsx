@@ -1,6 +1,5 @@
 /* eslint-disable complexity */
-import { Info } from "lucide-react";
-import { JSX, useState } from "react";
+import { JSX } from "react";
 import {
 	ControllerRenderProps,
 	FieldValues,
@@ -27,12 +26,7 @@ import {
 	SelectValue,
 } from "../Select";
 import { Textarea } from "../Textarea";
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipProvider,
-	TooltipTrigger,
-} from "../Tooltip";
+import { cn } from "@/lib/utils";
 
 /**
  * FormProperty interface defines the structure of a form field property
@@ -403,9 +397,9 @@ const renderField = (
 	}
 };
 
-const renderTooltip = (content: string) => {
+/* const renderTooltip = (content: string) => {
 	const TooltipWrapper = () => {
-		const [open, setOpen] = useState(false);
+		const [open, setOpen] = useState(true);
 
 		return (
 			<TooltipProvider>
@@ -425,7 +419,7 @@ const renderTooltip = (content: string) => {
 	};
 
 	return <TooltipWrapper />;
-};
+}; */
 
 /**
  * Props for the FormFieldWrapper component
@@ -543,7 +537,12 @@ function FormFieldWrapper({
 			name={id} // Use id instead of name for form field registration
 			render={({ field }) => (
 				<FormItem>
-					<div className="flex items-center justify-between">
+					<div
+						className={cn(
+							"flex items-center justify-between",
+							helperText && "mb-0",
+						)}
+					>
 						<FormLabel className="font-bold">
 							{name}
 							{isRequired && (
@@ -552,8 +551,10 @@ function FormFieldWrapper({
 								</span>
 							)}
 						</FormLabel>
-						{helperText && renderTooltip(helperText)}
 					</div>
+					{helperText && (
+						<p className="text-[0.875rem] text-text-lightest">{helperText}</p>
+					)}
 					<FormControl>{renderField(formProperty, field)}</FormControl>
 					{description && (
 						<FormDescription className="text-sm text-text-lightest">
