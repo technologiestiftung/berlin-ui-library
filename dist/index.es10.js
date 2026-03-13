@@ -5,12 +5,12 @@ import { cn as u } from "./index.es28.js";
 import m from "./index.es41.js";
 import i from "./index.es42.js";
 import y from "./index.es43.js";
-import w from "./index.es29.js";
+import w from "./index.es31.js";
 import j from "./index.es44.js";
-import b from "./index.es45.js";
-import k from "./index.es46.js";
-import v from "./index.es47.js";
-import N from "./index.es48.js";
+import b from "./index.es32.js";
+import k from "./index.es45.js";
+import v from "./index.es46.js";
+import N from "./index.es47.js";
 import { Spinner as z } from "./index.es26.js";
 const S = (r, t, a) => {
   if (r === "light" || r === "white" || r === "clean" || r === "link" || r === "linkWithIcon")

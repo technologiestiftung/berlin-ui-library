@@ -1,88 +1,25 @@
 import { j as e } from "./index.es4.js";
-import { useState as s } from "react";
-import { MenuButton as w } from "./index.es61.js";
-import { SearchButton as C } from "./index.es63.js";
-import { AccessibilityButton as I } from "./index.es65.js";
-import { SearchMenu as N } from "./index.es66.js";
-import { MenuDrawer as v } from "./index.es67.js";
-import { AccessibilityMenu as B } from "./index.es68.js";
-function G({
-  header: c,
-  caption: i,
-  url: l,
-  showSearchButton: a,
-  onSearch: o,
-  showMenuButton: m,
-  menuItems: p,
-  onOpenMenu: x,
-  doBerlinSearch: h
+import { LanguageSelect as s } from "./index.es57.js";
+import { Breadcrumbs as n } from "./index.es8.js";
+function f({
+  showBreadcrumbs: t,
+  breadcrumbs: r,
+  showLanguageSelect: a,
+  LinkComponent: i,
+  isSticky: o = !1
 }) {
-  const [d, n] = s(!1), [f, t] = s(!1), [u, r] = s(!1), j = () => {
-    n(!0), o();
-  }, b = () => {
-    n(!1);
-  }, O = (A) => {
-    console.warn("Search term:", A);
-  }, y = () => {
-    t(!0), x();
-  }, S = () => {
-    t(!1);
-  }, M = () => {
-    r(!0);
-  }, g = () => {
-    r(!1);
-  };
-  return /* @__PURE__ */ e.jsxs("div", { className: "relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]", children: [
-    /* @__PURE__ */ e.jsxs(
-      "a",
-      {
-        href: l,
-        className: "flex flex-col justify-center p-0 text-[15px] leading-[1.2] break-words md:text-base lg:p-[3px] lg:text-xl",
-        children: [
-          /* @__PURE__ */ e.jsx("span", { children: c }),
-          /* @__PURE__ */ e.jsx("span", { className: "block font-bold", children: i })
-        ]
-      }
-    ),
-    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[0.65rem] pt-[0.59rem] pb-[0.20rem] md:space-x-[1.05rem] md:pt-[0.69rem] md:pb-[0.22rem]", children: [
-      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(I, { onOpenAccessibility: M }),
-        /* @__PURE__ */ e.jsx(
-          B,
-          {
-            isOpen: u,
-            close: g,
-            accessibilityItems: []
-          }
-        )
-      ] }),
-      a && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(C, { onOpenSearch: j }),
-        /* @__PURE__ */ e.jsx(
-          N,
-          {
-            isOpen: d,
-            close: b,
-            onSearch: O,
-            doBerlinSearch: h
-          }
-        )
-      ] }),
-      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(w, { onOpenMenu: y }),
-        /* @__PURE__ */ e.jsx(
-          v,
-          {
-            isOpen: f,
-            close: S,
-            menuItems: p
-          }
-        )
+  return !t && !a ? null : /* @__PURE__ */ e.jsx(
+    "div",
+    {
+      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
+      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
+        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
+        a && /* @__PURE__ */ e.jsx(s, {})
       ] })
-    ] })
-  ] });
+    }
+  );
 }
 export {
-  G as MainHeaderContent
+  f as SubHeaderBar
 };
 //# sourceMappingURL=index.es56.js.map
