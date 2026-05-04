@@ -19,5 +19,6 @@ export { DownloadGroup, DownloadItem } from './modules/Download';
 export { List, ListItem } from './elements/List';
 export { Icon } from './elements/Icon';
 export { Spinner } from './elements/Spinner';
+export { Opener } from './elements/Opener';
 export { Link, linkVariants } from './elements/Link';
 //# sourceMappingURL=index.d.ts.map

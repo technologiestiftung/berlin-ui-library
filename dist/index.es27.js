@@ -1,56 +1,27 @@
-import { j as t } from "./index.es4.js";
-import { cva as s } from "class-variance-authority";
-import { forwardRef as l } from "react";
-import m from "./index.es32.js";
-import { cn as x } from "./index.es28.js";
-const c = s(
-  "inline-block text-text-link transition-colors duration-200 ease-out hover:underline focus:underline",
-  {
-    variants: {
-      variant: {
-        default: "",
-        extern: "m-0 inline-flex h-auto cursor-pointer items-center border-0 bg-transparent p-0 text-left"
-      }
-    },
-    defaultVariants: {
-      variant: "default"
-    }
-  }
-), d = l(
-  ({
-    className: r,
-    variant: e = "default",
-    children: n,
-    ...i
-  }, o) => {
-    const a = e === "extern" ? {
-      target: "_blank",
-      rel: "noopener noreferrer"
-    } : {};
-    return /* @__PURE__ */ t.jsxs(
-      "a",
+import { j as e } from "./index.es4.js";
+function x({
+  titleImage: t,
+  copyright: s,
+  title: l,
+  description: a
+}) {
+  return /* @__PURE__ */ e.jsxs("div", { className: "relative bg-grey-darkest", children: [
+    /* @__PURE__ */ e.jsx("div", { className: "flex max-h-[70vh] w-full overflow-hidden brightness-75 max-lg:min-h-[400px] lg:h-[500px]", children: /* @__PURE__ */ e.jsx(
+      "img",
       {
-        ref: o,
-        className: x(c({ variant: e, className: r })),
-        ...a,
-        ...i,
-        children: [
-          n,
-          e === "extern" && /* @__PURE__ */ t.jsx(
-            m,
-            {
-              className: "mb-2 ml-1 inline-block size-[16px] align-text-top leading-none text-[#0047d3]",
-              "aria-hidden": "true"
-            }
-          )
-        ]
+        src: t,
+        alt: l,
+        className: "h-full w-full object-cover object-center"
       }
-    );
-  }
-);
-d.displayName = "Link";
+    ) }),
+    s && /* @__PURE__ */ e.jsx("p", { className: "absolute bottom-1 left-1 text-white", children: s }),
+    /* @__PURE__ */ e.jsx("div", { className: "absolute inset-0 flex items-center justify-center px-4", children: /* @__PURE__ */ e.jsxs("div", { className: "max-w-[61.25rem] bg-white px-8 py-10 text-center", children: [
+      /* @__PURE__ */ e.jsx("h1", { className: "mb-2 text-[27px] leading-[31px] font-bold", children: l }),
+      /* @__PURE__ */ e.jsx("p", { className: "", children: a })
+    ] }) })
+  ] });
+}
 export {
-  d as Link,
-  c as linkVariants
+  x as Opener
 };
 //# sourceMappingURL=index.es27.js.map
