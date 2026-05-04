@@ -6,7 +6,7 @@ const meta: Meta<typeof Opener> = {
 	component: Opener,
 	tags: ["autodocs"],
 	argTypes: {
-		titleImage: {
+		src: {
 			control: "text",
 			description: "Set the background image for the opener",
 		},
@@ -30,8 +30,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		titleImage:
-			"https://media.istockphoto.com/id/500601834/photo/lake-moraine-and-canoe-dock-in-banff-national-park.jpg?s=612x612&w=0&k=20&c=TRuwRNk0hMinV-XA0pyvaZHKIhHEtdpGqzmcGy-VAlo=",
+		src: "https://media.istockphoto.com/id/500601834/photo/lake-moraine-and-canoe-dock-in-banff-national-park.jpg?s=612x612&w=0&k=20&c=TRuwRNk0hMinV-XA0pyvaZHKIhHEtdpGqzmcGy-VAlo=",
 		title: "Opener Title",
 		description: "This is the description for the opener.",
 		copyright: "© 2024 Your Company",
