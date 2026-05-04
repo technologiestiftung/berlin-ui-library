@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 interface OpenerProps {
 	/**
 	 * Set the background image for the opener
@@ -15,13 +17,26 @@ interface OpenerProps {
 	 * Set the description for the opener
 	 */
 	description: string;
+	/**
+	 * Set the height for the opener
+	 */
+	height?: number;
 }
 
-export function Opener({ src, copyright, title, description }: OpenerProps) {
+export function Opener({
+	src,
+	copyright,
+	title,
+	description,
+	height,
+}: OpenerProps) {
 	return (
-		<div className="relative pb-[500px] max-lg:pb-[450px] lg:pb-[500px]">
-			<div className="absolute h-[500px] w-screen bg-grey-darkest max-lg:h-[450px] lg:translate-x-[calc((100vw-61.25rem)/-2)]">
-				<div className="flex max-h-[70vh] w-full overflow-hidden brightness-75 max-lg:min-h-[450px] lg:h-[500px]">
+		<div
+			className="relative pb-[var(--height)]"
+			style={{ "--height": `${height}px` } as CSSProperties}
+		>
+			<div className="absolute h-[var(--height)] w-screen bg-grey-darkest lg:translate-x-[calc((100vw-61.25rem)/-2)]">
+				<div className="flex h-[var(--height)] max-h-[70vh] w-full overflow-hidden brightness-75">
 					<img
 						src={src}
 						alt={title}
