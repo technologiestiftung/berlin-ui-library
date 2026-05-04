@@ -33,7 +33,7 @@ export function Opener({
 	copyright,
 	title,
 	description,
-	height,
+	height = 500,
 	className,
 }: OpenerProps) {
 	return (
