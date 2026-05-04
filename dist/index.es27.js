@@ -5,7 +5,7 @@ function n({
   copyright: s,
   title: t,
   description: r,
-  height: a,
+  height: a = 500,
   className: i
 }) {
   return /* @__PURE__ */ e.jsx(
