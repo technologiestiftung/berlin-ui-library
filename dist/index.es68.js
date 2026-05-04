@@ -1,54 +1,5 @@
-import { j as t } from "./index.es4.js";
-import { Drawer as u, DrawerContent as b } from "./index.es6.js";
-import { useLanguage as f, t as i } from "./index.es5.js";
-function m({
-  isOpen: r,
-  close: l,
-  accessibilityItems: s = []
-}) {
-  const { translations: n } = f(), a = [
-    {
-      question: i("accessibilityMenu.barrierefreiheit.question", n),
-      label: i("accessibilityMenu.barrierefreiheit", n),
-      href: "/accessibility-statement/"
-    },
-    {
-      question: i("accessibilityMenu.contact.question", n),
-      label: i("accessibilityMenu.contact", n),
-      href: "/accessibility-statement/#accessibility-contact"
-    },
-    {
-      question: i("accessibilityMenu.additionalInfo.question", n),
-      label: i("accessibilityMenu.additionalInfo", n),
-      href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
-      external: !0
-    }
-  ], o = s && s.length > 0 ? s : a;
-  return /* @__PURE__ */ t.jsx(u, { open: r, onOpenChange: (e) => !e && l(), children: /* @__PURE__ */ t.jsxs(b, { className: "flex flex-col gap-4 px-6 py-4 text-base", children: [
-    /* @__PURE__ */ t.jsx("div", { className: "mt-4 mb-6 flex flex-row items-center justify-between", children: /* @__PURE__ */ t.jsx("p", { className: "text-2xl font-bold", children: i("accessibilityMenu.title", n) }) }),
-    o.map((e, c) => /* @__PURE__ */ t.jsxs("div", { className: "mb-4", children: [
-      /* @__PURE__ */ t.jsx("p", { className: "mb-1 font-bold", children: e.question }),
-      e.external ? /* @__PURE__ */ t.jsx(
-        "a",
-        {
-          className: "text-text-link transition-colors duration-200 hover:underline",
-          href: e.href,
-          target: "_blank",
-          rel: "noreferrer",
-          children: e.label
-        }
-      ) : /* @__PURE__ */ t.jsx(
-        "a",
-        {
-          href: e.href,
-          className: "text-text-link transition-colors duration-200 hover:underline",
-          children: e.label
-        }
-      )
-    ] }, c))
-  ] }) });
-}
+const e = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20448%20512'%3e%3c!--!Font%20Awesome%20Free%206.5.2%20by%20@fontawesome%20-%20https://fontawesome.com%20License%20-%20https://fontawesome.com/license/free%20Copyright%202024%20Fonticons,%20Inc.--%3e%3cpath%20d='M190.5%2066.9l22.2-22.2c9.4-9.4%2024.6-9.4%2033.9%200L441%20239c9.4%209.4%209.4%2024.6%200%2033.9L246.6%20467.3c-9.4%209.4-24.6%209.4-33.9%200l-22.2-22.2c-9.5-9.5-9.3-25%20.4-34.3L311.4%20296H24c-13.3%200-24-10.7-24-24v-32c0-13.3%2010.7-24%2024-24h287.4L190.9%20101.2c-9.8-9.3-10-24.8-.4-34.3z'%20fill='currentColor'%3e%3c/path%3e%3c/svg%3e";
 export {
-  m as AccessibilityMenu
+  e as default
 };
 //# sourceMappingURL=index.es68.js.map
