@@ -84,4 +84,6 @@ export { Icon } from "./elements/Icon";
 
 export { Spinner } from "./elements/Spinner";
 
+export { Opener } from "./elements/Opener";
+
 export { Link, linkVariants } from "./elements/Link";
