@@ -55,15 +55,13 @@ export function Opener({
 					/>
 				</div>
 				{copyright && (
-					<p className="absolute bottom-1 left-3 text-sm text-white">
+					<p className="absolute bottom-1 left-1 text-sm text-white lg:left-3">
 						{copyright}
 					</p>
 				)}
 				<div className="absolute inset-0 flex items-center justify-center px-4">
 					<div className="max-w-[61.25rem] bg-white px-8 py-10 text-center">
-						<h1 className="mb-2 text-[27px] leading-[31px] font-bold">
-							{title}
-						</h1>
+						<h1 className="mb-2 font-bold">{title}</h1>
 						<p>{description}</p>
 					</div>
 				</div>
