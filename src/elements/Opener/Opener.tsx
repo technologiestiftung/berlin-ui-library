@@ -19,9 +19,9 @@ interface OpenerProps {
 
 export function Opener({ src, copyright, title, description }: OpenerProps) {
 	return (
-		<div className="relative pb-[500px] max-lg:pb-[400px] lg:pb-[500px]">
-			<div className="absolute inset-x-0 top-0 h-[500px] bg-grey-darkest max-lg:h-[400px]">
-				<div className="flex max-h-[70vh] w-full overflow-hidden brightness-75 max-lg:min-h-[400px] lg:h-[500px]">
+		<div className="relative pb-[500px] max-lg:pb-[450px] lg:pb-[500px]">
+			<div className="absolute h-[500px] w-screen bg-grey-darkest max-lg:h-[450px] lg:translate-x-[calc((100vw-61.25rem)/-2)]">
+				<div className="flex max-h-[70vh] w-full overflow-hidden brightness-75 max-lg:min-h-[450px] lg:h-[500px]">
 					<img
 						src={src}
 						alt={title}
@@ -29,7 +29,7 @@ export function Opener({ src, copyright, title, description }: OpenerProps) {
 					/>
 				</div>
 				{copyright && (
-					<p className="absolute bottom-1 left-1 text-sm text-white">
+					<p className="absolute bottom-1 left-3 text-sm text-white">
 						{copyright}
 					</p>
 				)}
