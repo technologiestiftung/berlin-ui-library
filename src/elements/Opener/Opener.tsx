@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { CSSProperties } from "react";
 
 interface OpenerProps {
@@ -21,6 +22,10 @@ interface OpenerProps {
 	 * Set the height for the opener
 	 */
 	height?: number;
+	/**
+	 * Set the height for the opener
+	 */
+	className?: string;
 }
 
 export function Opener({
@@ -29,13 +34,19 @@ export function Opener({
 	title,
 	description,
 	height,
+	className,
 }: OpenerProps) {
 	return (
 		<div
 			className="relative pb-[var(--height)]"
 			style={{ "--height": `${height}px` } as CSSProperties}
 		>
-			<div className="absolute h-[var(--height)] w-screen bg-grey-darkest lg:translate-x-[calc((100vw-61.25rem)/-2)]">
+			<div
+				className={cn(
+					"absolute h-[var(--height)] w-screen bg-grey-darkest",
+					className,
+				)}
+			>
 				<div className="flex h-[var(--height)] max-h-[70vh] w-full overflow-hidden brightness-75">
 					<img
 						src={src}
