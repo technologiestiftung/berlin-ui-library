@@ -2,7 +2,7 @@ interface OpenerProps {
     /**
      * Set the background image for the opener
      */
-    titleImage: string;
+    src: string;
     /**
      * Set the copyright for the opener image
      */
@@ -16,6 +16,6 @@ interface OpenerProps {
      */
     description: string;
 }
-export declare function Opener({ titleImage, copyright, title, description, }: OpenerProps): import("react/jsx-runtime").JSX.Element;
+export declare function Opener({ src, copyright, title, description }: OpenerProps): import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=Opener.d.ts.map
