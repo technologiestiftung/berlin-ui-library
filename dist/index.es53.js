@@ -1,25 +1,6 @@
-import { j as e } from "./index.es4.js";
-import { LanguageSelect as s } from "./index.es54.js";
-import { Breadcrumbs as n } from "./index.es8.js";
-function f({
-  showBreadcrumbs: t,
-  breadcrumbs: r,
-  showLanguageSelect: a,
-  LinkComponent: i,
-  isSticky: o = !1
-}) {
-  return !t && !a ? null : /* @__PURE__ */ e.jsx(
-    "div",
-    {
-      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
-      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
-        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
-        a && /* @__PURE__ */ e.jsx(s, {})
-      ] })
-    }
-  );
-}
+import * as c from "react";
+const t = (e) => /* @__PURE__ */ c.createElement("svg", { id: "Layer_1", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 448", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M168,0H24C10.7,0,0,10.7,0,24v144c0,9.7,5.8,18.5,14.8,22.2,9,3.7,19.3,1.6,26.2-5.2l40-40,79,79-79,79-40-40c-6.9-6.9-17.2-8.9-26.2-5.2-9,3.7-14.8,12.5-14.8,22.2v144c0,13.3,10.7,24,24,24h144c9.7,0,18.5-5.8,22.2-14.8,3.7-9,1.7-19.3-5.2-26.2l-40-40,79-79,79,79-40,40c-6.9,6.9-8.9,17.2-5.2,26.2,3.7,9,12.5,14.8,22.2,14.8h144c13.3,0,24-10.7,24-24v-144c0-9.7-5.8-18.5-14.8-22.2-9-3.7-19.3-1.7-26.2,5.2l-40,40-79-79,79-79,40,40c6.9,6.9,17.2,8.9,26.2,5.2,9-3.7,14.8-12.5,14.8-22.2V24c0-13.3-10.7-24-24-24h-144c-9.7,0-18.5,5.8-22.2,14.8-3.7,9-1.6,19.3,5.2,26.2l40,40-79,79-79-79,40-40c6.9-6.9,8.9-17.2,5.2-26.2-3.7-9-12.5-14.8-22.2-14.8Z" }));
 export {
-  f as SubHeaderBar
+  t as default
 };
 //# sourceMappingURL=index.es53.js.map

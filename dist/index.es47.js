@@ -1,183 +1,122 @@
-import r from "./index.es71.js";
-import o from "./index.es32.js";
-import m from "./index.es31.js";
-import t from "./index.es48.js";
-import i from "./index.es58.js";
-import e from "./index.es72.js";
-import f from "./index.es38.js";
-import a from "./index.es73.js";
-import p from "./index.es55.js";
-import g from "./index.es74.js";
-import S from "./index.es56.js";
-import v from "./index.es75.js";
-import c from "./index.es76.js";
-import s from "./index.es77.js";
-import n from "./index.es30.js";
-import l from "./index.es78.js";
-import h from "./index.es79.js";
-import u from "./index.es80.js";
-import k from "./index.es81.js";
-import d from "./index.es82.js";
-import w from "./index.es36.js";
-import b from "./index.es83.js";
-import T from "./index.es84.js";
-import C from "./index.es45.js";
-import q from "./index.es85.js";
-import L from "./index.es86.js";
-import x from "./index.es87.js";
-import D from "./index.es88.js";
-import y from "./index.es34.js";
-import F from "./index.es89.js";
-import U from "./index.es90.js";
-import A from "./index.es44.js";
-import B from "./index.es91.js";
-import E from "./index.es92.js";
-import M from "./index.es93.js";
-import P from "./index.es94.js";
-import R from "./index.es35.js";
-import I from "./index.es95.js";
-import X from "./index.es96.js";
-import H from "./index.es97.js";
-import O from "./index.es98.js";
-import Q from "./index.es99.js";
-import W from "./index.es100.js";
-import Y from "./index.es101.js";
-import j from "./index.es102.js";
-import z from "./index.es103.js";
-import G from "./index.es104.js";
-import J from "./index.es37.js";
-import K from "./index.es105.js";
-import N from "./index.es106.js";
-import V from "./index.es107.js";
-import Z from "./index.es108.js";
-import _ from "./index.es33.js";
-import $ from "./index.es109.js";
-import rr from "./index.es110.js";
-import or from "./index.es111.js";
-import mr from "./index.es112.js";
-import tr from "./index.es113.js";
-import ir from "./index.es114.js";
-import er from "./index.es115.js";
-import fr from "./index.es116.js";
-import ar from "./index.es117.js";
-import pr from "./index.es118.js";
-import gr from "./index.es119.js";
-import Sr from "./index.es120.js";
-import vr from "./index.es121.js";
-import cr from "./index.es46.js";
-import sr from "./index.es122.js";
-import nr from "./index.es123.js";
-import lr from "./index.es124.js";
-import hr from "./index.es43.js";
-import ur from "./index.es125.js";
-import kr from "./index.es126.js";
-import dr from "./index.es127.js";
-import wr from "./index.es128.js";
-import br from "./index.es129.js";
-import Tr from "./index.es130.js";
-import Cr from "./index.es131.js";
-import qr from "./index.es49.js";
-import Lr from "./index.es132.js";
-import xr from "./index.es133.js";
-import Dr from "./index.es134.js";
-import yr from "./index.es135.js";
-import Fr from "./index.es136.js";
-import Ur from "./index.es137.js";
-import Ar from "./index.es138.js";
-import Br from "./index.es139.js";
-import Er from "./index.es140.js";
-const lm = {
-  "arrow-down": r,
-  "arrow-left": o,
-  "arrow-right": m,
-  "arrow-up": t,
-  bars: i,
-  calendar: e,
-  cart: f,
-  "check-circle": a,
-  "chevron-down": p,
-  "chevron-right": g,
-  "chevron-up": S,
-  "circle-down": v,
-  clock: c,
-  "clock-circle": s,
-  close: n,
-  comment: l,
-  "comment-dots": h,
-  comments: u,
-  desktop: k,
-  dgs: d,
-  download: w,
-  edit: b,
-  envelope: T,
-  error: C,
-  "euro-sign": q,
-  "external-link": L,
-  facebook: x,
-  fax: D,
-  filter: y,
-  flickr: F,
-  heart: U,
-  info: A,
-  "info-circle": B,
-  instagram: E,
-  landmark: M,
-  "leichte-sprache": P,
-  link: R,
-  lock: I,
-  "lock-open": X,
-  login: H,
-  logout: O,
-  map: Q,
-  "map-marker": W,
-  mobile: Y,
-  pause: j,
-  phone: z,
-  pinterest: G,
-  play: J,
-  print: K,
-  "quote-left": N,
-  right: V,
-  rss: Z,
-  search: _,
-  seeding: $,
-  snapchat: rr,
-  "square-bluesky": or,
-  "square-facebook": mr,
-  "square-instagram": tr,
-  "square-linkedin": ir,
-  "square-threads": er,
-  "square-x-twitter": fr,
-  "square-xing": ar,
-  "square-youtube": pr,
-  star: gr,
-  "star-half-stroke": Sr,
-  "star-solid": vr,
-  success: cr,
-  tablet: sr,
-  threads: nr,
-  ticket: lr,
-  times: hr,
-  "times-circle": ur,
-  trash: kr,
-  twitter: dr,
-  "universal-access": wr,
-  user: br,
-  "user-check": Tr,
-  whatsapp: Cr,
-  x: qr,
-  "x-twitter": Lr,
-  // Traffic icons (preserve original colors)
-  "traffic-bahn": xr,
-  "traffic-bus": Dr,
-  "traffic-bvg": yr,
-  "traffic-faehre": Fr,
-  "traffic-metrobus": Ur,
-  "traffic-sbahn": Ar,
-  "traffic-tram": Br,
-  "traffic-ubahn": Er
-};
+import { j as t } from "./index.es4.js";
+import * as l from "react";
+import * as e from "@radix-ui/react-select";
+import { ChevronDown as n, ChevronUp as p, Check as f } from "lucide-react";
+import { cn as o } from "./index.es29.js";
+const j = e.Root, S = e.Group, v = e.Value, u = l.forwardRef(({ className: s, children: r, ...a }, i) => /* @__PURE__ */ t.jsxs(
+  e.Trigger,
+  {
+    ref: i,
+    className: o(
+      "border-input ring-offset-background focus:ring-ring data-[placeholder]:text-muted-foreground flex h-10 w-full items-center justify-between border border-black bg-white py-2 pr-1 pl-2 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      s
+    ),
+    ...a,
+    children: [
+      r,
+      /* @__PURE__ */ t.jsx(e.Icon, { asChild: !0, children: /* @__PURE__ */ t.jsx(n, { className: "h-6 w-6" }) })
+    ]
+  }
+));
+u.displayName = e.Trigger.displayName;
+const d = l.forwardRef(({ className: s, ...r }, a) => /* @__PURE__ */ t.jsx(
+  e.ScrollUpButton,
+  {
+    ref: a,
+    className: o(
+      "flex cursor-default items-center justify-center py-1",
+      s
+    ),
+    ...r,
+    children: /* @__PURE__ */ t.jsx(p, { className: "h-6 w-6" })
+  }
+));
+d.displayName = e.ScrollUpButton.displayName;
+const c = l.forwardRef(({ className: s, ...r }, a) => /* @__PURE__ */ t.jsx(
+  e.ScrollDownButton,
+  {
+    ref: a,
+    className: o(
+      "flex cursor-default items-center justify-center py-1",
+      s
+    ),
+    ...r,
+    children: /* @__PURE__ */ t.jsx(n, { className: "h-4 w-4" })
+  }
+));
+c.displayName = e.ScrollDownButton.displayName;
+const x = l.forwardRef(({ className: s, children: r, position: a = "popper", ...i }, m) => /* @__PURE__ */ t.jsx(e.Portal, { children: /* @__PURE__ */ t.jsxs(
+  e.Content,
+  {
+    ref: m,
+    className: o(
+      "relative z-50 max-h-[--radix-select-content-available-height] min-w-[8rem] origin-[--radix-select-content-transform-origin] overflow-x-hidden overflow-y-auto border border-black bg-white text-black shadow-md data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
+      a === "popper" && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+      s
+    ),
+    position: a,
+    ...i,
+    children: [
+      /* @__PURE__ */ t.jsx(d, {}),
+      /* @__PURE__ */ t.jsx(
+        e.Viewport,
+        {
+          className: o(
+            "p-1",
+            a === "popper" && "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
+          ),
+          children: r
+        }
+      ),
+      /* @__PURE__ */ t.jsx(c, {})
+    ]
+  }
+) }));
+x.displayName = e.Content.displayName;
+const h = l.forwardRef(({ className: s, ...r }, a) => /* @__PURE__ */ t.jsx(
+  e.Label,
+  {
+    ref: a,
+    className: o("py-1.5 pr-2 pl-8 text-sm font-semibold", s),
+    ...r
+  }
+));
+h.displayName = e.Label.displayName;
+const w = l.forwardRef(({ className: s, children: r, ...a }, i) => /* @__PURE__ */ t.jsxs(
+  e.Item,
+  {
+    ref: i,
+    className: o(
+      "focus:bg-accent focus:text-accent-foreground relative flex w-full cursor-default items-center py-1.5 pr-2 pl-8 outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      s
+    ),
+    ...a,
+    children: [
+      /* @__PURE__ */ t.jsx("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ t.jsx(e.ItemIndicator, { children: /* @__PURE__ */ t.jsx(f, { className: "h-4 w-4" }) }) }),
+      /* @__PURE__ */ t.jsx(e.ItemText, { children: r })
+    ]
+  }
+));
+w.displayName = e.Item.displayName;
+const g = l.forwardRef(({ className: s, ...r }, a) => /* @__PURE__ */ t.jsx(
+  e.Separator,
+  {
+    ref: a,
+    className: o("bg-muted -mx-1 my-1 h-px", s),
+    ...r
+  }
+));
+g.displayName = e.Separator.displayName;
 export {
-  lm as iconRegistry
+  j as Select,
+  x as SelectContent,
+  S as SelectGroup,
+  w as SelectItem,
+  h as SelectLabel,
+  c as SelectScrollDownButton,
+  d as SelectScrollUpButton,
+  g as SelectSeparator,
+  u as SelectTrigger,
+  v as SelectValue
 };
 //# sourceMappingURL=index.es47.js.map
