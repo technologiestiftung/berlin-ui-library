@@ -41,14 +41,9 @@ export function Opener({
 			className="relative pb-[var(--height)]"
 			style={{ "--height": `${height}px` } as CSSProperties}
 		>
-			<div
-				className={cn(
-					"absolute h-[var(--height)] w-screen bg-grey-darkest",
-					className,
-				)}
-			>
+			<div className={cn("absolute h-[var(--height)] w-screen", className)}>
 				<div
-					className="flex h-[var(--height)] max-h-[70vh] w-full overflow-hidden [background-image:var(--src)] bg-cover bg-center"
+					className="flex h-[var(--height)] w-full overflow-hidden [background-image:var(--src)] bg-cover bg-center"
 					style={{ "--src": `url(${src})` } as CSSProperties}
 				/>
 				{copyright && (
