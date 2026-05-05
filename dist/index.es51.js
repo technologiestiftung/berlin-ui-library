@@ -1,6 +1,27 @@
-import * as c from "react";
-const l = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z", fill: "currentColor" }));
+import { j as e } from "./index.es4.js";
+import a from "./index.es60.js";
+function s({
+  logoUrl: o = "https://www.berlin.de",
+  logoComponent: t,
+  isSticky: r = !1
+}) {
+  return /* @__PURE__ */ e.jsx(
+    "div",
+    {
+      className: `sticky top-0 z-10 flex items-center justify-start border-b transition-[height,background-color,opacity,padding] duration-200 ease-in-out ${r ? "h-[3px] border-none bg-grey-darkest px-4 py-0 lg:px-6" : "h-11 border-gray-300 bg-white px-4 py-[0.25em] lg:px-6"}`,
+      children: /* @__PURE__ */ e.jsx(
+        "a",
+        {
+          href: o,
+          "aria-label": "Homepage Berlin.de",
+          className: `transition-opacity duration-200 ease-in-out ${r ? "opacity-0" : "opacity-100"}`,
+          children: t || /* @__PURE__ */ e.jsx("img", { src: a, alt: "Berlin.de Logo", className: "object-fill" })
+        }
+      )
+    }
+  );
+}
 export {
-  l as default
+  s as LogoBar
 };
 //# sourceMappingURL=index.es51.js.map
