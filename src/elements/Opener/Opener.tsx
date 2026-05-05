@@ -47,13 +47,10 @@ export function Opener({
 					className,
 				)}
 			>
-				<div className="flex h-[var(--height)] max-h-[70vh] w-full overflow-hidden brightness-75">
-					<img
-						src={src}
-						alt={title}
-						className="h-full w-full object-cover object-center"
-					/>
-				</div>
+				<div
+					className="flex h-[var(--height)] max-h-[70vh] w-full overflow-hidden [background-image:var(--src)] bg-cover bg-center"
+					style={{ "--src": `url(${src})` } as CSSProperties}
+				/>
 				{copyright && (
 					<p className="absolute bottom-1 left-1 text-sm text-white lg:left-3">
 						{copyright}
