@@ -12,7 +12,6 @@ interface TabsListProps extends React.ComponentPropsWithoutRef<typeof TabsPrimit
 }
 declare const TabsList: React.ForwardRefExoticComponent<TabsListProps & React.RefAttributes<HTMLDivElement>>;
 interface TabsTriggerProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>, VariantProps<typeof tabsTriggerVariants> {
-    tabColor?: string;
 }
 declare const TabsTrigger: React.ForwardRefExoticComponent<TabsTriggerProps & React.RefAttributes<HTMLButtonElement>>;
 declare const tabsContentVariants: (props?: ({

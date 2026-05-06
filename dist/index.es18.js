@@ -1,9 +1,9 @@
-import { j as s } from "./index.es4.js";
+import { j as r } from "./index.es4.js";
 import * as o from "react";
 import * as a from "@radix-ui/react-tabs";
-import { cva as l } from "class-variance-authority";
+import { cva as d } from "class-variance-authority";
 import { cn as n } from "./index.es29.js";
-const j = a.Root, u = l("flex w-auto items-center justify-start", {
+const y = a.Root, c = d("flex w-auto items-center justify-start", {
   variants: {
     variant: {
       default: "h-12 gap-1",
@@ -13,12 +13,12 @@ const j = a.Root, u = l("flex w-auto items-center justify-start", {
   defaultVariants: {
     variant: "default"
   }
-}), f = l(
+}), f = d(
   "ring-offset-background focus-visible:ring-ring inline-flex cursor-pointer items-center justify-center text-base whitespace-nowrap transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "data-[state=active]:text-foreground h-full bg-grey-dark px-3 py-1.5 data-[state=active]:bg-block-heavy data-[state=active]:shadow-[inset_0_4px_0_0_var(--color-red)]",
+        default: "data-[state=active]:text-foreground h-full border-b-4 border-transparent px-3 py-1.5 data-[state=active]:border-red data-[state=active]:shadow-[inset_0_4px_0_0_var(--color-red)]",
         module: "mr-[20px] mb-0 border-b-4 border-transparent p-2 text-text-lightest last:mr-0 data-[state=active]:border-red data-[state=active]:font-bold data-[state=active]:text-black data-[state=active]:no-underline"
       }
     },
@@ -26,59 +26,53 @@ const j = a.Root, u = l("flex w-auto items-center justify-start", {
       variant: "default"
     }
   }
-), m = o.forwardRef(({ className: i, variant: t, ...r }, e) => /* @__PURE__ */ s.jsx(
+), b = o.forwardRef(({ className: s, variant: t, ...e }, i) => /* @__PURE__ */ r.jsx(
   a.List,
   {
-    ref: e,
-    className: n(u({ variant: t, className: i })),
-    ...r
+    ref: i,
+    className: n(c({ variant: t, className: s })),
+    ...e
   }
 ));
-m.displayName = a.List.displayName;
-const v = o.forwardRef(({ className: i, variant: t, tabColor: r, children: e, ...d }, c) => {
-  if (t === "module")
-    return /* @__PURE__ */ s.jsx(
-      a.Trigger,
-      {
-        ref: c,
-        className: n(f({ variant: t, className: i })),
-        ...d,
-        children: /* @__PURE__ */ s.jsxs("span", { className: "relative", children: [
-          /* @__PURE__ */ s.jsx(
-            "span",
-            {
-              className: "invisible absolute left-0 font-bold",
-              "aria-hidden": "true",
-              children: e
-            }
-          ),
-          /* @__PURE__ */ s.jsx("span", { className: "relative", children: e })
-        ] })
-      }
-    );
-  const b = r ? { "--tab-color": r } : void 0;
-  return /* @__PURE__ */ s.jsx(
-    a.Trigger,
-    {
-      ref: c,
-      style: b,
-      className: n(
-        f({ variant: t }),
-        "data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
-        i
+b.displayName = a.List.displayName;
+const u = o.forwardRef(({ className: s, variant: t, children: e, ...i }, l) => t === "module" ? /* @__PURE__ */ r.jsx(
+  a.Trigger,
+  {
+    ref: l,
+    className: n(f({ variant: t, className: s })),
+    ...i,
+    children: /* @__PURE__ */ r.jsxs("span", { className: "relative", children: [
+      /* @__PURE__ */ r.jsx(
+        "span",
+        {
+          className: "invisible absolute left-0 font-bold",
+          "aria-hidden": "true",
+          children: e
+        }
       ),
-      ...d,
-      children: e
-    }
-  );
-});
-v.displayName = a.Trigger.displayName;
-const g = l(
-  "ring-offset-background focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
+      /* @__PURE__ */ r.jsx("span", { className: "relative", children: e })
+    ] })
+  }
+) : /* @__PURE__ */ r.jsx(
+  a.Trigger,
+  {
+    ref: l,
+    className: n(
+      f({ variant: t }),
+      "data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
+      s
+    ),
+    ...i,
+    children: e
+  }
+));
+u.displayName = a.Trigger.displayName;
+const m = d(
+  "ring-offset-background focus-visible:ring-ring border-t-1 border-t-grey-dark focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
   {
     variants: {
       variant: {
-        default: "bg-block-heavy p-6",
+        default: "p-6",
         module: "clear-left"
       }
     },
@@ -86,19 +80,19 @@ const g = l(
       variant: "default"
     }
   }
-), p = o.forwardRef(({ className: i, variant: t, ...r }, e) => /* @__PURE__ */ s.jsx(
+), p = o.forwardRef(({ className: s, variant: t, ...e }, i) => /* @__PURE__ */ r.jsx(
   a.Content,
   {
-    ref: e,
-    className: n(g({ variant: t, className: i })),
-    ...r
+    ref: i,
+    className: n(m({ variant: t, className: s })),
+    ...e
   }
 ));
 p.displayName = a.Content.displayName;
 export {
-  j as Tabs,
+  y as Tabs,
   p as TabsContent,
-  m as TabsList,
-  v as TabsTrigger
+  b as TabsList,
+  u as TabsTrigger
 };
 //# sourceMappingURL=index.es18.js.map

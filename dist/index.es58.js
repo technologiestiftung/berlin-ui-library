@@ -1,37 +1,66 @@
 import { j as e } from "./index.es4.js";
-import { useLanguage as i, t as l } from "./index.es5.js";
-import { Drawer as m, DrawerContent as h } from "./index.es6.js";
-import { SearchForm as x } from "./index.es7.js";
-function w({
-  isOpen: o,
-  close: s,
-  onSearch: t,
-  doBerlinSearch: n
-}) {
-  const { translations: a } = i(), c = (r) => {
-    if (n)
-      return s(), window.open(
-        `https://www.berlin.de/suche/?q=${encodeURIComponent(r)}`,
-        "_blank"
-      );
-    t && t(r), s();
-  };
-  return /* @__PURE__ */ e.jsx(m, { open: o, onOpenChange: (r) => !r && s(), children: /* @__PURE__ */ e.jsx(h, { size: "large", className: "flex flex-col gap-4", children: /* @__PURE__ */ e.jsx("div", { className: "flex flex-row justify-center", children: /* @__PURE__ */ e.jsxs("div", { className: "mt-[10vh] flex w-full flex-col gap-2 px-4 lg:mt-[30vh] lg:w-[50%]", children: [
-    /* @__PURE__ */ e.jsx("h1", { className: "font-bold", children: l("search.title", a) }),
-    /* @__PURE__ */ e.jsx(
-      x,
-      {
-        placeholder: l("search.placeholder", a),
-        onSubmit: c,
-        className: "w-full",
-        label: l("search.ariaLabel", a),
-        submitLabel: l("search.submit", a)
-      }
-    ),
-    n && /* @__PURE__ */ e.jsx("p", { className: "mt-1 text-sm text-gray-500", children: l("search.berlinSearchInfo", a) })
-  ] }) }) }) });
+import d, { useState as u, useRef as x } from "react";
+import m from "./index.es59.js";
+import f from "./index.es60.js";
+import { useLanguage as p, t as g } from "./index.es5.js";
+function h(n, t) {
+  d.useEffect(() => {
+    const s = (a) => {
+      n.current && !n.current.contains(a.target) && t(!1);
+    };
+    return document.addEventListener("mousedown", s), () => {
+      document.removeEventListener("mousedown", s);
+    };
+  }, [n, t]);
+}
+function C({ className: n = "" }) {
+  const [t, s] = u(!1), a = x(null), { currentLanguage: r, languages: o, translations: c, setLanguage: i } = p();
+  return h(
+    a,
+    s
+  ), /* @__PURE__ */ e.jsxs(
+    "div",
+    {
+      className: `relative z-[10] text-black ${n}`,
+      ref: a,
+      children: [
+        /* @__PURE__ */ e.jsxs(
+          "button",
+          {
+            className: "flex h-full items-center gap-2",
+            onClick: () => s(!t),
+            "aria-label": g(t ? "collapse" : "expand", c),
+            "aria-expanded": t,
+            children: [
+              /* @__PURE__ */ e.jsx("span", { className: "font-bolder flex size-5 items-center justify-center bg-black text-[11px] text-white", children: r.toLowerCase() }),
+              /* @__PURE__ */ e.jsx("span", { className: "pointer-events-none flex size-3 items-center justify-center text-red", children: t ? /* @__PURE__ */ e.jsx(f, { className: "text-berlin-green" }) : /* @__PURE__ */ e.jsx(m, { className: "text-berlin-green" }) })
+            ]
+          }
+        ),
+        /* @__PURE__ */ e.jsx(
+          "div",
+          {
+            className: `${t ? "block" : "hidden"} absolute top-8 right-0 bg-white shadow-lg`,
+            children: /* @__PURE__ */ e.jsx("ul", { children: o.map((l) => /* @__PURE__ */ e.jsx("li", { children: /* @__PURE__ */ e.jsxs(
+              "button",
+              {
+                className: "block flex w-full gap-2 px-2 py-1 text-base hover:bg-gray-100",
+                onClick: () => {
+                  i(l.code), s(!1);
+                },
+                children: [
+                  /* @__PURE__ */ e.jsx("span", { className: "flex size-6 items-center justify-center bg-black text-[11px] font-bold text-white", children: l.code.toLowerCase() }),
+                  l.label
+                ]
+              }
+            ) }, l.code)) })
+          }
+        )
+      ]
+    }
+  );
 }
 export {
-  w as SearchMenu
+  C as LanguageSelect
 };
 //# sourceMappingURL=index.es58.js.map
