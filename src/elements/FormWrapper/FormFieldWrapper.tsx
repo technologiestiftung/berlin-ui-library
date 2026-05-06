@@ -349,7 +349,7 @@ const renderRadioGroup = (
 			className={`flex ${direction === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-1"}`}
 		>
 			{options?.map((option) => (
-				<div key={option.value} className="flex items-center space-x-2">
+				<div key={option.value} className="flex items-start space-x-2">
 					<RadioGroupItem
 						id={`${field.name}-${option.value}`}
 						value={option.value}

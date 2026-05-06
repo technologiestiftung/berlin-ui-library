@@ -19,16 +19,17 @@ type Story = StoryObj<typeof RadioGroup>;
 export const Default: Story = {
 	render: () => (
 		<RadioGroup defaultValue="option-one">
-			<div className="flex items-center space-x-2">
+			<div className="flex items-start space-x-2">
 				<RadioGroupItem value="option-one" id="option-one" />
 				<label htmlFor="option-one" className="text-sm font-medium">
 					Option One
 				</label>
 			</div>
-			<div className="flex items-center space-x-2">
+			<div className="flex items-start space-x-2">
 				<RadioGroupItem value="option-two" id="option-two" />
 				<label htmlFor="option-two" className="text-sm font-medium">
-					Option Two
+					Option Two with a longer label to test text wrapping behavior in the
+					radio group component
 				</label>
 			</div>
 		</RadioGroup>
@@ -83,7 +84,7 @@ export const WithDescriptions: Story = {
 export const Disabled: Story = {
 	render: () => (
 		<RadioGroup defaultValue="option-one" disabled>
-			<div className="flex items-center space-x-2">
+			<div className="flex items-start space-x-2">
 				<RadioGroupItem value="option-one" id="disabled-option-one" />
 				<label
 					htmlFor="disabled-option-one"
@@ -92,7 +93,7 @@ export const Disabled: Story = {
 					Option One (Selected & Disabled)
 				</label>
 			</div>
-			<div className="flex items-center space-x-2">
+			<div className="flex items-start space-x-2">
 				<RadioGroupItem value="option-two" id="disabled-option-two" />
 				<label
 					htmlFor="disabled-option-two"
@@ -108,19 +109,19 @@ export const Disabled: Story = {
 export const Horizontal: Story = {
 	render: () => (
 		<RadioGroup defaultValue="option-one" className="flex flex-row space-x-4">
-			<div className="flex items-center space-x-2">
+			<div className="flex items-start space-x-2">
 				<RadioGroupItem value="option-one" id="horizontal-one" />
 				<label htmlFor="horizontal-one" className="text-sm font-medium">
 					Yes
 				</label>
 			</div>
-			<div className="flex items-center space-x-2">
+			<div className="flex items-start space-x-2">
 				<RadioGroupItem value="option-two" id="horizontal-two" />
 				<label htmlFor="horizontal-two" className="text-sm font-medium">
 					No
 				</label>
 			</div>
-			<div className="flex items-center space-x-2">
+			<div className="flex items-start space-x-2">
 				<RadioGroupItem value="option-three" id="horizontal-three" />
 				<label htmlFor="horizontal-three" className="text-sm font-medium">
 					Maybe
