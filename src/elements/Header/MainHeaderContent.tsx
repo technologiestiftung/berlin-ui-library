@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MenuButton } from "./MenuButton";
 import { SearchButton } from "./SearchButton";
 import { AccessibilityButton } from "./AccessibilityButton";
-import { MenuItem } from "./types";
+import { AccessibilityItem, MenuItem } from "./types";
 import { SearchMenu } from "./SearchMenu";
 import { MenuDrawer } from "./MenuDrawer";
 import { AccessibilityMenu } from "./AccessibilityMenu";
@@ -18,6 +18,7 @@ interface MainHeaderContentProps {
 	showMenuButton: boolean;
 	menuItems: MenuItem[];
 	onOpenMenu: () => void;
+	accessibilityItems?: AccessibilityItem[];
 }
 
 export function MainHeaderContent({
@@ -30,6 +31,7 @@ export function MainHeaderContent({
 	menuItems,
 	onOpenMenu,
 	doBerlinSearch,
+	accessibilityItems,
 }: MainHeaderContentProps) {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,7 +86,7 @@ export function MainHeaderContent({
 					<AccessibilityMenu
 						isOpen={isAccessibilityOpen}
 						close={handleCloseAccessibility}
-						accessibilityItems={[]}
+						accessibilityItems={accessibilityItems}
 					/>
 				</>
 
