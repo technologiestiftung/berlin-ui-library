@@ -1,10 +1,10 @@
 import { j as r } from "./index.es4.js";
-import { useState as B, useRef as Y, useEffect as D } from "react";
-import { LogoBar as H } from "./index.es55.js";
-import { MainHeaderContent as R } from "./index.es56.js";
-import { SubHeaderBar as C } from "./index.es57.js";
-import { LanguageProvider as M } from "./index.es5.js";
-function F({
+import { useState as Y, useRef as D, useEffect as H } from "react";
+import { LogoBar as R } from "./index.es55.js";
+import { MainHeaderContent as C } from "./index.es56.js";
+import { SubHeaderBar as M } from "./index.es57.js";
+import { LanguageProvider as N } from "./index.es5.js";
+function G({
   header: i = "Design System",
   caption: c = "Berlin.de",
   url: a = "/",
@@ -30,26 +30,27 @@ function F({
   menuItems: y = [],
   onOpenMenu: T = () => {
   },
-  className: k = ""
+  className: k = "",
+  accessibilityItems: I = []
 }) {
-  const [t, I] = B(!1), l = Y(null);
-  return D(() => {
+  const [t, L] = Y(!1), l = D(null);
+  return H(() => {
     if (l.current) {
       let e = null;
-      const L = 50;
+      const B = 50;
       let o = !1;
       const s = () => {
         const n = (window.scrollY || window.pageYOffset) > (o ? 0 : 2);
         n !== o && (o = n, e && clearTimeout(e), e = setTimeout(() => {
-          I(n);
-        }, L));
+          L(n);
+        }, B));
       };
       return s(), window.addEventListener("scroll", s, { passive: !0 }), () => {
         e && clearTimeout(e), window.removeEventListener("scroll", s);
       };
     }
   }, []), /* @__PURE__ */ r.jsx(
-    M,
+    N,
     {
       initialLanguage: w,
       languages: E,
@@ -62,7 +63,7 @@ function F({
           className: `sticky top-0 z-20 box-border leading-[1.22rem] ${k}`,
           children: [
             /* @__PURE__ */ r.jsx(
-              H,
+              R,
               {
                 logoUrl: d,
                 logoComponent: u,
@@ -70,7 +71,7 @@ function F({
               }
             ),
             /* @__PURE__ */ r.jsx(
-              R,
+              C,
               {
                 header: i,
                 caption: c,
@@ -80,11 +81,12 @@ function F({
                 doBerlinSearch: b,
                 showMenuButton: v,
                 menuItems: y,
-                onOpenMenu: T
+                onOpenMenu: T,
+                accessibilityItems: I
               }
             ),
             !t && /* @__PURE__ */ r.jsx(
-              C,
+              M,
               {
                 showBreadcrumbs: h,
                 breadcrumbs: f,
@@ -100,6 +102,6 @@ function F({
   );
 }
 export {
-  F as Header
+  G as Header
 };
 //# sourceMappingURL=index.es3.js.map
