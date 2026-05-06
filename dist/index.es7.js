@@ -1,8 +1,8 @@
 import { j as e } from "./index.es4.js";
 import { useState as b } from "react";
 import { cn as x } from "./index.es29.js";
-import g from "./index.es44.js";
-import v from "./index.es42.js";
+import g from "./index.es37.js";
+import v from "./index.es35.js";
 function C({
   placeholder: a = "Suchbegriff",
   onSubmit: i,

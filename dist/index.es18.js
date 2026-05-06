@@ -1,8 +1,8 @@
 import { j as r } from "./index.es4.js";
-import * as o from "react";
+import * as n from "react";
 import * as a from "@radix-ui/react-tabs";
 import { cva as d } from "class-variance-authority";
-import { cn as n } from "./index.es29.js";
+import { cn as o } from "./index.es29.js";
 const y = a.Root, c = d("flex w-auto items-center justify-start", {
   variants: {
     variant: {
@@ -26,20 +26,20 @@ const y = a.Root, c = d("flex w-auto items-center justify-start", {
       variant: "default"
     }
   }
-), b = o.forwardRef(({ className: s, variant: t, ...e }, i) => /* @__PURE__ */ r.jsx(
+), b = n.forwardRef(({ className: s, variant: t, ...e }, i) => /* @__PURE__ */ r.jsx(
   a.List,
   {
     ref: i,
-    className: n(c({ variant: t, className: s })),
+    className: o(c({ variant: t, className: s })),
     ...e
   }
 ));
 b.displayName = a.List.displayName;
-const u = o.forwardRef(({ className: s, variant: t, children: e, ...i }, l) => t === "module" ? /* @__PURE__ */ r.jsx(
+const u = n.forwardRef(({ className: s, variant: t, children: e, ...i }, l) => t === "module" ? /* @__PURE__ */ r.jsx(
   a.Trigger,
   {
     ref: l,
-    className: n(f({ variant: t, className: s })),
+    className: o(f({ variant: t, className: s })),
     ...i,
     children: /* @__PURE__ */ r.jsxs("span", { className: "relative", children: [
       /* @__PURE__ */ r.jsx(
@@ -57,9 +57,9 @@ const u = o.forwardRef(({ className: s, variant: t, children: e, ...i }, l) => t
   a.Trigger,
   {
     ref: l,
-    className: n(
+    className: o(
       f({ variant: t }),
-      "data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
+      "data-[state=active]:font-bold data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
       s
     ),
     ...i,
@@ -80,18 +80,18 @@ const m = d(
       variant: "default"
     }
   }
-), p = o.forwardRef(({ className: s, variant: t, ...e }, i) => /* @__PURE__ */ r.jsx(
+), v = n.forwardRef(({ className: s, variant: t, ...e }, i) => /* @__PURE__ */ r.jsx(
   a.Content,
   {
     ref: i,
-    className: n(m({ variant: t, className: s })),
+    className: o(m({ variant: t, className: s })),
     ...e
   }
 ));
-p.displayName = a.Content.displayName;
+v.displayName = a.Content.displayName;
 export {
   y as Tabs,
-  p as TabsContent,
+  v as TabsContent,
   b as TabsList,
   u as TabsTrigger
 };
