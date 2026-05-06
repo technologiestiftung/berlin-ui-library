@@ -194,6 +194,24 @@ export const MinimalHeader: Story = {
 export const WithCustomAccessibilityItems: Story = {
 	args: {
 		...Default.args,
+		accessibilityItems: [
+			{
+				question: "How accessible is this website?",
+				label: "Accessibility statement",
+				href: "/accessibility-statement/",
+			},
+			{
+				question: "Report an accessibility issue:",
+				label: "Contact",
+				href: "/accessibility-statement/#accessibility-contact",
+			},
+			{
+				question: "Additional information:",
+				label: "Competence center for accessibility",
+				href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
+				external: true,
+			},
+		],
 	},
 	parameters: {
 		docs: {

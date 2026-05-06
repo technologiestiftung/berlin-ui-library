@@ -68,6 +68,8 @@ export function MainHeaderContent({
 		setIsAccessibilityOpen(false);
 	};
 
+	console.log("accessibilityItems :>> ", accessibilityItems);
+
 	return (
 		<div className="relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]">
 			{/* Site Title */}

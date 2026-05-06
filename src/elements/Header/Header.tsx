@@ -4,7 +4,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { LogoBar } from "./LogoBar";
 import { MainHeaderContent } from "./MainHeaderContent";
 import { SubHeaderBar } from "./SubHeaderBar";
-import { BreadcrumbItem, LinkComponentProps, MenuItem } from "./types";
+import {
+	AccessibilityItem,
+	BreadcrumbItem,
+	LinkComponentProps,
+	MenuItem,
+} from "./types";
 import { Language } from "./LanguageProvider";
 import { LanguageProvider } from "./LanguageProvider";
 
@@ -85,6 +90,10 @@ export interface HeaderProps extends LinkComponentProps {
 	 * Additional CSS classes
 	 */
 	className?: string;
+	/**
+	 * Accessibility items for the accessibility menu
+	 */
+	accessibilityItems?: AccessibilityItem[];
 }
 
 /**
@@ -120,6 +129,7 @@ export function Header({
 	menuItems = [],
 	onOpenMenu = () => {},
 	className = "",
+	accessibilityItems = [],
 }: HeaderProps) {
 	const [isSticky, setIsSticky] = useState(false);
 	const headerRef = useRef<HTMLElement>(null);
@@ -204,6 +214,7 @@ export function Header({
 					showMenuButton={showMenuButton}
 					menuItems={menuItems}
 					onOpenMenu={onOpenMenu}
+					accessibilityItems={accessibilityItems}
 				/>
 
 				{/* Sub Header Bar */}

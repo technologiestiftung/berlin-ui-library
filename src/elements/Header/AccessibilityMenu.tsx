@@ -24,6 +24,8 @@ export function AccessibilityMenu({
 }: AccessibilityMenuProps) {
 	const { translations } = useLanguage();
 
+	console.log("accessibilityItems :>> ", accessibilityItems);
+
 	// Default items if none are provided
 	const defaultItems: AccessibilityItem[] = [
 		{
