@@ -26,7 +26,7 @@ const tabsTriggerVariants = cva(
 		variants: {
 			variant: {
 				default:
-					"data-[state=active]:text-foreground h-full bg-grey-dark px-3 py-1.5 data-[state=active]:bg-block-heavy data-[state=active]:shadow-[inset_0_4px_0_0_var(--color-red)]",
+					"data-[state=active]:text-foreground h-full border-b-4 border-transparent px-3 py-1.5 data-[state=active]:border-red data-[state=active]:shadow-[inset_0_4px_0_0_var(--color-red)]",
 				module:
 					"mr-[20px] mb-0 border-b-4 border-transparent p-2 text-text-lightest last:mr-0 data-[state=active]:border-red data-[state=active]:font-bold data-[state=active]:text-black data-[state=active]:no-underline",
 			},
@@ -55,14 +55,12 @@ TabsList.displayName = TabsPrimitive.List.displayName;
 
 interface TabsTriggerProps
 	extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>,
-		VariantProps<typeof tabsTriggerVariants> {
-	tabColor?: string;
-}
+		VariantProps<typeof tabsTriggerVariants> {}
 
 const TabsTrigger = React.forwardRef<
 	React.ElementRef<typeof TabsPrimitive.Trigger>,
 	TabsTriggerProps
->(({ className, variant, tabColor, children, ...props }, ref) => {
+>(({ className, variant, children, ...props }, ref) => {
 	// For module variant, we create a special wrapper to prevent text "jumping"
 	if (variant === "module") {
 		return (
@@ -84,13 +82,9 @@ const TabsTrigger = React.forwardRef<
 			</TabsPrimitive.Trigger>
 		);
 	}
-	const style: (React.CSSProperties & { "--tab-color"?: string }) | undefined =
-		tabColor ? { "--tab-color": tabColor } : undefined;
-
 	return (
 		<TabsPrimitive.Trigger
 			ref={ref}
-			style={style}
 			className={cn(
 				tabsTriggerVariants({ variant }),
 				"data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
@@ -105,11 +99,11 @@ const TabsTrigger = React.forwardRef<
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
 
 const tabsContentVariants = cva(
-	"ring-offset-background focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
+	"ring-offset-background focus-visible:ring-ring border-t-1 border-t-grey-dark focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
 	{
 		variants: {
 			variant: {
-				default: "bg-block-heavy p-6",
+				default: "p-6",
 				module: "clear-left",
 			},
 		},
