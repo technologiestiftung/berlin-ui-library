@@ -87,7 +87,7 @@ const TabsTrigger = React.forwardRef<
 			ref={ref}
 			className={cn(
 				tabsTriggerVariants({ variant }),
-				"data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
+				"data-[state=active]:font-bold data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
 				className,
 			)}
 			{...props}
