@@ -3,9 +3,9 @@ import { Checkbox as h } from "./index.es17.js";
 import { FormField as j, FormItem as g, FormLabel as p, FormControl as F, FormDescription as C, FormMessage as N } from "./index.es11.js";
 import { Input as v } from "./index.es14.js";
 import { Label as m } from "./index.es15.js";
-import { RadioGroup as $, RadioGroupItem as f } from "./index.es46.js";
-import { Select as w, SelectTrigger as S, SelectValue as k, SelectContent as D, SelectGroup as V, SelectItem as R } from "./index.es47.js";
-import { Textarea as T } from "./index.es48.js";
+import { RadioGroup as $, RadioGroupItem as f } from "./index.es36.js";
+import { Select as w, SelectTrigger as S, SelectValue as k, SelectContent as D, SelectGroup as V, SelectItem as R } from "./index.es37.js";
+import { Textarea as T } from "./index.es38.js";
 import { cn as A } from "./index.es29.js";
 const E = (s, e) => {
   const { name: r, description: i, placeholder: l, isDisabled: n } = s, c = e.value !== void 0 ? e.value : "";
@@ -149,7 +149,7 @@ const E = (s, e) => {
       onValueChange: e.onChange,
       disabled: i,
       className: `flex ${l === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-1"}`,
-      children: r?.map((n) => /* @__PURE__ */ a.jsxs("div", { className: "flex items-center space-x-2", children: [
+      children: r?.map((n) => /* @__PURE__ */ a.jsxs("div", { className: "flex items-start space-x-2", children: [
         /* @__PURE__ */ a.jsx(
           f,
           {

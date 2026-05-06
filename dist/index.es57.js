@@ -1,25 +1,25 @@
 import { j as e } from "./index.es4.js";
-import { LanguageSelect as s } from "./index.es58.js";
-import { Breadcrumbs as n } from "./index.es8.js";
-function f({
-  showBreadcrumbs: t,
-  breadcrumbs: r,
-  showLanguageSelect: a,
-  LinkComponent: i,
-  isSticky: o = !1
+import { useLanguage as r, t as n } from "./index.es5.js";
+import o from "./index.es126.js";
+function p({
+  onOpenAccessibility: t,
+  className: a = ""
 }) {
-  return !t && !a ? null : /* @__PURE__ */ e.jsx(
-    "div",
+  const { translations: i } = r(), s = n("accessibility", i);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
     {
-      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
-      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
-        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
-        a && /* @__PURE__ */ e.jsx(s, {})
-      ] })
+      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${a}`,
+      onClick: t,
+      "aria-label": s,
+      children: [
+        /* @__PURE__ */ e.jsx(o, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "whitespace-nowrap", children: s })
+      ]
     }
   );
 }
 export {
-  f as SubHeaderBar
+  p as AccessibilityButton
 };
 //# sourceMappingURL=index.es57.js.map

@@ -1,6 +1,25 @@
-import * as e from "react";
-const t = (c) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 352 512", ...c }, /* @__PURE__ */ e.createElement("path", { d: "M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z", fill: "currentColor" }));
+import { j as e } from "./index.es4.js";
+import { LanguageSelect as s } from "./index.es50.js";
+import { Breadcrumbs as n } from "./index.es8.js";
+function f({
+  showBreadcrumbs: t,
+  breadcrumbs: r,
+  showLanguageSelect: a,
+  LinkComponent: i,
+  isSticky: o = !1
+}) {
+  return !t && !a ? null : /* @__PURE__ */ e.jsx(
+    "div",
+    {
+      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
+      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
+        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
+        a && /* @__PURE__ */ e.jsx(s, {})
+      ] })
+    }
+  );
+}
 export {
-  t as default
+  f as SubHeaderBar
 };
 //# sourceMappingURL=index.es49.js.map

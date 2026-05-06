@@ -1,27 +1,25 @@
 import { j as e } from "./index.es4.js";
-import a from "./index.es64.js";
-function s({
-  logoUrl: o = "https://www.berlin.de",
-  logoComponent: t,
-  isSticky: r = !1
+import n from "./index.es41.js";
+import { useLanguage as o, t as m } from "./index.es5.js";
+function p({
+  onOpenSearch: t,
+  className: s = ""
 }) {
-  return /* @__PURE__ */ e.jsx(
-    "div",
+  const { translations: a } = o(), r = m("search", a);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
     {
-      className: `sticky top-0 z-10 flex items-center justify-start border-b transition-[height,background-color,opacity,padding] duration-200 ease-in-out ${r ? "h-[3px] border-none bg-grey-darkest px-4 py-0 lg:px-6" : "h-11 border-gray-300 bg-white px-4 py-[0.25em] lg:px-6"}`,
-      children: /* @__PURE__ */ e.jsx(
-        "a",
-        {
-          href: o,
-          "aria-label": "Homepage Berlin.de",
-          className: `transition-opacity duration-200 ease-in-out ${r ? "opacity-0" : "opacity-100"}`,
-          children: t || /* @__PURE__ */ e.jsx("img", { src: a, alt: "Berlin.de Logo", className: "object-fill" })
-        }
-      )
+      className: `-mt-[0.05rem] -ml-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] pr-[0.05rem] text-[11px] leading-normal ${s}`,
+      onClick: t,
+      "aria-label": r,
+      children: [
+        /* @__PURE__ */ e.jsx(n, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "text-[11px] whitespace-nowrap", children: r })
+      ]
     }
   );
 }
 export {
-  s as LogoBar
+  p as SearchButton
 };
 //# sourceMappingURL=index.es55.js.map
