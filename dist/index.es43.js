@@ -1,11 +1,5 @@
-import { __module as e } from "./index.es44.js";
-import { __require as t } from "./index.es45.js";
-import { __require as i } from "./index.es46.js";
-var r;
-function m() {
-  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
-}
+var e = { exports: {} };
 export {
-  m as __require
+  e as __module
 };
 //# sourceMappingURL=index.es43.js.map

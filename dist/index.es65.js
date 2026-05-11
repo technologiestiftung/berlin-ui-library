@@ -1,6 +1,6 @@
 import { j as e } from "./index.es4.js";
 import { useLanguage as r, t as n } from "./index.es5.js";
-import o from "./index.es128.js";
+import o from "./index.es126.js";
 function p({
   onOpenAccessibility: t,
   className: a = ""
