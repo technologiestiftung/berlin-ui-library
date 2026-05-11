@@ -1,6 +1,7 @@
 import { AccessibilityItem } from "./types";
 import { Drawer, DrawerContent } from "../Drawer/Drawer";
 import { useLanguage, t } from "./LanguageProvider";
+import { ExternalLinkIcon } from "lucide-react";
 
 export interface AccessibilityMenuProps {
 	/**
@@ -63,12 +64,13 @@ export function AccessibilityMenu({
 						<p className="mb-1 font-bold">{item.question}</p>
 						{item.external ? (
 							<a
-								className="text-text-link transition-colors duration-200 hover:underline"
+								className="flex text-text-link transition-colors duration-200 hover:underline"
 								href={item.href}
 								target="_blank"
 								rel="noreferrer"
 							>
 								{item.label}
+								<ExternalLinkIcon className="ml-2 size-4 flex-shrink-0 text-text-link" />
 							</a>
 						) : (
 							<a
