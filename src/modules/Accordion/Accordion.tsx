@@ -12,9 +12,9 @@ const accordionVariants = {
 		item: "border-t border-b border-gray-200",
 		header: "flex",
 		trigger:
-			"flex flex-1 text-start [&>svg]:text-red items-center pr-4 justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+			"flex flex-1 text-start [&>svg]:text-red items-center justify-between min-h-11 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
 		content:
-			"data-[state=closed]:animate-accordion-up pr-4 data-[state=open]:animate-accordion-down overflow-hidden duration-500 text-sm transition-all",
+			"data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden duration-500 text-sm transition-all",
 	},
 	footer: {
 		item: "border-b",
@@ -100,7 +100,7 @@ const AccordionContent = React.forwardRef<
 		className={cn(accordionVariants[variant].content, className)}
 		{...props}
 	>
-		<div className={cn("pt-0 pb-4", className)}>{children}</div>
+		<div className={cn("pt-[7px] pb-[15px]", className)}>{children}</div>
 	</AccordionPrimitive.Content>
 ));
 
