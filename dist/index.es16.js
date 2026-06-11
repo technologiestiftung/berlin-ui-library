@@ -7,8 +7,8 @@ const s = {
   default: {
     item: "border-t border-b border-gray-200",
     header: "flex",
-    trigger: "flex flex-1 text-start [&>svg]:text-red items-center pr-4 justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
-    content: "data-[state=closed]:animate-accordion-up pr-4 data-[state=open]:animate-accordion-down overflow-hidden duration-500 text-sm transition-all"
+    trigger: "flex flex-1 text-start [&>svg]:text-red items-center justify-between min-h-11 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+    content: "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden duration-500 text-sm transition-all"
   },
   footer: {
     item: "border-b",
@@ -46,7 +46,7 @@ const x = d.forwardRef(({ className: e, children: n, variant: t = "footer", ...a
     ref: c,
     className: i(s[t].content, e),
     ...a,
-    children: /* @__PURE__ */ o.jsx("div", { className: i("pt-0 pb-4", e), children: n })
+    children: /* @__PURE__ */ o.jsx("div", { className: i("pt-[7px] pb-[15px]", e), children: n })
   }
 ));
 x.displayName = r.Content.displayName;
