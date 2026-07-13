@@ -1,11 +1,27 @@
-import { __module as e } from "./index.es52.js";
-import { __require as t } from "./index.es53.js";
-import { __require as i } from "./index.es54.js";
-var r;
-function m() {
-  return r ? e.exports : (r = 1, process.env.NODE_ENV === "production" ? e.exports = t() : e.exports = i(), e.exports);
+import { j as e } from "./index.es4.js";
+import i from "./index.es60.js";
+function n({
+  logoUrl: t = "https://www.berlin.de",
+  logoComponent: a,
+  isSticky: r = !1
+}) {
+  return /* @__PURE__ */ e.jsx(
+    "div",
+    {
+      className: `sticky top-0 z-10 flex items-center justify-start border-b transition-[height,background-color,opacity,padding] duration-200 ease-in-out ${r ? "h-[3px] border-none bg-grey-darkest px-4 py-0 lg:px-6" : "h-11 border-gray-300 bg-white px-4 py-[0.25em] lg:px-6"}`,
+      children: /* @__PURE__ */ e.jsx(
+        "a",
+        {
+          href: t,
+          "aria-label": "Berlin.de zur Startseite",
+          className: `transition-opacity duration-200 ease-in-out ${r ? "opacity-0" : "opacity-100"}`,
+          children: a || /* @__PURE__ */ e.jsx("img", { src: i, alt: "", className: "object-fill" })
+        }
+      )
+    }
+  );
 }
 export {
-  m as __require
+  n as LogoBar
 };
 //# sourceMappingURL=index.es51.js.map

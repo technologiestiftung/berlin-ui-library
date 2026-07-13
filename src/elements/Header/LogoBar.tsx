@@ -32,13 +32,13 @@ export function LogoBar({
 		>
 			<a
 				href={logoUrl}
-				aria-label="Homepage Berlin.de"
+				aria-label="Berlin.de zur Startseite"
 				className={`transition-opacity duration-200 ease-in-out ${
 					isSticky ? "opacity-0" : "opacity-100"
 				}`}
 			>
 				{logoComponent || (
-					<img src={BerlinLogo} alt="Berlin.de Logo" className="object-fill" />
+					<img src={BerlinLogo} alt="" className="object-fill" />
 				)}
 			</a>
 		</div>
