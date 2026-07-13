@@ -7,6 +7,10 @@ interface OpenerProps {
 	 */
 	src: string;
 	/**
+	 * Accessible description for the opener background image
+	 */
+	alt?: string;
+	/**
 	 * Set the copyright for the opener image
 	 */
 	copyright: string;
@@ -30,6 +34,7 @@ interface OpenerProps {
 
 export function Opener({
 	src,
+	alt,
 	copyright,
 	title,
 	description,
@@ -44,6 +49,9 @@ export function Opener({
 			<div className={cn("absolute h-[var(--height)] w-screen", className)}>
 				<div
 					className="flex h-[var(--height)] w-full overflow-hidden [background-image:var(--src)] bg-cover bg-center"
+					role={alt ? "img" : undefined}
+					aria-label={alt}
+					aria-hidden={alt ? undefined : true}
 					style={{ "--src": `url(${src})` } as CSSProperties}
 				/>
 				{copyright && (

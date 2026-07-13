@@ -1,5 +1,89 @@
-const e = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20448%20512'%3e%3c!--!Font%20Awesome%20Free%206.5.2%20by%20@fontawesome%20-%20https://fontawesome.com%20License%20-%20https://fontawesome.com/license/free%20Copyright%202024%20Fonticons,%20Inc.--%3e%3cpath%20d='M190.5%2066.9l22.2-22.2c9.4-9.4%2024.6-9.4%2033.9%200L441%20239c9.4%209.4%209.4%2024.6%200%2033.9L246.6%20467.3c-9.4%209.4-24.6%209.4-33.9%200l-22.2-22.2c-9.5-9.5-9.3-25%20.4-34.3L311.4%20296H24c-13.3%200-24-10.7-24-24v-32c0-13.3%2010.7-24%2024-24h287.4L190.9%20101.2c-9.8-9.3-10-24.8-.4-34.3z'%20fill='currentColor'%3e%3c/path%3e%3c/svg%3e";
+import { j as e } from "./index.es4.js";
+import { useState as s } from "react";
+import { MenuButton as C } from "./index.es54.js";
+import { SearchButton as N } from "./index.es56.js";
+import { AccessibilityButton as v } from "./index.es58.js";
+import { SearchMenu as B } from "./index.es59.js";
+import { MenuDrawer as F } from "./index.es60.js";
+import { AccessibilityMenu as I } from "./index.es61.js";
+function J({
+  header: c,
+  caption: l,
+  url: i,
+  showSearchButton: o,
+  onSearch: a,
+  showMenuButton: m,
+  menuItems: p,
+  onOpenMenu: x,
+  doBerlinSearch: h,
+  accessibilityItems: d
+}) {
+  const [f, n] = s(!1), [u, t] = s(!1), [j, r] = s(!1), b = () => {
+    n(!0), a();
+  }, O = () => {
+    n(!1);
+  }, y = (w) => {
+    console.warn("Search term:", w);
+  }, S = () => {
+    t(!0), x();
+  }, M = () => {
+    t(!1);
+  }, g = () => {
+    r(!0);
+  }, A = () => {
+    r(!1);
+  };
+  return /* @__PURE__ */ e.jsxs("div", { className: "relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]", children: [
+    /* @__PURE__ */ e.jsxs(
+      "a",
+      {
+        href: i,
+        className: "flex flex-col justify-center p-0 text-[15px] leading-[1.2] break-words md:text-base lg:p-[3px] lg:text-xl",
+        children: [
+          /* @__PURE__ */ e.jsx("span", { children: c }),
+          /* @__PURE__ */ e.jsx("span", { className: "block font-bold", children: l })
+        ]
+      }
+    ),
+    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[0.65rem] pt-[0.59rem] pb-[0.20rem] md:space-x-[1.05rem] md:pt-[0.69rem] md:pb-[0.22rem]", children: [
+      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(v, { onOpenAccessibility: g }),
+        /* @__PURE__ */ e.jsx(
+          I,
+          {
+            isOpen: j,
+            close: A,
+            accessibilityItems: d
+          }
+        )
+      ] }),
+      o && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(N, { onOpenSearch: b }),
+        /* @__PURE__ */ e.jsx(
+          B,
+          {
+            isOpen: f,
+            close: O,
+            onSearch: y,
+            doBerlinSearch: h
+          }
+        )
+      ] }),
+      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(C, { onOpenMenu: S }),
+        /* @__PURE__ */ e.jsx(
+          F,
+          {
+            isOpen: u,
+            close: M,
+            menuItems: p
+          }
+        )
+      ] })
+    ] })
+  ] });
+}
 export {
-  e as default
+  J as MainHeaderContent
 };
 //# sourceMappingURL=index.es49.js.map
