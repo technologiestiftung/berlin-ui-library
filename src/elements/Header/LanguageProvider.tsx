@@ -28,6 +28,7 @@ const defaultTranslations: Record<string, Translations> = {
 	de: {
 		accessibility: "Barrierefrei",
 		menu: "Menü",
+		"menu.navigation": "Hauptnavigation",
 		search: "Suche",
 		expand: "Erweitern",
 		collapse: "Einklappen",
@@ -54,6 +55,7 @@ const defaultTranslations: Record<string, Translations> = {
 	en: {
 		accessibility: "Accessibility",
 		menu: "Menu",
+		"menu.navigation": "Main navigation",
 		search: "Search",
 		expand: "Expand",
 		collapse: "Collapse",

@@ -22,6 +22,11 @@ export interface MenuDrawerProps {
 export function MenuDrawer({ isOpen, close, menuItems }: MenuDrawerProps) {
 	const { translations } = useLanguage();
 	const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
+	const translatedNavigationLabel = t("menu.navigation", translations);
+	const navigationLabel =
+		translatedNavigationLabel === "menu.navigation"
+			? "Hauptnavigation"
+			: translatedNavigationLabel;
 
 	const toggleItem = (itemId: string) => {
 		setOpenItems((prevOpenItems) => ({
@@ -134,7 +139,9 @@ export function MenuDrawer({ isOpen, close, menuItems }: MenuDrawerProps) {
 
 					<div className="flex flex-col gap-2">
 						{menuItems.length > 0 ? (
-							renderMenuItems(menuItems)
+							<nav aria-label={navigationLabel}>
+								{renderMenuItems(menuItems)}
+							</nav>
 						) : (
 							<p>
 								{t("menu.noItems", translations) || "No menu items available."}

@@ -3,10 +3,11 @@ import { createContext as b, useState as d, useContext as f } from "react";
 const m = [
   { code: "de", label: "Deutsch" },
   { code: "en", label: "English" }
-], y = {
+], g = {
   de: {
     accessibility: "Barrierefrei",
     menu: "Menü",
+    "menu.navigation": "Hauptnavigation",
     search: "Suche",
     expand: "Erweitern",
     collapse: "Einklappen",
@@ -31,6 +32,7 @@ const m = [
   en: {
     accessibility: "Accessibility",
     menu: "Menu",
+    "menu.navigation": "Main navigation",
     search: "Search",
     expand: "Expand",
     collapse: "Collapse",
@@ -52,10 +54,10 @@ const m = [
     "accessibilityMenu.additionalInfo.question": "Additional information:",
     "accessibilityMenu.additionalInfo": "Competence center for accessibility"
   }
-}, a = b(
+}, r = b(
   void 0
 ), p = () => {
-  const e = f(a);
+  const e = f(r);
   if (!e)
     throw new Error("useLanguage must be used within a LanguageProvider");
   return e;
@@ -63,17 +65,17 @@ const m = [
   children: e,
   initialLanguage: i = "de",
   languages: c = m,
-  translations: t = y,
-  onLanguageChange: s
+  translations: t = g,
+  onLanguageChange: n
 }) => {
-  const [r, o] = d(i), u = () => t[r] || t.de || {}, l = (n) => {
-    o(n), s && s(n);
+  const [s, o] = d(i), u = () => t[s] || t.de || {}, l = (a) => {
+    o(a), n && n(a);
   };
   return /* @__PURE__ */ h.jsx(
-    a.Provider,
+    r.Provider,
     {
       value: {
-        currentLanguage: r,
+        currentLanguage: s,
         languages: c,
         translations: u(),
         setLanguage: l
