@@ -52,11 +52,21 @@ export function AccessibilityMenu({
 
 	return (
 		<Drawer open={isOpen} onOpenChange={(open) => !open && close()}>
-			<DrawerContent className="flex flex-col gap-4 px-6 py-4 text-base">
+			<DrawerContent
+				className="flex flex-col gap-4 px-6 py-4 text-base"
+				onOpenAutoFocus={(event) => {
+					event.preventDefault();
+					window.setTimeout(() => {
+						document
+							.querySelector<HTMLElement>("[role='dialog'] a[href]")
+							?.focus();
+					});
+				}}
+			>
 				<div className="mt-4 mb-6 flex flex-row items-center justify-between">
-					<p className="text-2xl font-bold">
+					<h2 className="text-2xl font-bold">
 						{t("accessibilityMenu.title", translations)}
-					</p>
+					</h2>
 				</div>
 
 				{items.map((item, index) => (

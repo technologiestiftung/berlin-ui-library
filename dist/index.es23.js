@@ -1,10 +1,10 @@
 import { j as e } from "./index.es4.js";
-import * as o from "react";
+import * as t from "react";
 import { cn as x } from "./index.es29.js";
 import { Button as i } from "./index.es10.js";
-const f = o.forwardRef(
+const f = t.forwardRef(
   ({
-    className: t,
+    className: o,
     title: l,
     description: n,
     fileType: s,
@@ -19,7 +19,7 @@ const f = o.forwardRef(
       ref: h,
       className: x(
         "flex flex-col border-b border-grey-dark py-5 md:flex-row md:items-center md:justify-between",
-        t
+        o
       ),
       ...c,
       children: [
@@ -35,14 +35,15 @@ const f = o.forwardRef(
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ e.jsx("div", { className: "mt-4 md:mt-0 md:flex-shrink-0 md:pl-[18px]", children: m ? /* @__PURE__ */ e.jsx("a", { href: m, className: "inline-block", children: /* @__PURE__ */ e.jsx(
+        /* @__PURE__ */ e.jsx("div", { className: "mt-4 md:mt-0 md:flex-shrink-0 md:pl-[18px]", children: m ? /* @__PURE__ */ e.jsx(
           i,
           {
+            asChild: !0,
             variant: "download",
             className: "min-h-[43px] w-auto text-base",
-            children: d
+            children: /* @__PURE__ */ e.jsx("a", { href: m, className: "inline-block", children: d })
           }
-        ) }) : /* @__PURE__ */ e.jsx(
+        ) : /* @__PURE__ */ e.jsx(
           i,
           {
             variant: "download",
@@ -58,9 +59,9 @@ const f = o.forwardRef(
   )
 );
 f.displayName = "DownloadItem";
-const b = o.forwardRef(({ className: t, title: l, asList: n = !0, children: s, ...a }, m) => {
-  const d = o.Children.map(s, (r) => o.isValidElement(r) && n ? /* @__PURE__ */ e.jsx("li", { className: "m-0 before:hidden before:content-none after:hidden after:content-none", children: r }) : r);
-  return /* @__PURE__ */ e.jsxs("div", { ref: m, className: x("modul-download-multi", t), ...a, children: [
+const b = t.forwardRef(({ className: o, title: l, asList: n = !0, children: s, ...a }, m) => {
+  const d = t.Children.map(s, (r) => t.isValidElement(r) && n ? /* @__PURE__ */ e.jsx("li", { className: "m-0 before:hidden before:content-none after:hidden after:content-none", children: r }) : r);
+  return /* @__PURE__ */ e.jsxs("div", { ref: m, className: x("modul-download-multi", o), ...a, children: [
     l && /* @__PURE__ */ e.jsx("h2", { className: "mb-0 text-xl font-bold", children: l }),
     n ? /* @__PURE__ */ e.jsx("ul", { className: "list-none p-0", children: d }) : /* @__PURE__ */ e.jsx("div", { className: "border-grey-dark", children: d })
   ] });

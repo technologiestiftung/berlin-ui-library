@@ -75,14 +75,15 @@ export const DownloadItem = React.forwardRef<HTMLDivElement, DownloadItemProps>(
 				</div>
 				<div className="mt-4 md:mt-0 md:flex-shrink-0 md:pl-[18px]">
 					{downloadUrl ? (
-						<a href={downloadUrl} className="inline-block">
-							<Button
-								variant="download"
-								className="min-h-[43px] w-auto text-base"
-							>
+						<Button
+							asChild
+							variant="download"
+							className="min-h-[43px] w-auto text-base"
+						>
+							<a href={downloadUrl} className="inline-block">
 								{buttonText}
-							</Button>
-						</a>
+							</a>
+						</Button>
 					) : (
 						<Button
 							variant="download"

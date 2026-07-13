@@ -32,10 +32,11 @@ export function SearchMenu({
 	const handleSearch = (searchTerm: string) => {
 		if (doBerlinSearch) {
 			close();
-			return window.open(
+			window.open(
 				`https://www.berlin.de/suche/?q=${encodeURIComponent(searchTerm)}`,
 				"_blank",
 			);
+			return;
 		}
 		if (onSearch) {
 			onSearch(searchTerm);
@@ -45,7 +46,16 @@ export function SearchMenu({
 
 	return (
 		<Drawer open={isOpen} onOpenChange={(open) => !open && close()}>
-			<DrawerContent size="large" className="flex flex-col gap-4">
+			<DrawerContent
+				size="large"
+				className="flex flex-col gap-4"
+				onOpenAutoFocus={(event) => {
+					event.preventDefault();
+					window.setTimeout(() => {
+						document.querySelector<HTMLInputElement>("#searchInput")?.focus();
+					});
+				}}
+			>
 				<div className="flex flex-row justify-center">
 					<div className="mt-[10vh] flex w-full flex-col gap-2 px-4 lg:mt-[30vh] lg:w-[50%]">
 						<h1 className="font-bold">{t("search.title", translations)}</h1>

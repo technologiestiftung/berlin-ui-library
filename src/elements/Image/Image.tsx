@@ -1,5 +1,5 @@
 /* eslint-disable complexity */
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils"; // Assuming cn utility is available (e.g., from shadcn/ui)
 import MaximizeIcon from "@/assets/icons/maximize.svg?react";
 import TimesIcon from "@/assets/icons/times.svg?react";
@@ -123,6 +123,7 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 			src,
 			alt,
 			caption,
+			href,
 			copyright,
 			overlayTitle,
 			overlayCopyright,
@@ -136,6 +137,7 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 		ref,
 	) => {
 		const imgRef = useRef<HTMLImageElement | null>(null);
+		const closeButtonRef = useRef<HTMLButtonElement | null>(null);
 		const [openImage, setOpenImage] = useState<OpenImage | null>(null);
 		const isPortrait = (img?: { width?: number; height?: number }) =>
 			(img?.height ?? 0) >= (img?.width ?? 0);
@@ -147,6 +149,28 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 				width: imgRef?.current?.clientWidth ?? 0,
 				height: imgRef?.current?.clientHeight ?? 0,
 			});
+		useEffect(() => {
+			const handleKeyDown = (event: KeyboardEvent) => {
+				if (event.key === "Escape") {
+					setOpenImage(null);
+				}
+			};
+			if (openImage) {
+				closeButtonRef.current?.focus();
+				document.addEventListener("keydown", handleKeyDown);
+			}
+			return () => document.removeEventListener("keydown", handleKeyDown);
+		}, [openImage]);
+
+		const imageElement = (
+			<img
+				ref={imgRef}
+				src={src}
+				alt={alt}
+				className={cn("block h-auto w-full", imgClassName)}
+			/>
+		);
+
 		return (
 			<>
 				<div
@@ -159,33 +183,25 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 						className={cn(
 							(caption || copyright) && "mb-1", // Only add mb-1 if caption or copyright exists
 							darkenImage && "brightness-60 filter",
-							(props.href || withZoomBox) && "cursor-pointer",
 							"relative",
 						)}
 					>
-						<img
-							ref={imgRef}
-							onClick={(e) => {
-								if (props.href) {
-									e.preventDefault();
-									window.open(props.href, "_blank");
-								}
-								if (withZoomBox) {
-									e.preventDefault();
-									open();
-								}
-							}}
-							src={src}
-							alt={alt}
-							className={cn("block h-auto w-full", imgClassName)} // Basic image styling
-						/>
+						{href ? (
+							<a href={href} target="_blank" rel="noopener noreferrer">
+								{imageElement}
+							</a>
+						) : (
+							imageElement
+						)}
 						{withZoomBox && (
-							<div
-								className="absolute right-1.5 bottom-1.5 flex items-center justify-center bg-white p-1.5"
+							<button
+								type="button"
+								className="absolute right-1.5 bottom-1.5 flex size-11 cursor-pointer items-center justify-center border border-black bg-white p-1.5 focus:ring-2 focus:ring-black focus:ring-offset-2 focus:outline-none"
+								aria-label="Bild vergrößern"
 								onClick={open}
 							>
 								<MaximizeIcon className="size-6 text-white" />
-							</div>
+							</button>
 						)}
 					</div>
 
@@ -220,6 +236,9 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 					<div
 						id="overlay"
 						className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/80"
+						role="dialog"
+						aria-modal="true"
+						aria-label="Bildvergrößerung"
 						onClick={(e) => {
 							if ((e.target as HTMLElement).id === "overlay") {
 								setOpenImage(null);
@@ -231,12 +250,15 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 							onClick={(e) => e.stopPropagation()}
 						>
 							{/* Close Button */}
-							<div
-								className="absolute top-0 right-0 z-10 cursor-pointer bg-white p-2"
+							<button
+								ref={closeButtonRef}
+								type="button"
+								className="absolute top-0 right-0 z-10 cursor-pointer bg-white p-2 focus:ring-2 focus:ring-black focus:ring-offset-2 focus:outline-none"
+								aria-label="Bildvergrößerung schließen"
 								onClick={() => setOpenImage(null)}
 							>
 								<TimesIcon className="size-6" />
-							</div>
+							</button>
 
 							{/* Image Container */}
 							<div

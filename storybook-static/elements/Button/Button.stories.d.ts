@@ -5,6 +5,7 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 export declare const Default: Story;
 export declare const DefaultDisabled: Story;
+export declare const DefaultLoading: Story;
 export declare const Light: Story;
 export declare const LightDisabled: Story;
 export declare const White: Story;

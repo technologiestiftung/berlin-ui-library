@@ -1,6 +1,89 @@
-import * as e from "react";
-const c = (t) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 192 512", ...t }, /* @__PURE__ */ e.createElement("path", { d: "M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z", fill: "currentColor" }));
+import { j as e } from "./index.es4.js";
+import { useState as s } from "react";
+import { MenuButton as C } from "./index.es57.js";
+import { SearchButton as N } from "./index.es59.js";
+import { AccessibilityButton as v } from "./index.es61.js";
+import { SearchMenu as B } from "./index.es62.js";
+import { MenuDrawer as F } from "./index.es63.js";
+import { AccessibilityMenu as I } from "./index.es64.js";
+function J({
+  header: c,
+  caption: l,
+  url: i,
+  showSearchButton: o,
+  onSearch: a,
+  showMenuButton: m,
+  menuItems: p,
+  onOpenMenu: x,
+  doBerlinSearch: h,
+  accessibilityItems: d
+}) {
+  const [f, n] = s(!1), [u, t] = s(!1), [j, r] = s(!1), b = () => {
+    n(!0), a();
+  }, O = () => {
+    n(!1);
+  }, y = (w) => {
+    console.warn("Search term:", w);
+  }, S = () => {
+    t(!0), x();
+  }, M = () => {
+    t(!1);
+  }, g = () => {
+    r(!0);
+  }, A = () => {
+    r(!1);
+  };
+  return /* @__PURE__ */ e.jsxs("div", { className: "relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]", children: [
+    /* @__PURE__ */ e.jsxs(
+      "a",
+      {
+        href: i,
+        className: "flex flex-col justify-center p-0 text-[15px] leading-[1.2] break-words md:text-base lg:p-[3px] lg:text-xl",
+        children: [
+          /* @__PURE__ */ e.jsx("span", { children: c }),
+          /* @__PURE__ */ e.jsx("span", { className: "block font-bold", children: l })
+        ]
+      }
+    ),
+    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[0.65rem] pt-[0.59rem] pb-[0.20rem] md:space-x-[1.05rem] md:pt-[0.69rem] md:pb-[0.22rem]", children: [
+      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(v, { onOpenAccessibility: g }),
+        /* @__PURE__ */ e.jsx(
+          I,
+          {
+            isOpen: j,
+            close: A,
+            accessibilityItems: d
+          }
+        )
+      ] }),
+      o && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(N, { onOpenSearch: b }),
+        /* @__PURE__ */ e.jsx(
+          B,
+          {
+            isOpen: f,
+            close: O,
+            onSearch: y,
+            doBerlinSearch: h
+          }
+        )
+      ] }),
+      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(C, { onOpenMenu: S }),
+        /* @__PURE__ */ e.jsx(
+          F,
+          {
+            isOpen: u,
+            close: M,
+            menuItems: p
+          }
+        )
+      ] })
+    ] })
+  ] });
+}
 export {
-  c as default
+  J as MainHeaderContent
 };
 //# sourceMappingURL=index.es52.js.map

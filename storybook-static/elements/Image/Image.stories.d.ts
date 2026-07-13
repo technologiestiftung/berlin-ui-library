@@ -13,4 +13,7 @@ export declare const WithOverlayLink: Story;
 export declare const WithLink: Story;
 export declare const OverlayPositionBottom: Story;
 export declare const CustomStyles: Story;
+export declare const WithZoomBoxVertical: Story;
+export declare const WithZoomBoxHorizontal: Story;
+export declare const WithZoomBoxQuadrant: Story;
 //# sourceMappingURL=Image.stories.d.ts.map

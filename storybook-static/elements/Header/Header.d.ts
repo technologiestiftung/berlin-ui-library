@@ -1,5 +1,5 @@
 import { default as React } from '../../../node_modules/react';
-import { BreadcrumbItem, LinkComponentProps, MenuItem } from './types';
+import { AccessibilityItem, BreadcrumbItem, LinkComponentProps, MenuItem } from './types';
 import { Language } from './LanguageProvider';
 export interface HeaderProps extends LinkComponentProps {
     /**
@@ -59,6 +59,10 @@ export interface HeaderProps extends LinkComponentProps {
      */
     onSearch?: () => void;
     /**
+     * Whether to use the Berlin search functionality
+     */
+    doBerlinSearch?: boolean;
+    /**
      * Whether to show the menu button
      */
     showMenuButton?: boolean;
@@ -74,6 +78,10 @@ export interface HeaderProps extends LinkComponentProps {
      * Additional CSS classes
      */
     className?: string;
+    /**
+     * Accessibility items for the accessibility menu
+     */
+    accessibilityItems?: AccessibilityItem[];
 }
 /**
  * Header component with integrated accessibility menu
@@ -84,5 +92,5 @@ export interface HeaderProps extends LinkComponentProps {
  * - Optional breadcrumbs and language selector
  * - Built-in accessibility menu drawer
  */
-export declare function Header({ header, caption, url, logoUrl, logoComponent, LinkComponent, breadcrumbs, showBreadcrumbs, showLanguageSelect, language, languages, translations, onLanguageChange, showSearchButton, onSearch, showMenuButton, menuItems, onOpenMenu, className, }: HeaderProps): import("react/jsx-runtime").JSX.Element;
+export declare function Header({ header, caption, url, logoUrl, logoComponent, LinkComponent, breadcrumbs, showBreadcrumbs, showLanguageSelect, language, languages, translations, onLanguageChange, showSearchButton, onSearch, doBerlinSearch, showMenuButton, menuItems, onOpenMenu, className, accessibilityItems, }: HeaderProps): import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Header.d.ts.map

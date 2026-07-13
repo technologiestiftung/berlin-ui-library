@@ -10,6 +10,7 @@ export declare const CustomLogoAndLinks: Story;
 export declare const WithoutLanguageSelector: Story;
 export declare const WithoutBreadcrumbs: Story;
 export declare const WithoutSearch: Story;
+export declare const WithBerlinSearch: Story;
 export declare const WithoutMenu: Story;
 export declare const MinimalHeader: Story;
 export declare const WithCustomAccessibilityItems: Story;

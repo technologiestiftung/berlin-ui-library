@@ -46,6 +46,10 @@ interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
      * Optional additional class names for the `img` element itself.
      */
     imgClassName?: string;
+    /**
+     * Optional add the zoom/enlarge icon to onClick open the image full screen
+     */
+    withZoomBox?: boolean;
 }
 /**
  * A component for displaying images with optional overlays, captions, and copyright information,

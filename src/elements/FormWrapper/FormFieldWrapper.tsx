@@ -180,7 +180,9 @@ const renderSimpleField = (
 };
 
 const RichText = ({ children }: { children: React.ReactNode }) => {
-	if (typeof children !== "string") return <>{children}</>;
+	if (typeof children !== "string") {
+		return <>{children}</>;
+	}
 
 	const parse = (text: string): React.ReactNode[] => {
 		const regex = /<(b|i|u)>(.*?)<\/\1>/i;

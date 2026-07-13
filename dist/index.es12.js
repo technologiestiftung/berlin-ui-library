@@ -3,9 +3,9 @@ import { Checkbox as h } from "./index.es17.js";
 import { FormField as j, FormItem as g, FormLabel as p, FormControl as F, FormDescription as C, FormMessage as N } from "./index.es11.js";
 import { Input as v } from "./index.es14.js";
 import { Label as m } from "./index.es15.js";
-import { RadioGroup as $, RadioGroupItem as f } from "./index.es47.js";
-import { Select as w, SelectTrigger as S, SelectValue as k, SelectContent as D, SelectGroup as V, SelectItem as R } from "./index.es48.js";
-import { Textarea as T } from "./index.es49.js";
+import { RadioGroup as $, RadioGroupItem as f } from "./index.es48.js";
+import { Select as w, SelectTrigger as S, SelectValue as k, SelectContent as D, SelectGroup as V, SelectItem as R } from "./index.es49.js";
+import { Textarea as T } from "./index.es50.js";
 import { cn as A } from "./index.es29.js";
 const E = (s, e) => {
   const { name: r, description: i, placeholder: l, isDisabled: n } = s, c = e.value !== void 0 ? e.value : "";
@@ -38,7 +38,8 @@ const E = (s, e) => {
     }
   );
 }, b = ({ children: s }) => {
-  if (typeof s != "string") return /* @__PURE__ */ a.jsx(a.Fragment, { children: s });
+  if (typeof s != "string")
+    return /* @__PURE__ */ a.jsx(a.Fragment, { children: s });
   const e = (r) => {
     const l = /<(b|i|u)>(.*?)<\/\1>/i.exec(r);
     if (!l || l.index === void 0)

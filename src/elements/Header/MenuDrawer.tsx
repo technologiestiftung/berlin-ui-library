@@ -86,16 +86,19 @@ export function MenuDrawer({ isOpen, close, menuItems }: MenuDrawerProps) {
 							{item.label}
 						</a>
 						{item.children && item.children.length > 0 && (
-							<div
+							<button
+								type="button"
 								className="mx-[3px] my-[0.5rem] cursor-pointer border-l border-black px-[0.7rem] pt-[0.3rem] pb-[0.4rem]"
 								onClick={() => toggleItem(itemId)}
+								aria-expanded={isItemOpen}
+								aria-label={`${item.label} Untermenü ${isItemOpen ? "schließen" : "öffnen"}`}
 							>
 								<ChevronDown
 									className={`transform transition-transform duration-200 ${
 										isItemOpen ? "rotate-180" : ""
 									}`}
 								/>
-							</div>
+							</button>
 						)}
 					</div>
 					{isItemOpen && item.children && item.children.length > 0 && (
@@ -111,12 +114,22 @@ export function MenuDrawer({ isOpen, close, menuItems }: MenuDrawerProps) {
 
 	return (
 		<Drawer open={isOpen} onOpenChange={(open) => !open && close()}>
-			<DrawerContent className="flex flex-col gap-2">
+			<DrawerContent
+				className="flex flex-col gap-2"
+				onOpenAutoFocus={(event) => {
+					event.preventDefault();
+					window.setTimeout(() => {
+						document
+							.querySelector<HTMLElement>("[role='dialog'] a[href]")
+							?.focus();
+					});
+				}}
+			>
 				<div className="text-base">
 					<div className="mb-5 flex flex-row items-center justify-between">
-						<p className="px-6 text-2xl font-bold">
+						<h2 className="px-6 text-2xl font-bold">
 							{t("menu.title", translations) || "Menu"}
-						</p>
+						</h2>
 					</div>
 
 					<div className="flex flex-col gap-2">

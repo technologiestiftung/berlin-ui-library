@@ -60,13 +60,14 @@ interface TabsTriggerProps
 const TabsTrigger = React.forwardRef<
 	React.ElementRef<typeof TabsPrimitive.Trigger>,
 	TabsTriggerProps
->(({ className, variant, children, ...props }, ref) => {
+>(({ className, variant, children, tabIndex, ...props }, ref) => {
 	// For module variant, we create a special wrapper to prevent text "jumping"
 	if (variant === "module") {
 		return (
 			<TabsPrimitive.Trigger
 				ref={ref}
 				className={cn(tabsTriggerVariants({ variant, className }))}
+				tabIndex={tabIndex ?? 0}
 				{...props}
 			>
 				<span className="relative">
@@ -90,6 +91,7 @@ const TabsTrigger = React.forwardRef<
 				"data-[state=active]:font-bold data-[state=active]:shadow-[inset_0_4px_0_0_var(--tab-color)]",
 				className,
 			)}
+			tabIndex={tabIndex ?? 0}
 			{...props}
 		>
 			{children}

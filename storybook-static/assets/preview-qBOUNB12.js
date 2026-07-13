@@ -1,0 +1,1 @@
+import{R as o}from"./index-0yr9KlQE.js";window.React=o;const e={parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}},docs:{toc:!0,source:{state:"open"},canvas:{sourceState:"shown"},story:{inline:!0}},options:{storySort:{order:["Introduction","Components"]}}}};export{e as default};
