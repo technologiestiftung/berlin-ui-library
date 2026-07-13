@@ -1,8 +1,8 @@
 import { j as e } from "./index.es4.js";
 import R, { useRef as f, useState as _, useEffect as I } from "react";
 import { cn as n } from "./index.es29.js";
-import B from "./index.es35.js";
-import C from "./index.es31.js";
+import B from "./index.es41.js";
+import C from "./index.es42.js";
 const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
   if (!a && !i)
     return null;
