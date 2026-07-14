@@ -5,6 +5,6 @@ interface SubHeaderBarProps extends LinkComponentProps {
     showLanguageSelect: boolean;
     isSticky?: boolean;
 }
-export declare function SubHeaderBar({ showBreadcrumbs, breadcrumbs, showLanguageSelect, LinkComponent, isSticky, }: SubHeaderBarProps): import("react/jsx-runtime").JSX.Element | null;
+export declare function SubHeaderBar({ showBreadcrumbs, breadcrumbs, showLanguageSelect, LinkComponent, isSticky, }: SubHeaderBarProps): import("react").JSX.Element | null;
 export {};
 //# sourceMappingURL=SubHeaderBar.d.ts.map

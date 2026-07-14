@@ -13,5 +13,5 @@ export interface MenuDrawerProps {
      */
     menuItems: MenuItem[];
 }
-export declare function MenuDrawer({ isOpen, close, menuItems }: MenuDrawerProps): import("react/jsx-runtime").JSX.Element;
+export declare function MenuDrawer({ isOpen, close, menuItems }: MenuDrawerProps): import("react").JSX.Element;
 //# sourceMappingURL=MenuDrawer.d.ts.map

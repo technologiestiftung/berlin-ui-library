@@ -8,5 +8,5 @@ export interface MenuButtonProps {
      */
     className?: string;
 }
-export declare function MenuButton({ onOpenMenu, className }: MenuButtonProps): import("react/jsx-runtime").JSX.Element;
+export declare function MenuButton({ onOpenMenu, className }: MenuButtonProps): import("react").JSX.Element;
 //# sourceMappingURL=MenuButton.d.ts.map

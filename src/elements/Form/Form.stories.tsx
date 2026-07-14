@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import type { Resolver, ResolverResult } from "react-hook-form";
 import { useForm } from "react-hook-form";
 
 import { Input } from "../Input/Input";
@@ -23,10 +24,25 @@ const meta: Meta<typeof Form> = {
 export default meta;
 
 type Story = StoryObj<typeof Form>;
+type FormValues = { name: string };
+
+const requiredNameResolver: Resolver<FormValues> = async (values) => {
+	if (values.name) {
+		const result: ResolverResult<FormValues> = { values, errors: {} };
+		return result;
+	}
+
+	const result: ResolverResult<FormValues> = {
+		values: {},
+		errors: {
+			name: { type: "required", message: "Name is required" },
+		},
+	};
+	return result;
+};
 
 export const Simple: Story = {
 	render: () => {
-		type FormValues = { name: string };
 		const methods = useForm<FormValues>({ defaultValues: { name: "" } });
 		return (
 			<Form {...methods}>
@@ -57,15 +73,10 @@ export const Simple: Story = {
 
 export const WithError: Story = {
 	render: () => {
-		const methods = useForm({
+		const methods = useForm<FormValues>({
 			defaultValues: { name: "" },
 			mode: "onSubmit",
-			resolver: async (values) => ({
-				values: values,
-				errors: values.name
-					? {}
-					: { name: { type: "required", message: "Name is required" } },
-			}),
+			resolver: requiredNameResolver,
 		});
 		return (
 			<Form {...methods}>
@@ -98,7 +109,6 @@ export const WithError: Story = {
 
 export const Disabled: Story = {
 	render: () => {
-		type FormValues = { name: string };
 		const methods = useForm<FormValues>({
 			defaultValues: { name: "John Doe" },
 		});
@@ -126,7 +136,6 @@ export const Disabled: Story = {
 };
 export const Horizontal: Story = {
 	render: () => {
-		type FormValues = { name: string };
 		const methods = useForm<FormValues>({ defaultValues: { name: "" } });
 		return (
 			<Form {...methods}>
@@ -156,7 +165,6 @@ export const Horizontal: Story = {
 };
 export const Required: Story = {
 	render: () => {
-		type FormValues = { name: string };
 		const methods = useForm<FormValues>({ defaultValues: { name: "" } });
 		return (
 			<Form {...methods}>

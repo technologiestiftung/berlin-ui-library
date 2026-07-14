@@ -18,5 +18,5 @@ export interface IconProps {
      */
     "aria-hidden"?: boolean;
 }
-export declare function Icon({ name, className, "aria-label": ariaLabel, "aria-hidden": ariaHidden, }: IconProps): import("react/jsx-runtime").JSX.Element | null;
+export declare function Icon({ name, className, "aria-label": ariaLabel, "aria-hidden": ariaHidden, }: IconProps): import("react").JSX.Element | null;
 //# sourceMappingURL=Icon.d.ts.map

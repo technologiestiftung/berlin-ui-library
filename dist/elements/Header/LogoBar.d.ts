@@ -13,6 +13,6 @@ interface LogoBarProps {
      */
     isSticky?: boolean;
 }
-export declare function LogoBar({ logoUrl, logoComponent, isSticky, }: LogoBarProps): import("react/jsx-runtime").JSX.Element;
+export declare function LogoBar({ logoUrl, logoComponent, isSticky, }: LogoBarProps): React.JSX.Element;
 export {};
 //# sourceMappingURL=LogoBar.d.ts.map

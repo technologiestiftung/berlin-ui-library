@@ -54,5 +54,5 @@ export interface FooterProps {
  * - Optional Berlin footer content section
  * - Scroll to top button
  */
-export declare function Footer({ language, languages, translations, onLanguageChange, ...props }: FooterProps): import("react/jsx-runtime").JSX.Element;
+export declare function Footer({ language, languages, translations, onLanguageChange, ...props }: FooterProps): React.JSX.Element;
 //# sourceMappingURL=Footer.d.ts.map

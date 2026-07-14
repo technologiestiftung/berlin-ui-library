@@ -21,5 +21,5 @@ export interface BreadcrumbsProps {
      */
     className?: string;
 }
-export declare function Breadcrumbs({ items, LinkComponent, className, }: BreadcrumbsProps): import("react/jsx-runtime").JSX.Element | null;
+export declare function Breadcrumbs({ items, LinkComponent, className, }: BreadcrumbsProps): React.JSX.Element | null;
 //# sourceMappingURL=Breadcrumbs.d.ts.map

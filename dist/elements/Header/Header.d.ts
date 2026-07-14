@@ -92,5 +92,5 @@ export interface HeaderProps extends LinkComponentProps {
  * - Optional breadcrumbs and language selector
  * - Built-in accessibility menu drawer
  */
-export declare function Header({ header, caption, url, logoUrl, logoComponent, LinkComponent, breadcrumbs, showBreadcrumbs, showLanguageSelect, language, languages, translations, onLanguageChange, showSearchButton, onSearch, doBerlinSearch, showMenuButton, menuItems, onOpenMenu, className, accessibilityItems, }: HeaderProps): import("react/jsx-runtime").JSX.Element;
+export declare function Header({ header, caption, url, logoUrl, logoComponent, LinkComponent, breadcrumbs, showBreadcrumbs, showLanguageSelect, language, languages, translations, onLanguageChange, showSearchButton, onSearch, doBerlinSearch, showMenuButton, menuItems, onOpenMenu, className, accessibilityItems, }: HeaderProps): React.JSX.Element;
 //# sourceMappingURL=Header.d.ts.map

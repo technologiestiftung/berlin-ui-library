@@ -24,6 +24,6 @@ interface SpinnerProps {
      */
     textColor?: "black" | "red";
 }
-export declare function Spinner({ withText, size, text, position, textColor, innerOnly, }: SpinnerProps): import("react/jsx-runtime").JSX.Element;
+export declare function Spinner({ withText, size, text, position, textColor, innerOnly, }: SpinnerProps): import("react").JSX.Element;
 export {};
 //# sourceMappingURL=Spinner.d.ts.map

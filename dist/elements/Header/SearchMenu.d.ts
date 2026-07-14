@@ -16,5 +16,5 @@ export interface SearchMenuProps {
      */
     doBerlinSearch: boolean | undefined;
 }
-export declare function SearchMenu({ isOpen, close, onSearch, doBerlinSearch, }: SearchMenuProps): import("react/jsx-runtime").JSX.Element;
+export declare function SearchMenu({ isOpen, close, onSearch, doBerlinSearch, }: SearchMenuProps): import("react").JSX.Element;
 //# sourceMappingURL=SearchMenu.d.ts.map

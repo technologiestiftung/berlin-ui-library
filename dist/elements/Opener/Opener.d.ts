@@ -28,6 +28,6 @@ interface OpenerProps {
      */
     className?: string;
 }
-export declare function Opener({ src, alt, copyright, title, description, height, className, }: OpenerProps): import("react/jsx-runtime").JSX.Element;
+export declare function Opener({ src, alt, copyright, title, description, height, className, }: OpenerProps): import("react").JSX.Element;
 export {};
 //# sourceMappingURL=Opener.d.ts.map

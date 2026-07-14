@@ -9,11 +9,11 @@ declare const BreadcrumbLink: React.ForwardRefExoticComponent<Omit<React.Detaile
 } & React.RefAttributes<HTMLAnchorElement>>;
 declare const BreadcrumbPage: React.ForwardRefExoticComponent<Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & React.RefAttributes<HTMLSpanElement>>;
 declare const BreadcrumbSeparator: {
-    ({ children, className, ...props }: React.ComponentProps<"span">): import("react/jsx-runtime").JSX.Element;
+    ({ children, className, ...props }: React.ComponentProps<"span">): React.JSX.Element;
     displayName: string;
 };
 declare const BreadcrumbEllipsis: {
-    ({ className, ...props }: React.ComponentProps<"span">): import("react/jsx-runtime").JSX.Element;
+    ({ className, ...props }: React.ComponentProps<"span">): React.JSX.Element;
     displayName: string;
 };
 export interface BreadcrumbItemProps {
@@ -38,6 +38,6 @@ export interface BreadcrumbsProps {
      */
     className?: string;
 }
-declare const Breadcrumbs: ({ items, LinkComponent, className, }: BreadcrumbsProps) => import("react/jsx-runtime").JSX.Element | null;
+declare const Breadcrumbs: ({ items, LinkComponent, className, }: BreadcrumbsProps) => React.JSX.Element | null;
 export { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis, Breadcrumbs, };
 //# sourceMappingURL=Breadcrumb.d.ts.map

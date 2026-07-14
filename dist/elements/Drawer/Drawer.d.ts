@@ -14,11 +14,11 @@ interface DrawerContentProps extends React.ComponentPropsWithoutRef<typeof Drawe
 }
 declare const DrawerContent: React.ForwardRefExoticComponent<DrawerContentProps & React.RefAttributes<HTMLDivElement>>;
 declare const DrawerHeader: {
-    ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>): import("react/jsx-runtime").JSX.Element;
+    ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>): React.JSX.Element;
     displayName: string;
 };
 declare const DrawerFooter: {
-    ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>): import("react/jsx-runtime").JSX.Element;
+    ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>): React.JSX.Element;
     displayName: string;
 };
 declare const DrawerTitle: React.ForwardRefExoticComponent<Omit<DrawerPrimitive.DialogTitleProps & React.RefAttributes<HTMLHeadingElement>, "ref"> & React.RefAttributes<HTMLHeadingElement>>;
@@ -36,7 +36,7 @@ interface SimpleDrawerProps {
     className?: string;
 }
 declare const SimpleDrawer: {
-    ({ isOpen, close, children, side, size, className, }: SimpleDrawerProps): import("react/jsx-runtime").JSX.Element;
+    ({ isOpen, close, children, side, size, className, }: SimpleDrawerProps): React.JSX.Element;
     displayName: string;
 };
 export { Drawer, DrawerPortal, DrawerOverlay, DrawerTrigger, DrawerClose, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerDescription, SimpleDrawer, type SimpleDrawerProps, };

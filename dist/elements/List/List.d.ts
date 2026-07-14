@@ -6,6 +6,6 @@ export interface ListProps extends React.HTMLAttributes<HTMLElement> {
 export interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
     children: React.ReactNode;
 }
-export declare function ListItem({ children, className, ...props }: ListItemProps): import("react/jsx-runtime").JSX.Element;
-export declare function List({ variant, children, className, ...props }: ListProps): import("react/jsx-runtime").JSX.Element;
+export declare function ListItem({ children, className, ...props }: ListItemProps): React.JSX.Element;
+export declare function List({ variant, children, className, ...props }: ListProps): React.JSX.Element;
 //# sourceMappingURL=List.d.ts.map

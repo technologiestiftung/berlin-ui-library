@@ -8,5 +8,5 @@ export interface AccessibilityButtonProps {
      */
     className?: string;
 }
-export declare function AccessibilityButton({ onOpenAccessibility, className, }: AccessibilityButtonProps): import("react/jsx-runtime").JSX.Element;
+export declare function AccessibilityButton({ onOpenAccessibility, className, }: AccessibilityButtonProps): import("react").JSX.Element;
 //# sourceMappingURL=AccessibilityButton.d.ts.map

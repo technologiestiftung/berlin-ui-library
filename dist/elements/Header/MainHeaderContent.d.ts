@@ -11,6 +11,6 @@ interface MainHeaderContentProps {
     onOpenMenu: () => void;
     accessibilityItems?: AccessibilityItem[];
 }
-export declare function MainHeaderContent({ header, caption, url, showSearchButton, onSearch, showMenuButton, menuItems, onOpenMenu, doBerlinSearch, accessibilityItems, }: MainHeaderContentProps): import("react/jsx-runtime").JSX.Element;
+export declare function MainHeaderContent({ header, caption, url, showSearchButton, onSearch, showMenuButton, menuItems, onOpenMenu, doBerlinSearch, accessibilityItems, }: MainHeaderContentProps): import("react").JSX.Element;
 export {};
 //# sourceMappingURL=MainHeaderContent.d.ts.map

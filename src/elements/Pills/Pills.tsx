@@ -7,6 +7,23 @@ import SuccessIcon from "@/assets/icons/success.svg?react";
 
 import { cn } from "@/lib/utils";
 
+type StatusIconVariant = "info" | "message" | "error" | "success";
+type PillSize = "default" | "md" | "lg" | "xl";
+
+const statusIcons = {
+	info: InfoIcon,
+	message: InfoIcon,
+	error: ErrorIcon,
+	success: SuccessIcon,
+} satisfies Record<StatusIconVariant, React.ComponentType<{ className?: string }>>;
+
+const statusIconColors = {
+	info: "fill-blue",
+	message: "fill-text-base",
+	error: "fill-text-error",
+	success: "fill-text-success",
+} satisfies Record<StatusIconVariant, string>;
+
 const pillVariants = cva(
 	"pill text-3.5 inline-flex w-auto min-w-[unset] items-center gap-[0.4em] rounded-full border border-transparent px-1.75 py-0.25 leading-[1.2] transition-colors",
 	{
@@ -88,8 +105,61 @@ export interface PillProps
 	showIcon?: boolean;
 }
 
+const isLargeIconSize = (size: PillSize | null | undefined) =>
+	size === "md" || size === "lg" || size === "xl";
+
+const isFilterVariant = (variant: PillProps["variant"]) =>
+	variant === "filter" || variant === "filter-outline";
+
+const PillFilterIcon = ({
+	active,
+	size,
+}: {
+	active?: boolean;
+	size?: PillSize | null;
+}) => {
+	if (!active) {
+		return null;
+	}
+
+	return (
+		<TimesIcon
+			className={cn("fill-white", isLargeIconSize(size) ? "size-4" : "size-3")}
+		/>
+	);
+};
+
+const PillStatusIcon = ({
+	inverted,
+	size,
+	variant,
+}: {
+	inverted?: boolean | null;
+	size?: PillSize | null;
+	variant?: PillProps["variant"];
+}) => {
+	if (
+		variant !== "info" &&
+		variant !== "message" &&
+		variant !== "error" &&
+		variant !== "success"
+	) {
+		return null;
+	}
+
+	const Icon = statusIcons[variant];
+
+	return (
+		<Icon
+			className={cn(
+				inverted ? "fill-white" : statusIconColors[variant],
+				isLargeIconSize(size) ? "size-4" : "size-3",
+			)}
+		/>
+	);
+};
+
 const Pill = React.forwardRef<HTMLDivElement, PillProps>(
-	// eslint-disable-next-line complexity
 	(
 		{
 			className,
@@ -105,9 +175,7 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 		},
 		ref,
 	) => {
-		const isToggleable =
-			(variant === "filter" || variant === "filter-outline") &&
-			onToggle !== undefined;
+		const isToggleable = isFilterVariant(variant) && onToggle !== undefined;
 
 		const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
 			if (isToggleable) {
@@ -138,59 +206,13 @@ const Pill = React.forwardRef<HTMLDivElement, PillProps>(
 				tabIndex={isToggleable ? 0 : undefined}
 				{...props}
 			>
-				{showIcon && variant === "info" && (
-					<InfoIcon
-						className={cn(
-							inverted ? "fill-white" : "fill-blue",
-							size === "md" || size === "lg" || size === "xl"
-								? "size-4"
-								: "size-3",
-						)}
-					/>
-				)}
-				{showIcon && variant === "message" && (
-					<InfoIcon
-						className={cn(
-							inverted ? "fill-white" : "fill-text-base",
-							size === "md" || size === "lg" || size === "xl"
-								? "size-4"
-								: "size-3",
-						)}
-					/>
-				)}
-				{showIcon && variant === "error" && (
-					<ErrorIcon
-						className={cn(
-							inverted ? "fill-white" : "fill-text-error",
-							size === "md" || size === "lg" || size === "xl"
-								? "size-4"
-								: "size-3",
-						)}
-					/>
-				)}
-				{showIcon && variant === "success" && (
-					<SuccessIcon
-						className={cn(
-							inverted ? "fill-white" : "fill-text-success",
-							size === "md" || size === "lg" || size === "xl"
-								? "size-4"
-								: "size-3",
-						)}
-					/>
+				{showIcon && (
+					<PillStatusIcon inverted={inverted} size={size} variant={variant} />
 				)}
 				{children}
-				{showIcon &&
-					(variant === "filter" || variant === "filter-outline") &&
-					active && (
-						<TimesIcon
-							className={cn(
-								"fill-white",
-								size === "md" || size === "lg" || size === "xl"
-									? "size-4"
-									: "size-3",
-							)}
-						/>
-					)}
+				{showIcon && isFilterVariant(variant) && (
+					<PillFilterIcon active={active} size={size} />
+				)}
 			</div>
 		);
 	},

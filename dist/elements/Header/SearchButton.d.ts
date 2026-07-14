@@ -8,5 +8,5 @@ export interface SearchButtonProps {
      */
     className?: string;
 }
-export declare function SearchButton({ onOpenSearch, className, }: SearchButtonProps): import("react/jsx-runtime").JSX.Element;
+export declare function SearchButton({ onOpenSearch, className, }: SearchButtonProps): import("react").JSX.Element;
 //# sourceMappingURL=SearchButton.d.ts.map

@@ -20,6 +20,6 @@ interface FormWrapperProps {
 /**
  * FormWrapper component for applying consistent styling to forms
  */
-export declare function FormWrapper({ children, withBackground, padding, className, }: FormWrapperProps): import("react/jsx-runtime").JSX.Element;
+export declare function FormWrapper({ children, withBackground, padding, className, }: FormWrapperProps): import("react").JSX.Element;
 export {};
 //# sourceMappingURL=FormWrapper.d.ts.map

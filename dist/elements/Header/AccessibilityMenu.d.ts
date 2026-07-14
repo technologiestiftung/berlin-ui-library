@@ -13,5 +13,5 @@ export interface AccessibilityMenuProps {
      */
     accessibilityItems?: AccessibilityItem[];
 }
-export declare function AccessibilityMenu({ isOpen, close, accessibilityItems, }: AccessibilityMenuProps): import("react/jsx-runtime").JSX.Element;
+export declare function AccessibilityMenu({ isOpen, close, accessibilityItems, }: AccessibilityMenuProps): import("react").JSX.Element;
 //# sourceMappingURL=AccessibilityMenu.d.ts.map
