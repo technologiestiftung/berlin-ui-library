@@ -1,6 +1,89 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z", fill: "currentColor" }));
+import { j as e } from "./index4.es.js";
+import { useState as s } from "react";
+import { MenuButton as C } from "./index56.es.js";
+import { SearchButton as N } from "./index58.es.js";
+import { AccessibilityButton as v } from "./index60.es.js";
+import { SearchMenu as B } from "./index61.es.js";
+import { MenuDrawer as F } from "./index62.es.js";
+import { AccessibilityMenu as I } from "./index63.es.js";
+function J({
+  header: c,
+  caption: l,
+  url: i,
+  showSearchButton: o,
+  onSearch: a,
+  showMenuButton: m,
+  menuItems: p,
+  onOpenMenu: x,
+  doBerlinSearch: h,
+  accessibilityItems: d
+}) {
+  const [f, n] = s(!1), [u, t] = s(!1), [j, r] = s(!1), b = () => {
+    n(!0), a();
+  }, O = () => {
+    n(!1);
+  }, y = (w) => {
+    console.warn("Search term:", w);
+  }, S = () => {
+    t(!0), x();
+  }, M = () => {
+    t(!1);
+  }, g = () => {
+    r(!0);
+  }, A = () => {
+    r(!1);
+  };
+  return /* @__PURE__ */ e.jsxs("div", { className: "relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]", children: [
+    /* @__PURE__ */ e.jsxs(
+      "a",
+      {
+        href: i,
+        className: "flex flex-col justify-center p-0 text-[15px] leading-[1.2] break-words md:text-base lg:p-[3px] lg:text-xl",
+        children: [
+          /* @__PURE__ */ e.jsx("span", { children: c }),
+          /* @__PURE__ */ e.jsx("span", { className: "block font-bold", children: l })
+        ]
+      }
+    ),
+    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[0.65rem] pt-[0.59rem] pb-[0.20rem] md:space-x-[1.05rem] md:pt-[0.69rem] md:pb-[0.22rem]", children: [
+      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(v, { onOpenAccessibility: g }),
+        /* @__PURE__ */ e.jsx(
+          I,
+          {
+            isOpen: j,
+            close: A,
+            accessibilityItems: d
+          }
+        )
+      ] }),
+      o && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(N, { onOpenSearch: b }),
+        /* @__PURE__ */ e.jsx(
+          B,
+          {
+            isOpen: f,
+            close: O,
+            onSearch: y,
+            doBerlinSearch: h
+          }
+        )
+      ] }),
+      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+        /* @__PURE__ */ e.jsx(C, { onOpenMenu: S }),
+        /* @__PURE__ */ e.jsx(
+          F,
+          {
+            isOpen: u,
+            close: M,
+            menuItems: p
+          }
+        )
+      ] })
+    ] })
+  ] });
+}
 export {
-  t as default
+  J as MainHeaderContent
 };
 //# sourceMappingURL=index51.es.js.map

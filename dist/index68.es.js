@@ -1,69 +1,246 @@
-import { j as t } from "./index4.es.js";
-import { Drawer as u, DrawerContent as f } from "./index6.es.js";
-import { useLanguage as x, t as i } from "./index5.es.js";
-import { ExternalLinkIcon as b } from "lucide-react";
-function j({
-  isOpen: l,
-  close: r,
-  accessibilityItems: s = []
-}) {
-  const { translations: n } = x(), a = [
-    {
-      question: i("accessibilityMenu.barrierefreiheit.question", n),
-      label: i("accessibilityMenu.barrierefreiheit", n),
-      href: "/accessibility-statement/"
-    },
-    {
-      question: i("accessibilityMenu.contact.question", n),
-      label: i("accessibilityMenu.contact", n),
-      href: "/accessibility-statement/#accessibility-contact"
-    },
-    {
-      question: i("accessibilityMenu.additionalInfo.question", n),
-      label: i("accessibilityMenu.additionalInfo", n),
-      href: "https://www.berlin.de/moderne-verwaltung/barrierefreie-it/anlaufstellen/kompetenzstelle/artikel.988002.php",
-      external: !0
+import { __exports as s } from "./index140.es.js";
+import J from "react";
+/**
+ * @license React
+ * react-jsx-runtime.development.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var j;
+function Z() {
+  return j ? s : (j = 1, process.env.NODE_ENV !== "production" && (function() {
+    function l(e) {
+      if (e == null) return null;
+      if (typeof e == "function")
+        return e.$$typeof === X ? null : e.displayName || e.name || null;
+      if (typeof e == "string") return e;
+      switch (e) {
+        case f:
+          return "Fragment";
+        case F:
+          return "Profiler";
+        case D:
+          return "StrictMode";
+        case M:
+          return "Suspense";
+        case z:
+          return "SuspenseList";
+        case G:
+          return "Activity";
+      }
+      if (typeof e == "object")
+        switch (typeof e.tag == "number" && console.error(
+          "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
+        ), e.$$typeof) {
+          case $:
+            return "Portal";
+          case L:
+            return e.displayName || "Context";
+          case W:
+            return (e._context.displayName || "Context") + ".Consumer";
+          case U:
+            var r = e.render;
+            return e = e.displayName, e || (e = r.displayName || r.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
+          case V:
+            return r = e.displayName || null, r !== null ? r : l(e.type) || "Memo";
+          case m:
+            r = e._payload, e = e._init;
+            try {
+              return l(e(r));
+            } catch {
+            }
+        }
+      return null;
     }
-  ], o = s && s.length > 0 ? s : a;
-  return /* @__PURE__ */ t.jsx(u, { open: l, onOpenChange: (e) => !e && r(), children: /* @__PURE__ */ t.jsxs(
-    f,
-    {
-      className: "flex flex-col gap-4 px-6 py-4 text-base",
-      onOpenAutoFocus: (e) => {
-        e.preventDefault(), window.setTimeout(() => {
-          document.querySelector("[role='dialog'] a[href]")?.focus();
+    function R(e) {
+      return "" + e;
+    }
+    function T(e) {
+      try {
+        R(e);
+        var r = !1;
+      } catch {
+        r = !0;
+      }
+      if (r) {
+        r = console;
+        var t = r.error, a = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+        return t.call(
+          r,
+          "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
+          a
+        ), R(e);
+      }
+    }
+    function i(e) {
+      if (e === f) return "<>";
+      if (typeof e == "object" && e !== null && e.$$typeof === m)
+        return "<...>";
+      try {
+        var r = l(e);
+        return r ? "<" + r + ">" : "<...>";
+      } catch {
+        return "<...>";
+      }
+    }
+    function N() {
+      var e = _.A;
+      return e === null ? null : e.getOwner();
+    }
+    function p() {
+      return Error("react-stack-top-frame");
+    }
+    function C(e) {
+      if (y.call(e, "key")) {
+        var r = Object.getOwnPropertyDescriptor(e, "key").get;
+        if (r && r.isReactWarning) return !1;
+      }
+      return e.key !== void 0;
+    }
+    function x(e, r) {
+      function t() {
+        A || (A = !0, console.error(
+          "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
+          r
+        ));
+      }
+      t.isReactWarning = !0, Object.defineProperty(e, "key", {
+        get: t,
+        configurable: !0
+      });
+    }
+    function Y() {
+      var e = l(this.type);
+      return S[e] || (S[e] = !0, console.error(
+        "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
+      )), e = this.props.ref, e !== void 0 ? e : null;
+    }
+    function I(e, r, t, a, u, b) {
+      var n = t.ref;
+      return e = {
+        $$typeof: g,
+        type: e,
+        key: r,
+        props: t,
+        _owner: a
+      }, (n !== void 0 ? n : null) !== null ? Object.defineProperty(e, "ref", {
+        enumerable: !1,
+        get: Y
+      }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
+        configurable: !1,
+        enumerable: !1,
+        writable: !0,
+        value: 0
+      }), Object.defineProperty(e, "_debugInfo", {
+        configurable: !1,
+        enumerable: !1,
+        writable: !0,
+        value: null
+      }), Object.defineProperty(e, "_debugStack", {
+        configurable: !1,
+        enumerable: !1,
+        writable: !0,
+        value: u
+      }), Object.defineProperty(e, "_debugTask", {
+        configurable: !1,
+        enumerable: !1,
+        writable: !0,
+        value: b
+      }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
+    }
+    function v(e, r, t, a, u, b) {
+      var n = r.children;
+      if (n !== void 0)
+        if (a)
+          if (q(n)) {
+            for (a = 0; a < n.length; a++)
+              O(n[a]);
+            Object.freeze && Object.freeze(n);
+          } else
+            console.error(
+              "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
+            );
+        else O(n);
+      if (y.call(r, "key")) {
+        n = l(e);
+        var o = Object.keys(r).filter(function(K) {
+          return K !== "key";
         });
-      },
-      children: [
-        /* @__PURE__ */ t.jsx("div", { className: "mt-4 mb-6 flex flex-row items-center justify-between", children: /* @__PURE__ */ t.jsx("h2", { className: "text-2xl font-bold", children: i("accessibilityMenu.title", n) }) }),
-        o.map((e, c) => /* @__PURE__ */ t.jsxs("div", { className: "mb-4", children: [
-          /* @__PURE__ */ t.jsx("p", { className: "mb-1 font-bold", children: e.question }),
-          e.external ? /* @__PURE__ */ t.jsxs(
-            "a",
-            {
-              className: "flex text-text-link transition-colors duration-200 hover:underline",
-              href: e.href,
-              target: "_blank",
-              rel: "noreferrer",
-              children: [
-                e.label,
-                /* @__PURE__ */ t.jsx(b, { className: "ml-2 size-4 flex-shrink-0 text-text-link" })
-              ]
-            }
-          ) : /* @__PURE__ */ t.jsx(
-            "a",
-            {
-              href: e.href,
-              className: "text-text-link transition-colors duration-200 hover:underline",
-              children: e.label
-            }
-          )
-        ] }, c))
-      ]
+        a = 0 < o.length ? "{key: someKey, " + o.join(": ..., ") + ": ...}" : "{key: someKey}", h[n + a] || (o = 0 < o.length ? "{" + o.join(": ..., ") + ": ...}" : "{}", console.error(
+          `A props object containing a "key" prop is being spread into JSX:
+  let props = %s;
+  <%s {...props} />
+React keys must be passed directly to JSX without using spread:
+  let props = %s;
+  <%s key={someKey} {...props} />`,
+          a,
+          n,
+          o,
+          n
+        ), h[n + a] = !0);
+      }
+      if (n = null, t !== void 0 && (T(t), n = "" + t), C(r) && (T(r.key), n = "" + r.key), "key" in r) {
+        t = {};
+        for (var E in r)
+          E !== "key" && (t[E] = r[E]);
+      } else t = r;
+      return n && x(
+        t,
+        typeof e == "function" ? e.displayName || e.name || "Unknown" : e
+      ), I(
+        e,
+        n,
+        t,
+        N(),
+        u,
+        b
+      );
     }
-  ) });
+    function O(e) {
+      k(e) ? e._store && (e._store.validated = 1) : typeof e == "object" && e !== null && e.$$typeof === m && (e._payload.status === "fulfilled" ? k(e._payload.value) && e._payload.value._store && (e._payload.value._store.validated = 1) : e._store && (e._store.validated = 1));
+    }
+    function k(e) {
+      return typeof e == "object" && e !== null && e.$$typeof === g;
+    }
+    var c = J, g = Symbol.for("react.transitional.element"), $ = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), D = Symbol.for("react.strict_mode"), F = Symbol.for("react.profiler"), W = Symbol.for("react.consumer"), L = Symbol.for("react.context"), U = Symbol.for("react.forward_ref"), M = Symbol.for("react.suspense"), z = Symbol.for("react.suspense_list"), V = Symbol.for("react.memo"), m = Symbol.for("react.lazy"), G = Symbol.for("react.activity"), X = Symbol.for("react.client.reference"), _ = c.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, y = Object.prototype.hasOwnProperty, q = Array.isArray, d = console.createTask ? console.createTask : function() {
+      return null;
+    };
+    c = {
+      react_stack_bottom_frame: function(e) {
+        return e();
+      }
+    };
+    var A, S = {}, w = c.react_stack_bottom_frame.bind(
+      c,
+      p
+    )(), P = d(i(p)), h = {};
+    s.Fragment = f, s.jsx = function(e, r, t) {
+      var a = 1e4 > _.recentlyCreatedOwnerStacks++;
+      return v(
+        e,
+        r,
+        t,
+        !1,
+        a ? Error("react-stack-top-frame") : w,
+        a ? d(i(e)) : P
+      );
+    }, s.jsxs = function(e, r, t) {
+      var a = 1e4 > _.recentlyCreatedOwnerStacks++;
+      return v(
+        e,
+        r,
+        t,
+        !0,
+        a ? Error("react-stack-top-frame") : w,
+        a ? d(i(e)) : P
+      );
+    };
+  })(), s);
 }
 export {
-  j as AccessibilityMenu
+  Z as __require
 };
 //# sourceMappingURL=index68.es.js.map

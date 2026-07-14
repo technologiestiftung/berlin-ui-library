@@ -1,89 +1,22 @@
 import { j as e } from "./index4.es.js";
-import { useState as s } from "react";
-import { MenuButton as C } from "./index61.es.js";
-import { SearchButton as N } from "./index63.es.js";
-import { AccessibilityButton as v } from "./index65.es.js";
-import { SearchMenu as B } from "./index66.es.js";
-import { MenuDrawer as F } from "./index67.es.js";
-import { AccessibilityMenu as I } from "./index68.es.js";
-function J({
-  header: c,
-  caption: l,
-  url: i,
-  showSearchButton: o,
-  onSearch: a,
-  showMenuButton: m,
-  menuItems: p,
-  onOpenMenu: x,
-  doBerlinSearch: h,
-  accessibilityItems: d
-}) {
-  const [f, n] = s(!1), [u, t] = s(!1), [j, r] = s(!1), b = () => {
-    n(!0), a();
-  }, O = () => {
-    n(!1);
-  }, y = (w) => {
-    console.warn("Search term:", w);
-  }, S = () => {
-    t(!0), x();
-  }, M = () => {
-    t(!1);
-  }, g = () => {
-    r(!0);
-  }, A = () => {
-    r(!1);
-  };
-  return /* @__PURE__ */ e.jsxs("div", { className: "relative z-11 flex items-center justify-between bg-white px-4 py-[0rem] shadow-md lg:px-6 lg:py-[0.7rem]", children: [
-    /* @__PURE__ */ e.jsxs(
-      "a",
-      {
-        href: i,
-        className: "flex flex-col justify-center p-0 text-[15px] leading-[1.2] break-words md:text-base lg:p-[3px] lg:text-xl",
-        children: [
-          /* @__PURE__ */ e.jsx("span", { children: c }),
-          /* @__PURE__ */ e.jsx("span", { className: "block font-bold", children: l })
-        ]
-      }
-    ),
-    /* @__PURE__ */ e.jsxs("div", { className: "mx-[0.65rem] flex h-full flex-0 items-end space-x-[0.65rem] pt-[0.59rem] pb-[0.20rem] md:space-x-[1.05rem] md:pt-[0.69rem] md:pb-[0.22rem]", children: [
-      /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(v, { onOpenAccessibility: g }),
-        /* @__PURE__ */ e.jsx(
-          I,
-          {
-            isOpen: j,
-            close: A,
-            accessibilityItems: d
-          }
-        )
-      ] }),
-      o && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(N, { onOpenSearch: b }),
-        /* @__PURE__ */ e.jsx(
-          B,
-          {
-            isOpen: f,
-            close: O,
-            onSearch: y,
-            doBerlinSearch: h
-          }
-        )
-      ] }),
-      m && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsx(C, { onOpenMenu: S }),
-        /* @__PURE__ */ e.jsx(
-          F,
-          {
-            isOpen: u,
-            close: M,
-            menuItems: p
-          }
-        )
-      ] })
-    ] })
-  ] });
+import a from "./index57.es.js";
+import { useLanguage as o, t as m } from "./index5.es.js";
+function p({ onOpenMenu: r, className: s = "" }) {
+  const { translations: n } = o(), t = m("menu", n);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${s}`,
+      onClick: r,
+      "aria-label": t,
+      children: [
+        /* @__PURE__ */ e.jsx(a, { className: "h-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "-mr-[0.05rem] whitespace-nowrap", children: t })
+      ]
+    }
+  );
 }
 export {
-  J as MainHeaderContent
+  p as MenuButton
 };
 //# sourceMappingURL=index56.es.js.map
