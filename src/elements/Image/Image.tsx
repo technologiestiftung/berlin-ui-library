@@ -138,17 +138,19 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 	) => {
 		const imgRef = useRef<HTMLImageElement | null>(null);
 		const closeButtonRef = useRef<HTMLButtonElement | null>(null);
-		const [openImage, setOpenImage] = useState<OpenImage | null>(null);
-		const isPortrait = (img?: { width?: number; height?: number }) =>
-			(img?.height ?? 0) >= (img?.width ?? 0);
-		const open = () =>
-			setOpenImage({
-				src,
-				alt,
-				caption,
-				width: imgRef?.current?.clientWidth ?? 0,
-				height: imgRef?.current?.clientHeight ?? 0,
-			});
+			const [openImage, setOpenImage] = useState<OpenImage | null>(null);
+			const isPortrait = (img?: { width?: number; height?: number }) =>
+				(img?.height ?? 0) >= (img?.width ?? 0);
+			const open = () =>
+				setOpenImage({
+					src,
+					alt,
+					caption,
+					width:
+						imgRef.current?.naturalWidth || imgRef.current?.clientWidth || 0,
+					height:
+						imgRef.current?.naturalHeight || imgRef.current?.clientHeight || 0,
+				});
 		useEffect(() => {
 			const handleKeyDown = (event: KeyboardEvent) => {
 				if (event.key === "Escape") {
@@ -261,21 +263,21 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(
 							</button>
 
 							{/* Image Container */}
-							<div
-								className={cn(
-									"relative flex items-center justify-center bg-white",
-									isPortrait(openImage)
-										? "h-[min(980px,80vh)] w-auto max-w-[min(980px,90vw)] lg:max-w-[min(980px,90vh)]"
-										: "h-auto max-h-[min(980px,90vh)] w-[min(980px,95vw)] lg:w-[min(980px,90vh)]",
-								)}
-							>
-								<img
-									src={openImage.src}
-									alt={openImage.alt || ""}
+								<div
 									className={cn(
-										"object-contain select-none",
-										isPortrait(openImage) ? "h-full w-auto" : "h-auto w-full",
+										"relative flex max-h-[min(980px,90vh)] max-w-[min(980px,95vw)] items-center justify-center bg-white",
+										isPortrait(openImage)
+											? "h-[min(980px,90vh)] w-auto"
+											: "h-auto w-[min(980px,95vw)] lg:w-[min(980px,90vh)]",
 									)}
+								>
+									<img
+										src={openImage.src}
+										alt={openImage.alt || ""}
+										className={cn(
+											"max-h-[min(980px,90vh)] max-w-[min(980px,95vw)] object-contain select-none",
+											isPortrait(openImage) ? "h-full w-auto" : "h-auto w-full",
+										)}
 									draggable={false}
 								/>
 							</div>

@@ -1,12 +1,12 @@
 import { j as e } from "./index4.es.js";
 import R, { useRef as f, useState as _, useEffect as I } from "react";
 import { cn as n } from "./index29.es.js";
-import B from "./index31.es.js";
-import C from "./index32.es.js";
-const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
-  if (!a && !i)
+import B from "./index49.es.js";
+import C from "./index30.es.js";
+const L = ({ title: i, copyrightText: r, link: a, position: s }) => {
+  if (!i && !r)
     return null;
-  const c = r ? "a" : "span", o = r ? { href: r, "data-mainlink": "true" } : {};
+  const m = a ? "a" : "span", o = a ? { href: a, "data-mainlink": "true" } : {};
   return /* @__PURE__ */ e.jsxs(
     "div",
     {
@@ -16,15 +16,15 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
         // Content alignment
       ),
       children: [
-        a && /* @__PURE__ */ e.jsx(
-          c,
+        i && /* @__PURE__ */ e.jsx(
+          m,
           {
             className: "text-lg leading-tight font-bold hover:underline lg:text-2xl",
             ...o,
-            children: a
+            children: i
           }
         ),
-        i && /* @__PURE__ */ e.jsx(
+        r && /* @__PURE__ */ e.jsx(
           "p",
           {
             className: n(
@@ -33,7 +33,7 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
               s === "bottom" ? "top-1 right-2" : "right-2 bottom-1"
               // Position depends on main content alignment
             ),
-            children: i
+            children: r
           }
         )
       ]
@@ -41,11 +41,11 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
   );
 }, P = R.forwardRef(
   ({
-    className: a,
-    src: i,
-    alt: r,
+    className: i,
+    src: r,
+    alt: a,
     caption: s,
-    href: c,
+    href: m,
     copyright: o,
     overlayTitle: h,
     overlayCopyright: b,
@@ -56,25 +56,25 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
     withZoomBox: k,
     ...N
   }, y) => {
-    const u = f(null), x = f(null), [t, m] = _(null), g = (l) => (l?.height ?? 0) >= (l?.width ?? 0), z = () => m({
-      src: i,
-      alt: r,
+    const c = f(null), x = f(null), [t, u] = _(null), d = (l) => (l?.height ?? 0) >= (l?.width ?? 0), z = () => u({
+      src: r,
+      alt: a,
       caption: s,
-      width: u?.current?.clientWidth ?? 0,
-      height: u?.current?.clientHeight ?? 0
+      width: c.current?.naturalWidth || c.current?.clientWidth || 0,
+      height: c.current?.naturalHeight || c.current?.clientHeight || 0
     });
     I(() => {
       const l = (E) => {
-        E.key === "Escape" && m(null);
+        E.key === "Escape" && u(null);
       };
       return t && (x.current?.focus(), document.addEventListener("keydown", l)), () => document.removeEventListener("keydown", l);
     }, [t]);
-    const d = /* @__PURE__ */ e.jsx(
+    const g = /* @__PURE__ */ e.jsx(
       "img",
       {
-        ref: u,
-        src: i,
-        alt: r,
+        ref: c,
+        src: r,
+        alt: a,
         className: n("block h-auto w-full", j)
       }
     );
@@ -82,7 +82,7 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
       /* @__PURE__ */ e.jsxs(
         "div",
         {
-          className: n("relative mb-3 block", a),
+          className: n("relative mb-3 block", i),
           ref: y,
           ...N,
           children: [
@@ -96,7 +96,7 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
                   "relative"
                 ),
                 children: [
-                  c ? /* @__PURE__ */ e.jsx("a", { href: c, target: "_blank", rel: "noopener noreferrer", children: d }) : d,
+                  m ? /* @__PURE__ */ e.jsx("a", { href: m, target: "_blank", rel: "noopener noreferrer", children: g }) : g,
                   k && /* @__PURE__ */ e.jsx(
                     "button",
                     {
@@ -139,7 +139,7 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
           "aria-modal": "true",
           "aria-label": "Bildvergrößerung",
           onClick: (l) => {
-            l.target.id === "overlay" && m(null);
+            l.target.id === "overlay" && u(null);
           },
           children: /* @__PURE__ */ e.jsxs(
             "div",
@@ -154,7 +154,7 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
                     type: "button",
                     className: "absolute top-0 right-0 z-10 cursor-pointer bg-white p-2 focus:ring-2 focus:ring-black focus:ring-offset-2 focus:outline-none",
                     "aria-label": "Bildvergrößerung schließen",
-                    onClick: () => m(null),
+                    onClick: () => u(null),
                     children: /* @__PURE__ */ e.jsx(C, { className: "size-6" })
                   }
                 ),
@@ -162,8 +162,8 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
                   "div",
                   {
                     className: n(
-                      "relative flex items-center justify-center bg-white",
-                      g(t) ? "h-[min(980px,80vh)] w-auto max-w-[min(980px,90vw)] lg:max-w-[min(980px,90vh)]" : "h-auto max-h-[min(980px,90vh)] w-[min(980px,95vw)] lg:w-[min(980px,90vh)]"
+                      "relative flex max-h-[min(980px,90vh)] max-w-[min(980px,95vw)] items-center justify-center bg-white",
+                      d(t) ? "h-[min(980px,90vh)] w-auto" : "h-auto w-[min(980px,95vw)] lg:w-[min(980px,90vh)]"
                     ),
                     children: /* @__PURE__ */ e.jsx(
                       "img",
@@ -171,8 +171,8 @@ const L = ({ title: a, copyrightText: i, link: r, position: s }) => {
                         src: t.src,
                         alt: t.alt || "",
                         className: n(
-                          "object-contain select-none",
-                          g(t) ? "h-full w-auto" : "h-auto w-full"
+                          "max-h-[min(980px,90vh)] max-w-[min(980px,95vw)] object-contain select-none",
+                          d(t) ? "h-full w-auto" : "h-auto w-full"
                         ),
                         draggable: !1
                       }

@@ -1,6 +1,77 @@
-import * as e from "react";
-const t = (s) => /* @__PURE__ */ e.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512", ...s }, /* @__PURE__ */ e.createElement("path", { d: "M256 48c115 0 208 93 208 208 0 115-93 208-208 208-115 0-208-93-208-208 0-115 93-208 208-208m0-40C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 56C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64zm0 44c19.9 0 36 16.1 36 36s-16.1 36-36 36-36-16.1-36-36 16.1-36 36-36zm117.7 98c-28.7 6.8-55.5 12.7-82.1 15.8 .9 101 12.3 123.1 25 155.6 3.6 9.3-1 19.7-10.2 23.3-9.3 3.6-19.7-1-23.3-10.2-8.7-22.3-17.1-40.6-22.3-78.5h-9.7c-5.2 37.9-13.5 56.2-22.3 78.5-3.6 9.3-14.1 13.8-23.3 10.2-9.3-3.6-13.8-14.1-10.2-23.3 12.7-32.5 24.2-54.5 25-155.6-26.6-3.1-53.4-9-82.1-15.8-8.6-2-13.9-10.6-11.9-19.2s10.6-13.9 19.2-11.9c96.7 22.8 124.3 22.8 220.8 0 8.6-2 17.2 3.3 19.2 11.9 2 8.6-3.3 17.2-11.9 19.2z", fill: "currentColor" }));
+import { j as n } from "./index4.es.js";
+import { Drawer as C, DrawerContent as $ } from "./index6.es.js";
+import { useLanguage as k, t as o } from "./index5.es.js";
+import { ChevronDown as y } from "lucide-react";
+import { useState as I } from "react";
+function q({ isOpen: u, close: h, menuItems: i }) {
+  const { translations: l } = k(), [m, p] = I({}), c = o("menu.navigation", l), f = c === "menu.navigation" ? "Hauptnavigation" : c, d = (r) => {
+    p((a) => ({
+      ...a,
+      [r]: !a[r]
+    }));
+  }, b = (r) => r % 2 === 0 && r > 0 ? "bg-menu-background-dark pl-4" : r % 2 === 1 ? "bg-menu-background pl-4" : "border-t border-border-light", x = (r, a = 0, g = "") => r.map((e, j) => {
+    const s = `${g}${e.label}-${j}`, t = !!m[s], v = b(a), N = [
+      "flex h-[55px] items-center"
+      // Shadow class removed from here
+    ].join(" ").trim(), w = [
+      v,
+      t ? "shadow-[0_7px_7px_rgba(150,150,150,0.1)] relative z-10" : ""
+    ].join(" ").trim();
+    return /* @__PURE__ */ n.jsxs("div", { className: w, children: [
+      " ",
+      /* @__PURE__ */ n.jsxs("div", { className: N, children: [
+        e.icon && /* @__PURE__ */ n.jsx("span", { className: "mr-2", children: e.icon }),
+        /* @__PURE__ */ n.jsx(
+          "a",
+          {
+            href: e.href,
+            className: "m-[3px] flex w-full items-center px-[24px] py-[0.1rem] text-lg transition-colors duration-200 hover:underline",
+            onClick: (D) => {
+              e.href === "#" || e.href === "" ? (D.preventDefault(), e.children && e.children.length > 0 && d(s)) : e.children && e.children.length > 0;
+            },
+            children: e.label
+          }
+        ),
+        e.children && e.children.length > 0 && /* @__PURE__ */ n.jsx(
+          "button",
+          {
+            type: "button",
+            className: "mx-[3px] my-[0.5rem] cursor-pointer border-l border-black px-[0.7rem] pt-[0.3rem] pb-[0.4rem]",
+            onClick: () => d(s),
+            "aria-expanded": t,
+            "aria-label": `${e.label} Untermenü ${t ? "schließen" : "öffnen"}`,
+            children: /* @__PURE__ */ n.jsx(
+              y,
+              {
+                className: `transform transition-transform duration-200 ${t ? "rotate-180" : ""}`
+              }
+            )
+          }
+        )
+      ] }),
+      t && e.children && e.children.length > 0 && /* @__PURE__ */ n.jsxs("div", { className: "flex flex-col", children: [
+        " ",
+        x(e.children, a + 1, `${s}-`)
+      ] })
+    ] }, s);
+  });
+  return /* @__PURE__ */ n.jsx(C, { open: u, onOpenChange: (r) => !r && h(), children: /* @__PURE__ */ n.jsx(
+    $,
+    {
+      className: "flex flex-col gap-2",
+      onOpenAutoFocus: (r) => {
+        r.preventDefault(), window.setTimeout(() => {
+          document.querySelector("[role='dialog'] a[href]")?.focus();
+        });
+      },
+      children: /* @__PURE__ */ n.jsxs("div", { className: "text-base", children: [
+        /* @__PURE__ */ n.jsx("div", { className: "mb-5 flex flex-row items-center justify-between", children: /* @__PURE__ */ n.jsx("h2", { className: "px-6 text-2xl font-bold", children: o("menu.title", l) || "Menu" }) }),
+        /* @__PURE__ */ n.jsx("div", { className: "flex flex-col gap-2", children: i.length > 0 ? /* @__PURE__ */ n.jsx("nav", { "aria-label": f, children: x(i) }) : /* @__PURE__ */ n.jsx("p", { children: o("menu.noItems", l) || "No menu items available." }) })
+      ] })
+    }
+  ) });
+}
 export {
-  t as default
+  q as MenuDrawer
 };
 //# sourceMappingURL=index69.es.js.map

@@ -1,36 +1,25 @@
-import { __exports as e } from "./index139.es.js";
-/**
- * @license React
- * react-jsx-runtime.production.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var s;
-function a() {
-  if (s) return e;
-  s = 1;
-  var i = Symbol.for("react.transitional.element"), _ = Symbol.for("react.fragment");
-  function o(l, r, t) {
-    var u = null;
-    if (t !== void 0 && (u = "" + t), r.key !== void 0 && (u = "" + r.key), "key" in r) {
-      t = {};
-      for (var n in r)
-        n !== "key" && (t[n] = r[n]);
-    } else t = r;
-    return r = t.ref, {
-      $$typeof: i,
-      type: l,
-      key: u,
-      ref: r !== void 0 ? r : null,
-      props: t
-    };
-  }
-  return e.Fragment = _, e.jsx = o, e.jsxs = o, e;
+import { j as e } from "./index4.es.js";
+import { useLanguage as r, t as n } from "./index5.es.js";
+import o from "./index128.es.js";
+function p({
+  onOpenAccessibility: t,
+  className: a = ""
+}) {
+  const { translations: i } = r(), s = n("accessibility", i);
+  return /* @__PURE__ */ e.jsxs(
+    "button",
+    {
+      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${a}`,
+      onClick: t,
+      "aria-label": s,
+      children: [
+        /* @__PURE__ */ e.jsx(o, { className: "size-8" }),
+        /* @__PURE__ */ e.jsx("span", { className: "whitespace-nowrap", children: s })
+      ]
+    }
+  );
 }
 export {
-  a as __require
+  p as AccessibilityButton
 };
 //# sourceMappingURL=index67.es.js.map

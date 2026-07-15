@@ -1,25 +1,5 @@
-import { j as e } from "./index4.es.js";
-import { LanguageSelect as s } from "./index53.es.js";
-import { Breadcrumbs as n } from "./index8.es.js";
-function f({
-  showBreadcrumbs: t,
-  breadcrumbs: r,
-  showLanguageSelect: a,
-  LinkComponent: i,
-  isSticky: o = !1
-}) {
-  return !t && !a ? null : /* @__PURE__ */ e.jsx(
-    "div",
-    {
-      className: `relative z-10 bg-block-colored px-4 lg:px-0 ${o ? "-translate-y-64 opacity-0" : "translate-y-0 opacity-100"} motion-safe:transition-all motion-safe:duration-100 motion-safe:ease-in-out`,
-      children: /* @__PURE__ */ e.jsxs("div", { className: "mx-auto flex max-w-[61.25rem] justify-between", children: [
-        t && /* @__PURE__ */ e.jsx(n, { items: r, LinkComponent: i }),
-        a && /* @__PURE__ */ e.jsx(s, {})
-      ] })
-    }
-  );
-}
+var e = { exports: {} };
 export {
-  f as SubHeaderBar
+  e as __module
 };
 //# sourceMappingURL=index52.es.js.map

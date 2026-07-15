@@ -1,22 +1,5 @@
-import { j as e } from "./index4.es.js";
-import a from "./index57.es.js";
-import { useLanguage as o, t as m } from "./index5.es.js";
-function p({ onOpenMenu: r, className: s = "" }) {
-  const { translations: n } = o(), t = m("menu", n);
-  return /* @__PURE__ */ e.jsxs(
-    "button",
-    {
-      className: `-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${s}`,
-      onClick: r,
-      "aria-label": t,
-      children: [
-        /* @__PURE__ */ e.jsx(a, { className: "h-8" }),
-        /* @__PURE__ */ e.jsx("span", { className: "-mr-[0.05rem] whitespace-nowrap", children: t })
-      ]
-    }
-  );
-}
+var e = {};
 export {
-  p as MenuButton
+  e as __exports
 };
 //# sourceMappingURL=index56.es.js.map

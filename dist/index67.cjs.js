@@ -1,10 +1,2 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index139.cjs.js");/**
- * @license React
- * react-jsx-runtime.production.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */var _;function x(){if(_)return e.__exports;_=1;var n=Symbol.for("react.transitional.element"),i=Symbol.for("react.fragment");function s(l,r,t){var o=null;if(t!==void 0&&(o=""+t),r.key!==void 0&&(o=""+r.key),"key"in r){t={};for(var u in r)u!=="key"&&(t[u]=r[u])}else t=r;return r=t.ref,{$$typeof:n,type:l,key:o,ref:r!==void 0?r:null,props:t}}return e.__exports.Fragment=i,e.__exports.jsx=s,e.__exports.jsxs=s,e.__exports}exports.__require=x;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index4.cjs.js"),t=require("./index5.cjs.js"),a=require("./index128.cjs.js");function c({onOpenAccessibility:i,className:n=""}){const{translations:r}=t.useLanguage(),s=t.t("accessibility",r);return e.jsxRuntimeExports.jsxs("button",{className:`-mt-[0.05rem] flex cursor-pointer flex-col items-center justify-between gap-[0.06rem] text-[11px] leading-normal ${n}`,onClick:i,"aria-label":s,children:[e.jsxRuntimeExports.jsx(a.default,{className:"size-8"}),e.jsxRuntimeExports.jsx("span",{className:"whitespace-nowrap",children:s})]})}exports.AccessibilityButton=c;
 //# sourceMappingURL=index67.cjs.js.map

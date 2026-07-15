@@ -1,6 +1,6 @@
 import { j as a } from "./index4.es.js";
 import { cn as e } from "./index29.es.js";
-import { iconRegistry as c } from "./index64.es.js";
+import { iconRegistry as c } from "./index34.es.js";
 function u({
   name: n,
   className: r,

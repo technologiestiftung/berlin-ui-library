@@ -1,6 +1,27 @@
-import * as c from "react";
-const t = (e) => /* @__PURE__ */ c.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 512", ...e }, /* @__PURE__ */ c.createElement("path", { d: "M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 76v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16z", fill: "currentColor" }));
+import { j as e } from "./index4.es.js";
+import i from "./index66.es.js";
+function n({
+  logoUrl: t = "https://www.berlin.de",
+  logoComponent: a,
+  isSticky: r = !1
+}) {
+  return /* @__PURE__ */ e.jsx(
+    "div",
+    {
+      className: `sticky top-0 z-10 flex items-center justify-start border-b transition-[height,background-color,opacity,padding] duration-200 ease-in-out ${r ? "h-[3px] border-none bg-grey-darkest px-4 py-0 lg:px-6" : "h-11 border-gray-300 bg-white px-4 py-[0.25em] lg:px-6"}`,
+      children: /* @__PURE__ */ e.jsx(
+        "a",
+        {
+          href: t,
+          "aria-label": "Berlin.de zur Startseite",
+          className: `transition-opacity duration-200 ease-in-out ${r ? "opacity-0" : "opacity-100"}`,
+          children: a || /* @__PURE__ */ e.jsx("img", { src: i, alt: "", className: "object-fill" })
+        }
+      )
+    }
+  );
+}
 export {
-  t as default
+  n as LogoBar
 };
 //# sourceMappingURL=index57.es.js.map
