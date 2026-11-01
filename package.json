@@ -80,6 +80,6 @@
 		"tailwindcss-animate": "^1.0.7",
 		"vaul": "^1.1.2",
 		"vite-plugin-dts": "^4.5.3",
-		"zod": "^3.24.3"
+		"zod": "^4.0.0"
 	}
 }
